@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LingXM Panos - Modern language learning through contextual reading">
+  <title>LingXM Panos</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/public/manifest.json">
+  <meta name="theme-color" content="#4CAF50">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/variables.css">
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/components.css">
+  <link rel="stylesheet" href="/src/styles/modal.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="app-header">
+    <h1 class="logo">LINGXM</h1>
+
+    <!-- Language Selector Component -->
+    <div class="language-selector">
+      <div class="selector-group">
+        <label class="selector-label">choose language</label>
+        <div class="language-picker" id="learningLangPicker">
+          <span class="picker-label">You are learning</span>
+          <div class="flag-display">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='20'><rect fill='%23000' width='30' height='7'/><rect fill='%23D00' y='7' width='30' height='6'/><rect fill='%23FFCE00' y='13' width='30' height='7'/></svg>" alt="German" class="active-flag">
+            <button class="dropdown-btn">▼</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="selector-group">
+        <label class="selector-label">I speak</label>
+        <div class="language-picker" id="nativeLangPicker">
+          <div class="flag-display">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='20'><rect fill='%23012169' width='30' height='20'/></svg>" alt="English" class="active-flag">
+            <button class="dropdown-btn">▼</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="add-language-btn" id="addLangBtn" title="Add translation language">+</button>
+
+      <div class="selector-group additional-language" id="additionalLang" style="display:none;">
+        <label class="selector-label">Also translate to</label>
+        <div class="language-picker" id="additionalLangPicker">
+          <div class="flag-display">
+            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='20'><rect fill='%23fff' width='30' height='20'/></svg>" alt="Select" class="active-flag">
+            <button class="dropdown-btn">▼</button>
+          </div>
+          <button class="remove-btn" id="removeLangBtn">×</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Sidebar: Filter Panel -->
+    <aside class="filter-panel">
+      <section class="filter-section">
+        <h3>Practice with the</h3>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="frequency" value="50" checked>
+            <span>50 most frequent words</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="frequency" value="100">
+            <span>100</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="frequency" value="250">
+            <span>250</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="frequency" value="500">
+            <span>500</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="frequency" value="1000">
+            <span>1000</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="filter-section">
+        <h3>Sentence Length</h3>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="length" value="1-10" checked>
+            <span>1 - 10 words</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="length" value="11-20">
+            <span>11 - 20</span>
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="length" value="21-100">
+            <span>21 - 100</span>
+          </label>
+        </div>
+      </section>
+
+      <button class="apply-btn" id="applyFiltersBtn">> Go!</button>
+
+      <section class="search-section">
+        <h3>SEARCH</h3>
+        <input type="text" class="search-input" placeholder="Search words or sentences...">
+      </section>
+
+      <section class="my-lingxm-section">
+        <h3>My LINGXM</h3>
+        <details>
+          <summary>□ include my vocabulary</summary>
+          <p class="saved-count">0 saved words</p>
+        </details>
+        <details>
+          <summary>□ Numbers</summary>
+        </details>
+        <details>
+          <summary>□ Colors</summary>
+        </details>
+      </section>
+    </aside>
+
+    <!-- Main Content: Sentence List -->
+    <main class="sentence-list-container">
+      <div class="results-header">
+        <p>Open Results at...</p>
+      </div>
+
+      <div class="sentence-list" id="sentenceList">
+        <!-- Sentences will be dynamically inserted here -->
+        <div class="sentence-item">
+          <p class="sentence-text">
+            <span class="underlined-word" data-word-id="universal_a1_001_de">Ich</span>
+            bin hier.
+          </p>
+          <div class="sentence-controls">
+            <button class="audio-btn" title="Play audio">🔊</button>
+            <button class="info-btn" title="More info">ℹ️</button>
+          </div>
+          <div class="difficulty-dots">
+            <span class="dot filled">●</span>
+            <span class="dot filled">●</span>
+            <span class="dot">○</span>
+            <span class="dot">○</span>
+            <span class="dot">○</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <button class="nav-btn">‹</button>
+        <span class="page-dots">
+          <span class="dot filled">●</span>
+          <span class="dot filled">●</span>
+          <span class="dot filled">●</span>
+          <span class="dot">○</span>
+          <span class="dot">○</span>
+        </span>
+        <button class="nav-btn">›</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Word Modal (Auto-dismiss on mouse leave) -->
+  <div id="wordModal" class="modal-overlay" style="display:none;">
+    <div class="modal-content" id="modalContent">
+      <button class="modal-close" id="modalClose">×</button>
+
+      <div class="modal-header">
+        <h2 class="word-title" id="modalWordTitle">📖 Word</h2>
+        <p class="word-translation" id="modalTranslation">(translation)</p>
+        <p class="word-meta" id="modalMeta">Category • #rank • Level</p>
+      </div>
+
+      <div class="modal-body">
+        <section class="translations-section">
+          <h3>🌍 Translations</h3>
+          <div class="translation-list" id="modalTranslations">
+            <!-- Dynamic translations -->
+          </div>
+        </section>
+
+        <section class="explanation-section">
+          <h3>📝 Explanation</h3>
+          <p id="modalExplanation">Explanation text...</p>
+        </section>
+
+        <section class="examples-section">
+          <h3>💬 Example Sentences</h3>
+          <ul id="modalExamples">
+            <!-- Dynamic examples -->
+          </ul>
+        </section>
+
+        <div class="modal-actions">
+          <button class="modal-action-btn audio-action" id="modalAudioBtn">
+            🔊 Play Audio
+          </button>
+          <button class="modal-action-btn save-action" id="modalSaveBtn">
+            💾 Save Word
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hover Tooltip -->
+  <div id="wordTooltip" class="word-tooltip" style="display:none;">
+    <p class="tooltip-word" id="tooltipWord">word</p>
+    <p class="tooltip-translation" id="tooltipTranslation">translation</p>
+    <p class="tooltip-meta" id="tooltipMeta">category • #rank</p>
+    <p class="tooltip-explanation" id="tooltipExplanation">Brief explanation...</p>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>

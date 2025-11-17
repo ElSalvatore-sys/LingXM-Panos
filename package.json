@@ -1,0 +1,21 @@
+{
+  "name": "lingxm-panos",
+  "version": "1.0.0",
+  "description": "Modern language learning PWA with advanced word interaction",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'No build step needed - pure vanilla JS'",
+    "test": "echo 'No tests yet'"
+  },
+  "keywords": [
+    "language-learning",
+    "pwa",
+    "education",
+    "multilingual"
+  ],
+  "author": "Ali",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
