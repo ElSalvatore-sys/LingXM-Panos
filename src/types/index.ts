@@ -21,6 +21,19 @@ export interface Word {
   difficulty: 1 | 2 | 3 | 4 | 5;
 }
 
+// Extended word details for modal display
+export interface WordDetail extends Word {
+  translation?: string;
+  partOfSpeech?: 'noun' | 'verb' | 'adjective' | 'adverb' | 'preposition' | 'conjunction' | 'pronoun' | 'article' | 'other';
+  gender?: 'masculine' | 'feminine' | 'neuter';
+  examples?: string[];
+  conjugation?: Record<string, string>;  // For verbs: ich gehe, du gehst, etc.
+  declension?: Record<string, string>;   // For nouns: der Hund, des Hundes, etc.
+  synonyms?: string[];
+  isBookmarked?: boolean;
+  isLearned?: boolean;
+}
+
 // Vocabulary data structure (matches JSON file)
 export interface VocabularyData {
   language: string;

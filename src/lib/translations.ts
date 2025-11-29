@@ -43,6 +43,44 @@ export interface Translations {
   backspace: string;
   shift: string;
   virtualKeyboard: string;
+
+  // Word Detail Modal
+  'modal.pronounce': string;
+  'modal.addBookmark': string;
+  'modal.removeBookmark': string;
+  'modal.markLearned': string;
+  'modal.markUnlearned': string;
+  'modal.wordDetails': string;
+  'modal.rank': string;
+  'modal.frequency': string;
+  'modal.declension': string;
+  'modal.conjugation': string;
+  'modal.examples': string;
+  'modal.synonyms': string;
+
+  // Difficulty levels
+  'difficulty.beginner': string;
+  'difficulty.elementary': string;
+  'difficulty.intermediate': string;
+  'difficulty.advanced': string;
+  'difficulty.expert': string;
+  'difficulty.unknown': string;
+
+  // Parts of speech
+  'partOfSpeech.noun': string;
+  'partOfSpeech.verb': string;
+  'partOfSpeech.adjective': string;
+  'partOfSpeech.adverb': string;
+  'partOfSpeech.preposition': string;
+  'partOfSpeech.conjunction': string;
+  'partOfSpeech.pronoun': string;
+  'partOfSpeech.article': string;
+  'partOfSpeech.other': string;
+
+  // Gender
+  'gender.masculine': string;
+  'gender.feminine': string;
+  'gender.neuter': string;
 }
 
 const englishTranslations: Translations = {
@@ -88,6 +126,44 @@ const englishTranslations: Translations = {
   backspace: 'Backspace',
   shift: 'Shift',
   virtualKeyboard: 'Virtual Keyboard',
+
+  // Word Detail Modal
+  'modal.pronounce': 'Pronounce',
+  'modal.addBookmark': 'Add bookmark',
+  'modal.removeBookmark': 'Remove bookmark',
+  'modal.markLearned': 'Mark as learned',
+  'modal.markUnlearned': 'Mark as not learned',
+  'modal.wordDetails': 'Word details for',
+  'modal.rank': 'Rank',
+  'modal.frequency': 'Frequency',
+  'modal.declension': 'Declension',
+  'modal.conjugation': 'Conjugation',
+  'modal.examples': 'Example sentences',
+  'modal.synonyms': 'Synonyms',
+
+  // Difficulty levels
+  'difficulty.beginner': 'Beginner',
+  'difficulty.elementary': 'Elementary',
+  'difficulty.intermediate': 'Intermediate',
+  'difficulty.advanced': 'Advanced',
+  'difficulty.expert': 'Expert',
+  'difficulty.unknown': 'Unknown',
+
+  // Parts of speech
+  'partOfSpeech.noun': 'Noun',
+  'partOfSpeech.verb': 'Verb',
+  'partOfSpeech.adjective': 'Adjective',
+  'partOfSpeech.adverb': 'Adverb',
+  'partOfSpeech.preposition': 'Preposition',
+  'partOfSpeech.conjunction': 'Conjunction',
+  'partOfSpeech.pronoun': 'Pronoun',
+  'partOfSpeech.article': 'Article',
+  'partOfSpeech.other': 'Other',
+
+  // Gender
+  'gender.masculine': 'Masculine',
+  'gender.feminine': 'Feminine',
+  'gender.neuter': 'Neuter',
 };
 
 const germanTranslations: Translations = {
@@ -133,6 +209,44 @@ const germanTranslations: Translations = {
   backspace: 'Löschen',
   shift: 'Umschalt',
   virtualKeyboard: 'Virtuelle Tastatur',
+
+  // Word Detail Modal
+  'modal.pronounce': 'Aussprechen',
+  'modal.addBookmark': 'Lesezeichen hinzufügen',
+  'modal.removeBookmark': 'Lesezeichen entfernen',
+  'modal.markLearned': 'Als gelernt markieren',
+  'modal.markUnlearned': 'Als nicht gelernt markieren',
+  'modal.wordDetails': 'Wortdetails für',
+  'modal.rank': 'Rang',
+  'modal.frequency': 'Häufigkeit',
+  'modal.declension': 'Deklination',
+  'modal.conjugation': 'Konjugation',
+  'modal.examples': 'Beispielsätze',
+  'modal.synonyms': 'Synonyme',
+
+  // Difficulty levels
+  'difficulty.beginner': 'Anfänger',
+  'difficulty.elementary': 'Grundlegend',
+  'difficulty.intermediate': 'Mittelstufe',
+  'difficulty.advanced': 'Fortgeschritten',
+  'difficulty.expert': 'Experte',
+  'difficulty.unknown': 'Unbekannt',
+
+  // Parts of speech
+  'partOfSpeech.noun': 'Substantiv',
+  'partOfSpeech.verb': 'Verb',
+  'partOfSpeech.adjective': 'Adjektiv',
+  'partOfSpeech.adverb': 'Adverb',
+  'partOfSpeech.preposition': 'Präposition',
+  'partOfSpeech.conjunction': 'Konjunktion',
+  'partOfSpeech.pronoun': 'Pronomen',
+  'partOfSpeech.article': 'Artikel',
+  'partOfSpeech.other': 'Sonstige',
+
+  // Gender
+  'gender.masculine': 'Maskulin',
+  'gender.feminine': 'Feminin',
+  'gender.neuter': 'Neutrum',
 };
 
 const frenchTranslations: Translations = {
@@ -178,6 +292,44 @@ const frenchTranslations: Translations = {
   backspace: 'Effacer',
   shift: 'Majuscule',
   virtualKeyboard: 'Clavier virtuel',
+
+  // Word Detail Modal
+  'modal.pronounce': 'Prononcer',
+  'modal.addBookmark': 'Ajouter aux favoris',
+  'modal.removeBookmark': 'Retirer des favoris',
+  'modal.markLearned': 'Marquer comme appris',
+  'modal.markUnlearned': 'Marquer comme non appris',
+  'modal.wordDetails': 'Détails du mot pour',
+  'modal.rank': 'Classement',
+  'modal.frequency': 'Fréquence',
+  'modal.declension': 'Déclinaison',
+  'modal.conjugation': 'Conjugaison',
+  'modal.examples': 'Exemples de phrases',
+  'modal.synonyms': 'Synonymes',
+
+  // Difficulty levels
+  'difficulty.beginner': 'Débutant',
+  'difficulty.elementary': 'Élémentaire',
+  'difficulty.intermediate': 'Intermédiaire',
+  'difficulty.advanced': 'Avancé',
+  'difficulty.expert': 'Expert',
+  'difficulty.unknown': 'Inconnu',
+
+  // Parts of speech
+  'partOfSpeech.noun': 'Nom',
+  'partOfSpeech.verb': 'Verbe',
+  'partOfSpeech.adjective': 'Adjectif',
+  'partOfSpeech.adverb': 'Adverbe',
+  'partOfSpeech.preposition': 'Préposition',
+  'partOfSpeech.conjunction': 'Conjonction',
+  'partOfSpeech.pronoun': 'Pronom',
+  'partOfSpeech.article': 'Article',
+  'partOfSpeech.other': 'Autre',
+
+  // Gender
+  'gender.masculine': 'Masculin',
+  'gender.feminine': 'Féminin',
+  'gender.neuter': 'Neutre',
 };
 
 const spanishTranslations: Translations = {
@@ -223,6 +375,44 @@ const spanishTranslations: Translations = {
   backspace: 'Borrar',
   shift: 'Mayúsculas',
   virtualKeyboard: 'Teclado virtual',
+
+  // Word Detail Modal
+  'modal.pronounce': 'Pronunciar',
+  'modal.addBookmark': 'Agregar a favoritos',
+  'modal.removeBookmark': 'Quitar de favoritos',
+  'modal.markLearned': 'Marcar como aprendido',
+  'modal.markUnlearned': 'Marcar como no aprendido',
+  'modal.wordDetails': 'Detalles de la palabra para',
+  'modal.rank': 'Rango',
+  'modal.frequency': 'Frecuencia',
+  'modal.declension': 'Declinación',
+  'modal.conjugation': 'Conjugación',
+  'modal.examples': 'Oraciones de ejemplo',
+  'modal.synonyms': 'Sinónimos',
+
+  // Difficulty levels
+  'difficulty.beginner': 'Principiante',
+  'difficulty.elementary': 'Elemental',
+  'difficulty.intermediate': 'Intermedio',
+  'difficulty.advanced': 'Avanzado',
+  'difficulty.expert': 'Experto',
+  'difficulty.unknown': 'Desconocido',
+
+  // Parts of speech
+  'partOfSpeech.noun': 'Sustantivo',
+  'partOfSpeech.verb': 'Verbo',
+  'partOfSpeech.adjective': 'Adjetivo',
+  'partOfSpeech.adverb': 'Adverbio',
+  'partOfSpeech.preposition': 'Preposición',
+  'partOfSpeech.conjunction': 'Conjunción',
+  'partOfSpeech.pronoun': 'Pronombre',
+  'partOfSpeech.article': 'Artículo',
+  'partOfSpeech.other': 'Otro',
+
+  // Gender
+  'gender.masculine': 'Masculino',
+  'gender.feminine': 'Femenino',
+  'gender.neuter': 'Neutro',
 };
 
 const russianTranslations: Translations = {
@@ -268,6 +458,44 @@ const russianTranslations: Translations = {
   backspace: 'Удалить',
   shift: 'Регистр',
   virtualKeyboard: 'Виртуальная клавиатура',
+
+  // Word Detail Modal
+  'modal.pronounce': 'Произнести',
+  'modal.addBookmark': 'Добавить в закладки',
+  'modal.removeBookmark': 'Удалить из закладок',
+  'modal.markLearned': 'Отметить как выученное',
+  'modal.markUnlearned': 'Отметить как невыученное',
+  'modal.wordDetails': 'Детали слова для',
+  'modal.rank': 'Ранг',
+  'modal.frequency': 'Частота',
+  'modal.declension': 'Склонение',
+  'modal.conjugation': 'Спряжение',
+  'modal.examples': 'Примеры предложений',
+  'modal.synonyms': 'Синонимы',
+
+  // Difficulty levels
+  'difficulty.beginner': 'Начинающий',
+  'difficulty.elementary': 'Элементарный',
+  'difficulty.intermediate': 'Средний',
+  'difficulty.advanced': 'Продвинутый',
+  'difficulty.expert': 'Эксперт',
+  'difficulty.unknown': 'Неизвестно',
+
+  // Parts of speech
+  'partOfSpeech.noun': 'Существительное',
+  'partOfSpeech.verb': 'Глагол',
+  'partOfSpeech.adjective': 'Прилагательное',
+  'partOfSpeech.adverb': 'Наречие',
+  'partOfSpeech.preposition': 'Предлог',
+  'partOfSpeech.conjunction': 'Союз',
+  'partOfSpeech.pronoun': 'Местоимение',
+  'partOfSpeech.article': 'Артикль',
+  'partOfSpeech.other': 'Другое',
+
+  // Gender
+  'gender.masculine': 'Мужской',
+  'gender.feminine': 'Женский',
+  'gender.neuter': 'Средний',
 };
 
 const greekTranslations: Translations = {
@@ -313,6 +541,44 @@ const greekTranslations: Translations = {
   backspace: 'Διαγραφή',
   shift: 'Shift',
   virtualKeyboard: 'Εικονικό πληκτρολόγιο',
+
+  // Word Detail Modal
+  'modal.pronounce': 'Προφορά',
+  'modal.addBookmark': 'Προσθήκη σελιδοδείκτη',
+  'modal.removeBookmark': 'Αφαίρεση σελιδοδείκτη',
+  'modal.markLearned': 'Σημείωση ως μαθημένο',
+  'modal.markUnlearned': 'Σημείωση ως μη μαθημένο',
+  'modal.wordDetails': 'Λεπτομέρειες λέξης για',
+  'modal.rank': 'Κατάταξη',
+  'modal.frequency': 'Συχνότητα',
+  'modal.declension': 'Κλίση',
+  'modal.conjugation': 'Κλίση ρήματος',
+  'modal.examples': 'Παραδείγματα προτάσεων',
+  'modal.synonyms': 'Συνώνυμα',
+
+  // Difficulty levels
+  'difficulty.beginner': 'Αρχάριος',
+  'difficulty.elementary': 'Στοιχειώδες',
+  'difficulty.intermediate': 'Μεσαίο',
+  'difficulty.advanced': 'Προχωρημένο',
+  'difficulty.expert': 'Ειδικός',
+  'difficulty.unknown': 'Άγνωστο',
+
+  // Parts of speech
+  'partOfSpeech.noun': 'Ουσιαστικό',
+  'partOfSpeech.verb': 'Ρήμα',
+  'partOfSpeech.adjective': 'Επίθετο',
+  'partOfSpeech.adverb': 'Επίρρημα',
+  'partOfSpeech.preposition': 'Πρόθεση',
+  'partOfSpeech.conjunction': 'Σύνδεσμος',
+  'partOfSpeech.pronoun': 'Αντωνυμία',
+  'partOfSpeech.article': 'Άρθρο',
+  'partOfSpeech.other': 'Άλλο',
+
+  // Gender
+  'gender.masculine': 'Αρσενικό',
+  'gender.feminine': 'Θηλυκό',
+  'gender.neuter': 'Ουδέτερο',
 };
 
 // All translations
@@ -343,4 +609,18 @@ export function translate(
   }
 
   return text;
+}
+
+/**
+ * Get translation by dynamic key string (for modal components)
+ * Falls back to English, then to the key itself
+ */
+export function getTranslation(
+  language: SiteLanguage,
+  key: string
+): string {
+  const langTranslations = translations[language] as unknown as Record<string, string>;
+  const enTranslations = translations.en as unknown as Record<string, string>;
+
+  return langTranslations?.[key] || enTranslations?.[key] || key;
 }

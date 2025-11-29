@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import type { LanguageCode, Word } from '@/types';
+import type { LanguageCode, Word, WordDetail } from '@/types';
 import { Header, Footer } from '@/components/layout';
 import {
   SearchInput,
@@ -8,13 +8,17 @@ import {
   ResultsList,
   SearchTips
 } from '@/components/features';
+import { WordDetailModal } from '@/components/features/WordDetailModal';
 import { useVocabulary } from '@/hooks/useVocabulary';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useApp } from '@/contexts/AppContext';
 import { languages } from '@/lib/languages';
+import { getWordDetails } from '@/lib/wordDetails';
 
 export function SearchPage() {
   const [searchParams] = useSearchParams();
   const { t } = useTranslation();
+  const { siteLanguage } = useApp();
 
   // Get languages from URL params
   const fromLang = (searchParams.get('from') || 'el') as LanguageCode;
@@ -26,6 +30,10 @@ export function SearchPage() {
   const [contentLength, setContentLength] = useState(5);
   const [results, setResults] = useState<Word[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
+
+  // Modal state
+  const [selectedWord, setSelectedWord] = useState<WordDetail | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Load vocabulary for target language
   const { isLoading, error, searchWords, totalWords, languageName } =
@@ -52,13 +60,38 @@ export function SearchPage() {
     }
   }, [difficulty, hasSearched, searchQuery, searchWords]);
 
-  // Handle result click
+  // Handle result click - open modal with word details
   const handleResultClick = (id: number) => {
     const word = results.find((w) => w.id === id);
     if (word) {
-      console.log('Selected word:', word);
-      // TODO: Open word detail modal
+      const wordDetails = getWordDetails(word, toLang);
+      setSelectedWord(wordDetails);
+      setIsModalOpen(true);
     }
+  };
+
+  // Handle modal close
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedWord(null);
+  };
+
+  // Handle bookmark toggle
+  const handleToggleBookmark = (wordId: number) => {
+    setSelectedWord((prev) => {
+      if (!prev || prev.id !== wordId) return prev;
+      return { ...prev, isBookmarked: !prev.isBookmarked };
+    });
+    // TODO: Persist to localStorage or backend
+  };
+
+  // Handle learned toggle
+  const handleToggleLearned = (wordId: number) => {
+    setSelectedWord((prev) => {
+      if (!prev || prev.id !== wordId) return prev;
+      return { ...prev, isLearned: !prev.isLearned };
+    });
+    // TODO: Persist to localStorage or backend
   };
 
   // Convert Word[] to ResultsList format
@@ -215,6 +248,17 @@ export function SearchPage() {
 
       {/* Footer - full variant */}
       <Footer variant="full" />
+
+      {/* Word Detail Modal */}
+      <WordDetailModal
+        word={selectedWord}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        targetLanguage={toLang}
+        nativeLanguage={siteLanguage}
+        onToggleBookmark={handleToggleBookmark}
+        onToggleLearned={handleToggleLearned}
+      />
     </div>
   );
 }
