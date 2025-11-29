@@ -12,18 +12,21 @@ export interface Language {
   flag: string; // path to flag image
 }
 
-// Word from vocabulary database
+// Word from vocabulary database (matches JSON structure)
 export interface Word {
   id: number;
   word: string;
-  translation: string;
   frequency: number;
+  rank: number;
   difficulty: 1 | 2 | 3 | 4 | 5;
-  partOfSpeech: string;
-  examples: string[];
-  declensions?: Record<string, string>;
-  conjugations?: Record<string, string>;
-  audio?: string;
+}
+
+// Vocabulary data structure (matches JSON file)
+export interface VocabularyData {
+  language: string;
+  languageName: string;
+  totalWords: number;
+  words: Word[];
 }
 
 // Search filters
@@ -31,6 +34,16 @@ export interface SearchFilters {
   difficulty: number[];
   contentLength: number[];
   query: string;
+}
+
+// Search result for display
+export interface SearchResult {
+  id: number;
+  word: string;
+  rank: number;
+  frequency: number;
+  difficulty: number;
+  examples?: string[];
 }
 
 // User progress (for later)
