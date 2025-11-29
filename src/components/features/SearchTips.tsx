@@ -1,3 +1,4 @@
+import { useTranslation } from '@/hooks/useTranslation';
 import { cn } from '@/lib/utils';
 
 interface SearchTipsProps {
@@ -5,6 +6,8 @@ interface SearchTipsProps {
 }
 
 export function SearchTips({ className }: SearchTipsProps) {
+  const { t } = useTranslation();
+
   return (
     <div
       className={cn('', className)}
@@ -16,20 +19,20 @@ export function SearchTips({ className }: SearchTipsProps) {
       }}
     >
       <h4 className="font-semibold mb-3" style={{ color: '#666' }}>
-        Search Tips
+        {t('searchTips')}
       </h4>
 
       <ul className="space-y-3">
         <li>
           <span className="text-gray-600">&bull;</span>{' '}
-          use <code className="bg-gray-100 px-1 rounded">" "</code> to note oscillations
+          {t('tipQuotes')}
           <br />
           <span className="text-gray-400 text-sm">e.g. "without"</span>
         </li>
 
         <li>
           <span className="text-gray-600">&bull;</span>{' '}
-          use <code className="bg-gray-100 px-1 rounded">*</code> before OR after a word to denote wildcards
+          {t('tipWildcard')}
           <br />
           <span className="text-gray-400 text-sm">e.g. operat* or *ation</span>
         </li>

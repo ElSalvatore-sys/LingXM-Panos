@@ -3,10 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import type { LanguageCode } from '@/types';
 import { Header, Footer } from '@/components/layout';
 import { LanguageSelector } from '@/components/features';
+import { useTranslation } from '@/hooks/useTranslation';
 import mapBg from '@/assets/backgrounds/mapBg.png';
 
 export function LandingPage() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [nativeLanguage, setNativeLanguage] = useState<LanguageCode>('el');
   const [targetLanguage, setTargetLanguage] = useState<LanguageCode>('de');
 
@@ -42,7 +44,7 @@ export function LandingPage() {
           <div className="flex flex-wrap items-center justify-center gap-5 mb-8">
             {/* Native language selector */}
             <LanguageSelector
-              label="Ich spreche"
+              label={t('iSpeak')}
               value={nativeLanguage}
               onChange={setNativeLanguage}
               className="min-w-[235px]"
@@ -50,13 +52,13 @@ export function LandingPage() {
 
             {/* Target language selector */}
             <LanguageSelector
-              label="Ich möchte üben:"
+              label={t('iWantToPractice')}
               value={targetLanguage}
               onChange={setTargetLanguage}
               className="min-w-[304px]"
             />
 
-            {/* Los! button */}
+            {/* Go button */}
             <button
               onClick={handleStart}
               className="h-[50px] px-7 text-white text-2xl font-normal transition-colors duration-300"
@@ -71,7 +73,7 @@ export function LandingPage() {
                 e.currentTarget.style.backgroundColor = '#e2678b';
               }}
             >
-              Los!
+              {t('go')}
             </button>
           </div>
 
@@ -85,7 +87,7 @@ export function LandingPage() {
                 textShadow: '0 2px 4px rgba(0,0,0,0.1)'
               }}
             >
-              Language learning 2.0
+              {t('languageLearning')}
             </h2>
           </div>
 
@@ -104,7 +106,7 @@ export function LandingPage() {
               e.currentTarget.style.backgroundColor = '#e2678b';
             }}
           >
-            Learn more
+            {t('learnMore')}
           </button>
         </div>
       </main>

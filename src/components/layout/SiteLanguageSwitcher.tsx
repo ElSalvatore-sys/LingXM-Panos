@@ -1,6 +1,7 @@
-import { useState } from 'react';
 import type { SiteLanguage } from '@/types';
 import { languages, siteLanguages } from '@/lib/languages';
+import { useApp } from '@/contexts/AppContext';
+import { useTranslation } from '@/hooks/useTranslation';
 import { cn } from '@/lib/utils';
 
 interface SiteLanguageSwitcherProps {
@@ -12,9 +13,14 @@ export function SiteLanguageSwitcher({
   variant = 'dark',
   className
 }: SiteLanguageSwitcherProps) {
-  const [activeLang, setActiveLang] = useState<SiteLanguage>('en');
+  const { siteLanguage, setSiteLanguage } = useApp();
+  const { t } = useTranslation();
 
   const isDark = variant === 'dark';
+
+  const handleLanguageChange = (langCode: SiteLanguage) => {
+    setSiteLanguage(langCode);
+  };
 
   return (
     <div className={cn('flex items-center gap-1', className)}>
@@ -24,15 +30,15 @@ export function SiteLanguageSwitcher({
           isDark ? 'text-black' : 'text-white'
         )}
       >
-        Site language:
+        {t('siteLanguage')}:
       </span>
       {siteLanguages.map((langCode) => (
         <button
           key={langCode}
-          onClick={() => setActiveLang(langCode)}
+          onClick={() => handleLanguageChange(langCode)}
           className={cn(
             'px-1.5 py-0.5 text-sm font-normal transition-all duration-500 ease-in-out',
-            activeLang === langCode
+            siteLanguage === langCode
               ? 'bg-black text-white'
               : isDark
                 ? 'text-black hover:bg-black hover:text-white'

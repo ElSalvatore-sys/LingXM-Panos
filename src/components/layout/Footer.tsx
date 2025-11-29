@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from '@/hooks/useTranslation';
 import { cn } from '@/lib/utils';
 
 interface FooterProps {
@@ -7,6 +8,7 @@ interface FooterProps {
 }
 
 export function Footer({ variant = 'simple', className }: FooterProps) {
+  const { t } = useTranslation();
   const isSimple = variant === 'simple';
 
   return (
@@ -26,19 +28,19 @@ export function Footer({ variant = 'simple', className }: FooterProps) {
                 to="/about"
                 className="px-2 py-0.5 text-lg text-black hover:bg-black hover:text-white transition-all duration-500"
               >
-                About
+                {t('about')}
               </Link>
               <Link
                 to="/contact"
                 className="px-2 py-0.5 text-lg text-black hover:bg-black hover:text-white transition-all duration-500"
               >
-                Contact
+                {t('contact')}
               </Link>
               <Link
                 to="/press"
                 className="px-2 py-0.5 text-lg text-black hover:bg-black hover:text-white transition-all duration-500"
               >
-                Press
+                {t('press')}
               </Link>
             </nav>
           </div>
@@ -50,7 +52,7 @@ export function Footer({ variant = 'simple', className }: FooterProps) {
                 Ling&lt;XM
               </Link>
               <span className="text-white/80 text-sm">
-                Language learning 2.0
+                {t('languageLearning')}
               </span>
             </div>
             <nav className="flex gap-2">
@@ -58,13 +60,13 @@ export function Footer({ variant = 'simple', className }: FooterProps) {
                 to="/about"
                 className="px-2 py-0.5 text-sm text-white hover:bg-black transition-all duration-500"
               >
-                About
+                {t('about')}
               </Link>
               <Link
                 to="/contact"
                 className="px-2 py-0.5 text-sm text-white hover:bg-black transition-all duration-500"
               >
-                Contact
+                {t('contact')}
               </Link>
             </nav>
           </div>

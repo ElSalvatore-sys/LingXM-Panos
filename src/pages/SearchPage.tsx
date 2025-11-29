@@ -9,10 +9,12 @@ import {
   SearchTips
 } from '@/components/features';
 import { useVocabulary } from '@/hooks/useVocabulary';
+import { useTranslation } from '@/hooks/useTranslation';
 import { languages } from '@/lib/languages';
 
 export function SearchPage() {
   const [searchParams] = useSearchParams();
+  const { t } = useTranslation();
 
   // Get languages from URL params
   const fromLang = (searchParams.get('from') || 'el') as LanguageCode;
@@ -26,7 +28,7 @@ export function SearchPage() {
   const [hasSearched, setHasSearched] = useState(false);
 
   // Load vocabulary for target language
-  const { words, isLoading, error, searchWords, totalWords, languageName } =
+  const { isLoading, error, searchWords, totalWords, languageName } =
     useVocabulary(toLang);
 
   // Search handler
@@ -82,7 +84,7 @@ export function SearchPage() {
               fontSize: '14px'
             }}
           >
-            <span className="text-gray-600">Learning:</span>
+            <span className="text-gray-600">{t('learning')}:</span>
             <img
               src={languages[toLang]?.flag}
               alt={languageName}
@@ -90,7 +92,7 @@ export function SearchPage() {
             />
             <strong>{languageName || toLang.toUpperCase()}</strong>
             <span className="text-gray-400 mx-2">|</span>
-            <span className="text-gray-600">from:</span>
+            <span className="text-gray-600">{t('from')}:</span>
             <img
               src={languages[fromLang]?.flag}
               alt={languages[fromLang]?.name}
@@ -101,7 +103,7 @@ export function SearchPage() {
               <>
                 <span className="text-gray-400 mx-2">|</span>
                 <span className="text-gray-500">
-                  {totalWords.toLocaleString()} words available
+                  {totalWords.toLocaleString()} {t('wordsAvailable')}
                 </span>
               </>
             )}
@@ -110,7 +112,7 @@ export function SearchPage() {
           {/* Loading/Error states */}
           {isLoading && (
             <div className="mb-6 text-gray-500">
-              Loading vocabulary...
+              {t('loading')}
             </div>
           )}
 
@@ -128,19 +130,20 @@ export function SearchPage() {
                 value={searchQuery}
                 onChange={setSearchQuery}
                 onSearch={handleSearch}
-                placeholder={`Search ${languageName || 'words'}...`}
+                placeholder={`${t('searchPlaceholder')} ${languageName || ''}...`}
+                targetLanguage={toLang}
                 className="mb-6"
               />
 
               {/* Filters */}
               <div className="mb-8 space-y-3">
                 <DifficultyFilter
-                  label="Max Difficulty"
+                  label={t('maxDifficulty')}
                   value={difficulty}
                   onChange={setDifficulty}
                 />
                 <DifficultyFilter
-                  label="Content Length"
+                  label={t('contentLength')}
                   value={contentLength}
                   onChange={setContentLength}
                 />
@@ -157,13 +160,13 @@ export function SearchPage() {
                     }}
                   >
                     {results.length > 0
-                      ? `Found ${results.length} word${results.length !== 1 ? 's' : ''} starting with "${searchQuery}"`
-                      : `No words found starting with "${searchQuery}"`}
+                      ? t('foundWords', { count: results.length, query: searchQuery })
+                      : t('noResults', { query: searchQuery })}
                   </div>
                   <ResultsList
                     results={resultsForDisplay}
                     onResultClick={handleResultClick}
-                    title={results.length > 0 ? 'Results:' : undefined}
+                    title={results.length > 0 ? t('results') : undefined}
                   />
                 </>
               ) : (
@@ -174,8 +177,7 @@ export function SearchPage() {
                     fontSize: '16px'
                   }}
                 >
-                  Type a word and press Enter or click the search icon to find
-                  matching vocabulary.
+                  {t('enterPhrase')}
                 </div>
               )}
             </div>
@@ -194,15 +196,15 @@ export function SearchPage() {
                   }}
                 >
                   <h4 className="font-semibold mb-2 text-gray-700">
-                    Vocabulary Stats
+                    {t('vocabularyStats')}
                   </h4>
                   <ul className="space-y-1 text-gray-600">
-                    <li>Total words: {totalWords.toLocaleString()}</li>
-                    <li>Difficulty 1: ~{Math.round(totalWords * 0.2).toLocaleString()} words</li>
-                    <li>Difficulty 2: ~{Math.round(totalWords * 0.2).toLocaleString()} words</li>
-                    <li>Difficulty 3: ~{Math.round(totalWords * 0.2).toLocaleString()} words</li>
-                    <li>Difficulty 4: ~{Math.round(totalWords * 0.2).toLocaleString()} words</li>
-                    <li>Difficulty 5: ~{Math.round(totalWords * 0.2).toLocaleString()} words</li>
+                    <li>{t('totalWords')}: {totalWords.toLocaleString()}</li>
+                    <li>{t('difficulty')} 1: ~{Math.round(totalWords * 0.2).toLocaleString()}</li>
+                    <li>{t('difficulty')} 2: ~{Math.round(totalWords * 0.2).toLocaleString()}</li>
+                    <li>{t('difficulty')} 3: ~{Math.round(totalWords * 0.2).toLocaleString()}</li>
+                    <li>{t('difficulty')} 4: ~{Math.round(totalWords * 0.2).toLocaleString()}</li>
+                    <li>{t('difficulty')} 5: ~{Math.round(totalWords * 0.2).toLocaleString()}</li>
                   </ul>
                 </div>
               )}
