@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter } from 'react-router-dom';
+import { Header } from '@/components/layout';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <BrowserRouter>
+      <div className="min-h-screen flex flex-col">
+        {/* White Header variant (for Landing page) */}
+        <Header variant="white" />
+
+        {/* Blue Header variant (for Search page) - shown below for testing */}
+        <Header variant="blue" showFlagSelector />
+
+        {/* Main content placeholder */}
+        <main className="flex-1 bg-lingxm-body">
+          <div className="container mx-auto px-4 py-12">
+            <div className="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+              <h1 className="text-3xl font-bold text-center text-lingxm-blue mb-4">
+                LingXM-Panos
+              </h1>
+              <p className="text-center text-lingxm-text-secondary mb-6">
+                Language Learning 2.0
+              </p>
+              <div className="space-y-4 text-sm text-lingxm-text-body">
+                <p>
+                  <strong>White Header:</strong> Used on the landing page with dark logo
+                </p>
+                <p>
+                  <strong>Blue Header:</strong> Used on the search/learn page with light logo and flag selector
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
