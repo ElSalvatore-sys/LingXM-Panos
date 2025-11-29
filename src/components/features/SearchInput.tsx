@@ -1,8 +1,7 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Search, Keyboard } from 'lucide-react';
 import type { LanguageCode } from '@/types';
 import { VirtualKeyboard } from './VirtualKeyboard';
-import { hasVirtualKeyboard } from '@/lib/keyboards';
 import { cn } from '@/lib/utils';
 
 interface SearchInputProps {
@@ -25,6 +24,11 @@ export function SearchInput({
   const [showKeyboard, setShowKeyboard] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // Close keyboard when language changes
+  useEffect(() => {
+    setShowKeyboard(false);
+  }, [targetLanguage]);
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
       onSearch();
@@ -44,7 +48,18 @@ export function SearchInput({
     inputRef.current?.focus();
   };
 
-  const showKeyboardButton = hasVirtualKeyboard(targetLanguage);
+  const handleEnter = () => {
+    onSearch();
+    setShowKeyboard(false);
+  };
+
+  const handleKeyboardToggle = () => {
+    setShowKeyboard(!showKeyboard);
+    if (!showKeyboard) {
+      // Focus input when opening keyboard
+      setTimeout(() => inputRef.current?.focus(), 100);
+    }
+  };
 
   return (
     <div className={cn('relative', className)}>
@@ -64,21 +79,19 @@ export function SearchInput({
           }}
         />
 
-        {/* Keyboard button - only show for languages with special characters */}
-        {showKeyboardButton && (
-          <button
-            onClick={() => setShowKeyboard(!showKeyboard)}
-            className={cn(
-              'h-8 w-10 flex items-center justify-center border border-l-0 border-black transition-colors',
-              showKeyboard
-                ? 'bg-lingxm-blue text-white'
-                : 'bg-white hover:bg-gray-50 text-gray-600'
-            )}
-            title="Virtual keyboard"
-          >
-            <Keyboard className="w-5 h-5" />
-          </button>
-        )}
+        {/* Keyboard button - always visible */}
+        <button
+          onClick={handleKeyboardToggle}
+          className={cn(
+            'h-8 w-10 flex items-center justify-center border border-l-0 border-black transition-colors',
+            showKeyboard
+              ? 'bg-lingxm-blue text-white'
+              : 'bg-white hover:bg-gray-50 text-gray-600'
+          )}
+          title="Virtual keyboard"
+        >
+          <Keyboard className="w-5 h-5" />
+        </button>
 
         {/* Search button */}
         <button
@@ -90,12 +103,13 @@ export function SearchInput({
         </button>
       </div>
 
-      {/* Virtual keyboard */}
+      {/* Virtual keyboard - renders as fixed overlay */}
       <VirtualKeyboard
         language={targetLanguage}
         isOpen={showKeyboard}
         onKeyPress={handleVirtualKeyPress}
         onBackspace={handleBackspace}
+        onEnter={handleEnter}
         onClose={() => setShowKeyboard(false)}
       />
     </div>
