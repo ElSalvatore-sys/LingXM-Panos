@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { LandingPage } from '@/pages';
+import { LandingPage, SearchPage } from '@/pages';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/learn" element={<SearchPage />} />
         {/* Future routes:
-        <Route path="/learn" element={<LearnPage />} />
         <Route path="/about" element={<AboutPage />} />
         */}
       </Routes>
