@@ -24,12 +24,21 @@ LingXM helps you learn vocabulary in **8 languages** using frequency-ranked word
 
 ## Features
 
+### Core
 - **8 Languages**: English, German, French, Spanish, Russian, Greek, Portuguese, Turkish
 - **78,000+ Words**: Frequency-ranked vocabulary from real language corpora
 - **Virtual Keyboards**: Full Apple-style layouts for Cyrillic, Greek, AZERTY, QWERTZ
 - **6 UI Languages**: Interface available in EN, DE, FR, ES, RU, EL
 - **PWA**: Installable on mobile/desktop, works offline
 - **Difficulty Filtering**: 5 levels based on word frequency (1 = most common)
+
+### Learning Tools
+- **Audio Pronunciation**: Web Speech API with 9 language support
+- **Word Detail Modal**: Translations, declensions, conjugations, examples
+- **Progress Tracking**: Daily streak, learned words, bookmarks with localStorage
+- **Bookmarks Page**: Save and manage your favorite words
+- **Learned Page**: Track mastered vocabulary
+- **Stats Bar**: Live progress display with daily goals
 
 ## Quick Start
 
@@ -89,29 +98,37 @@ lingxm-panos/
 │   ├── components/
 │   │   ├── features/            # Feature-specific components
 │   │   │   ├── DifficultyFilter.tsx
+│   │   │   ├── EmptyState.tsx      # Empty list states
 │   │   │   ├── FlagDropdown.tsx
 │   │   │   ├── ResultsList.tsx
 │   │   │   ├── SearchInput.tsx
 │   │   │   ├── SearchTips.tsx
-│   │   │   └── VirtualKeyboard.tsx
+│   │   │   ├── StatsBar.tsx        # Progress stats display
+│   │   │   ├── VirtualKeyboard.tsx
+│   │   │   └── WordDetailModal.tsx # Word details + actions
 │   │   ├── layout/              # Layout components
-│   │   │   ├── Header.tsx
+│   │   │   ├── Header.tsx       # With navigation menu
 │   │   │   ├── Footer.tsx
 │   │   │   └── Logo.tsx
 │   │   └── ui/                  # shadcn/ui components
 │   ├── contexts/
 │   │   └── AppContext.tsx       # Global state (languages)
 │   ├── hooks/
+│   │   ├── useProgress.ts       # Progress tracking hook
 │   │   ├── useTranslation.ts    # i18n hook
 │   │   └── useVocabulary.ts     # Vocabulary data hook
 │   ├── lib/
+│   │   ├── audioService.ts      # Web Speech API TTS
 │   │   ├── keyboards.ts         # Virtual keyboard layouts
 │   │   ├── search.ts            # Search/filter functions
 │   │   ├── translations.ts      # UI translations (6 languages)
+│   │   ├── wordDetails.ts       # Word detail generation
 │   │   └── utils.ts             # Utility functions
 │   ├── pages/
 │   │   ├── LandingPage.tsx      # Home page with language selectors
-│   │   └── SearchPage.tsx       # Main search/learn page
+│   │   ├── SearchPage.tsx       # Main search/learn page
+│   │   ├── BookmarksPage.tsx    # Saved words page
+│   │   └── LearnedPage.tsx      # Mastered words page
 │   └── types/
 │       └── index.ts             # TypeScript type definitions
 ├── scripts/
@@ -182,7 +199,7 @@ sortByFrequency(words)
 
 ## Roadmap
 
-### MVP (Complete)
+### Phase 1: MVP (Complete - Nov 29, 2025)
 
 - [x] Landing page with language selection
 - [x] Search page with real vocabulary data
@@ -190,20 +207,24 @@ sortByFrequency(words)
 - [x] Internationalization (i18n) for 6 languages
 - [x] PWA support with offline capability
 
-### Phase 2 (In Progress)
+### Phase 2: Progress Tracking (Complete - Nov 30, 2025)
 
-- [ ] Word detail modal with examples
-- [ ] Audio pronunciation (Web Speech API)
-- [ ] User progress tracking
-- [ ] Bookmarks/saved words
-- [ ] sql.js database with IndexedDB persistence
+- [x] Word detail modal with translations, declensions, conjugations
+- [x] Audio pronunciation (Web Speech API)
+- [x] User progress tracking with localStorage
+- [x] Bookmarks/saved words page
+- [x] Learned words page
+- [x] Navigation menu and stats bar
+- [x] Daily streak and goal tracking
 
 ### Phase 3 (Planned)
 
-- [ ] Declension/conjugation tables
-- [ ] Spaced repetition algorithm
-- [ ] Quiz mode
-- [ ] Export/import progress
+- [ ] Flashcard mode / quiz games
+- [ ] Spaced repetition algorithm (SM-2)
+- [ ] User authentication (optional)
+- [ ] Dark mode theme
+- [ ] Export/import progress data
+- [ ] Custom word lists
 
 ## Testing
 
