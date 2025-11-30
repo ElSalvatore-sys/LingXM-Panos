@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   Dialog,
   DialogContent,
@@ -9,6 +10,7 @@ import { Button } from '@/components/ui/button'
 import { BookmarkIcon, CheckCircleIcon, Volume2Icon } from 'lucide-react'
 import type { WordDetail, LanguageCode, SiteLanguage } from '@/types'
 import { getTranslation } from '@/lib/translations'
+import { speak, isTTSAvailable } from '@/lib/audioService'
 
 interface WordDetailModalProps {
   word: WordDetail | null
@@ -16,6 +18,8 @@ interface WordDetailModalProps {
   onClose: () => void
   targetLanguage: LanguageCode
   nativeLanguage: SiteLanguage
+  isBookmarked?: boolean
+  isLearned?: boolean
   onToggleBookmark?: (wordId: number) => void
   onToggleLearned?: (wordId: number) => void
 }
@@ -26,9 +30,12 @@ export function WordDetailModal({
   onClose,
   targetLanguage,
   nativeLanguage,
+  isBookmarked = false,
+  isLearned = false,
   onToggleBookmark,
   onToggleLearned,
 }: WordDetailModalProps) {
+  const [isSpeaking, setIsSpeaking] = useState(false)
   const t = (key: string) => getTranslation(nativeLanguage, key)
 
   if (!word) return null
@@ -67,11 +74,14 @@ export function WordDetailModal({
     return t(genderKey)
   }
 
-  const handleSpeak = () => {
-    if ('speechSynthesis' in window) {
-      const utterance = new SpeechSynthesisUtterance(word.word)
-      utterance.lang = targetLanguage
-      speechSynthesis.speak(utterance)
+  const handleSpeak = async () => {
+    if (!isTTSAvailable()) return
+
+    setIsSpeaking(true)
+    try {
+      await speak(word.word, targetLanguage)
+    } finally {
+      setIsSpeaking(false)
     }
   }
 
@@ -82,34 +92,37 @@ export function WordDetailModal({
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <DialogTitle className="text-2xl font-bold">{word.word}</DialogTitle>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={handleSpeak}
-                className="h-8 w-8"
-                title={t('modal.pronounce')}
-              >
-                <Volume2Icon className="h-5 w-5" />
-              </Button>
+              {isTTSAvailable() && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={handleSpeak}
+                  className={`h-8 w-8 ${isSpeaking ? 'text-lingxm-blue animate-pulse' : ''}`}
+                  title={t('modal.pronounce')}
+                  disabled={isSpeaking}
+                >
+                  <Volume2Icon className="h-5 w-5" />
+                </Button>
+              )}
             </div>
             <div className="flex gap-2">
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => onToggleBookmark?.(word.id)}
-                className={`h-8 w-8 ${word.isBookmarked ? 'text-yellow-500' : ''}`}
-                title={word.isBookmarked ? t('modal.removeBookmark') : t('modal.addBookmark')}
+                className={`h-8 w-8 ${isBookmarked ? 'text-yellow-500' : ''}`}
+                title={isBookmarked ? t('modal.removeBookmark') : t('modal.addBookmark')}
               >
-                <BookmarkIcon className={`h-5 w-5 ${word.isBookmarked ? 'fill-current' : ''}`} />
+                <BookmarkIcon className={`h-5 w-5 ${isBookmarked ? 'fill-current' : ''}`} />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => onToggleLearned?.(word.id)}
-                className={`h-8 w-8 ${word.isLearned ? 'text-green-500' : ''}`}
-                title={word.isLearned ? t('modal.markUnlearned') : t('modal.markLearned')}
+                className={`h-8 w-8 ${isLearned ? 'text-green-500' : ''}`}
+                title={isLearned ? t('modal.markUnlearned') : t('modal.markLearned')}
               >
-                <CheckCircleIcon className={`h-5 w-5 ${word.isLearned ? 'fill-current' : ''}`} />
+                <CheckCircleIcon className={`h-5 w-5 ${isLearned ? 'fill-current' : ''}`} />
               </Button>
             </div>
           </div>

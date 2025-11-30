@@ -6,11 +6,13 @@ import {
   SearchInput,
   DifficultyFilter,
   ResultsList,
-  SearchTips
+  SearchTips,
+  StatsBar,
+  WordDetailModal,
 } from '@/components/features';
-import { WordDetailModal } from '@/components/features/WordDetailModal';
 import { useVocabulary } from '@/hooks/useVocabulary';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useProgress } from '@/hooks/useProgress';
 import { useApp } from '@/contexts/AppContext';
 import { languages } from '@/lib/languages';
 import { getWordDetails } from '@/lib/wordDetails';
@@ -38,6 +40,21 @@ export function SearchPage() {
   // Load vocabulary for target language
   const { isLoading, error, searchWords, totalWords, languageName } =
     useVocabulary(toLang);
+
+  // Progress tracking
+  const {
+    currentStreak,
+    dailyGoal,
+    todayProgress,
+    wordsLearned,
+    bookmarkedCount,
+    addLearnedWord,
+    removeLearnedWord,
+    addBookmark,
+    removeBookmark,
+    isWordLearned,
+    isWordBookmarked,
+  } = useProgress(toLang);
 
   // Search handler
   const handleSearch = () => {
@@ -78,20 +95,22 @@ export function SearchPage() {
 
   // Handle bookmark toggle
   const handleToggleBookmark = (wordId: number) => {
-    setSelectedWord((prev) => {
-      if (!prev || prev.id !== wordId) return prev;
-      return { ...prev, isBookmarked: !prev.isBookmarked };
-    });
-    // TODO: Persist to localStorage or backend
+    const currentlyBookmarked = isWordBookmarked(wordId);
+    if (currentlyBookmarked) {
+      removeBookmark(wordId);
+    } else {
+      addBookmark(wordId);
+    }
   };
 
   // Handle learned toggle
   const handleToggleLearned = (wordId: number) => {
-    setSelectedWord((prev) => {
-      if (!prev || prev.id !== wordId) return prev;
-      return { ...prev, isLearned: !prev.isLearned };
-    });
-    // TODO: Persist to localStorage or backend
+    const currentlyLearned = isWordLearned(wordId);
+    if (currentlyLearned) {
+      removeLearnedWord(wordId);
+    } else {
+      addLearnedWord(wordId);
+    }
   };
 
   // Convert Word[] to ResultsList format
@@ -141,6 +160,15 @@ export function SearchPage() {
               </>
             )}
           </div>
+
+          {/* Stats Bar */}
+          <StatsBar
+            currentStreak={currentStreak}
+            wordsLearned={wordsLearned}
+            bookmarkedCount={bookmarkedCount}
+            todayProgress={todayProgress}
+            dailyGoal={dailyGoal}
+          />
 
           {/* Loading/Error states */}
           {isLoading && (
@@ -200,6 +228,7 @@ export function SearchPage() {
                     results={resultsForDisplay}
                     onResultClick={handleResultClick}
                     title={results.length > 0 ? t('results') : undefined}
+                    targetLanguage={toLang}
                   />
                 </>
               ) : (
@@ -256,6 +285,8 @@ export function SearchPage() {
         onClose={handleCloseModal}
         targetLanguage={toLang}
         nativeLanguage={siteLanguage}
+        isBookmarked={selectedWord ? isWordBookmarked(selectedWord.id) : false}
+        isLearned={selectedWord ? isWordLearned(selectedWord.id) : false}
         onToggleBookmark={handleToggleBookmark}
         onToggleLearned={handleToggleLearned}
       />

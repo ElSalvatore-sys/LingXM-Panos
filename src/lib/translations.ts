@@ -81,6 +81,13 @@ export interface Translations {
   'gender.masculine': string;
   'gender.feminine': string;
   'gender.neuter': string;
+
+  // Stats bar
+  dayStreak: string;
+  wordsLearned: string;
+  bookmarked: string;
+  todayProgress: string;
+  dailyGoal: string;
 }
 
 const englishTranslations: Translations = {
@@ -164,6 +171,13 @@ const englishTranslations: Translations = {
   'gender.masculine': 'Masculine',
   'gender.feminine': 'Feminine',
   'gender.neuter': 'Neuter',
+
+  // Stats bar
+  dayStreak: '{count} day streak',
+  wordsLearned: '{count} words learned',
+  bookmarked: '{count} bookmarked',
+  todayProgress: '{count}/{goal} today',
+  dailyGoal: 'Daily goal',
 };
 
 const germanTranslations: Translations = {
@@ -247,6 +261,13 @@ const germanTranslations: Translations = {
   'gender.masculine': 'Maskulin',
   'gender.feminine': 'Feminin',
   'gender.neuter': 'Neutrum',
+
+  // Stats bar
+  dayStreak: '{count} Tage Serie',
+  wordsLearned: '{count} Wörter gelernt',
+  bookmarked: '{count} gespeichert',
+  todayProgress: '{count}/{goal} heute',
+  dailyGoal: 'Tagesziel',
 };
 
 const frenchTranslations: Translations = {
@@ -330,6 +351,13 @@ const frenchTranslations: Translations = {
   'gender.masculine': 'Masculin',
   'gender.feminine': 'Féminin',
   'gender.neuter': 'Neutre',
+
+  // Stats bar
+  dayStreak: '{count} jours de suite',
+  wordsLearned: '{count} mots appris',
+  bookmarked: '{count} favoris',
+  todayProgress: "{count}/{goal} aujourd'hui",
+  dailyGoal: 'Objectif quotidien',
 };
 
 const spanishTranslations: Translations = {
@@ -413,6 +441,13 @@ const spanishTranslations: Translations = {
   'gender.masculine': 'Masculino',
   'gender.feminine': 'Femenino',
   'gender.neuter': 'Neutro',
+
+  // Stats bar
+  dayStreak: '{count} días seguidos',
+  wordsLearned: '{count} palabras aprendidas',
+  bookmarked: '{count} guardados',
+  todayProgress: '{count}/{goal} hoy',
+  dailyGoal: 'Meta diaria',
 };
 
 const russianTranslations: Translations = {
@@ -496,6 +531,13 @@ const russianTranslations: Translations = {
   'gender.masculine': 'Мужской',
   'gender.feminine': 'Женский',
   'gender.neuter': 'Средний',
+
+  // Stats bar
+  dayStreak: '{count} дней подряд',
+  wordsLearned: '{count} слов изучено',
+  bookmarked: '{count} сохранено',
+  todayProgress: '{count}/{goal} сегодня',
+  dailyGoal: 'Ежедневная цель',
 };
 
 const greekTranslations: Translations = {
@@ -579,6 +621,13 @@ const greekTranslations: Translations = {
   'gender.masculine': 'Αρσενικό',
   'gender.feminine': 'Θηλυκό',
   'gender.neuter': 'Ουδέτερο',
+
+  // Stats bar
+  dayStreak: '{count} ημέρες σερί',
+  wordsLearned: '{count} λέξεις μαθημένες',
+  bookmarked: '{count} αποθηκευμένα',
+  todayProgress: '{count}/{goal} σήμερα',
+  dailyGoal: 'Ημερήσιος στόχος',
 };
 
 // All translations

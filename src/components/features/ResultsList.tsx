@@ -1,4 +1,8 @@
+import { useState } from 'react';
+import { Volume2Icon } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { speak, isTTSAvailable } from '@/lib/audioService';
+import type { LanguageCode } from '@/types';
 
 interface ResultItem {
   id: number;
@@ -11,14 +15,32 @@ interface ResultsListProps {
   onResultClick: (id: number) => void;
   title?: string;
   className?: string;
+  targetLanguage?: LanguageCode;
 }
 
 export function ResultsList({
   results,
   onResultClick,
   title = 'Open Results at...',
-  className
+  className,
+  targetLanguage = 'de'
 }: ResultsListProps) {
+  const [speakingId, setSpeakingId] = useState<number | null>(null);
+
+  // Handle pronunciation
+  const handleSpeak = async (e: React.MouseEvent, id: number, word: string) => {
+    e.stopPropagation(); // Don't trigger row click
+
+    if (!isTTSAvailable()) return;
+
+    setSpeakingId(id);
+    try {
+      await speak(word, targetLanguage);
+    } finally {
+      setSpeakingId(null);
+    }
+  };
+
   // Helper to highlight a word in the sentence
   const highlightText = (sentence: string, word?: string) => {
     if (!word) return sentence;
@@ -57,10 +79,26 @@ export function ResultsList({
       {/* Results list */}
       <ul className="space-y-5">
         {results.map((result) => (
-          <li key={result.id}>
+          <li key={result.id} className="flex items-center gap-2">
+            {/* Speaker button */}
+            {isTTSAvailable() && result.highlightWord && (
+              <button
+                onClick={(e) => handleSpeak(e, result.id, result.highlightWord!)}
+                className={cn(
+                  'flex-shrink-0 p-1.5 rounded-full hover:bg-gray-100 transition-colors',
+                  speakingId === result.id ? 'text-lingxm-blue animate-pulse' : 'text-gray-400 hover:text-gray-600'
+                )}
+                title="Pronounce"
+                aria-label={`Pronounce ${result.highlightWord}`}
+              >
+                <Volume2Icon className="w-4 h-4" />
+              </button>
+            )}
+
+            {/* Result text */}
             <button
               onClick={() => onResultClick(result.id)}
-              className="flex items-start gap-2 text-left hover:text-lingxm-blue transition-colors w-full"
+              className="flex items-start gap-2 text-left hover:text-lingxm-blue transition-colors flex-1"
               style={{
                 fontSize: '18px',
                 lineHeight: '24px'
