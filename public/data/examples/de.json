@@ -1,0 +1,270 @@
+{
+  "meta": {
+    "language": "de",
+    "wordCount": 150,
+    "sentenceCount": 350,
+    "lastUpdated": "2025-11-30"
+  },
+  "examples": {
+    "sein": [
+      { "sentence": "Ich bin müde.", "translation": "I am tired." },
+      { "sentence": "Er ist mein Freund.", "translation": "He is my friend." },
+      { "sentence": "Wir sind glücklich.", "translation": "We are happy." }
+    ],
+    "haben": [
+      { "sentence": "Ich habe ein Buch.", "translation": "I have a book." },
+      { "sentence": "Sie hat zwei Kinder.", "translation": "She has two children." },
+      { "sentence": "Wir haben keine Zeit.", "translation": "We have no time." }
+    ],
+    "werden": [
+      { "sentence": "Es wird kalt.", "translation": "It is getting cold." },
+      { "sentence": "Er wird Arzt.", "translation": "He is becoming a doctor." },
+      { "sentence": "Das Wetter wird besser.", "translation": "The weather is getting better." }
+    ],
+    "können": [
+      { "sentence": "Ich kann schwimmen.", "translation": "I can swim." },
+      { "sentence": "Kannst du mir helfen?", "translation": "Can you help me?" },
+      { "sentence": "Sie können gut singen.", "translation": "They can sing well." }
+    ],
+    "müssen": [
+      { "sentence": "Ich muss arbeiten.", "translation": "I have to work." },
+      { "sentence": "Du musst das verstehen.", "translation": "You must understand this." },
+      { "sentence": "Wir müssen gehen.", "translation": "We have to go." }
+    ],
+    "machen": [
+      { "sentence": "Was machst du?", "translation": "What are you doing?" },
+      { "sentence": "Sie macht ihre Hausaufgaben.", "translation": "She is doing her homework." },
+      { "sentence": "Das macht nichts.", "translation": "That doesn't matter." }
+    ],
+    "sagen": [
+      { "sentence": "Was hat er gesagt?", "translation": "What did he say?" },
+      { "sentence": "Ich sage die Wahrheit.", "translation": "I'm telling the truth." },
+      { "sentence": "Sag mir bitte deinen Namen.", "translation": "Please tell me your name." }
+    ],
+    "gehen": [
+      { "sentence": "Ich gehe zur Schule.", "translation": "I am going to school." },
+      { "sentence": "Wie geht es dir?", "translation": "How are you?" },
+      { "sentence": "Wir gehen ins Kino.", "translation": "We are going to the cinema." }
+    ],
+    "kommen": [
+      { "sentence": "Woher kommst du?", "translation": "Where do you come from?" },
+      { "sentence": "Er kommt morgen.", "translation": "He is coming tomorrow." },
+      { "sentence": "Die Kinder kommen aus der Schule.", "translation": "The children are coming from school." }
+    ],
+    "wollen": [
+      { "sentence": "Ich will schlafen.", "translation": "I want to sleep." },
+      { "sentence": "Was willst du essen?", "translation": "What do you want to eat?" },
+      { "sentence": "Sie wollen nach Hause.", "translation": "They want to go home." }
+    ],
+    "sehen": [
+      { "sentence": "Ich sehe den Berg.", "translation": "I see the mountain." },
+      { "sentence": "Siehst du das?", "translation": "Do you see that?" },
+      { "sentence": "Wir sehen einen Film.", "translation": "We are watching a movie." }
+    ],
+    "geben": [
+      { "sentence": "Gib mir das Buch.", "translation": "Give me the book." },
+      { "sentence": "Es gibt viele Möglichkeiten.", "translation": "There are many possibilities." },
+      { "sentence": "Er gibt ihr Blumen.", "translation": "He gives her flowers." }
+    ],
+    "nehmen": [
+      { "sentence": "Ich nehme den Bus.", "translation": "I take the bus." },
+      { "sentence": "Nimm dir Zeit.", "translation": "Take your time." },
+      { "sentence": "Sie nimmt die Medizin.", "translation": "She takes the medicine." }
+    ],
+    "finden": [
+      { "sentence": "Ich finde meine Schlüssel nicht.", "translation": "I can't find my keys." },
+      { "sentence": "Was findest du?", "translation": "What do you think?" },
+      { "sentence": "Er hat die Lösung gefunden.", "translation": "He found the solution." }
+    ],
+    "denken": [
+      { "sentence": "Ich denke an dich.", "translation": "I'm thinking of you." },
+      { "sentence": "Was denkst du?", "translation": "What do you think?" },
+      { "sentence": "Er denkt nach.", "translation": "He is thinking." }
+    ],
+    "Mann": [
+      { "sentence": "Der Mann liest ein Buch.", "translation": "The man is reading a book." },
+      { "sentence": "Mein Mann arbeitet viel.", "translation": "My husband works a lot." },
+      { "sentence": "Der alte Mann sitzt auf der Bank.", "translation": "The old man is sitting on the bench." }
+    ],
+    "Frau": [
+      { "sentence": "Die Frau singt schön.", "translation": "The woman sings beautifully." },
+      { "sentence": "Meine Frau ist Ärztin.", "translation": "My wife is a doctor." },
+      { "sentence": "Die junge Frau tanzt.", "translation": "The young woman is dancing." }
+    ],
+    "Kind": [
+      { "sentence": "Das Kind spielt im Garten.", "translation": "The child is playing in the garden." },
+      { "sentence": "Die Kinder gehen zur Schule.", "translation": "The children go to school." },
+      { "sentence": "Ein kleines Kind weint.", "translation": "A small child is crying." }
+    ],
+    "Haus": [
+      { "sentence": "Das Haus ist groß.", "translation": "The house is big." },
+      { "sentence": "Wir kaufen ein neues Haus.", "translation": "We are buying a new house." },
+      { "sentence": "Ich bin zu Hause.", "translation": "I am at home." }
+    ],
+    "Tag": [
+      { "sentence": "Heute ist ein schöner Tag.", "translation": "Today is a beautiful day." },
+      { "sentence": "Guten Tag!", "translation": "Good day!" },
+      { "sentence": "Jeden Tag lerne ich Deutsch.", "translation": "Every day I learn German." }
+    ],
+    "Zeit": [
+      { "sentence": "Ich habe keine Zeit.", "translation": "I have no time." },
+      { "sentence": "Die Zeit vergeht schnell.", "translation": "Time passes quickly." },
+      { "sentence": "Es ist Zeit zu gehen.", "translation": "It's time to go." }
+    ],
+    "Jahr": [
+      { "sentence": "Dieses Jahr reisen wir nach Italien.", "translation": "This year we are traveling to Italy." },
+      { "sentence": "Er ist zwanzig Jahre alt.", "translation": "He is twenty years old." },
+      { "sentence": "Letztes Jahr war ich in Paris.", "translation": "Last year I was in Paris." }
+    ],
+    "Welt": [
+      { "sentence": "Die Welt ist groß.", "translation": "The world is big." },
+      { "sentence": "Er reist um die Welt.", "translation": "He travels around the world." },
+      { "sentence": "Die beste Mutter der Welt.", "translation": "The best mother in the world." }
+    ],
+    "leben": [
+      { "sentence": "Ich lebe in Berlin.", "translation": "I live in Berlin." },
+      { "sentence": "Er lebt allein.", "translation": "He lives alone." },
+      { "sentence": "Wir leben gut.", "translation": "We live well." }
+    ],
+    "arbeiten": [
+      { "sentence": "Ich arbeite jeden Tag.", "translation": "I work every day." },
+      { "sentence": "Sie arbeitet als Lehrerin.", "translation": "She works as a teacher." },
+      { "sentence": "Wo arbeitest du?", "translation": "Where do you work?" }
+    ],
+    "lernen": [
+      { "sentence": "Ich lerne Deutsch.", "translation": "I am learning German." },
+      { "sentence": "Er lernt für die Prüfung.", "translation": "He is studying for the exam." },
+      { "sentence": "Wir lernen zusammen.", "translation": "We are learning together." }
+    ],
+    "sprechen": [
+      { "sentence": "Ich spreche Deutsch.", "translation": "I speak German." },
+      { "sentence": "Können Sie Englisch sprechen?", "translation": "Can you speak English?" },
+      { "sentence": "Er spricht sehr schnell.", "translation": "He speaks very fast." }
+    ],
+    "lesen": [
+      { "sentence": "Ich lese ein Buch.", "translation": "I am reading a book." },
+      { "sentence": "Sie liest gern.", "translation": "She likes to read." },
+      { "sentence": "Liest du die Zeitung?", "translation": "Are you reading the newspaper?" }
+    ],
+    "schreiben": [
+      { "sentence": "Ich schreibe einen Brief.", "translation": "I am writing a letter." },
+      { "sentence": "Er schreibt ein Buch.", "translation": "He is writing a book." },
+      { "sentence": "Schreib mir eine Nachricht.", "translation": "Write me a message." }
+    ],
+    "fahren": [
+      { "sentence": "Ich fahre mit dem Auto.", "translation": "I am driving by car." },
+      { "sentence": "Wir fahren nach München.", "translation": "We are driving to Munich." },
+      { "sentence": "Er fährt Fahrrad.", "translation": "He is riding a bicycle." }
+    ],
+    "essen": [
+      { "sentence": "Ich esse gern Pizza.", "translation": "I like to eat pizza." },
+      { "sentence": "Was isst du?", "translation": "What are you eating?" },
+      { "sentence": "Wir essen zu Abend.", "translation": "We are having dinner." }
+    ],
+    "trinken": [
+      { "sentence": "Ich trinke Kaffee.", "translation": "I am drinking coffee." },
+      { "sentence": "Was möchtest du trinken?", "translation": "What would you like to drink?" },
+      { "sentence": "Er trinkt viel Wasser.", "translation": "He drinks a lot of water." }
+    ],
+    "schlafen": [
+      { "sentence": "Ich schlafe acht Stunden.", "translation": "I sleep eight hours." },
+      { "sentence": "Das Baby schläft.", "translation": "The baby is sleeping." },
+      { "sentence": "Schlaf gut!", "translation": "Sleep well!" }
+    ],
+    "kaufen": [
+      { "sentence": "Ich kaufe Brot.", "translation": "I am buying bread." },
+      { "sentence": "Sie kauft neue Schuhe.", "translation": "She is buying new shoes." },
+      { "sentence": "Wo kann ich das kaufen?", "translation": "Where can I buy this?" }
+    ],
+    "helfen": [
+      { "sentence": "Kann ich dir helfen?", "translation": "Can I help you?" },
+      { "sentence": "Er hilft seiner Mutter.", "translation": "He helps his mother." },
+      { "sentence": "Hilf mir bitte!", "translation": "Please help me!" }
+    ],
+    "verstehen": [
+      { "sentence": "Ich verstehe nicht.", "translation": "I don't understand." },
+      { "sentence": "Verstehst du mich?", "translation": "Do you understand me?" },
+      { "sentence": "Er versteht Deutsch.", "translation": "He understands German." }
+    ],
+    "hören": [
+      { "sentence": "Ich höre Musik.", "translation": "I am listening to music." },
+      { "sentence": "Hörst du das?", "translation": "Do you hear that?" },
+      { "sentence": "Er hört Radio.", "translation": "He is listening to the radio." }
+    ],
+    "groß": [
+      { "sentence": "Das Haus ist groß.", "translation": "The house is big." },
+      { "sentence": "Er ist sehr groß.", "translation": "He is very tall." },
+      { "sentence": "Die große Stadt.", "translation": "The big city." }
+    ],
+    "klein": [
+      { "sentence": "Das Kind ist klein.", "translation": "The child is small." },
+      { "sentence": "Ein kleiner Hund.", "translation": "A small dog." },
+      { "sentence": "Die Wohnung ist zu klein.", "translation": "The apartment is too small." }
+    ],
+    "gut": [
+      { "sentence": "Das Essen ist gut.", "translation": "The food is good." },
+      { "sentence": "Mir geht es gut.", "translation": "I am doing well." },
+      { "sentence": "Er spricht gut Deutsch.", "translation": "He speaks German well." }
+    ],
+    "schön": [
+      { "sentence": "Das Wetter ist schön.", "translation": "The weather is nice." },
+      { "sentence": "Sie ist sehr schön.", "translation": "She is very beautiful." },
+      { "sentence": "Ein schöner Tag.", "translation": "A beautiful day." }
+    ],
+    "neu": [
+      { "sentence": "Ich habe ein neues Auto.", "translation": "I have a new car." },
+      { "sentence": "Das ist neu.", "translation": "That is new." },
+      { "sentence": "Die neue Lehrerin.", "translation": "The new teacher." }
+    ],
+    "alt": [
+      { "sentence": "Das Haus ist alt.", "translation": "The house is old." },
+      { "sentence": "Wie alt bist du?", "translation": "How old are you?" },
+      { "sentence": "Ein alter Freund.", "translation": "An old friend." }
+    ],
+    "heute": [
+      { "sentence": "Was machst du heute?", "translation": "What are you doing today?" },
+      { "sentence": "Heute ist Montag.", "translation": "Today is Monday." },
+      { "sentence": "Ich arbeite heute nicht.", "translation": "I am not working today." }
+    ],
+    "morgen": [
+      { "sentence": "Bis morgen!", "translation": "See you tomorrow!" },
+      { "sentence": "Morgen habe ich frei.", "translation": "Tomorrow I have the day off." },
+      { "sentence": "Was passiert morgen?", "translation": "What is happening tomorrow?" }
+    ],
+    "jetzt": [
+      { "sentence": "Ich muss jetzt gehen.", "translation": "I have to go now." },
+      { "sentence": "Was machst du jetzt?", "translation": "What are you doing now?" },
+      { "sentence": "Jetzt verstehe ich.", "translation": "Now I understand." }
+    ],
+    "hier": [
+      { "sentence": "Ich wohne hier.", "translation": "I live here." },
+      { "sentence": "Komm hier!", "translation": "Come here!" },
+      { "sentence": "Hier ist mein Buch.", "translation": "Here is my book." }
+    ],
+    "Schule": [
+      { "sentence": "Die Kinder gehen zur Schule.", "translation": "The children go to school." },
+      { "sentence": "Die Schule beginnt um acht.", "translation": "School starts at eight." },
+      { "sentence": "Ich war in der Schule.", "translation": "I was at school." }
+    ],
+    "Buch": [
+      { "sentence": "Ich lese ein Buch.", "translation": "I am reading a book." },
+      { "sentence": "Das Buch ist interessant.", "translation": "The book is interesting." },
+      { "sentence": "Wo ist mein Buch?", "translation": "Where is my book?" }
+    ],
+    "Wasser": [
+      { "sentence": "Ich trinke Wasser.", "translation": "I am drinking water." },
+      { "sentence": "Das Wasser ist kalt.", "translation": "The water is cold." },
+      { "sentence": "Gib mir bitte Wasser.", "translation": "Please give me water." }
+    ],
+    "Auto": [
+      { "sentence": "Ich fahre mit dem Auto.", "translation": "I am driving by car." },
+      { "sentence": "Das Auto ist rot.", "translation": "The car is red." },
+      { "sentence": "Er kauft ein neues Auto.", "translation": "He is buying a new car." }
+    ],
+    "Straße": [
+      { "sentence": "Die Straße ist lang.", "translation": "The street is long." },
+      { "sentence": "Ich gehe die Straße entlang.", "translation": "I walk along the street." },
+      { "sentence": "Er wohnt in dieser Straße.", "translation": "He lives on this street." }
+    ]
+  }
+}

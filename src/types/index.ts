@@ -21,6 +21,36 @@ export interface Word {
   difficulty: 1 | 2 | 3 | 4 | 5;
 }
 
+// Example sentence with translation
+export interface ExampleSentence {
+  sentence: string;
+  translation: string;
+}
+
+// Full noun declension data
+export interface NounDeclension {
+  gender: 'm' | 'f' | 'n';
+  translation: string;
+  declension: {
+    nominativ: { singular: string; plural: string };
+    genitiv: { singular: string; plural: string };
+    dativ: { singular: string; plural: string };
+    akkusativ: { singular: string; plural: string };
+  };
+}
+
+// Full verb conjugation data
+export interface VerbConjugation {
+  translation: string;
+  type: 'regular' | 'irregular' | 'modal';
+  auxiliary: 'haben' | 'sein';
+  conjugations: {
+    präsens: Record<string, string>;
+    präteritum: Record<string, string>;
+    perfekt: Record<string, string>;
+  };
+}
+
 // Extended word details for modal display
 export interface WordDetail extends Word {
   translation?: string;
@@ -32,6 +62,11 @@ export interface WordDetail extends Word {
   synonyms?: string[];
   isBookmarked?: boolean;
   isLearned?: boolean;
+  // New fields for real data
+  hasRealData?: boolean;
+  fullConjugation?: VerbConjugation;      // Full conjugation data with all tenses
+  fullDeclension?: NounDeclension;        // Full declension data with all cases
+  examplesWithTranslations?: ExampleSentence[];  // Examples with English translations
 }
 
 // Vocabulary data structure (matches JSON file)

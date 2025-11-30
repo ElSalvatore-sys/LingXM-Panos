@@ -1,0 +1,939 @@
+{
+  "meta": {
+    "language": "de",
+    "verbCount": 30,
+    "lastUpdated": "2025-11-30"
+  },
+  "verbs": {
+    "sein": {
+      "translation": "to be",
+      "type": "irregular",
+      "auxiliary": "sein",
+      "conjugations": {
+        "präsens": {
+          "ich": "bin",
+          "du": "bist",
+          "er/sie/es": "ist",
+          "wir": "sind",
+          "ihr": "seid",
+          "sie/Sie": "sind"
+        },
+        "präteritum": {
+          "ich": "war",
+          "du": "warst",
+          "er/sie/es": "war",
+          "wir": "waren",
+          "ihr": "wart",
+          "sie/Sie": "waren"
+        },
+        "perfekt": {
+          "ich": "bin gewesen",
+          "du": "bist gewesen",
+          "er/sie/es": "ist gewesen",
+          "wir": "sind gewesen",
+          "ihr": "seid gewesen",
+          "sie/Sie": "sind gewesen"
+        }
+      }
+    },
+    "haben": {
+      "translation": "to have",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "habe",
+          "du": "hast",
+          "er/sie/es": "hat",
+          "wir": "haben",
+          "ihr": "habt",
+          "sie/Sie": "haben"
+        },
+        "präteritum": {
+          "ich": "hatte",
+          "du": "hattest",
+          "er/sie/es": "hatte",
+          "wir": "hatten",
+          "ihr": "hattet",
+          "sie/Sie": "hatten"
+        },
+        "perfekt": {
+          "ich": "habe gehabt",
+          "du": "hast gehabt",
+          "er/sie/es": "hat gehabt",
+          "wir": "haben gehabt",
+          "ihr": "habt gehabt",
+          "sie/Sie": "haben gehabt"
+        }
+      }
+    },
+    "werden": {
+      "translation": "to become",
+      "type": "irregular",
+      "auxiliary": "sein",
+      "conjugations": {
+        "präsens": {
+          "ich": "werde",
+          "du": "wirst",
+          "er/sie/es": "wird",
+          "wir": "werden",
+          "ihr": "werdet",
+          "sie/Sie": "werden"
+        },
+        "präteritum": {
+          "ich": "wurde",
+          "du": "wurdest",
+          "er/sie/es": "wurde",
+          "wir": "wurden",
+          "ihr": "wurdet",
+          "sie/Sie": "wurden"
+        },
+        "perfekt": {
+          "ich": "bin geworden",
+          "du": "bist geworden",
+          "er/sie/es": "ist geworden",
+          "wir": "sind geworden",
+          "ihr": "seid geworden",
+          "sie/Sie": "sind geworden"
+        }
+      }
+    },
+    "können": {
+      "translation": "can, to be able to",
+      "type": "modal",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "kann",
+          "du": "kannst",
+          "er/sie/es": "kann",
+          "wir": "können",
+          "ihr": "könnt",
+          "sie/Sie": "können"
+        },
+        "präteritum": {
+          "ich": "konnte",
+          "du": "konntest",
+          "er/sie/es": "konnte",
+          "wir": "konnten",
+          "ihr": "konntet",
+          "sie/Sie": "konnten"
+        },
+        "perfekt": {
+          "ich": "habe gekonnt",
+          "du": "hast gekonnt",
+          "er/sie/es": "hat gekonnt",
+          "wir": "haben gekonnt",
+          "ihr": "habt gekonnt",
+          "sie/Sie": "haben gekonnt"
+        }
+      }
+    },
+    "müssen": {
+      "translation": "must, to have to",
+      "type": "modal",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "muss",
+          "du": "musst",
+          "er/sie/es": "muss",
+          "wir": "müssen",
+          "ihr": "müsst",
+          "sie/Sie": "müssen"
+        },
+        "präteritum": {
+          "ich": "musste",
+          "du": "musstest",
+          "er/sie/es": "musste",
+          "wir": "mussten",
+          "ihr": "musstet",
+          "sie/Sie": "mussten"
+        },
+        "perfekt": {
+          "ich": "habe gemusst",
+          "du": "hast gemusst",
+          "er/sie/es": "hat gemusst",
+          "wir": "haben gemusst",
+          "ihr": "habt gemusst",
+          "sie/Sie": "haben gemusst"
+        }
+      }
+    },
+    "wollen": {
+      "translation": "to want",
+      "type": "modal",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "will",
+          "du": "willst",
+          "er/sie/es": "will",
+          "wir": "wollen",
+          "ihr": "wollt",
+          "sie/Sie": "wollen"
+        },
+        "präteritum": {
+          "ich": "wollte",
+          "du": "wolltest",
+          "er/sie/es": "wollte",
+          "wir": "wollten",
+          "ihr": "wolltet",
+          "sie/Sie": "wollten"
+        },
+        "perfekt": {
+          "ich": "habe gewollt",
+          "du": "hast gewollt",
+          "er/sie/es": "hat gewollt",
+          "wir": "haben gewollt",
+          "ihr": "habt gewollt",
+          "sie/Sie": "haben gewollt"
+        }
+      }
+    },
+    "sollen": {
+      "translation": "should, ought to",
+      "type": "modal",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "soll",
+          "du": "sollst",
+          "er/sie/es": "soll",
+          "wir": "sollen",
+          "ihr": "sollt",
+          "sie/Sie": "sollen"
+        },
+        "präteritum": {
+          "ich": "sollte",
+          "du": "solltest",
+          "er/sie/es": "sollte",
+          "wir": "sollten",
+          "ihr": "solltet",
+          "sie/Sie": "sollten"
+        },
+        "perfekt": {
+          "ich": "habe gesollt",
+          "du": "hast gesollt",
+          "er/sie/es": "hat gesollt",
+          "wir": "haben gesollt",
+          "ihr": "habt gesollt",
+          "sie/Sie": "haben gesollt"
+        }
+      }
+    },
+    "dürfen": {
+      "translation": "may, to be allowed to",
+      "type": "modal",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "darf",
+          "du": "darfst",
+          "er/sie/es": "darf",
+          "wir": "dürfen",
+          "ihr": "dürft",
+          "sie/Sie": "dürfen"
+        },
+        "präteritum": {
+          "ich": "durfte",
+          "du": "durftest",
+          "er/sie/es": "durfte",
+          "wir": "durften",
+          "ihr": "durftet",
+          "sie/Sie": "durften"
+        },
+        "perfekt": {
+          "ich": "habe gedurft",
+          "du": "hast gedurft",
+          "er/sie/es": "hat gedurft",
+          "wir": "haben gedurft",
+          "ihr": "habt gedurft",
+          "sie/Sie": "haben gedurft"
+        }
+      }
+    },
+    "mögen": {
+      "translation": "to like",
+      "type": "modal",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "mag",
+          "du": "magst",
+          "er/sie/es": "mag",
+          "wir": "mögen",
+          "ihr": "mögt",
+          "sie/Sie": "mögen"
+        },
+        "präteritum": {
+          "ich": "mochte",
+          "du": "mochtest",
+          "er/sie/es": "mochte",
+          "wir": "mochten",
+          "ihr": "mochtet",
+          "sie/Sie": "mochten"
+        },
+        "perfekt": {
+          "ich": "habe gemocht",
+          "du": "hast gemocht",
+          "er/sie/es": "hat gemocht",
+          "wir": "haben gemocht",
+          "ihr": "habt gemocht",
+          "sie/Sie": "haben gemocht"
+        }
+      }
+    },
+    "machen": {
+      "translation": "to make, to do",
+      "type": "regular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "mache",
+          "du": "machst",
+          "er/sie/es": "macht",
+          "wir": "machen",
+          "ihr": "macht",
+          "sie/Sie": "machen"
+        },
+        "präteritum": {
+          "ich": "machte",
+          "du": "machtest",
+          "er/sie/es": "machte",
+          "wir": "machten",
+          "ihr": "machtet",
+          "sie/Sie": "machten"
+        },
+        "perfekt": {
+          "ich": "habe gemacht",
+          "du": "hast gemacht",
+          "er/sie/es": "hat gemacht",
+          "wir": "haben gemacht",
+          "ihr": "habt gemacht",
+          "sie/Sie": "haben gemacht"
+        }
+      }
+    },
+    "gehen": {
+      "translation": "to go",
+      "type": "irregular",
+      "auxiliary": "sein",
+      "conjugations": {
+        "präsens": {
+          "ich": "gehe",
+          "du": "gehst",
+          "er/sie/es": "geht",
+          "wir": "gehen",
+          "ihr": "geht",
+          "sie/Sie": "gehen"
+        },
+        "präteritum": {
+          "ich": "ging",
+          "du": "gingst",
+          "er/sie/es": "ging",
+          "wir": "gingen",
+          "ihr": "gingt",
+          "sie/Sie": "gingen"
+        },
+        "perfekt": {
+          "ich": "bin gegangen",
+          "du": "bist gegangen",
+          "er/sie/es": "ist gegangen",
+          "wir": "sind gegangen",
+          "ihr": "seid gegangen",
+          "sie/Sie": "sind gegangen"
+        }
+      }
+    },
+    "kommen": {
+      "translation": "to come",
+      "type": "irregular",
+      "auxiliary": "sein",
+      "conjugations": {
+        "präsens": {
+          "ich": "komme",
+          "du": "kommst",
+          "er/sie/es": "kommt",
+          "wir": "kommen",
+          "ihr": "kommt",
+          "sie/Sie": "kommen"
+        },
+        "präteritum": {
+          "ich": "kam",
+          "du": "kamst",
+          "er/sie/es": "kam",
+          "wir": "kamen",
+          "ihr": "kamt",
+          "sie/Sie": "kamen"
+        },
+        "perfekt": {
+          "ich": "bin gekommen",
+          "du": "bist gekommen",
+          "er/sie/es": "ist gekommen",
+          "wir": "sind gekommen",
+          "ihr": "seid gekommen",
+          "sie/Sie": "sind gekommen"
+        }
+      }
+    },
+    "sagen": {
+      "translation": "to say",
+      "type": "regular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "sage",
+          "du": "sagst",
+          "er/sie/es": "sagt",
+          "wir": "sagen",
+          "ihr": "sagt",
+          "sie/Sie": "sagen"
+        },
+        "präteritum": {
+          "ich": "sagte",
+          "du": "sagtest",
+          "er/sie/es": "sagte",
+          "wir": "sagten",
+          "ihr": "sagtet",
+          "sie/Sie": "sagten"
+        },
+        "perfekt": {
+          "ich": "habe gesagt",
+          "du": "hast gesagt",
+          "er/sie/es": "hat gesagt",
+          "wir": "haben gesagt",
+          "ihr": "habt gesagt",
+          "sie/Sie": "haben gesagt"
+        }
+      }
+    },
+    "sehen": {
+      "translation": "to see",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "sehe",
+          "du": "siehst",
+          "er/sie/es": "sieht",
+          "wir": "sehen",
+          "ihr": "seht",
+          "sie/Sie": "sehen"
+        },
+        "präteritum": {
+          "ich": "sah",
+          "du": "sahst",
+          "er/sie/es": "sah",
+          "wir": "sahen",
+          "ihr": "saht",
+          "sie/Sie": "sahen"
+        },
+        "perfekt": {
+          "ich": "habe gesehen",
+          "du": "hast gesehen",
+          "er/sie/es": "hat gesehen",
+          "wir": "haben gesehen",
+          "ihr": "habt gesehen",
+          "sie/Sie": "haben gesehen"
+        }
+      }
+    },
+    "geben": {
+      "translation": "to give",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "gebe",
+          "du": "gibst",
+          "er/sie/es": "gibt",
+          "wir": "geben",
+          "ihr": "gebt",
+          "sie/Sie": "geben"
+        },
+        "präteritum": {
+          "ich": "gab",
+          "du": "gabst",
+          "er/sie/es": "gab",
+          "wir": "gaben",
+          "ihr": "gabt",
+          "sie/Sie": "gaben"
+        },
+        "perfekt": {
+          "ich": "habe gegeben",
+          "du": "hast gegeben",
+          "er/sie/es": "hat gegeben",
+          "wir": "haben gegeben",
+          "ihr": "habt gegeben",
+          "sie/Sie": "haben gegeben"
+        }
+      }
+    },
+    "nehmen": {
+      "translation": "to take",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "nehme",
+          "du": "nimmst",
+          "er/sie/es": "nimmt",
+          "wir": "nehmen",
+          "ihr": "nehmt",
+          "sie/Sie": "nehmen"
+        },
+        "präteritum": {
+          "ich": "nahm",
+          "du": "nahmst",
+          "er/sie/es": "nahm",
+          "wir": "nahmen",
+          "ihr": "nahmt",
+          "sie/Sie": "nahmen"
+        },
+        "perfekt": {
+          "ich": "habe genommen",
+          "du": "hast genommen",
+          "er/sie/es": "hat genommen",
+          "wir": "haben genommen",
+          "ihr": "habt genommen",
+          "sie/Sie": "haben genommen"
+        }
+      }
+    },
+    "finden": {
+      "translation": "to find",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "finde",
+          "du": "findest",
+          "er/sie/es": "findet",
+          "wir": "finden",
+          "ihr": "findet",
+          "sie/Sie": "finden"
+        },
+        "präteritum": {
+          "ich": "fand",
+          "du": "fandest",
+          "er/sie/es": "fand",
+          "wir": "fanden",
+          "ihr": "fandet",
+          "sie/Sie": "fanden"
+        },
+        "perfekt": {
+          "ich": "habe gefunden",
+          "du": "hast gefunden",
+          "er/sie/es": "hat gefunden",
+          "wir": "haben gefunden",
+          "ihr": "habt gefunden",
+          "sie/Sie": "haben gefunden"
+        }
+      }
+    },
+    "denken": {
+      "translation": "to think",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "denke",
+          "du": "denkst",
+          "er/sie/es": "denkt",
+          "wir": "denken",
+          "ihr": "denkt",
+          "sie/Sie": "denken"
+        },
+        "präteritum": {
+          "ich": "dachte",
+          "du": "dachtest",
+          "er/sie/es": "dachte",
+          "wir": "dachten",
+          "ihr": "dachtet",
+          "sie/Sie": "dachten"
+        },
+        "perfekt": {
+          "ich": "habe gedacht",
+          "du": "hast gedacht",
+          "er/sie/es": "hat gedacht",
+          "wir": "haben gedacht",
+          "ihr": "habt gedacht",
+          "sie/Sie": "haben gedacht"
+        }
+      }
+    },
+    "wissen": {
+      "translation": "to know (a fact)",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "weiß",
+          "du": "weißt",
+          "er/sie/es": "weiß",
+          "wir": "wissen",
+          "ihr": "wisst",
+          "sie/Sie": "wissen"
+        },
+        "präteritum": {
+          "ich": "wusste",
+          "du": "wusstest",
+          "er/sie/es": "wusste",
+          "wir": "wussten",
+          "ihr": "wusstet",
+          "sie/Sie": "wussten"
+        },
+        "perfekt": {
+          "ich": "habe gewusst",
+          "du": "hast gewusst",
+          "er/sie/es": "hat gewusst",
+          "wir": "haben gewusst",
+          "ihr": "habt gewusst",
+          "sie/Sie": "haben gewusst"
+        }
+      }
+    },
+    "leben": {
+      "translation": "to live",
+      "type": "regular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "lebe",
+          "du": "lebst",
+          "er/sie/es": "lebt",
+          "wir": "leben",
+          "ihr": "lebt",
+          "sie/Sie": "leben"
+        },
+        "präteritum": {
+          "ich": "lebte",
+          "du": "lebtest",
+          "er/sie/es": "lebte",
+          "wir": "lebten",
+          "ihr": "lebtet",
+          "sie/Sie": "lebten"
+        },
+        "perfekt": {
+          "ich": "habe gelebt",
+          "du": "hast gelebt",
+          "er/sie/es": "hat gelebt",
+          "wir": "haben gelebt",
+          "ihr": "habt gelebt",
+          "sie/Sie": "haben gelebt"
+        }
+      }
+    },
+    "arbeiten": {
+      "translation": "to work",
+      "type": "regular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "arbeite",
+          "du": "arbeitest",
+          "er/sie/es": "arbeitet",
+          "wir": "arbeiten",
+          "ihr": "arbeitet",
+          "sie/Sie": "arbeiten"
+        },
+        "präteritum": {
+          "ich": "arbeitete",
+          "du": "arbeitetest",
+          "er/sie/es": "arbeitete",
+          "wir": "arbeiteten",
+          "ihr": "arbeitetet",
+          "sie/Sie": "arbeiteten"
+        },
+        "perfekt": {
+          "ich": "habe gearbeitet",
+          "du": "hast gearbeitet",
+          "er/sie/es": "hat gearbeitet",
+          "wir": "haben gearbeitet",
+          "ihr": "habt gearbeitet",
+          "sie/Sie": "haben gearbeitet"
+        }
+      }
+    },
+    "lernen": {
+      "translation": "to learn",
+      "type": "regular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "lerne",
+          "du": "lernst",
+          "er/sie/es": "lernt",
+          "wir": "lernen",
+          "ihr": "lernt",
+          "sie/Sie": "lernen"
+        },
+        "präteritum": {
+          "ich": "lernte",
+          "du": "lerntest",
+          "er/sie/es": "lernte",
+          "wir": "lernten",
+          "ihr": "lerntet",
+          "sie/Sie": "lernten"
+        },
+        "perfekt": {
+          "ich": "habe gelernt",
+          "du": "hast gelernt",
+          "er/sie/es": "hat gelernt",
+          "wir": "haben gelernt",
+          "ihr": "habt gelernt",
+          "sie/Sie": "haben gelernt"
+        }
+      }
+    },
+    "sprechen": {
+      "translation": "to speak",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "spreche",
+          "du": "sprichst",
+          "er/sie/es": "spricht",
+          "wir": "sprechen",
+          "ihr": "sprecht",
+          "sie/Sie": "sprechen"
+        },
+        "präteritum": {
+          "ich": "sprach",
+          "du": "sprachst",
+          "er/sie/es": "sprach",
+          "wir": "sprachen",
+          "ihr": "spracht",
+          "sie/Sie": "sprachen"
+        },
+        "perfekt": {
+          "ich": "habe gesprochen",
+          "du": "hast gesprochen",
+          "er/sie/es": "hat gesprochen",
+          "wir": "haben gesprochen",
+          "ihr": "habt gesprochen",
+          "sie/Sie": "haben gesprochen"
+        }
+      }
+    },
+    "lesen": {
+      "translation": "to read",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "lese",
+          "du": "liest",
+          "er/sie/es": "liest",
+          "wir": "lesen",
+          "ihr": "lest",
+          "sie/Sie": "lesen"
+        },
+        "präteritum": {
+          "ich": "las",
+          "du": "lasest",
+          "er/sie/es": "las",
+          "wir": "lasen",
+          "ihr": "last",
+          "sie/Sie": "lasen"
+        },
+        "perfekt": {
+          "ich": "habe gelesen",
+          "du": "hast gelesen",
+          "er/sie/es": "hat gelesen",
+          "wir": "haben gelesen",
+          "ihr": "habt gelesen",
+          "sie/Sie": "haben gelesen"
+        }
+      }
+    },
+    "schreiben": {
+      "translation": "to write",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "schreibe",
+          "du": "schreibst",
+          "er/sie/es": "schreibt",
+          "wir": "schreiben",
+          "ihr": "schreibt",
+          "sie/Sie": "schreiben"
+        },
+        "präteritum": {
+          "ich": "schrieb",
+          "du": "schriebst",
+          "er/sie/es": "schrieb",
+          "wir": "schrieben",
+          "ihr": "schriebt",
+          "sie/Sie": "schrieben"
+        },
+        "perfekt": {
+          "ich": "habe geschrieben",
+          "du": "hast geschrieben",
+          "er/sie/es": "hat geschrieben",
+          "wir": "haben geschrieben",
+          "ihr": "habt geschrieben",
+          "sie/Sie": "haben geschrieben"
+        }
+      }
+    },
+    "fahren": {
+      "translation": "to drive, to travel",
+      "type": "irregular",
+      "auxiliary": "sein",
+      "conjugations": {
+        "präsens": {
+          "ich": "fahre",
+          "du": "fährst",
+          "er/sie/es": "fährt",
+          "wir": "fahren",
+          "ihr": "fahrt",
+          "sie/Sie": "fahren"
+        },
+        "präteritum": {
+          "ich": "fuhr",
+          "du": "fuhrst",
+          "er/sie/es": "fuhr",
+          "wir": "fuhren",
+          "ihr": "fuhrt",
+          "sie/Sie": "fuhren"
+        },
+        "perfekt": {
+          "ich": "bin gefahren",
+          "du": "bist gefahren",
+          "er/sie/es": "ist gefahren",
+          "wir": "sind gefahren",
+          "ihr": "seid gefahren",
+          "sie/Sie": "sind gefahren"
+        }
+      }
+    },
+    "essen": {
+      "translation": "to eat",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "esse",
+          "du": "isst",
+          "er/sie/es": "isst",
+          "wir": "essen",
+          "ihr": "esst",
+          "sie/Sie": "essen"
+        },
+        "präteritum": {
+          "ich": "aß",
+          "du": "aßest",
+          "er/sie/es": "aß",
+          "wir": "aßen",
+          "ihr": "aßt",
+          "sie/Sie": "aßen"
+        },
+        "perfekt": {
+          "ich": "habe gegessen",
+          "du": "hast gegessen",
+          "er/sie/es": "hat gegessen",
+          "wir": "haben gegessen",
+          "ihr": "habt gegessen",
+          "sie/Sie": "haben gegessen"
+        }
+      }
+    },
+    "trinken": {
+      "translation": "to drink",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "trinke",
+          "du": "trinkst",
+          "er/sie/es": "trinkt",
+          "wir": "trinken",
+          "ihr": "trinkt",
+          "sie/Sie": "trinken"
+        },
+        "präteritum": {
+          "ich": "trank",
+          "du": "trankst",
+          "er/sie/es": "trank",
+          "wir": "tranken",
+          "ihr": "trankt",
+          "sie/Sie": "tranken"
+        },
+        "perfekt": {
+          "ich": "habe getrunken",
+          "du": "hast getrunken",
+          "er/sie/es": "hat getrunken",
+          "wir": "haben getrunken",
+          "ihr": "habt getrunken",
+          "sie/Sie": "haben getrunken"
+        }
+      }
+    },
+    "schlafen": {
+      "translation": "to sleep",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "schlafe",
+          "du": "schläfst",
+          "er/sie/es": "schläft",
+          "wir": "schlafen",
+          "ihr": "schlaft",
+          "sie/Sie": "schlafen"
+        },
+        "präteritum": {
+          "ich": "schlief",
+          "du": "schliefst",
+          "er/sie/es": "schlief",
+          "wir": "schliefen",
+          "ihr": "schlieft",
+          "sie/Sie": "schliefen"
+        },
+        "perfekt": {
+          "ich": "habe geschlafen",
+          "du": "hast geschlafen",
+          "er/sie/es": "hat geschlafen",
+          "wir": "haben geschlafen",
+          "ihr": "habt geschlafen",
+          "sie/Sie": "haben geschlafen"
+        }
+      }
+    },
+    "helfen": {
+      "translation": "to help",
+      "type": "irregular",
+      "auxiliary": "haben",
+      "conjugations": {
+        "präsens": {
+          "ich": "helfe",
+          "du": "hilfst",
+          "er/sie/es": "hilft",
+          "wir": "helfen",
+          "ihr": "helft",
+          "sie/Sie": "helfen"
+        },
+        "präteritum": {
+          "ich": "half",
+          "du": "halfst",
+          "er/sie/es": "half",
+          "wir": "halfen",
+          "ihr": "halft",
+          "sie/Sie": "halfen"
+        },
+        "perfekt": {
+          "ich": "habe geholfen",
+          "du": "hast geholfen",
+          "er/sie/es": "hat geholfen",
+          "wir": "haben geholfen",
+          "ihr": "habt geholfen",
+          "sie/Sie": "haben geholfen"
+        }
+      }
+    }
+  }
+}

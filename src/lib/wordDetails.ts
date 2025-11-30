@@ -1,7 +1,17 @@
 import type { Word, WordDetail, LanguageCode } from '@/types'
+import {
+  getTranslation,
+  getExamples,
+  getDeclension,
+  getConjugation,
+  type TranslationData,
+  type ExampleSentence,
+  type NounDeclension,
+  type VerbConjugation,
+} from './grammarData'
 
-// Mock translations by language
-const mockTranslations: Record<LanguageCode, Record<string, string>> = {
+// Fallback translations by language (used when real data not available)
+const fallbackTranslations: Record<LanguageCode, Record<string, string>> = {
   de: {
     'der': 'the (masculine)',
     'die': 'the (feminine/plural)',
@@ -23,16 +33,6 @@ const mockTranslations: Record<LanguageCode, Record<string, string>> = {
     'stehen': 'to stand',
     'finden': 'to find',
     'bleiben': 'to stay',
-    'Hund': 'dog',
-    'Katze': 'cat',
-    'Haus': 'house',
-    'Mann': 'man',
-    'Frau': 'woman',
-    'Kind': 'child',
-    'Tag': 'day',
-    'Jahr': 'year',
-    'Zeit': 'time',
-    'Hand': 'hand',
   },
   en: {
     'the': 'der/die/das',
@@ -132,143 +132,13 @@ const mockTranslations: Record<LanguageCode, Record<string, string>> = {
   },
 }
 
-// Mock example sentences by language
-const mockExamples: Record<LanguageCode, Record<string, string[]>> = {
-  de: {
-    'Hund': [
-      'Der Hund läuft im Park.',
-      'Mein Hund ist sehr freundlich.',
-      'Der Hund bellt laut.',
-    ],
-    'gehen': [
-      'Ich gehe nach Hause.',
-      'Wir gehen ins Kino.',
-      'Er geht zur Arbeit.',
-    ],
-    'haben': [
-      'Ich habe ein Auto.',
-      'Hast du Zeit?',
-      'Wir haben Hunger.',
-    ],
-    'sein': [
-      'Ich bin müde.',
-      'Das ist schön.',
-      'Wir sind hier.',
-    ],
-  },
-  en: {
-    'dog': [
-      'The dog is running in the park.',
-      'My dog is very friendly.',
-      'The dog barks loudly.',
-    ],
-    'go': [
-      'I go to school every day.',
-      'We go to the movies.',
-      'She goes to work.',
-    ],
-  },
-  fr: {
-    'chien': [
-      'Le chien court dans le parc.',
-      'Mon chien est très gentil.',
-      'Le chien aboie fort.',
-    ],
-  },
-  es: {
-    'perro': [
-      'El perro corre en el parque.',
-      'Mi perro es muy amigable.',
-      'El perro ladra fuerte.',
-    ],
-  },
-  it: {},
-  ru: {},
-  el: {},
-  tr: {},
-  pt: {},
-}
-
-// German noun declensions (example patterns)
-const germanDeclensions: Record<string, Record<string, string>> = {
-  'Hund': {
-    nominativ: 'der Hund',
-    genitiv: 'des Hundes',
-    dativ: 'dem Hund(e)',
-    akkusativ: 'den Hund',
-  },
-  'Katze': {
-    nominativ: 'die Katze',
-    genitiv: 'der Katze',
-    dativ: 'der Katze',
-    akkusativ: 'die Katze',
-  },
-  'Haus': {
-    nominativ: 'das Haus',
-    genitiv: 'des Hauses',
-    dativ: 'dem Haus(e)',
-    akkusativ: 'das Haus',
-  },
-  'Mann': {
-    nominativ: 'der Mann',
-    genitiv: 'des Mannes',
-    dativ: 'dem Mann(e)',
-    akkusativ: 'den Mann',
-  },
-  'Frau': {
-    nominativ: 'die Frau',
-    genitiv: 'der Frau',
-    dativ: 'der Frau',
-    akkusativ: 'die Frau',
-  },
-}
-
-// German verb conjugations (present tense)
-const germanConjugations: Record<string, Record<string, string>> = {
-  'gehen': {
-    'ich': 'gehe',
-    'du': 'gehst',
-    'er/sie/es': 'geht',
-    'wir': 'gehen',
-    'ihr': 'geht',
-    'sie/Sie': 'gehen',
-  },
-  'haben': {
-    'ich': 'habe',
-    'du': 'hast',
-    'er/sie/es': 'hat',
-    'wir': 'haben',
-    'ihr': 'habt',
-    'sie/Sie': 'haben',
-  },
-  'sein': {
-    'ich': 'bin',
-    'du': 'bist',
-    'er/sie/es': 'ist',
-    'wir': 'sind',
-    'ihr': 'seid',
-    'sie/Sie': 'sind',
-  },
-  'werden': {
-    'ich': 'werde',
-    'du': 'wirst',
-    'er/sie/es': 'wird',
-    'wir': 'werden',
-    'ihr': 'werdet',
-    'sie/Sie': 'werden',
-  },
-  'können': {
-    'ich': 'kann',
-    'du': 'kannst',
-    'er/sie/es': 'kann',
-    'wir': 'können',
-    'ihr': 'könnt',
-    'sie/Sie': 'können',
-  },
-}
-
 // Detect part of speech based on word patterns
-function detectPartOfSpeech(word: string, language: LanguageCode): WordDetail['partOfSpeech'] {
+function detectPartOfSpeech(word: string, language: LanguageCode, translationData?: TranslationData | null): WordDetail['partOfSpeech'] {
+  // If we have real data, use it
+  if (translationData?.partOfSpeech) {
+    return translationData.partOfSpeech as WordDetail['partOfSpeech']
+  }
+
   const lowerWord = word.toLowerCase()
 
   if (language === 'de') {
@@ -297,9 +167,35 @@ function detectPartOfSpeech(word: string, language: LanguageCode): WordDetail['p
 }
 
 // Detect gender for German nouns
-function detectGender(word: string, language: LanguageCode): WordDetail['gender'] {
+function detectGender(
+  word: string,
+  language: LanguageCode,
+  translationData?: TranslationData | null,
+  declensionData?: NounDeclension | null
+): WordDetail['gender'] {
   if (language !== 'de') return undefined
 
+  // Priority 1: Declension data (most accurate)
+  if (declensionData?.gender) {
+    const genderMap: Record<string, WordDetail['gender']> = {
+      'm': 'masculine',
+      'f': 'feminine',
+      'n': 'neuter',
+    }
+    return genderMap[declensionData.gender]
+  }
+
+  // Priority 2: Translation data
+  if (translationData?.gender) {
+    const genderMap: Record<string, WordDetail['gender']> = {
+      'm': 'masculine',
+      'f': 'feminine',
+      'n': 'neuter',
+    }
+    return genderMap[translationData.gender]
+  }
+
+  // Priority 3: Pattern-based detection
   const lowerWord = word.toLowerCase()
 
   // Common masculine endings
@@ -317,63 +213,10 @@ function detectGender(word: string, language: LanguageCode): WordDetail['gender'
     return 'neuter'
   }
 
-  // Known words
-  const genders: Record<string, WordDetail['gender']> = {
-    'Hund': 'masculine',
-    'Katze': 'feminine',
-    'Haus': 'neuter',
-    'Mann': 'masculine',
-    'Frau': 'feminine',
-    'Kind': 'neuter',
-    'Tag': 'masculine',
-    'Zeit': 'feminine',
-    'Jahr': 'neuter',
-  }
-
-  return genders[word]
+  return undefined
 }
 
-/**
- * Generate detailed word information from a basic Word object
- * In a real app, this would fetch from an API or database
- */
-export function getWordDetails(word: Word, language: LanguageCode): WordDetail {
-  const partOfSpeech = detectPartOfSpeech(word.word, language)
-  const gender = partOfSpeech === 'noun' ? detectGender(word.word, language) : undefined
-
-  // Get translation
-  const langTranslations = mockTranslations[language] || {}
-  const translation = langTranslations[word.word] || langTranslations[word.word.toLowerCase()]
-
-  // Get examples
-  const langExamples = mockExamples[language] || {}
-  const examples = langExamples[word.word] || langExamples[word.word.toLowerCase()] || generateGenericExamples(word.word, language)
-
-  // Get declension (for German nouns)
-  const declension = language === 'de' && partOfSpeech === 'noun'
-    ? germanDeclensions[word.word]
-    : undefined
-
-  // Get conjugation (for German verbs)
-  const conjugation = language === 'de' && partOfSpeech === 'verb'
-    ? germanConjugations[word.word.toLowerCase()]
-    : undefined
-
-  return {
-    ...word,
-    translation,
-    partOfSpeech,
-    gender,
-    examples,
-    declension,
-    conjugation,
-    synonyms: generateSynonyms(word.word, language),
-    isBookmarked: false,
-    isLearned: false,
-  }
-}
-
-// Generate generic example sentences
+// Generate generic example sentences (fallback)
 function generateGenericExamples(word: string, language: LanguageCode): string[] {
   const templates: Record<LanguageCode, string[]> = {
     de: [
@@ -440,4 +283,122 @@ function generateSynonyms(word: string, language: LanguageCode): string[] | unde
   if (!langSynonyms) return undefined
 
   return langSynonyms[word.toLowerCase()]
+}
+
+// Convert declension data to simple format for WordDetail
+function formatDeclension(data: NounDeclension | null): Record<string, string> | undefined {
+  if (!data) return undefined
+
+  return {
+    nominativ: `${data.declension.nominativ.singular} / ${data.declension.nominativ.plural}`,
+    genitiv: `${data.declension.genitiv.singular} / ${data.declension.genitiv.plural}`,
+    dativ: `${data.declension.dativ.singular} / ${data.declension.dativ.plural}`,
+    akkusativ: `${data.declension.akkusativ.singular} / ${data.declension.akkusativ.plural}`,
+  }
+}
+
+// Convert conjugation data to simple format for WordDetail
+function formatConjugation(data: VerbConjugation | null): Record<string, string> | undefined {
+  if (!data) return undefined
+
+  // Return präsens (present tense) for the simple conjugation view
+  return data.conjugations.präsens
+}
+
+// Convert example sentences to string array
+function formatExamples(data: ExampleSentence[] | null): string[] | undefined {
+  if (!data || data.length === 0) return undefined
+
+  // Return just the sentences (translations are shown in the modal if needed)
+  return data.map((ex) => ex.sentence)
+}
+
+/**
+ * Generate detailed word information from a basic Word object
+ * Uses real data from JSON files when available, with fallbacks
+ */
+export async function getWordDetailsAsync(word: Word, language: LanguageCode): Promise<WordDetail> {
+  // Fetch real data in parallel
+  const [translationData, examplesData, declensionData, conjugationData] = await Promise.all([
+    getTranslation(word.word, language),
+    getExamples(word.word, language),
+    getDeclension(word.word, language),
+    getConjugation(word.word, language),
+  ])
+
+  const partOfSpeech = detectPartOfSpeech(word.word, language, translationData)
+  const gender = partOfSpeech === 'noun' ? detectGender(word.word, language, translationData, declensionData) : undefined
+
+  // Get translation (real or fallback)
+  let translation: string | undefined
+  if (translationData?.translation) {
+    translation = translationData.translation
+  } else {
+    const langTranslations = fallbackTranslations[language] || {}
+    translation = langTranslations[word.word] || langTranslations[word.word.toLowerCase()]
+  }
+
+  // Get examples (real or generic)
+  const examples = formatExamples(examplesData) || generateGenericExamples(word.word, language)
+
+  // Get declension (for German nouns)
+  const declension = language === 'de' && partOfSpeech === 'noun'
+    ? formatDeclension(declensionData)
+    : undefined
+
+  // Get conjugation (for German verbs)
+  const conjugation = language === 'de' && partOfSpeech === 'verb'
+    ? formatConjugation(conjugationData)
+    : undefined
+
+  return {
+    ...word,
+    translation,
+    partOfSpeech,
+    gender,
+    examples,
+    declension,
+    conjugation,
+    synonyms: generateSynonyms(word.word, language),
+    isBookmarked: false,
+    isLearned: false,
+    // Add metadata about data source
+    hasRealData: !!(translationData || examplesData || declensionData || conjugationData),
+    // Store full conjugation data for expanded view
+    fullConjugation: conjugationData || undefined,
+    // Store full declension data for expanded view
+    fullDeclension: declensionData || undefined,
+    // Store examples with translations
+    examplesWithTranslations: examplesData || undefined,
+  }
+}
+
+/**
+ * Synchronous version for backward compatibility
+ * Uses only fallback data (no async loading)
+ */
+export function getWordDetails(word: Word, language: LanguageCode): WordDetail {
+  const partOfSpeech = detectPartOfSpeech(word.word, language)
+  const gender = partOfSpeech === 'noun' ? detectGender(word.word, language) : undefined
+
+  // Get translation from fallback
+  const langTranslations = fallbackTranslations[language] || {}
+  const translation = langTranslations[word.word] || langTranslations[word.word.toLowerCase()]
+
+  // Get generic examples
+  const examples = generateGenericExamples(word.word, language)
+
+  return {
+    ...word,
+    translation,
+    partOfSpeech,
+    gender,
+    examples,
+    declension: undefined,
+    conjugation: undefined,
+    synonyms: generateSynonyms(word.word, language),
+    isBookmarked: false,
+    isLearned: false,
+    hasRealData: false,
+  }
 }

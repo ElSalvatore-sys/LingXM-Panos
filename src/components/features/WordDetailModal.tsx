@@ -7,7 +7,7 @@ import {
   DialogDescription,
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
-import { BookmarkIcon, CheckCircleIcon, Volume2Icon } from 'lucide-react'
+import { BookmarkIcon, CheckCircleIcon, Volume2Icon, ChevronDownIcon, ChevronUpIcon, SparklesIcon } from 'lucide-react'
 import type { WordDetail, LanguageCode, SiteLanguage } from '@/types'
 import { getTranslation } from '@/lib/translations'
 import { speak, isTTSAvailable } from '@/lib/audioService'
@@ -36,6 +36,8 @@ export function WordDetailModal({
   onToggleLearned,
 }: WordDetailModalProps) {
   const [isSpeaking, setIsSpeaking] = useState(false)
+  const [showFullConjugation, setShowFullConjugation] = useState(false)
+  const [showFullDeclension, setShowFullDeclension] = useState(false)
   const t = (key: string) => getTranslation(nativeLanguage, key)
 
   if (!word) return null
@@ -85,6 +87,19 @@ export function WordDetailModal({
     }
   }
 
+  const tenseLabels: Record<string, string> = {
+    präsens: 'Present',
+    präteritum: 'Past (Präteritum)',
+    perfekt: 'Perfect',
+  }
+
+  const caseLabels: Record<string, string> = {
+    nominativ: 'Nominativ',
+    genitiv: 'Genitiv',
+    dativ: 'Dativ',
+    akkusativ: 'Akkusativ',
+  }
+
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
@@ -103,6 +118,12 @@ export function WordDetailModal({
                 >
                   <Volume2Icon className="h-5 w-5" />
                 </Button>
+              )}
+              {word.hasRealData && (
+                <span className="flex items-center gap-1 px-2 py-1 bg-lingxm-blue/10 text-lingxm-blue rounded-full text-xs">
+                  <SparklesIcon className="h-3 w-3" />
+                  Real Data
+                </span>
               )}
             </div>
             <div className="flex gap-2">
@@ -165,35 +186,138 @@ export function WordDetailModal({
           {/* Declension table (for nouns) */}
           {word.declension && Object.keys(word.declension).length > 0 && (
             <div className="border rounded-lg p-3">
-              <h3 className="font-semibold mb-2">{t('modal.declension')}</h3>
-              <div className="grid grid-cols-2 gap-2 text-sm">
-                {Object.entries(word.declension).map(([caseType, form]) => (
-                  <div key={caseType} className="flex justify-between">
-                    <span className="text-muted-foreground capitalize">{caseType}:</span>
-                    <span className="font-medium">{form}</span>
-                  </div>
-                ))}
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold">{t('modal.declension')}</h3>
+                {word.fullDeclension && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setShowFullDeclension(!showFullDeclension)}
+                    className="h-6 text-xs"
+                  >
+                    {showFullDeclension ? (
+                      <>Less <ChevronUpIcon className="h-3 w-3 ml-1" /></>
+                    ) : (
+                      <>Full Table <ChevronDownIcon className="h-3 w-3 ml-1" /></>
+                    )}
+                  </Button>
+                )}
               </div>
+
+              {showFullDeclension && word.fullDeclension ? (
+                /* Full declension table with singular/plural */
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b">
+                        <th className="text-left py-1 pr-2 text-muted-foreground">Case</th>
+                        <th className="text-left py-1 px-2">Singular</th>
+                        <th className="text-left py-1 pl-2">Plural</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {Object.entries(word.fullDeclension.declension).map(([caseType, forms]) => (
+                        <tr key={caseType} className="border-b last:border-b-0">
+                          <td className="py-1 pr-2 text-muted-foreground">{caseLabels[caseType] || caseType}</td>
+                          <td className="py-1 px-2 font-medium">{forms.singular}</td>
+                          <td className="py-1 pl-2 font-medium">{forms.plural}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                /* Simple declension view */
+                <div className="grid grid-cols-2 gap-2 text-sm">
+                  {Object.entries(word.declension).map(([caseType, form]) => (
+                    <div key={caseType} className="flex justify-between">
+                      <span className="text-muted-foreground capitalize">{caseType}:</span>
+                      <span className="font-medium">{form}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 
           {/* Conjugation table (for verbs) */}
           {word.conjugation && Object.keys(word.conjugation).length > 0 && (
             <div className="border rounded-lg p-3">
-              <h3 className="font-semibold mb-2">{t('modal.conjugation')}</h3>
-              <div className="grid grid-cols-2 gap-2 text-sm">
-                {Object.entries(word.conjugation).map(([person, form]) => (
-                  <div key={person} className="flex justify-between">
-                    <span className="text-muted-foreground">{person}:</span>
-                    <span className="font-medium">{form}</span>
-                  </div>
-                ))}
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-semibold">{t('modal.conjugation')}</h3>
+                {word.fullConjugation && (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setShowFullConjugation(!showFullConjugation)}
+                    className="h-6 text-xs"
+                  >
+                    {showFullConjugation ? (
+                      <>Less <ChevronUpIcon className="h-3 w-3 ml-1" /></>
+                    ) : (
+                      <>All Tenses <ChevronDownIcon className="h-3 w-3 ml-1" /></>
+                    )}
+                  </Button>
+                )}
               </div>
+
+              {showFullConjugation && word.fullConjugation ? (
+                /* Full conjugation with all tenses */
+                <div className="space-y-3">
+                  {word.fullConjugation.type && (
+                    <div className="flex gap-2 text-xs">
+                      <span className="px-2 py-0.5 bg-secondary rounded">
+                        {word.fullConjugation.type}
+                      </span>
+                      <span className="px-2 py-0.5 bg-secondary rounded">
+                        aux: {word.fullConjugation.auxiliary}
+                      </span>
+                    </div>
+                  )}
+                  {Object.entries(word.fullConjugation.conjugations).map(([tense, forms]) => (
+                    <div key={tense}>
+                      <h4 className="text-sm font-medium text-muted-foreground mb-1">
+                        {tenseLabels[tense] || tense}
+                      </h4>
+                      <div className="grid grid-cols-2 gap-1 text-sm">
+                        {Object.entries(forms).map(([person, form]) => (
+                          <div key={person} className="flex justify-between">
+                            <span className="text-muted-foreground">{person}:</span>
+                            <span className="font-medium">{form}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                /* Simple conjugation view (present tense only) */
+                <div className="grid grid-cols-2 gap-2 text-sm">
+                  {Object.entries(word.conjugation).map(([person, form]) => (
+                    <div key={person} className="flex justify-between">
+                      <span className="text-muted-foreground">{person}:</span>
+                      <span className="font-medium">{form}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 
-          {/* Example sentences */}
-          {word.examples && word.examples.length > 0 && (
+          {/* Example sentences with translations */}
+          {word.examplesWithTranslations && word.examplesWithTranslations.length > 0 ? (
+            <div className="border rounded-lg p-3">
+              <h3 className="font-semibold mb-2">{t('modal.examples')}</h3>
+              <ul className="space-y-3">
+                {word.examplesWithTranslations.map((example, index) => (
+                  <li key={index} className="text-sm">
+                    <div className="font-medium">{example.sentence}</div>
+                    <div className="text-muted-foreground text-xs mt-0.5">{example.translation}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : word.examples && word.examples.length > 0 && (
             <div className="border rounded-lg p-3">
               <h3 className="font-semibold mb-2">{t('modal.examples')}</h3>
               <ul className="space-y-2">

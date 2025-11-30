@@ -15,7 +15,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { useProgress } from '@/hooks/useProgress';
 import { useApp } from '@/contexts/AppContext';
 import { languages } from '@/lib/languages';
-import { getWordDetails } from '@/lib/wordDetails';
+import { getWordDetailsAsync } from '@/lib/wordDetails';
 
 export function SearchPage() {
   const [searchParams] = useSearchParams();
@@ -78,12 +78,13 @@ export function SearchPage() {
   }, [difficulty, hasSearched, searchQuery, searchWords]);
 
   // Handle result click - open modal with word details
-  const handleResultClick = (id: number) => {
+  const handleResultClick = async (id: number) => {
     const word = results.find((w) => w.id === id);
     if (word) {
-      const wordDetails = getWordDetails(word, toLang);
-      setSelectedWord(wordDetails);
+      // Open modal immediately with basic data, then load async data
       setIsModalOpen(true);
+      const wordDetails = await getWordDetailsAsync(word, toLang);
+      setSelectedWord(wordDetails);
     }
   };
 

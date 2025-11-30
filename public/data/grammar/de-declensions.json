@@ -1,0 +1,479 @@
+{
+  "meta": {
+    "language": "de",
+    "nounCount": 50,
+    "lastUpdated": "2025-11-30"
+  },
+  "nouns": {
+    "Mann": {
+      "gender": "m",
+      "translation": "man",
+      "declension": {
+        "nominativ": { "singular": "der Mann", "plural": "die Männer" },
+        "genitiv": { "singular": "des Mannes", "plural": "der Männer" },
+        "dativ": { "singular": "dem Mann", "plural": "den Männern" },
+        "akkusativ": { "singular": "den Mann", "plural": "die Männer" }
+      }
+    },
+    "Frau": {
+      "gender": "f",
+      "translation": "woman, wife",
+      "declension": {
+        "nominativ": { "singular": "die Frau", "plural": "die Frauen" },
+        "genitiv": { "singular": "der Frau", "plural": "der Frauen" },
+        "dativ": { "singular": "der Frau", "plural": "den Frauen" },
+        "akkusativ": { "singular": "die Frau", "plural": "die Frauen" }
+      }
+    },
+    "Kind": {
+      "gender": "n",
+      "translation": "child",
+      "declension": {
+        "nominativ": { "singular": "das Kind", "plural": "die Kinder" },
+        "genitiv": { "singular": "des Kindes", "plural": "der Kinder" },
+        "dativ": { "singular": "dem Kind", "plural": "den Kindern" },
+        "akkusativ": { "singular": "das Kind", "plural": "die Kinder" }
+      }
+    },
+    "Haus": {
+      "gender": "n",
+      "translation": "house",
+      "declension": {
+        "nominativ": { "singular": "das Haus", "plural": "die Häuser" },
+        "genitiv": { "singular": "des Hauses", "plural": "der Häuser" },
+        "dativ": { "singular": "dem Haus", "plural": "den Häusern" },
+        "akkusativ": { "singular": "das Haus", "plural": "die Häuser" }
+      }
+    },
+    "Tag": {
+      "gender": "m",
+      "translation": "day",
+      "declension": {
+        "nominativ": { "singular": "der Tag", "plural": "die Tage" },
+        "genitiv": { "singular": "des Tages", "plural": "der Tage" },
+        "dativ": { "singular": "dem Tag", "plural": "den Tagen" },
+        "akkusativ": { "singular": "den Tag", "plural": "die Tage" }
+      }
+    },
+    "Jahr": {
+      "gender": "n",
+      "translation": "year",
+      "declension": {
+        "nominativ": { "singular": "das Jahr", "plural": "die Jahre" },
+        "genitiv": { "singular": "des Jahres", "plural": "der Jahre" },
+        "dativ": { "singular": "dem Jahr", "plural": "den Jahren" },
+        "akkusativ": { "singular": "das Jahr", "plural": "die Jahre" }
+      }
+    },
+    "Zeit": {
+      "gender": "f",
+      "translation": "time",
+      "declension": {
+        "nominativ": { "singular": "die Zeit", "plural": "die Zeiten" },
+        "genitiv": { "singular": "der Zeit", "plural": "der Zeiten" },
+        "dativ": { "singular": "der Zeit", "plural": "den Zeiten" },
+        "akkusativ": { "singular": "die Zeit", "plural": "die Zeiten" }
+      }
+    },
+    "Welt": {
+      "gender": "f",
+      "translation": "world",
+      "declension": {
+        "nominativ": { "singular": "die Welt", "plural": "die Welten" },
+        "genitiv": { "singular": "der Welt", "plural": "der Welten" },
+        "dativ": { "singular": "der Welt", "plural": "den Welten" },
+        "akkusativ": { "singular": "die Welt", "plural": "die Welten" }
+      }
+    },
+    "Leben": {
+      "gender": "n",
+      "translation": "life",
+      "declension": {
+        "nominativ": { "singular": "das Leben", "plural": "die Leben" },
+        "genitiv": { "singular": "des Lebens", "plural": "der Leben" },
+        "dativ": { "singular": "dem Leben", "plural": "den Leben" },
+        "akkusativ": { "singular": "das Leben", "plural": "die Leben" }
+      }
+    },
+    "Arbeit": {
+      "gender": "f",
+      "translation": "work",
+      "declension": {
+        "nominativ": { "singular": "die Arbeit", "plural": "die Arbeiten" },
+        "genitiv": { "singular": "der Arbeit", "plural": "der Arbeiten" },
+        "dativ": { "singular": "der Arbeit", "plural": "den Arbeiten" },
+        "akkusativ": { "singular": "die Arbeit", "plural": "die Arbeiten" }
+      }
+    },
+    "Stadt": {
+      "gender": "f",
+      "translation": "city",
+      "declension": {
+        "nominativ": { "singular": "die Stadt", "plural": "die Städte" },
+        "genitiv": { "singular": "der Stadt", "plural": "der Städte" },
+        "dativ": { "singular": "der Stadt", "plural": "den Städten" },
+        "akkusativ": { "singular": "die Stadt", "plural": "die Städte" }
+      }
+    },
+    "Land": {
+      "gender": "n",
+      "translation": "country, land",
+      "declension": {
+        "nominativ": { "singular": "das Land", "plural": "die Länder" },
+        "genitiv": { "singular": "des Landes", "plural": "der Länder" },
+        "dativ": { "singular": "dem Land", "plural": "den Ländern" },
+        "akkusativ": { "singular": "das Land", "plural": "die Länder" }
+      }
+    },
+    "Mensch": {
+      "gender": "m",
+      "translation": "human, person",
+      "declension": {
+        "nominativ": { "singular": "der Mensch", "plural": "die Menschen" },
+        "genitiv": { "singular": "des Menschen", "plural": "der Menschen" },
+        "dativ": { "singular": "dem Menschen", "plural": "den Menschen" },
+        "akkusativ": { "singular": "den Menschen", "plural": "die Menschen" }
+      }
+    },
+    "Kopf": {
+      "gender": "m",
+      "translation": "head",
+      "declension": {
+        "nominativ": { "singular": "der Kopf", "plural": "die Köpfe" },
+        "genitiv": { "singular": "des Kopfes", "plural": "der Köpfe" },
+        "dativ": { "singular": "dem Kopf", "plural": "den Köpfen" },
+        "akkusativ": { "singular": "den Kopf", "plural": "die Köpfe" }
+      }
+    },
+    "Hand": {
+      "gender": "f",
+      "translation": "hand",
+      "declension": {
+        "nominativ": { "singular": "die Hand", "plural": "die Hände" },
+        "genitiv": { "singular": "der Hand", "plural": "der Hände" },
+        "dativ": { "singular": "der Hand", "plural": "den Händen" },
+        "akkusativ": { "singular": "die Hand", "plural": "die Hände" }
+      }
+    },
+    "Auge": {
+      "gender": "n",
+      "translation": "eye",
+      "declension": {
+        "nominativ": { "singular": "das Auge", "plural": "die Augen" },
+        "genitiv": { "singular": "des Auges", "plural": "der Augen" },
+        "dativ": { "singular": "dem Auge", "plural": "den Augen" },
+        "akkusativ": { "singular": "das Auge", "plural": "die Augen" }
+      }
+    },
+    "Wort": {
+      "gender": "n",
+      "translation": "word",
+      "declension": {
+        "nominativ": { "singular": "das Wort", "plural": "die Wörter" },
+        "genitiv": { "singular": "des Wortes", "plural": "der Wörter" },
+        "dativ": { "singular": "dem Wort", "plural": "den Wörtern" },
+        "akkusativ": { "singular": "das Wort", "plural": "die Wörter" }
+      }
+    },
+    "Frage": {
+      "gender": "f",
+      "translation": "question",
+      "declension": {
+        "nominativ": { "singular": "die Frage", "plural": "die Fragen" },
+        "genitiv": { "singular": "der Frage", "plural": "der Fragen" },
+        "dativ": { "singular": "der Frage", "plural": "den Fragen" },
+        "akkusativ": { "singular": "die Frage", "plural": "die Fragen" }
+      }
+    },
+    "Mutter": {
+      "gender": "f",
+      "translation": "mother",
+      "declension": {
+        "nominativ": { "singular": "die Mutter", "plural": "die Mütter" },
+        "genitiv": { "singular": "der Mutter", "plural": "der Mütter" },
+        "dativ": { "singular": "der Mutter", "plural": "den Müttern" },
+        "akkusativ": { "singular": "die Mutter", "plural": "die Mütter" }
+      }
+    },
+    "Vater": {
+      "gender": "m",
+      "translation": "father",
+      "declension": {
+        "nominativ": { "singular": "der Vater", "plural": "die Väter" },
+        "genitiv": { "singular": "des Vaters", "plural": "der Väter" },
+        "dativ": { "singular": "dem Vater", "plural": "den Vätern" },
+        "akkusativ": { "singular": "den Vater", "plural": "die Väter" }
+      }
+    },
+    "Bruder": {
+      "gender": "m",
+      "translation": "brother",
+      "declension": {
+        "nominativ": { "singular": "der Bruder", "plural": "die Brüder" },
+        "genitiv": { "singular": "des Bruders", "plural": "der Brüder" },
+        "dativ": { "singular": "dem Bruder", "plural": "den Brüdern" },
+        "akkusativ": { "singular": "den Bruder", "plural": "die Brüder" }
+      }
+    },
+    "Schwester": {
+      "gender": "f",
+      "translation": "sister",
+      "declension": {
+        "nominativ": { "singular": "die Schwester", "plural": "die Schwestern" },
+        "genitiv": { "singular": "der Schwester", "plural": "der Schwestern" },
+        "dativ": { "singular": "der Schwester", "plural": "den Schwestern" },
+        "akkusativ": { "singular": "die Schwester", "plural": "die Schwestern" }
+      }
+    },
+    "Sohn": {
+      "gender": "m",
+      "translation": "son",
+      "declension": {
+        "nominativ": { "singular": "der Sohn", "plural": "die Söhne" },
+        "genitiv": { "singular": "des Sohnes", "plural": "der Söhne" },
+        "dativ": { "singular": "dem Sohn", "plural": "den Söhnen" },
+        "akkusativ": { "singular": "den Sohn", "plural": "die Söhne" }
+      }
+    },
+    "Tochter": {
+      "gender": "f",
+      "translation": "daughter",
+      "declension": {
+        "nominativ": { "singular": "die Tochter", "plural": "die Töchter" },
+        "genitiv": { "singular": "der Tochter", "plural": "der Töchter" },
+        "dativ": { "singular": "der Tochter", "plural": "den Töchtern" },
+        "akkusativ": { "singular": "die Tochter", "plural": "die Töchter" }
+      }
+    },
+    "Freund": {
+      "gender": "m",
+      "translation": "friend (male)",
+      "declension": {
+        "nominativ": { "singular": "der Freund", "plural": "die Freunde" },
+        "genitiv": { "singular": "des Freundes", "plural": "der Freunde" },
+        "dativ": { "singular": "dem Freund", "plural": "den Freunden" },
+        "akkusativ": { "singular": "den Freund", "plural": "die Freunde" }
+      }
+    },
+    "Schule": {
+      "gender": "f",
+      "translation": "school",
+      "declension": {
+        "nominativ": { "singular": "die Schule", "plural": "die Schulen" },
+        "genitiv": { "singular": "der Schule", "plural": "der Schulen" },
+        "dativ": { "singular": "der Schule", "plural": "den Schulen" },
+        "akkusativ": { "singular": "die Schule", "plural": "die Schulen" }
+      }
+    },
+    "Buch": {
+      "gender": "n",
+      "translation": "book",
+      "declension": {
+        "nominativ": { "singular": "das Buch", "plural": "die Bücher" },
+        "genitiv": { "singular": "des Buches", "plural": "der Bücher" },
+        "dativ": { "singular": "dem Buch", "plural": "den Büchern" },
+        "akkusativ": { "singular": "das Buch", "plural": "die Bücher" }
+      }
+    },
+    "Auto": {
+      "gender": "n",
+      "translation": "car",
+      "declension": {
+        "nominativ": { "singular": "das Auto", "plural": "die Autos" },
+        "genitiv": { "singular": "des Autos", "plural": "der Autos" },
+        "dativ": { "singular": "dem Auto", "plural": "den Autos" },
+        "akkusativ": { "singular": "das Auto", "plural": "die Autos" }
+      }
+    },
+    "Straße": {
+      "gender": "f",
+      "translation": "street",
+      "declension": {
+        "nominativ": { "singular": "die Straße", "plural": "die Straßen" },
+        "genitiv": { "singular": "der Straße", "plural": "der Straßen" },
+        "dativ": { "singular": "der Straße", "plural": "den Straßen" },
+        "akkusativ": { "singular": "die Straße", "plural": "die Straßen" }
+      }
+    },
+    "Wasser": {
+      "gender": "n",
+      "translation": "water",
+      "declension": {
+        "nominativ": { "singular": "das Wasser", "plural": "die Wasser" },
+        "genitiv": { "singular": "des Wassers", "plural": "der Wasser" },
+        "dativ": { "singular": "dem Wasser", "plural": "den Wassern" },
+        "akkusativ": { "singular": "das Wasser", "plural": "die Wasser" }
+      }
+    },
+    "Tisch": {
+      "gender": "m",
+      "translation": "table",
+      "declension": {
+        "nominativ": { "singular": "der Tisch", "plural": "die Tische" },
+        "genitiv": { "singular": "des Tisches", "plural": "der Tische" },
+        "dativ": { "singular": "dem Tisch", "plural": "den Tischen" },
+        "akkusativ": { "singular": "den Tisch", "plural": "die Tische" }
+      }
+    },
+    "Stuhl": {
+      "gender": "m",
+      "translation": "chair",
+      "declension": {
+        "nominativ": { "singular": "der Stuhl", "plural": "die Stühle" },
+        "genitiv": { "singular": "des Stuhles", "plural": "der Stühle" },
+        "dativ": { "singular": "dem Stuhl", "plural": "den Stühlen" },
+        "akkusativ": { "singular": "den Stuhl", "plural": "die Stühle" }
+      }
+    },
+    "Fenster": {
+      "gender": "n",
+      "translation": "window",
+      "declension": {
+        "nominativ": { "singular": "das Fenster", "plural": "die Fenster" },
+        "genitiv": { "singular": "des Fensters", "plural": "der Fenster" },
+        "dativ": { "singular": "dem Fenster", "plural": "den Fenstern" },
+        "akkusativ": { "singular": "das Fenster", "plural": "die Fenster" }
+      }
+    },
+    "Tür": {
+      "gender": "f",
+      "translation": "door",
+      "declension": {
+        "nominativ": { "singular": "die Tür", "plural": "die Türen" },
+        "genitiv": { "singular": "der Tür", "plural": "der Türen" },
+        "dativ": { "singular": "der Tür", "plural": "den Türen" },
+        "akkusativ": { "singular": "die Tür", "plural": "die Türen" }
+      }
+    },
+    "Name": {
+      "gender": "m",
+      "translation": "name",
+      "declension": {
+        "nominativ": { "singular": "der Name", "plural": "die Namen" },
+        "genitiv": { "singular": "des Namens", "plural": "der Namen" },
+        "dativ": { "singular": "dem Namen", "plural": "den Namen" },
+        "akkusativ": { "singular": "den Namen", "plural": "die Namen" }
+      }
+    },
+    "Stunde": {
+      "gender": "f",
+      "translation": "hour",
+      "declension": {
+        "nominativ": { "singular": "die Stunde", "plural": "die Stunden" },
+        "genitiv": { "singular": "der Stunde", "plural": "der Stunden" },
+        "dativ": { "singular": "der Stunde", "plural": "den Stunden" },
+        "akkusativ": { "singular": "die Stunde", "plural": "die Stunden" }
+      }
+    },
+    "Woche": {
+      "gender": "f",
+      "translation": "week",
+      "declension": {
+        "nominativ": { "singular": "die Woche", "plural": "die Wochen" },
+        "genitiv": { "singular": "der Woche", "plural": "der Wochen" },
+        "dativ": { "singular": "der Woche", "plural": "den Wochen" },
+        "akkusativ": { "singular": "die Woche", "plural": "die Wochen" }
+      }
+    },
+    "Monat": {
+      "gender": "m",
+      "translation": "month",
+      "declension": {
+        "nominativ": { "singular": "der Monat", "plural": "die Monate" },
+        "genitiv": { "singular": "des Monats", "plural": "der Monate" },
+        "dativ": { "singular": "dem Monat", "plural": "den Monaten" },
+        "akkusativ": { "singular": "den Monat", "plural": "die Monate" }
+      }
+    },
+    "Weg": {
+      "gender": "m",
+      "translation": "way, path",
+      "declension": {
+        "nominativ": { "singular": "der Weg", "plural": "die Wege" },
+        "genitiv": { "singular": "des Weges", "plural": "der Wege" },
+        "dativ": { "singular": "dem Weg", "plural": "den Wegen" },
+        "akkusativ": { "singular": "den Weg", "plural": "die Wege" }
+      }
+    },
+    "Teil": {
+      "gender": "m",
+      "translation": "part",
+      "declension": {
+        "nominativ": { "singular": "der Teil", "plural": "die Teile" },
+        "genitiv": { "singular": "des Teils", "plural": "der Teile" },
+        "dativ": { "singular": "dem Teil", "plural": "den Teilen" },
+        "akkusativ": { "singular": "den Teil", "plural": "die Teile" }
+      }
+    },
+    "Bild": {
+      "gender": "n",
+      "translation": "picture",
+      "declension": {
+        "nominativ": { "singular": "das Bild", "plural": "die Bilder" },
+        "genitiv": { "singular": "des Bildes", "plural": "der Bilder" },
+        "dativ": { "singular": "dem Bild", "plural": "den Bildern" },
+        "akkusativ": { "singular": "das Bild", "plural": "die Bilder" }
+      }
+    },
+    "Seite": {
+      "gender": "f",
+      "translation": "page, side",
+      "declension": {
+        "nominativ": { "singular": "die Seite", "plural": "die Seiten" },
+        "genitiv": { "singular": "der Seite", "plural": "der Seiten" },
+        "dativ": { "singular": "der Seite", "plural": "den Seiten" },
+        "akkusativ": { "singular": "die Seite", "plural": "die Seiten" }
+      }
+    },
+    "Ende": {
+      "gender": "n",
+      "translation": "end",
+      "declension": {
+        "nominativ": { "singular": "das Ende", "plural": "die Enden" },
+        "genitiv": { "singular": "des Endes", "plural": "der Enden" },
+        "dativ": { "singular": "dem Ende", "plural": "den Enden" },
+        "akkusativ": { "singular": "das Ende", "plural": "die Enden" }
+      }
+    },
+    "Platz": {
+      "gender": "m",
+      "translation": "place, square",
+      "declension": {
+        "nominativ": { "singular": "der Platz", "plural": "die Plätze" },
+        "genitiv": { "singular": "des Platzes", "plural": "der Plätze" },
+        "dativ": { "singular": "dem Platz", "plural": "den Plätzen" },
+        "akkusativ": { "singular": "den Platz", "plural": "die Plätze" }
+      }
+    },
+    "Grund": {
+      "gender": "m",
+      "translation": "reason, ground",
+      "declension": {
+        "nominativ": { "singular": "der Grund", "plural": "die Gründe" },
+        "genitiv": { "singular": "des Grundes", "plural": "der Gründe" },
+        "dativ": { "singular": "dem Grund", "plural": "den Gründen" },
+        "akkusativ": { "singular": "den Grund", "plural": "die Gründe" }
+      }
+    },
+    "Uhr": {
+      "gender": "f",
+      "translation": "clock, watch",
+      "declension": {
+        "nominativ": { "singular": "die Uhr", "plural": "die Uhren" },
+        "genitiv": { "singular": "der Uhr", "plural": "der Uhren" },
+        "dativ": { "singular": "der Uhr", "plural": "den Uhren" },
+        "akkusativ": { "singular": "die Uhr", "plural": "die Uhren" }
+      }
+    },
+    "Essen": {
+      "gender": "n",
+      "translation": "food, meal",
+      "declension": {
+        "nominativ": { "singular": "das Essen", "plural": "die Essen" },
+        "genitiv": { "singular": "des Essens", "plural": "der Essen" },
+        "dativ": { "singular": "dem Essen", "plural": "den Essen" },
+        "akkusativ": { "singular": "das Essen", "plural": "die Essen" }
+      }
+    }
+  }
+}
