@@ -1,0 +1,821 @@
+{
+  "meta": {
+    "language": "en",
+    "verbCount": 30,
+    "lastUpdated": "2025-11-30"
+  },
+  "verbs": {
+    "be": {
+      "translation": "sein",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "am",
+          "you": "are",
+          "he/she/it": "is",
+          "we": "are",
+          "they": "are"
+        },
+        "past": {
+          "I": "was",
+          "you": "were",
+          "he/she/it": "was",
+          "we": "were",
+          "they": "were"
+        },
+        "perfect": {
+          "participle": "been",
+          "I": "have been",
+          "you": "have been",
+          "he/she/it": "has been",
+          "we": "have been",
+          "they": "have been"
+        }
+      }
+    },
+    "have": {
+      "translation": "haben",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "have",
+          "you": "have",
+          "he/she/it": "has",
+          "we": "have",
+          "they": "have"
+        },
+        "past": {
+          "I": "had",
+          "you": "had",
+          "he/she/it": "had",
+          "we": "had",
+          "they": "had"
+        },
+        "perfect": {
+          "participle": "had",
+          "I": "have had",
+          "you": "have had",
+          "he/she/it": "has had",
+          "we": "have had",
+          "they": "have had"
+        }
+      }
+    },
+    "do": {
+      "translation": "tun, machen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "do",
+          "you": "do",
+          "he/she/it": "does",
+          "we": "do",
+          "they": "do"
+        },
+        "past": {
+          "I": "did",
+          "you": "did",
+          "he/she/it": "did",
+          "we": "did",
+          "they": "did"
+        },
+        "perfect": {
+          "participle": "done",
+          "I": "have done",
+          "you": "have done",
+          "he/she/it": "has done",
+          "we": "have done",
+          "they": "have done"
+        }
+      }
+    },
+    "say": {
+      "translation": "sagen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "say",
+          "you": "say",
+          "he/she/it": "says",
+          "we": "say",
+          "they": "say"
+        },
+        "past": {
+          "I": "said",
+          "you": "said",
+          "he/she/it": "said",
+          "we": "said",
+          "they": "said"
+        },
+        "perfect": {
+          "participle": "said",
+          "I": "have said",
+          "you": "have said",
+          "he/she/it": "has said",
+          "we": "have said",
+          "they": "have said"
+        }
+      }
+    },
+    "go": {
+      "translation": "gehen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "go",
+          "you": "go",
+          "he/she/it": "goes",
+          "we": "go",
+          "they": "go"
+        },
+        "past": {
+          "I": "went",
+          "you": "went",
+          "he/she/it": "went",
+          "we": "went",
+          "they": "went"
+        },
+        "perfect": {
+          "participle": "gone",
+          "I": "have gone",
+          "you": "have gone",
+          "he/she/it": "has gone",
+          "we": "have gone",
+          "they": "have gone"
+        }
+      }
+    },
+    "get": {
+      "translation": "bekommen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "get",
+          "you": "get",
+          "he/she/it": "gets",
+          "we": "get",
+          "they": "get"
+        },
+        "past": {
+          "I": "got",
+          "you": "got",
+          "he/she/it": "got",
+          "we": "got",
+          "they": "got"
+        },
+        "perfect": {
+          "participle": "got/gotten",
+          "I": "have got",
+          "you": "have got",
+          "he/she/it": "has got",
+          "we": "have got",
+          "they": "have got"
+        }
+      }
+    },
+    "make": {
+      "translation": "machen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "make",
+          "you": "make",
+          "he/she/it": "makes",
+          "we": "make",
+          "they": "make"
+        },
+        "past": {
+          "I": "made",
+          "you": "made",
+          "he/she/it": "made",
+          "we": "made",
+          "they": "made"
+        },
+        "perfect": {
+          "participle": "made",
+          "I": "have made",
+          "you": "have made",
+          "he/she/it": "has made",
+          "we": "have made",
+          "they": "have made"
+        }
+      }
+    },
+    "know": {
+      "translation": "wissen, kennen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "know",
+          "you": "know",
+          "he/she/it": "knows",
+          "we": "know",
+          "they": "know"
+        },
+        "past": {
+          "I": "knew",
+          "you": "knew",
+          "he/she/it": "knew",
+          "we": "knew",
+          "they": "knew"
+        },
+        "perfect": {
+          "participle": "known",
+          "I": "have known",
+          "you": "have known",
+          "he/she/it": "has known",
+          "we": "have known",
+          "they": "have known"
+        }
+      }
+    },
+    "think": {
+      "translation": "denken",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "think",
+          "you": "think",
+          "he/she/it": "thinks",
+          "we": "think",
+          "they": "think"
+        },
+        "past": {
+          "I": "thought",
+          "you": "thought",
+          "he/she/it": "thought",
+          "we": "thought",
+          "they": "thought"
+        },
+        "perfect": {
+          "participle": "thought",
+          "I": "have thought",
+          "you": "have thought",
+          "he/she/it": "has thought",
+          "we": "have thought",
+          "they": "have thought"
+        }
+      }
+    },
+    "take": {
+      "translation": "nehmen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "take",
+          "you": "take",
+          "he/she/it": "takes",
+          "we": "take",
+          "they": "take"
+        },
+        "past": {
+          "I": "took",
+          "you": "took",
+          "he/she/it": "took",
+          "we": "took",
+          "they": "took"
+        },
+        "perfect": {
+          "participle": "taken",
+          "I": "have taken",
+          "you": "have taken",
+          "he/she/it": "has taken",
+          "we": "have taken",
+          "they": "have taken"
+        }
+      }
+    },
+    "see": {
+      "translation": "sehen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "see",
+          "you": "see",
+          "he/she/it": "sees",
+          "we": "see",
+          "they": "see"
+        },
+        "past": {
+          "I": "saw",
+          "you": "saw",
+          "he/she/it": "saw",
+          "we": "saw",
+          "they": "saw"
+        },
+        "perfect": {
+          "participle": "seen",
+          "I": "have seen",
+          "you": "have seen",
+          "he/she/it": "has seen",
+          "we": "have seen",
+          "they": "have seen"
+        }
+      }
+    },
+    "come": {
+      "translation": "kommen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "come",
+          "you": "come",
+          "he/she/it": "comes",
+          "we": "come",
+          "they": "come"
+        },
+        "past": {
+          "I": "came",
+          "you": "came",
+          "he/she/it": "came",
+          "we": "came",
+          "they": "came"
+        },
+        "perfect": {
+          "participle": "come",
+          "I": "have come",
+          "you": "have come",
+          "he/she/it": "has come",
+          "we": "have come",
+          "they": "have come"
+        }
+      }
+    },
+    "want": {
+      "translation": "wollen",
+      "type": "regular",
+      "conjugations": {
+        "present": {
+          "I": "want",
+          "you": "want",
+          "he/she/it": "wants",
+          "we": "want",
+          "they": "want"
+        },
+        "past": {
+          "I": "wanted",
+          "you": "wanted",
+          "he/she/it": "wanted",
+          "we": "wanted",
+          "they": "wanted"
+        },
+        "perfect": {
+          "participle": "wanted",
+          "I": "have wanted",
+          "you": "have wanted",
+          "he/she/it": "has wanted",
+          "we": "have wanted",
+          "they": "have wanted"
+        }
+      }
+    },
+    "give": {
+      "translation": "geben",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "give",
+          "you": "give",
+          "he/she/it": "gives",
+          "we": "give",
+          "they": "give"
+        },
+        "past": {
+          "I": "gave",
+          "you": "gave",
+          "he/she/it": "gave",
+          "we": "gave",
+          "they": "gave"
+        },
+        "perfect": {
+          "participle": "given",
+          "I": "have given",
+          "you": "have given",
+          "he/she/it": "has given",
+          "we": "have given",
+          "they": "have given"
+        }
+      }
+    },
+    "find": {
+      "translation": "finden",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "find",
+          "you": "find",
+          "he/she/it": "finds",
+          "we": "find",
+          "they": "find"
+        },
+        "past": {
+          "I": "found",
+          "you": "found",
+          "he/she/it": "found",
+          "we": "found",
+          "they": "found"
+        },
+        "perfect": {
+          "participle": "found",
+          "I": "have found",
+          "you": "have found",
+          "he/she/it": "has found",
+          "we": "have found",
+          "they": "have found"
+        }
+      }
+    },
+    "tell": {
+      "translation": "erzählen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "tell",
+          "you": "tell",
+          "he/she/it": "tells",
+          "we": "tell",
+          "they": "tell"
+        },
+        "past": {
+          "I": "told",
+          "you": "told",
+          "he/she/it": "told",
+          "we": "told",
+          "they": "told"
+        },
+        "perfect": {
+          "participle": "told",
+          "I": "have told",
+          "you": "have told",
+          "he/she/it": "has told",
+          "we": "have told",
+          "they": "have told"
+        }
+      }
+    },
+    "feel": {
+      "translation": "fühlen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "feel",
+          "you": "feel",
+          "he/she/it": "feels",
+          "we": "feel",
+          "they": "feel"
+        },
+        "past": {
+          "I": "felt",
+          "you": "felt",
+          "he/she/it": "felt",
+          "we": "felt",
+          "they": "felt"
+        },
+        "perfect": {
+          "participle": "felt",
+          "I": "have felt",
+          "you": "have felt",
+          "he/she/it": "has felt",
+          "we": "have felt",
+          "they": "have felt"
+        }
+      }
+    },
+    "become": {
+      "translation": "werden",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "become",
+          "you": "become",
+          "he/she/it": "becomes",
+          "we": "become",
+          "they": "become"
+        },
+        "past": {
+          "I": "became",
+          "you": "became",
+          "he/she/it": "became",
+          "we": "became",
+          "they": "became"
+        },
+        "perfect": {
+          "participle": "become",
+          "I": "have become",
+          "you": "have become",
+          "he/she/it": "has become",
+          "we": "have become",
+          "they": "have become"
+        }
+      }
+    },
+    "leave": {
+      "translation": "verlassen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "leave",
+          "you": "leave",
+          "he/she/it": "leaves",
+          "we": "leave",
+          "they": "leave"
+        },
+        "past": {
+          "I": "left",
+          "you": "left",
+          "he/she/it": "left",
+          "we": "left",
+          "they": "left"
+        },
+        "perfect": {
+          "participle": "left",
+          "I": "have left",
+          "you": "have left",
+          "he/she/it": "has left",
+          "we": "have left",
+          "they": "have left"
+        }
+      }
+    },
+    "put": {
+      "translation": "setzen, stellen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "put",
+          "you": "put",
+          "he/she/it": "puts",
+          "we": "put",
+          "they": "put"
+        },
+        "past": {
+          "I": "put",
+          "you": "put",
+          "he/she/it": "put",
+          "we": "put",
+          "they": "put"
+        },
+        "perfect": {
+          "participle": "put",
+          "I": "have put",
+          "you": "have put",
+          "he/she/it": "has put",
+          "we": "have put",
+          "they": "have put"
+        }
+      }
+    },
+    "keep": {
+      "translation": "behalten",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "keep",
+          "you": "keep",
+          "he/she/it": "keeps",
+          "we": "keep",
+          "they": "keep"
+        },
+        "past": {
+          "I": "kept",
+          "you": "kept",
+          "he/she/it": "kept",
+          "we": "kept",
+          "they": "kept"
+        },
+        "perfect": {
+          "participle": "kept",
+          "I": "have kept",
+          "you": "have kept",
+          "he/she/it": "has kept",
+          "we": "have kept",
+          "they": "have kept"
+        }
+      }
+    },
+    "begin": {
+      "translation": "beginnen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "begin",
+          "you": "begin",
+          "he/she/it": "begins",
+          "we": "begin",
+          "they": "begin"
+        },
+        "past": {
+          "I": "began",
+          "you": "began",
+          "he/she/it": "began",
+          "we": "began",
+          "they": "began"
+        },
+        "perfect": {
+          "participle": "begun",
+          "I": "have begun",
+          "you": "have begun",
+          "he/she/it": "has begun",
+          "we": "have begun",
+          "they": "have begun"
+        }
+      }
+    },
+    "write": {
+      "translation": "schreiben",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "write",
+          "you": "write",
+          "he/she/it": "writes",
+          "we": "write",
+          "they": "write"
+        },
+        "past": {
+          "I": "wrote",
+          "you": "wrote",
+          "he/she/it": "wrote",
+          "we": "wrote",
+          "they": "wrote"
+        },
+        "perfect": {
+          "participle": "written",
+          "I": "have written",
+          "you": "have written",
+          "he/she/it": "has written",
+          "we": "have written",
+          "they": "have written"
+        }
+      }
+    },
+    "run": {
+      "translation": "laufen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "run",
+          "you": "run",
+          "he/she/it": "runs",
+          "we": "run",
+          "they": "run"
+        },
+        "past": {
+          "I": "ran",
+          "you": "ran",
+          "he/she/it": "ran",
+          "we": "ran",
+          "they": "ran"
+        },
+        "perfect": {
+          "participle": "run",
+          "I": "have run",
+          "you": "have run",
+          "he/she/it": "has run",
+          "we": "have run",
+          "they": "have run"
+        }
+      }
+    },
+    "read": {
+      "translation": "lesen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "read",
+          "you": "read",
+          "he/she/it": "reads",
+          "we": "read",
+          "they": "read"
+        },
+        "past": {
+          "I": "read",
+          "you": "read",
+          "he/she/it": "read",
+          "we": "read",
+          "they": "read"
+        },
+        "perfect": {
+          "participle": "read",
+          "I": "have read",
+          "you": "have read",
+          "he/she/it": "has read",
+          "we": "have read",
+          "they": "have read"
+        }
+      }
+    },
+    "speak": {
+      "translation": "sprechen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "speak",
+          "you": "speak",
+          "he/she/it": "speaks",
+          "we": "speak",
+          "they": "speak"
+        },
+        "past": {
+          "I": "spoke",
+          "you": "spoke",
+          "he/she/it": "spoke",
+          "we": "spoke",
+          "they": "spoke"
+        },
+        "perfect": {
+          "participle": "spoken",
+          "I": "have spoken",
+          "you": "have spoken",
+          "he/she/it": "has spoken",
+          "we": "have spoken",
+          "they": "have spoken"
+        }
+      }
+    },
+    "hear": {
+      "translation": "hören",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "hear",
+          "you": "hear",
+          "he/she/it": "hears",
+          "we": "hear",
+          "they": "hear"
+        },
+        "past": {
+          "I": "heard",
+          "you": "heard",
+          "he/she/it": "heard",
+          "we": "heard",
+          "they": "heard"
+        },
+        "perfect": {
+          "participle": "heard",
+          "I": "have heard",
+          "you": "have heard",
+          "he/she/it": "has heard",
+          "we": "have heard",
+          "they": "have heard"
+        }
+      }
+    },
+    "sit": {
+      "translation": "sitzen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "sit",
+          "you": "sit",
+          "he/she/it": "sits",
+          "we": "sit",
+          "they": "sit"
+        },
+        "past": {
+          "I": "sat",
+          "you": "sat",
+          "he/she/it": "sat",
+          "we": "sat",
+          "they": "sat"
+        },
+        "perfect": {
+          "participle": "sat",
+          "I": "have sat",
+          "you": "have sat",
+          "he/she/it": "has sat",
+          "we": "have sat",
+          "they": "have sat"
+        }
+      }
+    },
+    "stand": {
+      "translation": "stehen",
+      "type": "irregular",
+      "conjugations": {
+        "present": {
+          "I": "stand",
+          "you": "stand",
+          "he/she/it": "stands",
+          "we": "stand",
+          "they": "stand"
+        },
+        "past": {
+          "I": "stood",
+          "you": "stood",
+          "he/she/it": "stood",
+          "we": "stood",
+          "they": "stood"
+        },
+        "perfect": {
+          "participle": "stood",
+          "I": "have stood",
+          "you": "have stood",
+          "he/she/it": "has stood",
+          "we": "have stood",
+          "they": "have stood"
+        }
+      }
+    }
+  }
+}

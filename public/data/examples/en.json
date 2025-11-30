@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "language": "en",
+    "wordCount": 50,
+    "sentenceCount": 150,
+    "lastUpdated": "2025-11-30"
+  },
+  "examples": {
+    "be": [
+      { "sentence": "I am happy today.", "translation": "Ich bin heute glücklich." },
+      { "sentence": "She is my best friend.", "translation": "Sie ist meine beste Freundin." },
+      { "sentence": "They are from Germany.", "translation": "Sie kommen aus Deutschland." }
+    ],
+    "have": [
+      { "sentence": "I have a new car.", "translation": "Ich habe ein neues Auto." },
+      { "sentence": "She has two children.", "translation": "Sie hat zwei Kinder." },
+      { "sentence": "We have no time.", "translation": "Wir haben keine Zeit." }
+    ],
+    "do": [
+      { "sentence": "What do you do?", "translation": "Was machst du?" },
+      { "sentence": "I do my homework every day.", "translation": "Ich mache jeden Tag meine Hausaufgaben." },
+      { "sentence": "She does her best.", "translation": "Sie gibt ihr Bestes." }
+    ],
+    "say": [
+      { "sentence": "What did you say?", "translation": "Was hast du gesagt?" },
+      { "sentence": "He says hello.", "translation": "Er sagt Hallo." },
+      { "sentence": "They say it's true.", "translation": "Sie sagen, es ist wahr." }
+    ],
+    "go": [
+      { "sentence": "I go to school every day.", "translation": "Ich gehe jeden Tag zur Schule." },
+      { "sentence": "Let's go to the cinema.", "translation": "Lass uns ins Kino gehen." },
+      { "sentence": "She goes to work by bus.", "translation": "Sie fährt mit dem Bus zur Arbeit." }
+    ],
+    "get": [
+      { "sentence": "I get up at seven.", "translation": "Ich stehe um sieben auf." },
+      { "sentence": "Did you get my message?", "translation": "Hast du meine Nachricht bekommen?" },
+      { "sentence": "It's getting cold.", "translation": "Es wird kalt." }
+    ],
+    "make": [
+      { "sentence": "I make breakfast every morning.", "translation": "Ich mache jeden Morgen Frühstück." },
+      { "sentence": "She makes beautiful paintings.", "translation": "Sie macht schöne Gemälde." },
+      { "sentence": "Let's make a plan.", "translation": "Lass uns einen Plan machen." }
+    ],
+    "know": [
+      { "sentence": "I know the answer.", "translation": "Ich kenne die Antwort." },
+      { "sentence": "Do you know her?", "translation": "Kennst du sie?" },
+      { "sentence": "I don't know what to do.", "translation": "Ich weiß nicht, was ich tun soll." }
+    ],
+    "think": [
+      { "sentence": "I think you're right.", "translation": "Ich denke, du hast recht." },
+      { "sentence": "What do you think?", "translation": "Was denkst du?" },
+      { "sentence": "She thinks about the future.", "translation": "Sie denkt über die Zukunft nach." }
+    ],
+    "take": [
+      { "sentence": "Take your time.", "translation": "Nimm dir Zeit." },
+      { "sentence": "I take the bus to work.", "translation": "Ich nehme den Bus zur Arbeit." },
+      { "sentence": "She takes photos.", "translation": "Sie macht Fotos." }
+    ],
+    "see": [
+      { "sentence": "I see the mountain.", "translation": "Ich sehe den Berg." },
+      { "sentence": "Can you see that?", "translation": "Kannst du das sehen?" },
+      { "sentence": "We'll see what happens.", "translation": "Wir werden sehen, was passiert." }
+    ],
+    "come": [
+      { "sentence": "Please come here.", "translation": "Bitte komm hierher." },
+      { "sentence": "Where do you come from?", "translation": "Woher kommst du?" },
+      { "sentence": "He comes every Sunday.", "translation": "Er kommt jeden Sonntag." }
+    ],
+    "want": [
+      { "sentence": "I want to learn German.", "translation": "Ich will Deutsch lernen." },
+      { "sentence": "What do you want?", "translation": "Was willst du?" },
+      { "sentence": "She wants to travel.", "translation": "Sie möchte reisen." }
+    ],
+    "look": [
+      { "sentence": "Look at this!", "translation": "Schau dir das an!" },
+      { "sentence": "You look great today.", "translation": "Du siehst heute toll aus." },
+      { "sentence": "I'm looking for my keys.", "translation": "Ich suche meine Schlüssel." }
+    ],
+    "use": [
+      { "sentence": "Can I use your phone?", "translation": "Kann ich dein Telefon benutzen?" },
+      { "sentence": "I use this app every day.", "translation": "Ich benutze diese App jeden Tag." },
+      { "sentence": "She uses a lot of sugar.", "translation": "Sie benutzt viel Zucker." }
+    ],
+    "find": [
+      { "sentence": "I can't find my keys.", "translation": "Ich kann meine Schlüssel nicht finden." },
+      { "sentence": "Did you find the answer?", "translation": "Hast du die Antwort gefunden?" },
+      { "sentence": "She found a new job.", "translation": "Sie hat einen neuen Job gefunden." }
+    ],
+    "give": [
+      { "sentence": "Give me a moment.", "translation": "Gib mir einen Moment." },
+      { "sentence": "He gives her flowers.", "translation": "Er gibt ihr Blumen." },
+      { "sentence": "I'll give you a call.", "translation": "Ich rufe dich an." }
+    ],
+    "tell": [
+      { "sentence": "Tell me the truth.", "translation": "Sag mir die Wahrheit." },
+      { "sentence": "She told me a story.", "translation": "Sie hat mir eine Geschichte erzählt." },
+      { "sentence": "Can you tell the difference?", "translation": "Kannst du den Unterschied erkennen?" }
+    ],
+    "work": [
+      { "sentence": "I work in an office.", "translation": "Ich arbeite in einem Büro." },
+      { "sentence": "Does this phone work?", "translation": "Funktioniert dieses Telefon?" },
+      { "sentence": "She works hard.", "translation": "Sie arbeitet hart." }
+    ],
+    "ask": [
+      { "sentence": "Can I ask you something?", "translation": "Kann ich dich etwas fragen?" },
+      { "sentence": "She asked for help.", "translation": "Sie hat um Hilfe gebeten." },
+      { "sentence": "Ask him about it.", "translation": "Frag ihn danach." }
+    ],
+    "need": [
+      { "sentence": "I need your help.", "translation": "Ich brauche deine Hilfe." },
+      { "sentence": "You need to rest.", "translation": "Du musst dich ausruhen." },
+      { "sentence": "What do you need?", "translation": "Was brauchst du?" }
+    ],
+    "feel": [
+      { "sentence": "I feel tired.", "translation": "Ich fühle mich müde." },
+      { "sentence": "How do you feel?", "translation": "Wie fühlst du dich?" },
+      { "sentence": "She feels happy.", "translation": "Sie fühlt sich glücklich." }
+    ],
+    "try": [
+      { "sentence": "I'll try my best.", "translation": "Ich werde mein Bestes versuchen." },
+      { "sentence": "Try this food.", "translation": "Probier dieses Essen." },
+      { "sentence": "She tried to help.", "translation": "Sie versuchte zu helfen." }
+    ],
+    "leave": [
+      { "sentence": "I have to leave now.", "translation": "Ich muss jetzt gehen." },
+      { "sentence": "She left her bag here.", "translation": "Sie hat ihre Tasche hier gelassen." },
+      { "sentence": "When does the train leave?", "translation": "Wann fährt der Zug ab?" }
+    ],
+    "call": [
+      { "sentence": "Call me tomorrow.", "translation": "Ruf mich morgen an." },
+      { "sentence": "What do you call this?", "translation": "Wie nennt man das?" },
+      { "sentence": "She called the police.", "translation": "Sie hat die Polizei gerufen." }
+    ],
+    "keep": [
+      { "sentence": "Keep the change.", "translation": "Behalte das Wechselgeld." },
+      { "sentence": "I keep forgetting.", "translation": "Ich vergesse es immer wieder." },
+      { "sentence": "She keeps her promises.", "translation": "Sie hält ihre Versprechen." }
+    ],
+    "let": [
+      { "sentence": "Let me help you.", "translation": "Lass mich dir helfen." },
+      { "sentence": "Let's go!", "translation": "Lass uns gehen!" },
+      { "sentence": "She let him in.", "translation": "Sie ließ ihn herein." }
+    ],
+    "begin": [
+      { "sentence": "Let's begin the meeting.", "translation": "Lasst uns das Meeting beginnen." },
+      { "sentence": "The movie begins at eight.", "translation": "Der Film beginnt um acht." },
+      { "sentence": "She began to cry.", "translation": "Sie fing an zu weinen." }
+    ],
+    "help": [
+      { "sentence": "Can you help me?", "translation": "Kannst du mir helfen?" },
+      { "sentence": "I need help with this.", "translation": "Ich brauche Hilfe damit." },
+      { "sentence": "She helped me a lot.", "translation": "Sie hat mir sehr geholfen." }
+    ],
+    "show": [
+      { "sentence": "Show me the way.", "translation": "Zeig mir den Weg." },
+      { "sentence": "The picture shows a cat.", "translation": "Das Bild zeigt eine Katze." },
+      { "sentence": "I'll show you how.", "translation": "Ich zeige dir, wie." }
+    ],
+    "hear": [
+      { "sentence": "I can't hear you.", "translation": "Ich kann dich nicht hören." },
+      { "sentence": "Did you hear the news?", "translation": "Hast du die Neuigkeiten gehört?" },
+      { "sentence": "She heard a strange noise.", "translation": "Sie hörte ein seltsames Geräusch." }
+    ],
+    "play": [
+      { "sentence": "The children play in the park.", "translation": "Die Kinder spielen im Park." },
+      { "sentence": "She plays the piano.", "translation": "Sie spielt Klavier." },
+      { "sentence": "Let's play a game.", "translation": "Lass uns ein Spiel spielen." }
+    ],
+    "run": [
+      { "sentence": "I run every morning.", "translation": "Ich laufe jeden Morgen." },
+      { "sentence": "The dog runs fast.", "translation": "Der Hund läuft schnell." },
+      { "sentence": "She runs a business.", "translation": "Sie führt ein Geschäft." }
+    ],
+    "move": [
+      { "sentence": "Don't move!", "translation": "Beweg dich nicht!" },
+      { "sentence": "We're moving to a new house.", "translation": "Wir ziehen in ein neues Haus." },
+      { "sentence": "The car is not moving.", "translation": "Das Auto bewegt sich nicht." }
+    ],
+    "live": [
+      { "sentence": "I live in Berlin.", "translation": "Ich lebe in Berlin." },
+      { "sentence": "Where do you live?", "translation": "Wo wohnst du?" },
+      { "sentence": "She lives alone.", "translation": "Sie lebt allein." }
+    ],
+    "believe": [
+      { "sentence": "I believe you.", "translation": "Ich glaube dir." },
+      { "sentence": "Do you believe in magic?", "translation": "Glaubst du an Magie?" },
+      { "sentence": "She believes in herself.", "translation": "Sie glaubt an sich selbst." }
+    ],
+    "write": [
+      { "sentence": "I write in my journal.", "translation": "Ich schreibe in mein Tagebuch." },
+      { "sentence": "She writes beautiful poems.", "translation": "Sie schreibt schöne Gedichte." },
+      { "sentence": "Write your name here.", "translation": "Schreibe deinen Namen hier." }
+    ],
+    "learn": [
+      { "sentence": "I'm learning German.", "translation": "Ich lerne Deutsch." },
+      { "sentence": "She learns quickly.", "translation": "Sie lernt schnell." },
+      { "sentence": "You learn from mistakes.", "translation": "Man lernt aus Fehlern." }
+    ],
+    "read": [
+      { "sentence": "I read books every night.", "translation": "Ich lese jeden Abend Bücher." },
+      { "sentence": "Can you read this?", "translation": "Kannst du das lesen?" },
+      { "sentence": "She reads the newspaper.", "translation": "Sie liest die Zeitung." }
+    ],
+    "speak": [
+      { "sentence": "Do you speak English?", "translation": "Sprechen Sie Englisch?" },
+      { "sentence": "She speaks three languages.", "translation": "Sie spricht drei Sprachen." },
+      { "sentence": "He speaks very fast.", "translation": "Er spricht sehr schnell." }
+    ],
+    "time": [
+      { "sentence": "What time is it?", "translation": "Wie spät ist es?" },
+      { "sentence": "Time flies when you're having fun.", "translation": "Die Zeit vergeht wie im Flug, wenn man Spaß hat." },
+      { "sentence": "I need more time.", "translation": "Ich brauche mehr Zeit." }
+    ],
+    "good": [
+      { "sentence": "This food is good.", "translation": "Dieses Essen ist gut." },
+      { "sentence": "Have a good day!", "translation": "Hab einen schönen Tag!" },
+      { "sentence": "She's a good person.", "translation": "Sie ist ein guter Mensch." }
+    ],
+    "day": [
+      { "sentence": "It's a beautiful day.", "translation": "Es ist ein schöner Tag." },
+      { "sentence": "I work every day.", "translation": "Ich arbeite jeden Tag." },
+      { "sentence": "One day, I'll travel the world.", "translation": "Eines Tages werde ich um die Welt reisen." }
+    ],
+    "year": [
+      { "sentence": "Happy New Year!", "translation": "Frohes neues Jahr!" },
+      { "sentence": "I'm twenty years old.", "translation": "Ich bin zwanzig Jahre alt." },
+      { "sentence": "She graduated last year.", "translation": "Sie hat letztes Jahr ihren Abschluss gemacht." }
+    ],
+    "man": [
+      { "sentence": "The man is reading a book.", "translation": "Der Mann liest ein Buch." },
+      { "sentence": "He's a good man.", "translation": "Er ist ein guter Mann." },
+      { "sentence": "That man lives next door.", "translation": "Dieser Mann wohnt nebenan." }
+    ],
+    "woman": [
+      { "sentence": "The woman is singing.", "translation": "Die Frau singt." },
+      { "sentence": "She's a strong woman.", "translation": "Sie ist eine starke Frau." },
+      { "sentence": "A woman called for you.", "translation": "Eine Frau hat nach dir gefragt." }
+    ],
+    "child": [
+      { "sentence": "The child is playing.", "translation": "Das Kind spielt." },
+      { "sentence": "Every child deserves love.", "translation": "Jedes Kind verdient Liebe." },
+      { "sentence": "She was a happy child.", "translation": "Sie war ein glückliches Kind." }
+    ],
+    "world": [
+      { "sentence": "The world is beautiful.", "translation": "Die Welt ist schön." },
+      { "sentence": "I want to travel the world.", "translation": "Ich möchte um die Welt reisen." },
+      { "sentence": "It's a small world.", "translation": "Die Welt ist klein." }
+    ],
+    "life": [
+      { "sentence": "Life is short.", "translation": "Das Leben ist kurz." },
+      { "sentence": "I love my life.", "translation": "Ich liebe mein Leben." },
+      { "sentence": "She saved his life.", "translation": "Sie rettete sein Leben." }
+    ]
+  }
+}

@@ -105,6 +105,40 @@ export interface Translations {
   removeBookmark: string;
   addBookmark: string;
   removeLearned: string;
+
+  // Flashcards
+  'flashcards.title': string;
+  'flashcards.practice': string;
+  'flashcards.tapToFlip': string;
+  'flashcards.clickToReveal': string;
+  'flashcards.again': string;
+  'flashcards.hard': string;
+  'flashcards.good': string;
+  'flashcards.easy': string;
+  'flashcards.card': string;
+  'flashcards.cardsRemaining': string;
+  'flashcards.sessionComplete': string;
+  'flashcards.correct': string;
+  'flashcards.toReview': string;
+  'flashcards.studyAgain': string;
+  'flashcards.backToSearch': string;
+  'flashcards.nextReview': string;
+  'flashcards.dueToday': string;
+  'flashcards.due': string;
+  'flashcards.startPractice': string;
+  'flashcards.noCardsDue': string;
+  'flashcards.totalCards': string;
+  'flashcards.newCards': string;
+  'flashcards.mastered': string;
+  'flashcards.cardsPerSession': string;
+  'flashcards.addCards': string;
+  'flashcards.adding': string;
+  'flashcards.resetProgress': string;
+  'flashcards.noCards': string;
+  'flashcards.addFromSearch': string;
+  'flashcards.endSession': string;
+  'flashcards.accuracy': string;
+  'flashcards.minutes': string;
 }
 
 const englishTranslations: Translations = {
@@ -212,6 +246,40 @@ const englishTranslations: Translations = {
   removeBookmark: 'Remove bookmark',
   addBookmark: 'Add bookmark',
   removeLearned: 'Remove from learned',
+
+  // Flashcards
+  'flashcards.title': 'Flashcards',
+  'flashcards.practice': 'Practice',
+  'flashcards.tapToFlip': 'Tap to flip',
+  'flashcards.clickToReveal': 'Click to reveal the answer',
+  'flashcards.again': 'Again',
+  'flashcards.hard': 'Hard',
+  'flashcards.good': 'Good',
+  'flashcards.easy': 'Easy',
+  'flashcards.card': 'Card',
+  'flashcards.cardsRemaining': '{count} cards remaining',
+  'flashcards.sessionComplete': 'Session Complete!',
+  'flashcards.correct': 'Correct',
+  'flashcards.toReview': 'To review',
+  'flashcards.studyAgain': 'Study Again',
+  'flashcards.backToSearch': 'Back to Search',
+  'flashcards.nextReview': 'Next review: {time}',
+  'flashcards.dueToday': 'Due today',
+  'flashcards.due': 'due',
+  'flashcards.startPractice': 'Start Practice',
+  'flashcards.noCardsDue': 'No cards due!',
+  'flashcards.totalCards': 'Total cards',
+  'flashcards.newCards': 'New cards',
+  'flashcards.mastered': 'Mastered',
+  'flashcards.cardsPerSession': 'Cards per session',
+  'flashcards.addCards': 'Add Cards from Vocabulary',
+  'flashcards.adding': 'Adding cards...',
+  'flashcards.resetProgress': 'Reset Progress',
+  'flashcards.noCards': 'No flashcards yet',
+  'flashcards.addFromSearch': 'Add words from vocabulary to start practicing',
+  'flashcards.endSession': 'End Session',
+  'flashcards.accuracy': 'Accuracy',
+  'flashcards.minutes': 'minutes',
 };
 
 const germanTranslations: Translations = {
@@ -319,6 +387,40 @@ const germanTranslations: Translations = {
   removeBookmark: 'Lesezeichen entfernen',
   addBookmark: 'Lesezeichen hinzufügen',
   removeLearned: 'Aus gelernt entfernen',
+
+  // Flashcards
+  'flashcards.title': 'Karteikarten',
+  'flashcards.practice': 'Üben',
+  'flashcards.tapToFlip': 'Tippen zum Umdrehen',
+  'flashcards.clickToReveal': 'Klicken, um die Antwort zu zeigen',
+  'flashcards.again': 'Nochmal',
+  'flashcards.hard': 'Schwer',
+  'flashcards.good': 'Gut',
+  'flashcards.easy': 'Leicht',
+  'flashcards.card': 'Karte',
+  'flashcards.cardsRemaining': '{count} Karten übrig',
+  'flashcards.sessionComplete': 'Sitzung abgeschlossen!',
+  'flashcards.correct': 'Richtig',
+  'flashcards.toReview': 'Zu wiederholen',
+  'flashcards.studyAgain': 'Nochmal lernen',
+  'flashcards.backToSearch': 'Zurück zur Suche',
+  'flashcards.nextReview': 'Nächste Wiederholung: {time}',
+  'flashcards.dueToday': 'Heute fällig',
+  'flashcards.due': 'fällig',
+  'flashcards.startPractice': 'Übung starten',
+  'flashcards.noCardsDue': 'Keine Karten fällig!',
+  'flashcards.totalCards': 'Gesamte Karten',
+  'flashcards.newCards': 'Neue Karten',
+  'flashcards.mastered': 'Gemeistert',
+  'flashcards.cardsPerSession': 'Karten pro Sitzung',
+  'flashcards.addCards': 'Karten aus Vokabular hinzufügen',
+  'flashcards.adding': 'Karten werden hinzugefügt...',
+  'flashcards.resetProgress': 'Fortschritt zurücksetzen',
+  'flashcards.noCards': 'Noch keine Karteikarten',
+  'flashcards.addFromSearch': 'Füge Wörter aus dem Vokabular hinzu, um zu üben',
+  'flashcards.endSession': 'Sitzung beenden',
+  'flashcards.accuracy': 'Genauigkeit',
+  'flashcards.minutes': 'Minuten',
 };
 
 const frenchTranslations: Translations = {
@@ -426,6 +528,40 @@ const frenchTranslations: Translations = {
   removeBookmark: 'Retirer des favoris',
   addBookmark: 'Ajouter aux favoris',
   removeLearned: 'Retirer des appris',
+
+  // Flashcards
+  'flashcards.title': 'Cartes mémoire',
+  'flashcards.practice': 'Pratiquer',
+  'flashcards.tapToFlip': 'Appuyer pour retourner',
+  'flashcards.clickToReveal': 'Cliquer pour révéler la réponse',
+  'flashcards.again': 'Encore',
+  'flashcards.hard': 'Difficile',
+  'flashcards.good': 'Bien',
+  'flashcards.easy': 'Facile',
+  'flashcards.card': 'Carte',
+  'flashcards.cardsRemaining': '{count} cartes restantes',
+  'flashcards.sessionComplete': 'Session terminée !',
+  'flashcards.correct': 'Correct',
+  'flashcards.toReview': 'À revoir',
+  'flashcards.studyAgain': 'Étudier à nouveau',
+  'flashcards.backToSearch': 'Retour à la recherche',
+  'flashcards.nextReview': 'Prochaine révision : {time}',
+  'flashcards.dueToday': 'À revoir aujourd\'hui',
+  'flashcards.due': 'à revoir',
+  'flashcards.startPractice': 'Commencer la pratique',
+  'flashcards.noCardsDue': 'Aucune carte à revoir !',
+  'flashcards.totalCards': 'Total des cartes',
+  'flashcards.newCards': 'Nouvelles cartes',
+  'flashcards.mastered': 'Maîtrisées',
+  'flashcards.cardsPerSession': 'Cartes par session',
+  'flashcards.addCards': 'Ajouter des cartes du vocabulaire',
+  'flashcards.adding': 'Ajout des cartes...',
+  'flashcards.resetProgress': 'Réinitialiser le progrès',
+  'flashcards.noCards': 'Pas encore de cartes mémoire',
+  'flashcards.addFromSearch': 'Ajoutez des mots du vocabulaire pour commencer à pratiquer',
+  'flashcards.endSession': 'Terminer la session',
+  'flashcards.accuracy': 'Précision',
+  'flashcards.minutes': 'minutes',
 };
 
 const spanishTranslations: Translations = {
@@ -533,6 +669,40 @@ const spanishTranslations: Translations = {
   removeBookmark: 'Quitar de guardados',
   addBookmark: 'Agregar a guardados',
   removeLearned: 'Quitar de aprendidos',
+
+  // Flashcards
+  'flashcards.title': 'Tarjetas de memoria',
+  'flashcards.practice': 'Practicar',
+  'flashcards.tapToFlip': 'Toca para voltear',
+  'flashcards.clickToReveal': 'Haz clic para revelar la respuesta',
+  'flashcards.again': 'Otra vez',
+  'flashcards.hard': 'Difícil',
+  'flashcards.good': 'Bien',
+  'flashcards.easy': 'Fácil',
+  'flashcards.card': 'Tarjeta',
+  'flashcards.cardsRemaining': '{count} tarjetas restantes',
+  'flashcards.sessionComplete': '¡Sesión completada!',
+  'flashcards.correct': 'Correcto',
+  'flashcards.toReview': 'Para repasar',
+  'flashcards.studyAgain': 'Estudiar de nuevo',
+  'flashcards.backToSearch': 'Volver a buscar',
+  'flashcards.nextReview': 'Próxima revisión: {time}',
+  'flashcards.dueToday': 'Pendientes hoy',
+  'flashcards.due': 'pendientes',
+  'flashcards.startPractice': 'Comenzar práctica',
+  'flashcards.noCardsDue': '¡Sin tarjetas pendientes!',
+  'flashcards.totalCards': 'Total de tarjetas',
+  'flashcards.newCards': 'Tarjetas nuevas',
+  'flashcards.mastered': 'Dominadas',
+  'flashcards.cardsPerSession': 'Tarjetas por sesión',
+  'flashcards.addCards': 'Agregar tarjetas del vocabulario',
+  'flashcards.adding': 'Agregando tarjetas...',
+  'flashcards.resetProgress': 'Reiniciar progreso',
+  'flashcards.noCards': 'Sin tarjetas de memoria todavía',
+  'flashcards.addFromSearch': 'Agrega palabras del vocabulario para empezar a practicar',
+  'flashcards.endSession': 'Terminar sesión',
+  'flashcards.accuracy': 'Precisión',
+  'flashcards.minutes': 'minutos',
 };
 
 const russianTranslations: Translations = {
@@ -640,6 +810,40 @@ const russianTranslations: Translations = {
   removeBookmark: 'Удалить из закладок',
   addBookmark: 'Добавить в закладки',
   removeLearned: 'Удалить из изученных',
+
+  // Flashcards
+  'flashcards.title': 'Карточки',
+  'flashcards.practice': 'Практика',
+  'flashcards.tapToFlip': 'Нажмите, чтобы перевернуть',
+  'flashcards.clickToReveal': 'Нажмите, чтобы увидеть ответ',
+  'flashcards.again': 'Ещё раз',
+  'flashcards.hard': 'Сложно',
+  'flashcards.good': 'Хорошо',
+  'flashcards.easy': 'Легко',
+  'flashcards.card': 'Карточка',
+  'flashcards.cardsRemaining': 'Осталось {count} карточек',
+  'flashcards.sessionComplete': 'Сессия завершена!',
+  'flashcards.correct': 'Правильно',
+  'flashcards.toReview': 'На повторение',
+  'flashcards.studyAgain': 'Учить снова',
+  'flashcards.backToSearch': 'Вернуться к поиску',
+  'flashcards.nextReview': 'Следующее повторение: {time}',
+  'flashcards.dueToday': 'На сегодня',
+  'flashcards.due': 'к изучению',
+  'flashcards.startPractice': 'Начать практику',
+  'flashcards.noCardsDue': 'Нет карточек к изучению!',
+  'flashcards.totalCards': 'Всего карточек',
+  'flashcards.newCards': 'Новые карточки',
+  'flashcards.mastered': 'Изучено',
+  'flashcards.cardsPerSession': 'Карточек за сессию',
+  'flashcards.addCards': 'Добавить карточки из словаря',
+  'flashcards.adding': 'Добавление карточек...',
+  'flashcards.resetProgress': 'Сбросить прогресс',
+  'flashcards.noCards': 'Пока нет карточек',
+  'flashcards.addFromSearch': 'Добавьте слова из словаря, чтобы начать практику',
+  'flashcards.endSession': 'Завершить сессию',
+  'flashcards.accuracy': 'Точность',
+  'flashcards.minutes': 'минут',
 };
 
 const greekTranslations: Translations = {
@@ -747,6 +951,40 @@ const greekTranslations: Translations = {
   removeBookmark: 'Αφαίρεση αποθήκευσης',
   addBookmark: 'Αποθήκευση',
   removeLearned: 'Αφαίρεση από μαθημένα',
+
+  // Flashcards
+  'flashcards.title': 'Κάρτες μνήμης',
+  'flashcards.practice': 'Εξάσκηση',
+  'flashcards.tapToFlip': 'Πατήστε για αναστροφή',
+  'flashcards.clickToReveal': 'Κάντε κλικ για να δείτε την απάντηση',
+  'flashcards.again': 'Ξανά',
+  'flashcards.hard': 'Δύσκολο',
+  'flashcards.good': 'Καλά',
+  'flashcards.easy': 'Εύκολο',
+  'flashcards.card': 'Κάρτα',
+  'flashcards.cardsRemaining': '{count} κάρτες απομένουν',
+  'flashcards.sessionComplete': 'Συνεδρία ολοκληρώθηκε!',
+  'flashcards.correct': 'Σωστά',
+  'flashcards.toReview': 'Για επανάληψη',
+  'flashcards.studyAgain': 'Μελέτη ξανά',
+  'flashcards.backToSearch': 'Πίσω στην αναζήτηση',
+  'flashcards.nextReview': 'Επόμενη επανάληψη: {time}',
+  'flashcards.dueToday': 'Σήμερα',
+  'flashcards.due': 'εκκρεμείς',
+  'flashcards.startPractice': 'Έναρξη εξάσκησης',
+  'flashcards.noCardsDue': 'Δεν υπάρχουν κάρτες!',
+  'flashcards.totalCards': 'Συνολικές κάρτες',
+  'flashcards.newCards': 'Νέες κάρτες',
+  'flashcards.mastered': 'Εκμαθημένες',
+  'flashcards.cardsPerSession': 'Κάρτες ανά συνεδρία',
+  'flashcards.addCards': 'Προσθήκη καρτών από το λεξιλόγιο',
+  'flashcards.adding': 'Προσθήκη καρτών...',
+  'flashcards.resetProgress': 'Επαναφορά προόδου',
+  'flashcards.noCards': 'Δεν υπάρχουν κάρτες ακόμα',
+  'flashcards.addFromSearch': 'Προσθέστε λέξεις από το λεξιλόγιο για να ξεκινήσετε',
+  'flashcards.endSession': 'Τέλος συνεδρίας',
+  'flashcards.accuracy': 'Ακρίβεια',
+  'flashcards.minutes': 'λεπτά',
 };
 
 // All translations

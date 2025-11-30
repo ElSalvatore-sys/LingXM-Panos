@@ -7,3 +7,6 @@ export { VirtualKeyboard } from './VirtualKeyboard';
 export { StatsBar } from './StatsBar';
 export { WordDetailModal } from './WordDetailModal';
 export { EmptyState } from './EmptyState';
+export { FlashcardCard } from './FlashcardCard';
+export { FlashcardControls } from './FlashcardControls';
+export { FlashcardSessionSummary } from './FlashcardSessionSummary';

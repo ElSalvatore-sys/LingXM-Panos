@@ -101,3 +101,38 @@ export interface UserProgress {
   currentStreak: number;
   lastPractice: Date | null;
 }
+
+// Flashcard types
+export type FlashcardRating = 0 | 1 | 2 | 3 | 4 | 5; // 0=again, 1=hard, 2=good, 3=easy, 4=very easy, 5=perfect
+
+export interface Flashcard {
+  id: number;
+  wordId: number;
+  word: string;
+  translation: string;
+  difficulty: number;
+  language: LanguageCode;
+  // SM-2 algorithm fields
+  lastReviewed: string | null;  // ISO date string
+  nextReview: string | null;    // ISO date string
+  easeFactor: number;           // Default 2.5, min 1.3
+  interval: number;             // Days until next review
+  repetitions: number;          // Times reviewed successfully
+}
+
+export interface FlashcardSession {
+  cards: Flashcard[];
+  currentIndex: number;
+  correctCount: number;
+  incorrectCount: number;
+  startTime: string;  // ISO date string
+  isComplete: boolean;
+}
+
+export interface FlashcardStats {
+  totalCards: number;
+  dueToday: number;
+  newCards: number;
+  masteredCards: number;
+  averageEase: number;
+}
