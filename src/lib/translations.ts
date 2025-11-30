@@ -88,6 +88,23 @@ export interface Translations {
   bookmarked: string;
   todayProgress: string;
   dailyGoal: string;
+
+  // Navigation
+  search: string;
+  bookmarks: string;
+  learned: string;
+
+  // Bookmarks/Learned pages
+  mySavedWords: string;
+  myLearnedWords: string;
+  language: string;
+  noBookmarks: string;
+  noLearnedWords: string;
+  searchMore: string;
+  learn: string;
+  removeBookmark: string;
+  addBookmark: string;
+  removeLearned: string;
 }
 
 const englishTranslations: Translations = {
@@ -178,6 +195,23 @@ const englishTranslations: Translations = {
   bookmarked: '{count} bookmarked',
   todayProgress: '{count}/{goal} today',
   dailyGoal: 'Daily goal',
+
+  // Navigation
+  search: 'Search',
+  bookmarks: 'Bookmarks',
+  learned: 'Learned',
+
+  // Bookmarks/Learned pages
+  mySavedWords: 'My Saved Words',
+  myLearnedWords: 'My Learned Words',
+  language: 'Language',
+  noBookmarks: "You haven't saved any words yet. Search for words and bookmark them to see them here.",
+  noLearnedWords: "You haven't learned any words yet. Mark words as learned to track your progress.",
+  searchMore: 'Search Words',
+  learn: 'Learn',
+  removeBookmark: 'Remove bookmark',
+  addBookmark: 'Add bookmark',
+  removeLearned: 'Remove from learned',
 };
 
 const germanTranslations: Translations = {
@@ -268,6 +302,23 @@ const germanTranslations: Translations = {
   bookmarked: '{count} gespeichert',
   todayProgress: '{count}/{goal} heute',
   dailyGoal: 'Tagesziel',
+
+  // Navigation
+  search: 'Suche',
+  bookmarks: 'Gespeichert',
+  learned: 'Gelernt',
+
+  // Bookmarks/Learned pages
+  mySavedWords: 'Meine gespeicherten Wörter',
+  myLearnedWords: 'Meine gelernten Wörter',
+  language: 'Sprache',
+  noBookmarks: 'Du hast noch keine Wörter gespeichert. Suche nach Wörtern und speichere sie.',
+  noLearnedWords: 'Du hast noch keine Wörter gelernt. Markiere Wörter als gelernt.',
+  searchMore: 'Wörter suchen',
+  learn: 'Lernen',
+  removeBookmark: 'Lesezeichen entfernen',
+  addBookmark: 'Lesezeichen hinzufügen',
+  removeLearned: 'Aus gelernt entfernen',
 };
 
 const frenchTranslations: Translations = {
@@ -358,6 +409,23 @@ const frenchTranslations: Translations = {
   bookmarked: '{count} favoris',
   todayProgress: "{count}/{goal} aujourd'hui",
   dailyGoal: 'Objectif quotidien',
+
+  // Navigation
+  search: 'Recherche',
+  bookmarks: 'Favoris',
+  learned: 'Appris',
+
+  // Bookmarks/Learned pages
+  mySavedWords: 'Mes mots sauvegardés',
+  myLearnedWords: 'Mes mots appris',
+  language: 'Langue',
+  noBookmarks: "Vous n'avez pas encore sauvegardé de mots. Recherchez des mots et ajoutez-les aux favoris.",
+  noLearnedWords: "Vous n'avez pas encore appris de mots. Marquez les mots comme appris pour suivre vos progrès.",
+  searchMore: 'Rechercher des mots',
+  learn: 'Apprendre',
+  removeBookmark: 'Retirer des favoris',
+  addBookmark: 'Ajouter aux favoris',
+  removeLearned: 'Retirer des appris',
 };
 
 const spanishTranslations: Translations = {
@@ -448,6 +516,23 @@ const spanishTranslations: Translations = {
   bookmarked: '{count} guardados',
   todayProgress: '{count}/{goal} hoy',
   dailyGoal: 'Meta diaria',
+
+  // Navigation
+  search: 'Buscar',
+  bookmarks: 'Guardados',
+  learned: 'Aprendidos',
+
+  // Bookmarks/Learned pages
+  mySavedWords: 'Mis palabras guardadas',
+  myLearnedWords: 'Mis palabras aprendidas',
+  language: 'Idioma',
+  noBookmarks: 'Aún no has guardado palabras. Busca palabras y guárdalas como favoritos.',
+  noLearnedWords: 'Aún no has aprendido palabras. Marca las palabras como aprendidas.',
+  searchMore: 'Buscar palabras',
+  learn: 'Aprender',
+  removeBookmark: 'Quitar de guardados',
+  addBookmark: 'Agregar a guardados',
+  removeLearned: 'Quitar de aprendidos',
 };
 
 const russianTranslations: Translations = {
@@ -538,6 +623,23 @@ const russianTranslations: Translations = {
   bookmarked: '{count} сохранено',
   todayProgress: '{count}/{goal} сегодня',
   dailyGoal: 'Ежедневная цель',
+
+  // Navigation
+  search: 'Поиск',
+  bookmarks: 'Закладки',
+  learned: 'Изучено',
+
+  // Bookmarks/Learned pages
+  mySavedWords: 'Мои сохранённые слова',
+  myLearnedWords: 'Мои изученные слова',
+  language: 'Язык',
+  noBookmarks: 'Вы ещё не сохранили слова. Найдите слова и добавьте их в закладки.',
+  noLearnedWords: 'Вы ещё не изучили слова. Отмечайте слова как изученные.',
+  searchMore: 'Искать слова',
+  learn: 'Учить',
+  removeBookmark: 'Удалить из закладок',
+  addBookmark: 'Добавить в закладки',
+  removeLearned: 'Удалить из изученных',
 };
 
 const greekTranslations: Translations = {
@@ -628,6 +730,23 @@ const greekTranslations: Translations = {
   bookmarked: '{count} αποθηκευμένα',
   todayProgress: '{count}/{goal} σήμερα',
   dailyGoal: 'Ημερήσιος στόχος',
+
+  // Navigation
+  search: 'Αναζήτηση',
+  bookmarks: 'Αποθηκευμένα',
+  learned: 'Μαθημένα',
+
+  // Bookmarks/Learned pages
+  mySavedWords: 'Οι αποθηκευμένες μου λέξεις',
+  myLearnedWords: 'Οι μαθημένες μου λέξεις',
+  language: 'Γλώσσα',
+  noBookmarks: 'Δεν έχετε αποθηκεύσει λέξεις ακόμα. Αναζητήστε λέξεις και αποθηκεύστε τες.',
+  noLearnedWords: 'Δεν έχετε μάθει λέξεις ακόμα. Σημειώστε λέξεις ως μαθημένες.',
+  searchMore: 'Αναζήτηση λέξεων',
+  learn: 'Μάθε',
+  removeBookmark: 'Αφαίρεση αποθήκευσης',
+  addBookmark: 'Αποθήκευση',
+  removeLearned: 'Αφαίρεση από μαθημένα',
 };
 
 // All translations

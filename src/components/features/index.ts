@@ -6,3 +6,4 @@ export { SearchTips } from './SearchTips';
 export { VirtualKeyboard } from './VirtualKeyboard';
 export { StatsBar } from './StatsBar';
 export { WordDetailModal } from './WordDetailModal';
+export { EmptyState } from './EmptyState';

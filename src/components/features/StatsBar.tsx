@@ -1,3 +1,4 @@
+import { Link, useSearchParams } from 'react-router-dom'
 import { FlameIcon, BookOpenIcon, BookmarkIcon, TargetIcon } from 'lucide-react'
 import { useTranslation } from '@/hooks/useTranslation'
 
@@ -17,8 +18,12 @@ export function StatsBar({
   dailyGoal,
 }: StatsBarProps) {
   const { t } = useTranslation()
+  const [searchParams] = useSearchParams()
 
+  const toLang = searchParams.get('to') || 'de'
   const progressPercent = Math.min(100, (todayProgress / dailyGoal) * 100)
+
+  const linkClass = 'flex items-center gap-2 hover:bg-lingxm-blue/10 px-2 py-1 rounded-md transition-colors cursor-pointer'
 
   return (
     <div
@@ -38,21 +43,21 @@ export function StatsBar({
           </span>
         </div>
 
-        {/* Words Learned */}
-        <div className="flex items-center gap-2">
+        {/* Words Learned - clickable */}
+        <Link to={`/learned?to=${toLang}`} className={linkClass}>
           <BookOpenIcon className="w-5 h-5 text-green-600" />
           <span className="text-sm font-medium">
             {t('wordsLearned', { count: wordsLearned })}
           </span>
-        </div>
+        </Link>
 
-        {/* Bookmarked */}
-        <div className="flex items-center gap-2">
+        {/* Bookmarked - clickable */}
+        <Link to={`/bookmarks?to=${toLang}`} className={linkClass}>
           <BookmarkIcon className="w-5 h-5 text-yellow-500" />
           <span className="text-sm font-medium">
             {t('bookmarked', { count: bookmarkedCount })}
           </span>
-        </div>
+        </Link>
 
         {/* Today's Progress */}
         <div className="flex items-center gap-3">

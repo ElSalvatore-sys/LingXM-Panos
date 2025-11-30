@@ -26,6 +26,10 @@ interface UseProgressReturn {
   wordsLearned: number      // For current language
   bookmarkedCount: number   // For current language
 
+  // Word lists
+  learnedWordIds: number[]
+  bookmarkedWordIds: number[]
+
   // Actions
   addLearnedWord: (wordId: number) => void
   removeLearnedWord: (wordId: number) => void
@@ -253,6 +257,8 @@ export function useProgress(targetLanguage: LanguageCode): UseProgressReturn {
     todayProgress: progress.todayLearned,
     wordsLearned: languageData.learnedWords.length,
     bookmarkedCount: languageData.bookmarkedWords.length,
+    learnedWordIds: languageData.learnedWords,
+    bookmarkedWordIds: languageData.bookmarkedWords,
     addLearnedWord,
     removeLearnedWord,
     addBookmark,

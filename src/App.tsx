@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AppProvider } from '@/contexts/AppContext';
-import { LandingPage, SearchPage } from '@/pages';
+import { LandingPage, SearchPage, BookmarksPage, LearnedPage } from '@/pages';
 
 function App() {
   return (
@@ -9,9 +9,9 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/learn" element={<SearchPage />} />
-          {/* Future routes:
-          <Route path="/about" element={<AboutPage />} />
-          */}
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/bookmarks" element={<BookmarksPage />} />
+          <Route path="/learned" element={<LearnedPage />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>
