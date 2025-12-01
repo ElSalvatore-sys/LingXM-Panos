@@ -13,6 +13,7 @@ interface UseVocabularyReturn {
 
 /**
  * Hook to load and search vocabulary for a given language
+ * IMPORTANT: This hook ONLY loads vocabulary for the specified language
  */
 export function useVocabulary(languageCode: LanguageCode): UseVocabularyReturn {
   const [data, setData] = useState<VocabularyData | null>(null);
@@ -23,10 +24,12 @@ export function useVocabulary(languageCode: LanguageCode): UseVocabularyReturn {
   useEffect(() => {
     let isMounted = true;
 
-    async function loadVocabulary() {
-      setIsLoading(true);
-      setError(null);
+    // Clear previous data immediately when language changes
+    setData(null);
+    setIsLoading(true);
+    setError(null);
 
+    async function loadVocabulary() {
       try {
         const response = await fetch(`/data/${languageCode}.json`);
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import type { LanguageCode, Word, WordDetail } from '@/types';
 import { Header, Footer } from '@/components/layout';
@@ -26,12 +26,26 @@ export function SearchPage() {
   const fromLang = (searchParams.get('from') || 'el') as LanguageCode;
   const toLang = (searchParams.get('to') || 'de') as LanguageCode;
 
+  // Track previous language to detect changes
+  const prevLangRef = useRef(toLang);
+
+
   // State
   const [searchQuery, setSearchQuery] = useState('');
   const [difficulty, setDifficulty] = useState(5); // Show all difficulty levels by default
   const [contentLength, setContentLength] = useState(5);
   const [results, setResults] = useState<Word[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
+
+  // Clear results when language changes
+  useEffect(() => {
+    if (prevLangRef.current !== toLang) {
+      setResults([]);
+      setHasSearched(false);
+      setSearchQuery('');
+      prevLangRef.current = toLang;
+    }
+  }, [toLang]);
 
   // Modal state
   const [selectedWord, setSelectedWord] = useState<WordDetail | null>(null);
