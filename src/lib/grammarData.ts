@@ -8,12 +8,29 @@ export interface TranslationData {
 }
 
 export interface TranslationsFile {
-  meta: {
+  meta?: {
     fromLanguage: string
     toLanguage: string
     wordCount: number
     lastUpdated: string
   }
+  language?: string
+  targetLanguage?: string
+  translations: Record<string, TranslationData> | TranslationArrayEntry[]
+}
+
+// Array format entry for translations
+export interface TranslationArrayEntry {
+  word: string
+  translation: string
+  partOfSpeech?: string
+  gender?: 'm' | 'f' | 'n'
+}
+
+// Normalized translations file
+export interface NormalizedTranslationsFile {
+  language: string
+  targetLanguage: string
   translations: Record<string, TranslationData>
 }
 
@@ -23,12 +40,25 @@ export interface ExampleSentence {
 }
 
 export interface ExamplesFile {
-  meta: {
+  meta?: {
     language: string
     wordCount: number
     sentenceCount: number
     lastUpdated: string
   }
+  language?: string
+  examples: Record<string, ExampleSentence[]> | ExampleArrayEntry[]
+}
+
+// Array format entry for examples
+export interface ExampleArrayEntry {
+  word: string
+  sentences: ExampleSentence[]
+}
+
+// Normalized examples file
+export interface NormalizedExamplesFile {
+  language: string
   examples: Record<string, ExampleSentence[]>
 }
 
@@ -60,27 +90,46 @@ export interface DeclensionsFile {
 export interface VerbConjugation {
   translation: string
   type: 'regular' | 'irregular' | 'modal'
-  auxiliary: 'haben' | 'sein'
-  conjugations: {
-    präsens: Record<string, string>
-    präteritum: Record<string, string>
-    perfekt: Record<string, string>
-  }
+  auxiliary?: 'haben' | 'sein'  // German-specific, optional for other languages
+  root?: string  // For Turkish agglutinative verbs
+  conjugations: Record<string, Record<string, string>>  // Flexible tenses per language
 }
 
-export interface ConjugationsFile {
-  meta: {
+// Raw verb entry for array-format conjugation files (es, fr, el, pt, ru, tr)
+export interface VerbArrayEntry {
+  infinitive: string
+  translation: string
+  type: 'regular' | 'irregular' | 'modal'
+  root?: string  // For Turkish
+  conjugations: Record<string, Record<string, string>>
+}
+
+// Raw file format - can be object or array
+export interface RawConjugationsFile {
+  meta?: {
     language: string
     verbCount: number
     lastUpdated: string
   }
+  language?: string  // Array format uses this instead of meta
+  verbs: Record<string, VerbConjugation> | VerbArrayEntry[]
+}
+
+// Normalized format used internally
+export interface ConjugationsFile {
+  meta?: {
+    language: string
+    verbCount: number
+    lastUpdated: string
+  }
+  language?: string
   verbs: Record<string, VerbConjugation>
 }
 
-// Cache for loaded data
+// Cache for loaded data (normalized format)
 const dataCache: {
-  translations: Record<string, TranslationsFile | null>
-  examples: Record<string, ExamplesFile | null>
+  translations: Record<string, NormalizedTranslationsFile | null>
+  examples: Record<string, NormalizedExamplesFile | null>
   declensions: Record<string, DeclensionsFile | null>
   conjugations: Record<string, ConjugationsFile | null>
 } = {
@@ -114,25 +163,104 @@ async function fetchJson<T>(path: string, cacheKey: string, cache: Record<string
 
 /**
  * Load translations for a language pair (e.g., de-en)
+ * Handles both object format (de, en) and array format (es, fr, el, pt, ru, tr)
  */
-export async function loadTranslations(fromLang: LanguageCode, toLang: string = 'en'): Promise<TranslationsFile | null> {
+export async function loadTranslations(fromLang: LanguageCode, toLang: string = 'en'): Promise<NormalizedTranslationsFile | null> {
   const cacheKey = `${fromLang}-${toLang}`
-  return fetchJson<TranslationsFile>(
-    `/data/translations/${cacheKey}.json`,
-    cacheKey,
-    dataCache.translations
-  )
+
+  // Check cache first
+  if (cacheKey in dataCache.translations) {
+    return dataCache.translations[cacheKey]
+  }
+
+  try {
+    const response = await fetch(`/data/translations/${cacheKey}.json`)
+    if (!response.ok) {
+      dataCache.translations[cacheKey] = null
+      return null
+    }
+    const rawData = await response.json() as TranslationsFile
+
+    // Normalize array format to object format
+    let normalizedData: NormalizedTranslationsFile
+    if (Array.isArray(rawData.translations)) {
+      // Array format - convert to object keyed by word
+      const translationsObject: Record<string, TranslationData> = {}
+      for (const entry of rawData.translations as TranslationArrayEntry[]) {
+        translationsObject[entry.word] = {
+          translation: entry.translation,
+          partOfSpeech: entry.partOfSpeech,
+          gender: entry.gender
+        }
+      }
+      normalizedData = {
+        language: rawData.language || rawData.meta?.fromLanguage || fromLang,
+        targetLanguage: rawData.targetLanguage || rawData.meta?.toLanguage || toLang,
+        translations: translationsObject
+      }
+    } else {
+      // Object format - use as-is
+      normalizedData = {
+        language: rawData.meta?.fromLanguage || fromLang,
+        targetLanguage: rawData.meta?.toLanguage || toLang,
+        translations: rawData.translations as Record<string, TranslationData>
+      }
+    }
+
+    dataCache.translations[cacheKey] = normalizedData
+    return normalizedData
+  } catch (error) {
+    console.warn(`Failed to load translations for ${cacheKey}:`, error)
+    dataCache.translations[cacheKey] = null
+    return null
+  }
 }
 
 /**
  * Load example sentences for a language
+ * Handles both object format (de, en) and array format (es, fr, el, pt, ru, tr)
  */
-export async function loadExamples(language: LanguageCode): Promise<ExamplesFile | null> {
-  return fetchJson<ExamplesFile>(
-    `/data/examples/${language}.json`,
-    language,
-    dataCache.examples
-  )
+export async function loadExamples(language: LanguageCode): Promise<NormalizedExamplesFile | null> {
+  // Check cache first
+  if (language in dataCache.examples) {
+    return dataCache.examples[language]
+  }
+
+  try {
+    const response = await fetch(`/data/examples/${language}.json`)
+    if (!response.ok) {
+      dataCache.examples[language] = null
+      return null
+    }
+    const rawData = await response.json() as ExamplesFile
+
+    // Normalize array format to object format
+    let normalizedData: NormalizedExamplesFile
+    if (Array.isArray(rawData.examples)) {
+      // Array format - convert to object keyed by word
+      const examplesObject: Record<string, ExampleSentence[]> = {}
+      for (const entry of rawData.examples as ExampleArrayEntry[]) {
+        examplesObject[entry.word] = entry.sentences
+      }
+      normalizedData = {
+        language: rawData.language || rawData.meta?.language || language,
+        examples: examplesObject
+      }
+    } else {
+      // Object format - use as-is
+      normalizedData = {
+        language: rawData.meta?.language || language,
+        examples: rawData.examples as Record<string, ExampleSentence[]>
+      }
+    }
+
+    dataCache.examples[language] = normalizedData
+    return normalizedData
+  } catch (error) {
+    console.warn(`Failed to load examples for ${language}:`, error)
+    dataCache.examples[language] = null
+    return null
+  }
 }
 
 /**
@@ -147,14 +275,53 @@ export async function loadDeclensions(language: LanguageCode): Promise<Declensio
 }
 
 /**
- * Load verb conjugations for a language (currently only German)
+ * Load verb conjugations for a language
+ * Handles both object format (de, en) and array format (es, fr, el, pt, ru, tr)
  */
 export async function loadConjugations(language: LanguageCode): Promise<ConjugationsFile | null> {
-  return fetchJson<ConjugationsFile>(
-    `/data/grammar/${language}-conjugations.json`,
-    language,
-    dataCache.conjugations
-  )
+  // Check cache first
+  if (language in dataCache.conjugations) {
+    return dataCache.conjugations[language]
+  }
+
+  try {
+    const response = await fetch(`/data/grammar/${language}-conjugations.json`)
+    if (!response.ok) {
+      dataCache.conjugations[language] = null
+      return null
+    }
+    const rawData = await response.json() as RawConjugationsFile
+
+    // Normalize array format to object format
+    let normalizedData: ConjugationsFile
+    if (Array.isArray(rawData.verbs)) {
+      // Array format - convert to object keyed by infinitive
+      const verbsObject: Record<string, VerbConjugation> = {}
+      for (const verb of rawData.verbs as VerbArrayEntry[]) {
+        verbsObject[verb.infinitive] = {
+          translation: verb.translation,
+          type: verb.type,
+          root: verb.root,
+          conjugations: verb.conjugations
+        }
+      }
+      normalizedData = {
+        language: rawData.language,
+        meta: rawData.meta,
+        verbs: verbsObject
+      }
+    } else {
+      // Object format - use as-is
+      normalizedData = rawData as ConjugationsFile
+    }
+
+    dataCache.conjugations[language] = normalizedData
+    return normalizedData
+  } catch (error) {
+    console.warn(`Failed to load conjugations for ${language}:`, error)
+    dataCache.conjugations[language] = null
+    return null
+  }
 }
 
 /**
@@ -179,11 +346,17 @@ export async function getExamples(word: string, language: LanguageCode): Promise
   return examples.examples[word] || examples.examples[word.toLowerCase()] || null
 }
 
+// Languages that have declension data
+const DECLENSION_LANGUAGES: LanguageCode[] = ['de']
+
+// Languages that have conjugation data
+const CONJUGATION_LANGUAGES: LanguageCode[] = ['de', 'en', 'es', 'fr', 'el', 'pt', 'ru', 'tr']
+
 /**
- * Get noun declension for a specific word (German only)
+ * Get noun declension for a specific word (German only for now)
  */
 export async function getDeclension(word: string, language: LanguageCode): Promise<NounDeclension | null> {
-  if (language !== 'de') return null
+  if (!DECLENSION_LANGUAGES.includes(language)) return null
 
   const declensions = await loadDeclensions(language)
   if (!declensions) return null
@@ -192,10 +365,11 @@ export async function getDeclension(word: string, language: LanguageCode): Promi
 }
 
 /**
- * Get verb conjugation for a specific word (German only)
+ * Get verb conjugation for a specific word
+ * Supports: German, English, Spanish, French, Greek, Portuguese, Russian, Turkish
  */
 export async function getConjugation(word: string, language: LanguageCode): Promise<VerbConjugation | null> {
-  if (language !== 'de') return null
+  if (!CONJUGATION_LANGUAGES.includes(language)) return null
 
   const conjugations = await loadConjugations(language)
   if (!conjugations) return null

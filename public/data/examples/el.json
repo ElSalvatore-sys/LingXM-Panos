@@ -1,0 +1,341 @@
+{
+  "language": "el",
+  "examples": [
+    {
+      "word": "είμαι",
+      "sentences": [
+        { "sentence": "Είμαι φοιτητής.", "translation": "I am a student." },
+        { "sentence": "Είναι πολύ έξυπνη.", "translation": "She is very smart." },
+        { "sentence": "Είμαστε φίλοι.", "translation": "We are friends." }
+      ]
+    },
+    {
+      "word": "έχω",
+      "sentences": [
+        { "sentence": "Έχω πείνα.", "translation": "I am hungry." },
+        { "sentence": "Έχει είκοσι χρόνων.", "translation": "She is twenty years old." },
+        { "sentence": "Έχουμε ένα μεγάλο σπίτι.", "translation": "We have a big house." }
+      ]
+    },
+    {
+      "word": "κάνω",
+      "sentences": [
+        { "sentence": "Τι κάνεις;", "translation": "What are you doing? / How are you?" },
+        { "sentence": "Κάνει ωραίο καιρό σήμερα.", "translation": "The weather is nice today." },
+        { "sentence": "Κάνω τα μαθήματά μου.", "translation": "I'm doing my homework." }
+      ]
+    },
+    {
+      "word": "πάω",
+      "sentences": [
+        { "sentence": "Πάω στο σούπερ μάρκετ.", "translation": "I'm going to the supermarket." },
+        { "sentence": "Πού πας;", "translation": "Where are you going?" },
+        { "sentence": "Πήγαμε στην παραλία χθες.", "translation": "We went to the beach yesterday." }
+      ]
+    },
+    {
+      "word": "θέλω",
+      "sentences": [
+        { "sentence": "Θέλω έναν καφέ.", "translation": "I want a coffee." },
+        { "sentence": "Τι θέλεις να κάνεις;", "translation": "What do you want to do?" },
+        { "sentence": "Θέλει να φύγει.", "translation": "He wants to leave." }
+      ]
+    },
+    {
+      "word": "μπορώ",
+      "sentences": [
+        { "sentence": "Μπορώ να σε βοηθήσω;", "translation": "Can I help you?" },
+        { "sentence": "Δεν μπορεί να έρθει.", "translation": "She can't come." },
+        { "sentence": "Μπορείτε να επαναλάβετε;", "translation": "Can you repeat?" }
+      ]
+    },
+    {
+      "word": "λέω",
+      "sentences": [
+        { "sentence": "Τι είπες;", "translation": "What did you say?" },
+        { "sentence": "Σου λέω την αλήθεια.", "translation": "I'm telling you the truth." },
+        { "sentence": "Λένε ότι θα βρέξει.", "translation": "They say it's going to rain." }
+      ]
+    },
+    {
+      "word": "βλέπω",
+      "sentences": [
+        { "sentence": "Βλέπεις εκείνο το κτίριο;", "translation": "Do you see that building?" },
+        { "sentence": "Είδα μια ταινία χθες.", "translation": "I saw a movie yesterday." },
+        { "sentence": "Τα λέμε αύριο.", "translation": "See you tomorrow." }
+      ]
+    },
+    {
+      "word": "ξέρω",
+      "sentences": [
+        { "sentence": "Δεν ξέρω.", "translation": "I don't know." },
+        { "sentence": "Ξέρεις να μιλάς ελληνικά;", "translation": "Do you know how to speak Greek?" },
+        { "sentence": "Ξέρει να μαγειρεύει πολύ καλά.", "translation": "She knows how to cook very well." }
+      ]
+    },
+    {
+      "word": "έρχομαι",
+      "sentences": [
+        { "sentence": "Έρχεσαι στη γιορτή;", "translation": "Are you coming to the party?" },
+        { "sentence": "Ήρθα όσο πιο γρήγορα μπορούσα.", "translation": "I came as fast as I could." },
+        { "sentence": "Έρχεται από την Ελλάδα.", "translation": "She comes from Greece." }
+      ]
+    },
+    {
+      "word": "δίνω",
+      "sentences": [
+        { "sentence": "Δώσε μου το βιβλίο, παρακαλώ.", "translation": "Give me the book, please." },
+        { "sentence": "Του έδωσα ένα δώρο.", "translation": "I gave him a gift." },
+        { "sentence": "Ο ήλιος δίνει πολλή ζέστη.", "translation": "The sun gives off a lot of heat." }
+      ]
+    },
+    {
+      "word": "μιλάω",
+      "sentences": [
+        { "sentence": "Μιλάω ελληνικά.", "translation": "I speak Greek." },
+        { "sentence": "Μπορείς να μιλάς πιο αργά;", "translation": "Can you speak more slowly?" },
+        { "sentence": "Πρέπει να μιλήσω μαζί σου.", "translation": "I need to talk to you." }
+      ]
+    },
+    {
+      "word": "αγαπώ",
+      "sentences": [
+        { "sentence": "Σε αγαπώ.", "translation": "I love you." },
+        { "sentence": "Αγαπάει τη μουσική.", "translation": "He/She loves music." },
+        { "sentence": "Αγαπάμε την Ελλάδα.", "translation": "We love Greece." }
+      ]
+    },
+    {
+      "word": "σπίτι",
+      "sentences": [
+        { "sentence": "Το σπίτι μου είναι κοντά.", "translation": "My house is nearby." },
+        { "sentence": "Πάμε σπίτι.", "translation": "Let's go home." },
+        { "sentence": "Αυτό είναι ένα μεγάλο σπίτι.", "translation": "This is a big house." }
+      ]
+    },
+    {
+      "word": "ζωή",
+      "sentences": [
+        { "sentence": "Η ζωή είναι όμορφη.", "translation": "Life is beautiful." },
+        { "sentence": "Πώς πάει η ζωή σου;", "translation": "How is your life going?" },
+        { "sentence": "Είναι ο έρωτας της ζωής μου.", "translation": "He/She is the love of my life." }
+      ]
+    },
+    {
+      "word": "μέρα",
+      "sentences": [
+        { "sentence": "Καλημέρα!", "translation": "Good morning!" },
+        { "sentence": "Τι μέρα είναι σήμερα;", "translation": "What day is it today?" },
+        { "sentence": "Ήταν μια μεγάλη μέρα.", "translation": "It was a long day." }
+      ]
+    },
+    {
+      "word": "κόσμος",
+      "sentences": [
+        { "sentence": "Ο κόσμος είναι μεγάλος.", "translation": "The world is big." },
+        { "sentence": "Υπάρχει πολύς κόσμος εδώ.", "translation": "There are many people here." },
+        { "sentence": "Όλος ο κόσμος είναι εδώ.", "translation": "Everyone is here." }
+      ]
+    },
+    {
+      "word": "δουλεύω",
+      "sentences": [
+        { "sentence": "Δουλεύω σε ένα γραφείο.", "translation": "I work in an office." },
+        { "sentence": "Δουλεύει πολύ.", "translation": "She works a lot." },
+        { "sentence": "Πού δουλεύεις;", "translation": "Where do you work?" }
+      ]
+    },
+    {
+      "word": "τρώω",
+      "sentences": [
+        { "sentence": "Πάμε να φάμε.", "translation": "Let's eat." },
+        { "sentence": "Τι θέλεις να φας;", "translation": "What do you want to eat?" },
+        { "sentence": "Τρώω φρούτα κάθε μέρα.", "translation": "I eat fruit every day." }
+      ]
+    },
+    {
+      "word": "ζω",
+      "sentences": [
+        { "sentence": "Ζω στην Αθήνα.", "translation": "I live in Athens." },
+        { "sentence": "Πού ζεις;", "translation": "Where do you live?" },
+        { "sentence": "Ζούμε μαζί.", "translation": "We live together." }
+      ]
+    },
+    {
+      "word": "γράφω",
+      "sentences": [
+        { "sentence": "Γράφω ένα γράμμα.", "translation": "I'm writing a letter." },
+        { "sentence": "Μπορείς να γράψεις το όνομά σου;", "translation": "Can you write your name?" },
+        { "sentence": "Γράφει πολύ ωραία.", "translation": "She writes very well." }
+      ]
+    },
+    {
+      "word": "διαβάζω",
+      "sentences": [
+        { "sentence": "Μου αρέσει να διαβάζω.", "translation": "I like to read." },
+        { "sentence": "Διαβάζω την εφημερίδα κάθε πρωί.", "translation": "I read the newspaper every morning." },
+        { "sentence": "Τι διαβάζεις;", "translation": "What are you reading?" }
+      ]
+    },
+    {
+      "word": "καταλαβαίνω",
+      "sentences": [
+        { "sentence": "Δεν καταλαβαίνω.", "translation": "I don't understand." },
+        { "sentence": "Καταλαβαίνεις ελληνικά;", "translation": "Do you understand Greek?" },
+        { "sentence": "Τώρα καταλαβαίνω.", "translation": "Now I understand." }
+      ]
+    },
+    {
+      "word": "μαθαίνω",
+      "sentences": [
+        { "sentence": "Θέλω να μάθω ελληνικά.", "translation": "I want to learn Greek." },
+        { "sentence": "Μαθαίνω κάτι καινούριο κάθε μέρα.", "translation": "I learn something new every day." },
+        { "sentence": "Είναι εύκολο να το μάθεις.", "translation": "It's easy to learn." }
+      ]
+    },
+    {
+      "word": "περιμένω",
+      "sentences": [
+        { "sentence": "Περίμενέ με εδώ.", "translation": "Wait for me here." },
+        { "sentence": "Περιμένω το λεωφορείο.", "translation": "I'm waiting for the bus." },
+        { "sentence": "Περιμένουμε μια ώρα.", "translation": "We've been waiting for an hour." }
+      ]
+    },
+    {
+      "word": "φεύγω",
+      "sentences": [
+        { "sentence": "Πρέπει να φύγω.", "translation": "I have to leave." },
+        { "sentence": "Πότε φεύγεις;", "translation": "When are you leaving?" },
+        { "sentence": "Έφυγε το πρωί.", "translation": "He/She left this morning." }
+      ]
+    },
+    {
+      "word": "φτάνω",
+      "sentences": [
+        { "sentence": "Έφτασα αργά.", "translation": "I arrived late." },
+        { "sentence": "Το τρένο φτάνει στις οκτώ.", "translation": "The train arrives at eight." },
+        { "sentence": "Τι έγινε;", "translation": "What happened?" }
+      ]
+    },
+    {
+      "word": "πιστεύω",
+      "sentences": [
+        { "sentence": "Δεν το πιστεύω.", "translation": "I don't believe it." },
+        { "sentence": "Πιστεύω ότι ναι.", "translation": "I believe so." },
+        { "sentence": "Πιστεύεις στα φαντάσματα;", "translation": "Do you believe in ghosts?" }
+      ]
+    },
+    {
+      "word": "κοιμάμαι",
+      "sentences": [
+        { "sentence": "Νυστάζω, θέλω να κοιμηθώ.", "translation": "I'm sleepy, I want to sleep." },
+        { "sentence": "Κοιμήθηκες καλά;", "translation": "Did you sleep well?" },
+        { "sentence": "Το μωρό κοιμάται.", "translation": "The baby is sleeping." }
+      ]
+    },
+    {
+      "word": "αρχίζω",
+      "sentences": [
+        { "sentence": "Το μάθημα αρχίζει στις εννέα.", "translation": "The class starts at nine." },
+        { "sentence": "Ας αρχίσουμε.", "translation": "Let's begin." },
+        { "sentence": "Άρχισα να διαβάζω χθες.", "translation": "I started reading yesterday." }
+      ]
+    },
+    {
+      "word": "τελειώνω",
+      "sentences": [
+        { "sentence": "Τελείωσες τα μαθήματα;", "translation": "Did you finish the homework?" },
+        { "sentence": "Η ταινία τελειώνει στις δέκα.", "translation": "The movie ends at ten." },
+        { "sentence": "Τελείωσα να τρώω.", "translation": "I finished eating." }
+      ]
+    },
+    {
+      "word": "καλός",
+      "sentences": [
+        { "sentence": "Είναι ένα καλό βιβλίο.", "translation": "It's a good book." },
+        { "sentence": "Το φαγητό είναι καλό.", "translation": "The food is good." },
+        { "sentence": "Είναι πολύ καλός μαζί μου.", "translation": "He is very good to me." }
+      ]
+    },
+    {
+      "word": "μεγάλος",
+      "sentences": [
+        { "sentence": "Είναι μια μεγάλη πόλη.", "translation": "It's a big city." },
+        { "sentence": "Ο αδερφός μου είναι μεγαλύτερος από μένα.", "translation": "My brother is older than me." },
+        { "sentence": "Έχει μεγάλη καρδιά.", "translation": "He/She has a big heart." }
+      ]
+    },
+    {
+      "word": "νέος",
+      "sentences": [
+        { "sentence": "Έχω ένα καινούριο αυτοκίνητο.", "translation": "I have a new car." },
+        { "sentence": "Τι νέα;", "translation": "What's new?" },
+        { "sentence": "Είναι νέος φοιτητής.", "translation": "He is a new student." }
+      ]
+    },
+    {
+      "word": "σκέφτομαι",
+      "sentences": [
+        { "sentence": "Τι σκέφτεσαι;", "translation": "What are you thinking?" },
+        { "sentence": "Νομίζω ότι έχεις δίκιο.", "translation": "I think you're right." },
+        { "sentence": "Σκεφτόμουν εσένα.", "translation": "I was thinking about you." }
+      ]
+    },
+    {
+      "word": "νιώθω",
+      "sentences": [
+        { "sentence": "Νιώθω καλά.", "translation": "I feel good." },
+        { "sentence": "Πώς νιώθεις;", "translation": "How do you feel?" },
+        { "sentence": "Νιώθω κρύο.", "translation": "I feel cold." }
+      ]
+    },
+    {
+      "word": "μένω",
+      "sentences": [
+        { "sentence": "Μένω στο σπίτι.", "translation": "I'm staying at home." },
+        { "sentence": "Μείνε εδώ.", "translation": "Stay here." },
+        { "sentence": "Έμεινε κέικ.", "translation": "There's some cake left." }
+      ]
+    },
+    {
+      "word": "ακολουθώ",
+      "sentences": [
+        { "sentence": "Ακολούθησέ με.", "translation": "Follow me." },
+        { "sentence": "Παρακολουθώ ένα μάθημα ελληνικών.", "translation": "I'm taking a Greek class." },
+        { "sentence": "Με ακολουθείς;", "translation": "Are you following me?" }
+      ]
+    },
+    {
+      "word": "τρέχω",
+      "sentences": [
+        { "sentence": "Μου αρέσει να τρέχω το πρωί.", "translation": "I like to run in the morning." },
+        { "sentence": "Το παιδί τρέχει γρήγορα.", "translation": "The child runs fast." },
+        { "sentence": "Τρέξε!", "translation": "Run!" }
+      ]
+    },
+    {
+      "word": "ελπίζω",
+      "sentences": [
+        { "sentence": "Ελπίζω ναι.", "translation": "I hope so." },
+        { "sentence": "Ελπίζω να είσαι καλά.", "translation": "I hope you're well." },
+        { "sentence": "Ελπίζουμε να έρθεις.", "translation": "We hope you'll come." }
+      ]
+    },
+    {
+      "word": "ξεχνάω",
+      "sentences": [
+        { "sentence": "Ξέχασα τα κλειδιά.", "translation": "I forgot the keys." },
+        { "sentence": "Μην ξεχάσεις να με πάρεις.", "translation": "Don't forget to call me." },
+        { "sentence": "Είναι εύκολο να το ξεχάσεις.", "translation": "It's easy to forget." }
+      ]
+    },
+    {
+      "word": "θυμάμαι",
+      "sentences": [
+        { "sentence": "Δεν θυμάμαι το όνομά του.", "translation": "I don't remember his name." },
+        { "sentence": "Θυμάσαι εκείνη τη μέρα;", "translation": "Do you remember that day?" },
+        { "sentence": "Σε θυμάμαι όταν ήσουν μικρός.", "translation": "I remember you when you were little." }
+      ]
+    }
+  ]
+}

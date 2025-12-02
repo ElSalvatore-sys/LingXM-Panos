@@ -39,16 +39,13 @@ export interface NounDeclension {
   };
 }
 
-// Full verb conjugation data
+// Full verb conjugation data (flexible for all languages)
 export interface VerbConjugation {
   translation: string;
   type: 'regular' | 'irregular' | 'modal';
-  auxiliary: 'haben' | 'sein';
-  conjugations: {
-    präsens: Record<string, string>;
-    präteritum: Record<string, string>;
-    perfekt: Record<string, string>;
-  };
+  auxiliary?: 'haben' | 'sein';  // German-specific, optional for other languages
+  root?: string;  // For Turkish agglutinative verbs
+  conjugations: Record<string, Record<string, string>>;  // Flexible tenses per language
 }
 
 // Extended word details for modal display

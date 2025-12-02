@@ -1,0 +1,405 @@
+{
+  "language": "es",
+  "examples": [
+    {
+      "word": "ser",
+      "sentences": [
+        { "sentence": "Yo soy estudiante.", "translation": "I am a student." },
+        { "sentence": "Ella es muy inteligente.", "translation": "She is very intelligent." },
+        { "sentence": "Somos amigos desde hace años.", "translation": "We have been friends for years." }
+      ]
+    },
+    {
+      "word": "estar",
+      "sentences": [
+        { "sentence": "Estoy en casa.", "translation": "I am at home." },
+        { "sentence": "¿Cómo estás?", "translation": "How are you?" },
+        { "sentence": "La comida está deliciosa.", "translation": "The food is delicious." }
+      ]
+    },
+    {
+      "word": "tener",
+      "sentences": [
+        { "sentence": "Tengo hambre.", "translation": "I am hungry." },
+        { "sentence": "Ella tiene veinte años.", "translation": "She is twenty years old." },
+        { "sentence": "Tenemos que irnos.", "translation": "We have to leave." }
+      ]
+    },
+    {
+      "word": "hacer",
+      "sentences": [
+        { "sentence": "¿Qué haces?", "translation": "What are you doing?" },
+        { "sentence": "Hace buen tiempo hoy.", "translation": "The weather is nice today." },
+        { "sentence": "Voy a hacer la tarea.", "translation": "I'm going to do the homework." }
+      ]
+    },
+    {
+      "word": "poder",
+      "sentences": [
+        { "sentence": "¿Puedo ayudarte?", "translation": "Can I help you?" },
+        { "sentence": "No puedo dormir.", "translation": "I can't sleep." },
+        { "sentence": "Podemos hacerlo juntos.", "translation": "We can do it together." }
+      ]
+    },
+    {
+      "word": "ir",
+      "sentences": [
+        { "sentence": "Voy al supermercado.", "translation": "I'm going to the supermarket." },
+        { "sentence": "¿Adónde vas?", "translation": "Where are you going?" },
+        { "sentence": "Fuimos a la playa ayer.", "translation": "We went to the beach yesterday." }
+      ]
+    },
+    {
+      "word": "decir",
+      "sentences": [
+        { "sentence": "¿Qué dijiste?", "translation": "What did you say?" },
+        { "sentence": "Te digo la verdad.", "translation": "I'm telling you the truth." },
+        { "sentence": "Dicen que va a llover.", "translation": "They say it's going to rain." }
+      ]
+    },
+    {
+      "word": "ver",
+      "sentences": [
+        { "sentence": "¿Ves ese edificio?", "translation": "Do you see that building?" },
+        { "sentence": "Vi una película anoche.", "translation": "I saw a movie last night." },
+        { "sentence": "Nos vemos mañana.", "translation": "See you tomorrow." }
+      ]
+    },
+    {
+      "word": "saber",
+      "sentences": [
+        { "sentence": "No sé la respuesta.", "translation": "I don't know the answer." },
+        { "sentence": "¿Sabes hablar español?", "translation": "Do you know how to speak Spanish?" },
+        { "sentence": "Ella sabe cocinar muy bien.", "translation": "She knows how to cook very well." }
+      ]
+    },
+    {
+      "word": "querer",
+      "sentences": [
+        { "sentence": "Quiero un café.", "translation": "I want a coffee." },
+        { "sentence": "Te quiero mucho.", "translation": "I love you very much." },
+        { "sentence": "¿Qué quieres hacer?", "translation": "What do you want to do?" }
+      ]
+    },
+    {
+      "word": "dar",
+      "sentences": [
+        { "sentence": "Dame el libro, por favor.", "translation": "Give me the book, please." },
+        { "sentence": "Le di un regalo.", "translation": "I gave him/her a gift." },
+        { "sentence": "El sol da mucho calor.", "translation": "The sun gives off a lot of heat." }
+      ]
+    },
+    {
+      "word": "hablar",
+      "sentences": [
+        { "sentence": "Hablo español.", "translation": "I speak Spanish." },
+        { "sentence": "¿Puedes hablar más despacio?", "translation": "Can you speak more slowly?" },
+        { "sentence": "Necesito hablar contigo.", "translation": "I need to talk to you." }
+      ]
+    },
+    {
+      "word": "llegar",
+      "sentences": [
+        { "sentence": "Llegué tarde al trabajo.", "translation": "I arrived late to work." },
+        { "sentence": "El tren llega a las ocho.", "translation": "The train arrives at eight." },
+        { "sentence": "¿Cuándo llegas?", "translation": "When are you arriving?" }
+      ]
+    },
+    {
+      "word": "venir",
+      "sentences": [
+        { "sentence": "¿Vienes a la fiesta?", "translation": "Are you coming to the party?" },
+        { "sentence": "Vine tan pronto como pude.", "translation": "I came as soon as I could." },
+        { "sentence": "Ella viene de México.", "translation": "She comes from Mexico." }
+      ]
+    },
+    {
+      "word": "pensar",
+      "sentences": [
+        { "sentence": "¿Qué piensas?", "translation": "What do you think?" },
+        { "sentence": "Pienso que tienes razón.", "translation": "I think you're right." },
+        { "sentence": "Estaba pensando en ti.", "translation": "I was thinking about you." }
+      ]
+    },
+    {
+      "word": "salir",
+      "sentences": [
+        { "sentence": "Salgo a las seis.", "translation": "I leave at six." },
+        { "sentence": "¿Quieres salir conmigo?", "translation": "Do you want to go out with me?" },
+        { "sentence": "El sol sale temprano.", "translation": "The sun rises early." }
+      ]
+    },
+    {
+      "word": "encontrar",
+      "sentences": [
+        { "sentence": "No encuentro mis llaves.", "translation": "I can't find my keys." },
+        { "sentence": "Encontré un buen restaurante.", "translation": "I found a good restaurant." },
+        { "sentence": "¿Dónde te encontraste con ella?", "translation": "Where did you meet her?" }
+      ]
+    },
+    {
+      "word": "casa",
+      "sentences": [
+        { "sentence": "Mi casa está cerca.", "translation": "My house is nearby." },
+        { "sentence": "Vamos a casa.", "translation": "Let's go home." },
+        { "sentence": "Esta es una casa grande.", "translation": "This is a big house." }
+      ]
+    },
+    {
+      "word": "tiempo",
+      "sentences": [
+        { "sentence": "No tengo tiempo.", "translation": "I don't have time." },
+        { "sentence": "¿Qué tiempo hace hoy?", "translation": "What's the weather like today?" },
+        { "sentence": "Hace mucho tiempo que no te veo.", "translation": "It's been a long time since I've seen you." }
+      ]
+    },
+    {
+      "word": "vida",
+      "sentences": [
+        { "sentence": "La vida es bella.", "translation": "Life is beautiful." },
+        { "sentence": "¿Cómo va tu vida?", "translation": "How is your life going?" },
+        { "sentence": "Es el amor de mi vida.", "translation": "He/She is the love of my life." }
+      ]
+    },
+    {
+      "word": "día",
+      "sentences": [
+        { "sentence": "Buenos días.", "translation": "Good morning." },
+        { "sentence": "¿Qué día es hoy?", "translation": "What day is it today?" },
+        { "sentence": "Fue un día largo.", "translation": "It was a long day." }
+      ]
+    },
+    {
+      "word": "mundo",
+      "sentences": [
+        { "sentence": "El mundo es grande.", "translation": "The world is big." },
+        { "sentence": "Quiero viajar por todo el mundo.", "translation": "I want to travel around the world." },
+        { "sentence": "Es el mejor del mundo.", "translation": "He/She is the best in the world." }
+      ]
+    },
+    {
+      "word": "hombre",
+      "sentences": [
+        { "sentence": "El hombre camina por la calle.", "translation": "The man walks down the street." },
+        { "sentence": "Es un buen hombre.", "translation": "He is a good man." },
+        { "sentence": "Todo hombre tiene derechos.", "translation": "Every person has rights." }
+      ]
+    },
+    {
+      "word": "mujer",
+      "sentences": [
+        { "sentence": "Esa mujer es mi profesora.", "translation": "That woman is my teacher." },
+        { "sentence": "Es una mujer inteligente.", "translation": "She is an intelligent woman." },
+        { "sentence": "La mujer lee un libro.", "translation": "The woman reads a book." }
+      ]
+    },
+    {
+      "word": "bueno",
+      "sentences": [
+        { "sentence": "Es un buen libro.", "translation": "It's a good book." },
+        { "sentence": "La comida está buena.", "translation": "The food is good." },
+        { "sentence": "Él es muy bueno conmigo.", "translation": "He is very good to me." }
+      ]
+    },
+    {
+      "word": "grande",
+      "sentences": [
+        { "sentence": "Es una ciudad grande.", "translation": "It's a big city." },
+        { "sentence": "Mi hermano es más grande que yo.", "translation": "My brother is older than me." },
+        { "sentence": "Tiene un gran corazón.", "translation": "He/She has a big heart." }
+      ]
+    },
+    {
+      "word": "nuevo",
+      "sentences": [
+        { "sentence": "Tengo un coche nuevo.", "translation": "I have a new car." },
+        { "sentence": "¿Qué hay de nuevo?", "translation": "What's new?" },
+        { "sentence": "Es un estudiante nuevo.", "translation": "He is a new student." }
+      ]
+    },
+    {
+      "word": "trabajar",
+      "sentences": [
+        { "sentence": "Trabajo en una oficina.", "translation": "I work in an office." },
+        { "sentence": "Ella trabaja mucho.", "translation": "She works a lot." },
+        { "sentence": "¿Dónde trabajas?", "translation": "Where do you work?" }
+      ]
+    },
+    {
+      "word": "comer",
+      "sentences": [
+        { "sentence": "Vamos a comer.", "translation": "Let's eat." },
+        { "sentence": "¿Qué quieres comer?", "translation": "What do you want to eat?" },
+        { "sentence": "Como frutas todos los días.", "translation": "I eat fruit every day." }
+      ]
+    },
+    {
+      "word": "vivir",
+      "sentences": [
+        { "sentence": "Vivo en Madrid.", "translation": "I live in Madrid." },
+        { "sentence": "¿Dónde vives?", "translation": "Where do you live?" },
+        { "sentence": "Vivimos juntos.", "translation": "We live together." }
+      ]
+    },
+    {
+      "word": "escribir",
+      "sentences": [
+        { "sentence": "Escribo una carta.", "translation": "I'm writing a letter." },
+        { "sentence": "¿Puedes escribir tu nombre?", "translation": "Can you write your name?" },
+        { "sentence": "Ella escribe muy bien.", "translation": "She writes very well." }
+      ]
+    },
+    {
+      "word": "leer",
+      "sentences": [
+        { "sentence": "Me gusta leer.", "translation": "I like to read." },
+        { "sentence": "Leo el periódico cada mañana.", "translation": "I read the newspaper every morning." },
+        { "sentence": "¿Qué estás leyendo?", "translation": "What are you reading?" }
+      ]
+    },
+    {
+      "word": "entender",
+      "sentences": [
+        { "sentence": "No entiendo.", "translation": "I don't understand." },
+        { "sentence": "¿Entiendes español?", "translation": "Do you understand Spanish?" },
+        { "sentence": "Ahora lo entiendo.", "translation": "Now I understand." }
+      ]
+    },
+    {
+      "word": "aprender",
+      "sentences": [
+        { "sentence": "Quiero aprender español.", "translation": "I want to learn Spanish." },
+        { "sentence": "Aprendo algo nuevo cada día.", "translation": "I learn something new every day." },
+        { "sentence": "Es fácil de aprender.", "translation": "It's easy to learn." }
+      ]
+    },
+    {
+      "word": "gustar",
+      "sentences": [
+        { "sentence": "Me gusta la música.", "translation": "I like music." },
+        { "sentence": "¿Te gusta el café?", "translation": "Do you like coffee?" },
+        { "sentence": "Nos gusta viajar.", "translation": "We like to travel." }
+      ]
+    },
+    {
+      "word": "necesitar",
+      "sentences": [
+        { "sentence": "Necesito ayuda.", "translation": "I need help." },
+        { "sentence": "¿Qué necesitas?", "translation": "What do you need?" },
+        { "sentence": "Necesitamos más tiempo.", "translation": "We need more time." }
+      ]
+    },
+    {
+      "word": "esperar",
+      "sentences": [
+        { "sentence": "Espérame aquí.", "translation": "Wait for me here." },
+        { "sentence": "Espero que sí.", "translation": "I hope so." },
+        { "sentence": "Estoy esperando el autobús.", "translation": "I'm waiting for the bus." }
+      ]
+    },
+    {
+      "word": "llamar",
+      "sentences": [
+        { "sentence": "Te llamo mañana.", "translation": "I'll call you tomorrow." },
+        { "sentence": "¿Cómo te llamas?", "translation": "What's your name?" },
+        { "sentence": "Alguien está llamando a la puerta.", "translation": "Someone is knocking on the door." }
+      ]
+    },
+    {
+      "word": "sentir",
+      "sentences": [
+        { "sentence": "Lo siento mucho.", "translation": "I'm very sorry." },
+        { "sentence": "¿Cómo te sientes?", "translation": "How do you feel?" },
+        { "sentence": "Siento frío.", "translation": "I feel cold." }
+      ]
+    },
+    {
+      "word": "parecer",
+      "sentences": [
+        { "sentence": "Parece interesante.", "translation": "It seems interesting." },
+        { "sentence": "¿Qué te parece?", "translation": "What do you think?" },
+        { "sentence": "Pareces cansado.", "translation": "You seem tired." }
+      ]
+    },
+    {
+      "word": "creer",
+      "sentences": [
+        { "sentence": "No lo creo.", "translation": "I don't believe it." },
+        { "sentence": "Creo que sí.", "translation": "I think so." },
+        { "sentence": "¿Crees en fantasmas?", "translation": "Do you believe in ghosts?" }
+      ]
+    },
+    {
+      "word": "seguir",
+      "sentences": [
+        { "sentence": "Sigue recto.", "translation": "Go straight ahead." },
+        { "sentence": "Sigo estudiando español.", "translation": "I keep studying Spanish." },
+        { "sentence": "¿Me sigues?", "translation": "Do you follow me?" }
+      ]
+    },
+    {
+      "word": "poner",
+      "sentences": [
+        { "sentence": "Pon la mesa.", "translation": "Set the table." },
+        { "sentence": "¿Dónde lo pongo?", "translation": "Where should I put it?" },
+        { "sentence": "Me puse el abrigo.", "translation": "I put on my coat." }
+      ]
+    },
+    {
+      "word": "dormir",
+      "sentences": [
+        { "sentence": "Tengo sueño, quiero dormir.", "translation": "I'm sleepy, I want to sleep." },
+        { "sentence": "¿Dormiste bien?", "translation": "Did you sleep well?" },
+        { "sentence": "El bebé está durmiendo.", "translation": "The baby is sleeping." }
+      ]
+    },
+    {
+      "word": "conocer",
+      "sentences": [
+        { "sentence": "¿Conoces a María?", "translation": "Do you know María?" },
+        { "sentence": "Quiero conocer España.", "translation": "I want to visit Spain." },
+        { "sentence": "Nos conocimos en la universidad.", "translation": "We met at university." }
+      ]
+    },
+    {
+      "word": "empezar",
+      "sentences": [
+        { "sentence": "La clase empieza a las nueve.", "translation": "The class starts at nine." },
+        { "sentence": "Vamos a empezar.", "translation": "Let's begin." },
+        { "sentence": "Empecé a estudiar ayer.", "translation": "I started studying yesterday." }
+      ]
+    },
+    {
+      "word": "terminar",
+      "sentences": [
+        { "sentence": "¿Terminaste la tarea?", "translation": "Did you finish the homework?" },
+        { "sentence": "La película termina a las diez.", "translation": "The movie ends at ten." },
+        { "sentence": "Terminé de comer.", "translation": "I finished eating." }
+      ]
+    },
+    {
+      "word": "recordar",
+      "sentences": [
+        { "sentence": "No recuerdo su nombre.", "translation": "I don't remember his/her name." },
+        { "sentence": "Recuerda cerrar la puerta.", "translation": "Remember to close the door." },
+        { "sentence": "Te recuerdo cuando eras niño.", "translation": "I remember you when you were a child." }
+      ]
+    },
+    {
+      "word": "olvidar",
+      "sentences": [
+        { "sentence": "Olvidé las llaves.", "translation": "I forgot the keys." },
+        { "sentence": "No olvides llamarme.", "translation": "Don't forget to call me." },
+        { "sentence": "Es fácil de olvidar.", "translation": "It's easy to forget." }
+      ]
+    },
+    {
+      "word": "correr",
+      "sentences": [
+        { "sentence": "Me gusta correr por la mañana.", "translation": "I like to run in the morning." },
+        { "sentence": "El niño corre rápido.", "translation": "The boy runs fast." },
+        { "sentence": "¡Corre!", "translation": "Run!" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,382 @@
+{
+  "language": "fr",
+  "verbs": [
+    {
+      "infinitive": "être",
+      "translation": "to be",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "suis", "tu": "es", "il/elle": "est", "nous": "sommes", "vous": "êtes", "ils/elles": "sont" },
+        "passé composé": { "je": "ai été", "tu": "as été", "il/elle": "a été", "nous": "avons été", "vous": "avez été", "ils/elles": "ont été" },
+        "imparfait": { "je": "étais", "tu": "étais", "il/elle": "était", "nous": "étions", "vous": "étiez", "ils/elles": "étaient" },
+        "futur": { "je": "serai", "tu": "seras", "il/elle": "sera", "nous": "serons", "vous": "serez", "ils/elles": "seront" },
+        "conditionnel": { "je": "serais", "tu": "serais", "il/elle": "serait", "nous": "serions", "vous": "seriez", "ils/elles": "seraient" },
+        "subjonctif": { "je": "sois", "tu": "sois", "il/elle": "soit", "nous": "soyons", "vous": "soyez", "ils/elles": "soient" }
+      }
+    },
+    {
+      "infinitive": "avoir",
+      "translation": "to have",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "ai", "tu": "as", "il/elle": "a", "nous": "avons", "vous": "avez", "ils/elles": "ont" },
+        "passé composé": { "je": "ai eu", "tu": "as eu", "il/elle": "a eu", "nous": "avons eu", "vous": "avez eu", "ils/elles": "ont eu" },
+        "imparfait": { "je": "avais", "tu": "avais", "il/elle": "avait", "nous": "avions", "vous": "aviez", "ils/elles": "avaient" },
+        "futur": { "je": "aurai", "tu": "auras", "il/elle": "aura", "nous": "aurons", "vous": "aurez", "ils/elles": "auront" },
+        "conditionnel": { "je": "aurais", "tu": "aurais", "il/elle": "aurait", "nous": "aurions", "vous": "auriez", "ils/elles": "auraient" },
+        "subjonctif": { "je": "aie", "tu": "aies", "il/elle": "ait", "nous": "ayons", "vous": "ayez", "ils/elles": "aient" }
+      }
+    },
+    {
+      "infinitive": "faire",
+      "translation": "to do, to make",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "fais", "tu": "fais", "il/elle": "fait", "nous": "faisons", "vous": "faites", "ils/elles": "font" },
+        "passé composé": { "je": "ai fait", "tu": "as fait", "il/elle": "a fait", "nous": "avons fait", "vous": "avez fait", "ils/elles": "ont fait" },
+        "imparfait": { "je": "faisais", "tu": "faisais", "il/elle": "faisait", "nous": "faisions", "vous": "faisiez", "ils/elles": "faisaient" },
+        "futur": { "je": "ferai", "tu": "feras", "il/elle": "fera", "nous": "ferons", "vous": "ferez", "ils/elles": "feront" },
+        "conditionnel": { "je": "ferais", "tu": "ferais", "il/elle": "ferait", "nous": "ferions", "vous": "feriez", "ils/elles": "feraient" },
+        "subjonctif": { "je": "fasse", "tu": "fasses", "il/elle": "fasse", "nous": "fassions", "vous": "fassiez", "ils/elles": "fassent" }
+      }
+    },
+    {
+      "infinitive": "aller",
+      "translation": "to go",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "vais", "tu": "vas", "il/elle": "va", "nous": "allons", "vous": "allez", "ils/elles": "vont" },
+        "passé composé": { "je": "suis allé(e)", "tu": "es allé(e)", "il/elle": "est allé(e)", "nous": "sommes allés", "vous": "êtes allé(s)", "ils/elles": "sont allé(e)s" },
+        "imparfait": { "je": "allais", "tu": "allais", "il/elle": "allait", "nous": "allions", "vous": "alliez", "ils/elles": "allaient" },
+        "futur": { "je": "irai", "tu": "iras", "il/elle": "ira", "nous": "irons", "vous": "irez", "ils/elles": "iront" },
+        "conditionnel": { "je": "irais", "tu": "irais", "il/elle": "irait", "nous": "irions", "vous": "iriez", "ils/elles": "iraient" },
+        "subjonctif": { "je": "aille", "tu": "ailles", "il/elle": "aille", "nous": "allions", "vous": "alliez", "ils/elles": "aillent" }
+      }
+    },
+    {
+      "infinitive": "pouvoir",
+      "translation": "to be able to, can",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "peux", "tu": "peux", "il/elle": "peut", "nous": "pouvons", "vous": "pouvez", "ils/elles": "peuvent" },
+        "passé composé": { "je": "ai pu", "tu": "as pu", "il/elle": "a pu", "nous": "avons pu", "vous": "avez pu", "ils/elles": "ont pu" },
+        "imparfait": { "je": "pouvais", "tu": "pouvais", "il/elle": "pouvait", "nous": "pouvions", "vous": "pouviez", "ils/elles": "pouvaient" },
+        "futur": { "je": "pourrai", "tu": "pourras", "il/elle": "pourra", "nous": "pourrons", "vous": "pourrez", "ils/elles": "pourront" },
+        "conditionnel": { "je": "pourrais", "tu": "pourrais", "il/elle": "pourrait", "nous": "pourrions", "vous": "pourriez", "ils/elles": "pourraient" },
+        "subjonctif": { "je": "puisse", "tu": "puisses", "il/elle": "puisse", "nous": "puissions", "vous": "puissiez", "ils/elles": "puissent" }
+      }
+    },
+    {
+      "infinitive": "vouloir",
+      "translation": "to want",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "veux", "tu": "veux", "il/elle": "veut", "nous": "voulons", "vous": "voulez", "ils/elles": "veulent" },
+        "passé composé": { "je": "ai voulu", "tu": "as voulu", "il/elle": "a voulu", "nous": "avons voulu", "vous": "avez voulu", "ils/elles": "ont voulu" },
+        "imparfait": { "je": "voulais", "tu": "voulais", "il/elle": "voulait", "nous": "voulions", "vous": "vouliez", "ils/elles": "voulaient" },
+        "futur": { "je": "voudrai", "tu": "voudras", "il/elle": "voudra", "nous": "voudrons", "vous": "voudrez", "ils/elles": "voudront" },
+        "conditionnel": { "je": "voudrais", "tu": "voudrais", "il/elle": "voudrait", "nous": "voudrions", "vous": "voudriez", "ils/elles": "voudraient" },
+        "subjonctif": { "je": "veuille", "tu": "veuilles", "il/elle": "veuille", "nous": "voulions", "vous": "vouliez", "ils/elles": "veuillent" }
+      }
+    },
+    {
+      "infinitive": "devoir",
+      "translation": "to have to, must",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "dois", "tu": "dois", "il/elle": "doit", "nous": "devons", "vous": "devez", "ils/elles": "doivent" },
+        "passé composé": { "je": "ai dû", "tu": "as dû", "il/elle": "a dû", "nous": "avons dû", "vous": "avez dû", "ils/elles": "ont dû" },
+        "imparfait": { "je": "devais", "tu": "devais", "il/elle": "devait", "nous": "devions", "vous": "deviez", "ils/elles": "devaient" },
+        "futur": { "je": "devrai", "tu": "devras", "il/elle": "devra", "nous": "devrons", "vous": "devrez", "ils/elles": "devront" },
+        "conditionnel": { "je": "devrais", "tu": "devrais", "il/elle": "devrait", "nous": "devrions", "vous": "devriez", "ils/elles": "devraient" },
+        "subjonctif": { "je": "doive", "tu": "doives", "il/elle": "doive", "nous": "devions", "vous": "deviez", "ils/elles": "doivent" }
+      }
+    },
+    {
+      "infinitive": "venir",
+      "translation": "to come",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "viens", "tu": "viens", "il/elle": "vient", "nous": "venons", "vous": "venez", "ils/elles": "viennent" },
+        "passé composé": { "je": "suis venu(e)", "tu": "es venu(e)", "il/elle": "est venu(e)", "nous": "sommes venus", "vous": "êtes venu(s)", "ils/elles": "sont venu(e)s" },
+        "imparfait": { "je": "venais", "tu": "venais", "il/elle": "venait", "nous": "venions", "vous": "veniez", "ils/elles": "venaient" },
+        "futur": { "je": "viendrai", "tu": "viendras", "il/elle": "viendra", "nous": "viendrons", "vous": "viendrez", "ils/elles": "viendront" },
+        "conditionnel": { "je": "viendrais", "tu": "viendrais", "il/elle": "viendrait", "nous": "viendrions", "vous": "viendriez", "ils/elles": "viendraient" },
+        "subjonctif": { "je": "vienne", "tu": "viennes", "il/elle": "vienne", "nous": "venions", "vous": "veniez", "ils/elles": "viennent" }
+      }
+    },
+    {
+      "infinitive": "voir",
+      "translation": "to see",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "vois", "tu": "vois", "il/elle": "voit", "nous": "voyons", "vous": "voyez", "ils/elles": "voient" },
+        "passé composé": { "je": "ai vu", "tu": "as vu", "il/elle": "a vu", "nous": "avons vu", "vous": "avez vu", "ils/elles": "ont vu" },
+        "imparfait": { "je": "voyais", "tu": "voyais", "il/elle": "voyait", "nous": "voyions", "vous": "voyiez", "ils/elles": "voyaient" },
+        "futur": { "je": "verrai", "tu": "verras", "il/elle": "verra", "nous": "verrons", "vous": "verrez", "ils/elles": "verront" },
+        "conditionnel": { "je": "verrais", "tu": "verrais", "il/elle": "verrait", "nous": "verrions", "vous": "verriez", "ils/elles": "verraient" },
+        "subjonctif": { "je": "voie", "tu": "voies", "il/elle": "voie", "nous": "voyions", "vous": "voyiez", "ils/elles": "voient" }
+      }
+    },
+    {
+      "infinitive": "savoir",
+      "translation": "to know (facts)",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "sais", "tu": "sais", "il/elle": "sait", "nous": "savons", "vous": "savez", "ils/elles": "savent" },
+        "passé composé": { "je": "ai su", "tu": "as su", "il/elle": "a su", "nous": "avons su", "vous": "avez su", "ils/elles": "ont su" },
+        "imparfait": { "je": "savais", "tu": "savais", "il/elle": "savait", "nous": "savions", "vous": "saviez", "ils/elles": "savaient" },
+        "futur": { "je": "saurai", "tu": "sauras", "il/elle": "saura", "nous": "saurons", "vous": "saurez", "ils/elles": "sauront" },
+        "conditionnel": { "je": "saurais", "tu": "saurais", "il/elle": "saurait", "nous": "saurions", "vous": "sauriez", "ils/elles": "sauraient" },
+        "subjonctif": { "je": "sache", "tu": "saches", "il/elle": "sache", "nous": "sachions", "vous": "sachiez", "ils/elles": "sachent" }
+      }
+    },
+    {
+      "infinitive": "prendre",
+      "translation": "to take",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "prends", "tu": "prends", "il/elle": "prend", "nous": "prenons", "vous": "prenez", "ils/elles": "prennent" },
+        "passé composé": { "je": "ai pris", "tu": "as pris", "il/elle": "a pris", "nous": "avons pris", "vous": "avez pris", "ils/elles": "ont pris" },
+        "imparfait": { "je": "prenais", "tu": "prenais", "il/elle": "prenait", "nous": "prenions", "vous": "preniez", "ils/elles": "prenaient" },
+        "futur": { "je": "prendrai", "tu": "prendras", "il/elle": "prendra", "nous": "prendrons", "vous": "prendrez", "ils/elles": "prendront" },
+        "conditionnel": { "je": "prendrais", "tu": "prendrais", "il/elle": "prendrait", "nous": "prendrions", "vous": "prendriez", "ils/elles": "prendraient" },
+        "subjonctif": { "je": "prenne", "tu": "prennes", "il/elle": "prenne", "nous": "prenions", "vous": "preniez", "ils/elles": "prennent" }
+      }
+    },
+    {
+      "infinitive": "dire",
+      "translation": "to say, to tell",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "dis", "tu": "dis", "il/elle": "dit", "nous": "disons", "vous": "dites", "ils/elles": "disent" },
+        "passé composé": { "je": "ai dit", "tu": "as dit", "il/elle": "a dit", "nous": "avons dit", "vous": "avez dit", "ils/elles": "ont dit" },
+        "imparfait": { "je": "disais", "tu": "disais", "il/elle": "disait", "nous": "disions", "vous": "disiez", "ils/elles": "disaient" },
+        "futur": { "je": "dirai", "tu": "diras", "il/elle": "dira", "nous": "dirons", "vous": "direz", "ils/elles": "diront" },
+        "conditionnel": { "je": "dirais", "tu": "dirais", "il/elle": "dirait", "nous": "dirions", "vous": "diriez", "ils/elles": "diraient" },
+        "subjonctif": { "je": "dise", "tu": "dises", "il/elle": "dise", "nous": "disions", "vous": "disiez", "ils/elles": "disent" }
+      }
+    },
+    {
+      "infinitive": "mettre",
+      "translation": "to put, to place",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "mets", "tu": "mets", "il/elle": "met", "nous": "mettons", "vous": "mettez", "ils/elles": "mettent" },
+        "passé composé": { "je": "ai mis", "tu": "as mis", "il/elle": "a mis", "nous": "avons mis", "vous": "avez mis", "ils/elles": "ont mis" },
+        "imparfait": { "je": "mettais", "tu": "mettais", "il/elle": "mettait", "nous": "mettions", "vous": "mettiez", "ils/elles": "mettaient" },
+        "futur": { "je": "mettrai", "tu": "mettras", "il/elle": "mettra", "nous": "mettrons", "vous": "mettrez", "ils/elles": "mettront" },
+        "conditionnel": { "je": "mettrais", "tu": "mettrais", "il/elle": "mettrait", "nous": "mettrions", "vous": "mettriez", "ils/elles": "mettraient" },
+        "subjonctif": { "je": "mette", "tu": "mettes", "il/elle": "mette", "nous": "mettions", "vous": "mettiez", "ils/elles": "mettent" }
+      }
+    },
+    {
+      "infinitive": "connaître",
+      "translation": "to know (people/places)",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "connais", "tu": "connais", "il/elle": "connaît", "nous": "connaissons", "vous": "connaissez", "ils/elles": "connaissent" },
+        "passé composé": { "je": "ai connu", "tu": "as connu", "il/elle": "a connu", "nous": "avons connu", "vous": "avez connu", "ils/elles": "ont connu" },
+        "imparfait": { "je": "connaissais", "tu": "connaissais", "il/elle": "connaissait", "nous": "connaissions", "vous": "connaissiez", "ils/elles": "connaissaient" },
+        "futur": { "je": "connaîtrai", "tu": "connaîtras", "il/elle": "connaîtra", "nous": "connaîtrons", "vous": "connaîtrez", "ils/elles": "connaîtront" },
+        "conditionnel": { "je": "connaîtrais", "tu": "connaîtrais", "il/elle": "connaîtrait", "nous": "connaîtrions", "vous": "connaîtriez", "ils/elles": "connaîtraient" },
+        "subjonctif": { "je": "connaisse", "tu": "connaisses", "il/elle": "connaisse", "nous": "connaissions", "vous": "connaissiez", "ils/elles": "connaissent" }
+      }
+    },
+    {
+      "infinitive": "parler",
+      "translation": "to speak",
+      "type": "regular-er",
+      "conjugations": {
+        "présent": { "je": "parle", "tu": "parles", "il/elle": "parle", "nous": "parlons", "vous": "parlez", "ils/elles": "parlent" },
+        "passé composé": { "je": "ai parlé", "tu": "as parlé", "il/elle": "a parlé", "nous": "avons parlé", "vous": "avez parlé", "ils/elles": "ont parlé" },
+        "imparfait": { "je": "parlais", "tu": "parlais", "il/elle": "parlait", "nous": "parlions", "vous": "parliez", "ils/elles": "parlaient" },
+        "futur": { "je": "parlerai", "tu": "parleras", "il/elle": "parlera", "nous": "parlerons", "vous": "parlerez", "ils/elles": "parleront" },
+        "conditionnel": { "je": "parlerais", "tu": "parlerais", "il/elle": "parlerait", "nous": "parlerions", "vous": "parleriez", "ils/elles": "parleraient" },
+        "subjonctif": { "je": "parle", "tu": "parles", "il/elle": "parle", "nous": "parlions", "vous": "parliez", "ils/elles": "parlent" }
+      }
+    },
+    {
+      "infinitive": "aimer",
+      "translation": "to love, to like",
+      "type": "regular-er",
+      "conjugations": {
+        "présent": { "je": "aime", "tu": "aimes", "il/elle": "aime", "nous": "aimons", "vous": "aimez", "ils/elles": "aiment" },
+        "passé composé": { "je": "ai aimé", "tu": "as aimé", "il/elle": "a aimé", "nous": "avons aimé", "vous": "avez aimé", "ils/elles": "ont aimé" },
+        "imparfait": { "je": "aimais", "tu": "aimais", "il/elle": "aimait", "nous": "aimions", "vous": "aimiez", "ils/elles": "aimaient" },
+        "futur": { "je": "aimerai", "tu": "aimeras", "il/elle": "aimera", "nous": "aimerons", "vous": "aimerez", "ils/elles": "aimeront" },
+        "conditionnel": { "je": "aimerais", "tu": "aimerais", "il/elle": "aimerait", "nous": "aimerions", "vous": "aimeriez", "ils/elles": "aimeraient" },
+        "subjonctif": { "je": "aime", "tu": "aimes", "il/elle": "aime", "nous": "aimions", "vous": "aimiez", "ils/elles": "aiment" }
+      }
+    },
+    {
+      "infinitive": "finir",
+      "translation": "to finish",
+      "type": "regular-ir",
+      "conjugations": {
+        "présent": { "je": "finis", "tu": "finis", "il/elle": "finit", "nous": "finissons", "vous": "finissez", "ils/elles": "finissent" },
+        "passé composé": { "je": "ai fini", "tu": "as fini", "il/elle": "a fini", "nous": "avons fini", "vous": "avez fini", "ils/elles": "ont fini" },
+        "imparfait": { "je": "finissais", "tu": "finissais", "il/elle": "finissait", "nous": "finissions", "vous": "finissiez", "ils/elles": "finissaient" },
+        "futur": { "je": "finirai", "tu": "finiras", "il/elle": "finira", "nous": "finirons", "vous": "finirez", "ils/elles": "finiront" },
+        "conditionnel": { "je": "finirais", "tu": "finirais", "il/elle": "finirait", "nous": "finirions", "vous": "finiriez", "ils/elles": "finiraient" },
+        "subjonctif": { "je": "finisse", "tu": "finisses", "il/elle": "finisse", "nous": "finissions", "vous": "finissiez", "ils/elles": "finissent" }
+      }
+    },
+    {
+      "infinitive": "partir",
+      "translation": "to leave, to depart",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "pars", "tu": "pars", "il/elle": "part", "nous": "partons", "vous": "partez", "ils/elles": "partent" },
+        "passé composé": { "je": "suis parti(e)", "tu": "es parti(e)", "il/elle": "est parti(e)", "nous": "sommes partis", "vous": "êtes parti(s)", "ils/elles": "sont parti(e)s" },
+        "imparfait": { "je": "partais", "tu": "partais", "il/elle": "partait", "nous": "partions", "vous": "partiez", "ils/elles": "partaient" },
+        "futur": { "je": "partirai", "tu": "partiras", "il/elle": "partira", "nous": "partirons", "vous": "partirez", "ils/elles": "partiront" },
+        "conditionnel": { "je": "partirais", "tu": "partirais", "il/elle": "partirait", "nous": "partirions", "vous": "partiriez", "ils/elles": "partiraient" },
+        "subjonctif": { "je": "parte", "tu": "partes", "il/elle": "parte", "nous": "partions", "vous": "partiez", "ils/elles": "partent" }
+      }
+    },
+    {
+      "infinitive": "dormir",
+      "translation": "to sleep",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "dors", "tu": "dors", "il/elle": "dort", "nous": "dormons", "vous": "dormez", "ils/elles": "dorment" },
+        "passé composé": { "je": "ai dormi", "tu": "as dormi", "il/elle": "a dormi", "nous": "avons dormi", "vous": "avez dormi", "ils/elles": "ont dormi" },
+        "imparfait": { "je": "dormais", "tu": "dormais", "il/elle": "dormait", "nous": "dormions", "vous": "dormiez", "ils/elles": "dormaient" },
+        "futur": { "je": "dormirai", "tu": "dormiras", "il/elle": "dormira", "nous": "dormirons", "vous": "dormirez", "ils/elles": "dormiront" },
+        "conditionnel": { "je": "dormirais", "tu": "dormirais", "il/elle": "dormirait", "nous": "dormirions", "vous": "dormiriez", "ils/elles": "dormiraient" },
+        "subjonctif": { "je": "dorme", "tu": "dormes", "il/elle": "dorme", "nous": "dormions", "vous": "dormiez", "ils/elles": "dorment" }
+      }
+    },
+    {
+      "infinitive": "attendre",
+      "translation": "to wait",
+      "type": "regular-re",
+      "conjugations": {
+        "présent": { "je": "attends", "tu": "attends", "il/elle": "attend", "nous": "attendons", "vous": "attendez", "ils/elles": "attendent" },
+        "passé composé": { "je": "ai attendu", "tu": "as attendu", "il/elle": "a attendu", "nous": "avons attendu", "vous": "avez attendu", "ils/elles": "ont attendu" },
+        "imparfait": { "je": "attendais", "tu": "attendais", "il/elle": "attendait", "nous": "attendions", "vous": "attendiez", "ils/elles": "attendaient" },
+        "futur": { "je": "attendrai", "tu": "attendras", "il/elle": "attendra", "nous": "attendrons", "vous": "attendrez", "ils/elles": "attendront" },
+        "conditionnel": { "je": "attendrais", "tu": "attendrais", "il/elle": "attendrait", "nous": "attendrions", "vous": "attendriez", "ils/elles": "attendraient" },
+        "subjonctif": { "je": "attende", "tu": "attendes", "il/elle": "attende", "nous": "attendions", "vous": "attendiez", "ils/elles": "attendent" }
+      }
+    },
+    {
+      "infinitive": "écrire",
+      "translation": "to write",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "écris", "tu": "écris", "il/elle": "écrit", "nous": "écrivons", "vous": "écrivez", "ils/elles": "écrivent" },
+        "passé composé": { "je": "ai écrit", "tu": "as écrit", "il/elle": "a écrit", "nous": "avons écrit", "vous": "avez écrit", "ils/elles": "ont écrit" },
+        "imparfait": { "je": "écrivais", "tu": "écrivais", "il/elle": "écrivait", "nous": "écrivions", "vous": "écriviez", "ils/elles": "écrivaient" },
+        "futur": { "je": "écrirai", "tu": "écriras", "il/elle": "écrira", "nous": "écrirons", "vous": "écrirez", "ils/elles": "écriront" },
+        "conditionnel": { "je": "écrirais", "tu": "écrirais", "il/elle": "écrirait", "nous": "écririons", "vous": "écririez", "ils/elles": "écriraient" },
+        "subjonctif": { "je": "écrive", "tu": "écrives", "il/elle": "écrive", "nous": "écrivions", "vous": "écriviez", "ils/elles": "écrivent" }
+      }
+    },
+    {
+      "infinitive": "lire",
+      "translation": "to read",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "lis", "tu": "lis", "il/elle": "lit", "nous": "lisons", "vous": "lisez", "ils/elles": "lisent" },
+        "passé composé": { "je": "ai lu", "tu": "as lu", "il/elle": "a lu", "nous": "avons lu", "vous": "avez lu", "ils/elles": "ont lu" },
+        "imparfait": { "je": "lisais", "tu": "lisais", "il/elle": "lisait", "nous": "lisions", "vous": "lisiez", "ils/elles": "lisaient" },
+        "futur": { "je": "lirai", "tu": "liras", "il/elle": "lira", "nous": "lirons", "vous": "lirez", "ils/elles": "liront" },
+        "conditionnel": { "je": "lirais", "tu": "lirais", "il/elle": "lirait", "nous": "lirions", "vous": "liriez", "ils/elles": "liraient" },
+        "subjonctif": { "je": "lise", "tu": "lises", "il/elle": "lise", "nous": "lisions", "vous": "lisiez", "ils/elles": "lisent" }
+      }
+    },
+    {
+      "infinitive": "boire",
+      "translation": "to drink",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "bois", "tu": "bois", "il/elle": "boit", "nous": "buvons", "vous": "buvez", "ils/elles": "boivent" },
+        "passé composé": { "je": "ai bu", "tu": "as bu", "il/elle": "a bu", "nous": "avons bu", "vous": "avez bu", "ils/elles": "ont bu" },
+        "imparfait": { "je": "buvais", "tu": "buvais", "il/elle": "buvait", "nous": "buvions", "vous": "buviez", "ils/elles": "buvaient" },
+        "futur": { "je": "boirai", "tu": "boiras", "il/elle": "boira", "nous": "boirons", "vous": "boirez", "ils/elles": "boiront" },
+        "conditionnel": { "je": "boirais", "tu": "boirais", "il/elle": "boirait", "nous": "boirions", "vous": "boiriez", "ils/elles": "boiraient" },
+        "subjonctif": { "je": "boive", "tu": "boives", "il/elle": "boive", "nous": "buvions", "vous": "buviez", "ils/elles": "boivent" }
+      }
+    },
+    {
+      "infinitive": "manger",
+      "translation": "to eat",
+      "type": "regular-er",
+      "conjugations": {
+        "présent": { "je": "mange", "tu": "manges", "il/elle": "mange", "nous": "mangeons", "vous": "mangez", "ils/elles": "mangent" },
+        "passé composé": { "je": "ai mangé", "tu": "as mangé", "il/elle": "a mangé", "nous": "avons mangé", "vous": "avez mangé", "ils/elles": "ont mangé" },
+        "imparfait": { "je": "mangeais", "tu": "mangeais", "il/elle": "mangeait", "nous": "mangions", "vous": "mangiez", "ils/elles": "mangeaient" },
+        "futur": { "je": "mangerai", "tu": "mangeras", "il/elle": "mangera", "nous": "mangerons", "vous": "mangerez", "ils/elles": "mangeront" },
+        "conditionnel": { "je": "mangerais", "tu": "mangerais", "il/elle": "mangerait", "nous": "mangerions", "vous": "mangeriez", "ils/elles": "mangeraient" },
+        "subjonctif": { "je": "mange", "tu": "manges", "il/elle": "mange", "nous": "mangions", "vous": "mangiez", "ils/elles": "mangent" }
+      }
+    },
+    {
+      "infinitive": "croire",
+      "translation": "to believe",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "crois", "tu": "crois", "il/elle": "croit", "nous": "croyons", "vous": "croyez", "ils/elles": "croient" },
+        "passé composé": { "je": "ai cru", "tu": "as cru", "il/elle": "a cru", "nous": "avons cru", "vous": "avez cru", "ils/elles": "ont cru" },
+        "imparfait": { "je": "croyais", "tu": "croyais", "il/elle": "croyait", "nous": "croyions", "vous": "croyiez", "ils/elles": "croyaient" },
+        "futur": { "je": "croirai", "tu": "croiras", "il/elle": "croira", "nous": "croirons", "vous": "croirez", "ils/elles": "croiront" },
+        "conditionnel": { "je": "croirais", "tu": "croirais", "il/elle": "croirait", "nous": "croirions", "vous": "croiriez", "ils/elles": "croiraient" },
+        "subjonctif": { "je": "croie", "tu": "croies", "il/elle": "croie", "nous": "croyions", "vous": "croyiez", "ils/elles": "croient" }
+      }
+    },
+    {
+      "infinitive": "vivre",
+      "translation": "to live",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "vis", "tu": "vis", "il/elle": "vit", "nous": "vivons", "vous": "vivez", "ils/elles": "vivent" },
+        "passé composé": { "je": "ai vécu", "tu": "as vécu", "il/elle": "a vécu", "nous": "avons vécu", "vous": "avez vécu", "ils/elles": "ont vécu" },
+        "imparfait": { "je": "vivais", "tu": "vivais", "il/elle": "vivait", "nous": "vivions", "vous": "viviez", "ils/elles": "vivaient" },
+        "futur": { "je": "vivrai", "tu": "vivras", "il/elle": "vivra", "nous": "vivrons", "vous": "vivrez", "ils/elles": "vivront" },
+        "conditionnel": { "je": "vivrais", "tu": "vivrais", "il/elle": "vivrait", "nous": "vivrions", "vous": "vivriez", "ils/elles": "vivraient" },
+        "subjonctif": { "je": "vive", "tu": "vives", "il/elle": "vive", "nous": "vivions", "vous": "viviez", "ils/elles": "vivent" }
+      }
+    },
+    {
+      "infinitive": "comprendre",
+      "translation": "to understand",
+      "type": "irregular",
+      "conjugations": {
+        "présent": { "je": "comprends", "tu": "comprends", "il/elle": "comprend", "nous": "comprenons", "vous": "comprenez", "ils/elles": "comprennent" },
+        "passé composé": { "je": "ai compris", "tu": "as compris", "il/elle": "a compris", "nous": "avons compris", "vous": "avez compris", "ils/elles": "ont compris" },
+        "imparfait": { "je": "comprenais", "tu": "comprenais", "il/elle": "comprenait", "nous": "comprenions", "vous": "compreniez", "ils/elles": "comprenaient" },
+        "futur": { "je": "comprendrai", "tu": "comprendras", "il/elle": "comprendra", "nous": "comprendrons", "vous": "comprendrez", "ils/elles": "comprendront" },
+        "conditionnel": { "je": "comprendrais", "tu": "comprendrais", "il/elle": "comprendrait", "nous": "comprendrions", "vous": "comprendriez", "ils/elles": "comprendraient" },
+        "subjonctif": { "je": "comprenne", "tu": "comprennes", "il/elle": "comprenne", "nous": "comprenions", "vous": "compreniez", "ils/elles": "comprennent" }
+      }
+    },
+    {
+      "infinitive": "travailler",
+      "translation": "to work",
+      "type": "regular-er",
+      "conjugations": {
+        "présent": { "je": "travaille", "tu": "travailles", "il/elle": "travaille", "nous": "travaillons", "vous": "travaillez", "ils/elles": "travaillent" },
+        "passé composé": { "je": "ai travaillé", "tu": "as travaillé", "il/elle": "a travaillé", "nous": "avons travaillé", "vous": "avez travaillé", "ils/elles": "ont travaillé" },
+        "imparfait": { "je": "travaillais", "tu": "travaillais", "il/elle": "travaillait", "nous": "travaillions", "vous": "travailliez", "ils/elles": "travaillaient" },
+        "futur": { "je": "travaillerai", "tu": "travailleras", "il/elle": "travaillera", "nous": "travaillerons", "vous": "travaillerez", "ils/elles": "travailleront" },
+        "conditionnel": { "je": "travaillerais", "tu": "travaillerais", "il/elle": "travaillerait", "nous": "travaillerions", "vous": "travailleriez", "ils/elles": "travailleraient" },
+        "subjonctif": { "je": "travaille", "tu": "travailles", "il/elle": "travaille", "nous": "travaillions", "vous": "travailliez", "ils/elles": "travaillent" }
+      }
+    },
+    {
+      "infinitive": "commencer",
+      "translation": "to begin",
+      "type": "regular-er",
+      "conjugations": {
+        "présent": { "je": "commence", "tu": "commences", "il/elle": "commence", "nous": "commençons", "vous": "commencez", "ils/elles": "commencent" },
+        "passé composé": { "je": "ai commencé", "tu": "as commencé", "il/elle": "a commencé", "nous": "avons commencé", "vous": "avez commencé", "ils/elles": "ont commencé" },
+        "imparfait": { "je": "commençais", "tu": "commençais", "il/elle": "commençait", "nous": "commencions", "vous": "commenciez", "ils/elles": "commençaient" },
+        "futur": { "je": "commencerai", "tu": "commenceras", "il/elle": "commencera", "nous": "commencerons", "vous": "commencerez", "ils/elles": "commenceront" },
+        "conditionnel": { "je": "commencerais", "tu": "commencerais", "il/elle": "commencerait", "nous": "commencerions", "vous": "commenceriez", "ils/elles": "commenceraient" },
+        "subjonctif": { "je": "commence", "tu": "commences", "il/elle": "commence", "nous": "commencions", "vous": "commenciez", "ils/elles": "commencent" }
+      }
+    }
+  ]
+}

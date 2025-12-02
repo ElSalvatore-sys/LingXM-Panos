@@ -1,0 +1,405 @@
+{
+  "language": "fr",
+  "examples": [
+    {
+      "word": "être",
+      "sentences": [
+        { "sentence": "Je suis étudiant.", "translation": "I am a student." },
+        { "sentence": "Elle est très intelligente.", "translation": "She is very intelligent." },
+        { "sentence": "Nous sommes amis.", "translation": "We are friends." }
+      ]
+    },
+    {
+      "word": "avoir",
+      "sentences": [
+        { "sentence": "J'ai faim.", "translation": "I am hungry." },
+        { "sentence": "Elle a vingt ans.", "translation": "She is twenty years old." },
+        { "sentence": "Nous avons une grande maison.", "translation": "We have a big house." }
+      ]
+    },
+    {
+      "word": "faire",
+      "sentences": [
+        { "sentence": "Qu'est-ce que tu fais?", "translation": "What are you doing?" },
+        { "sentence": "Il fait beau aujourd'hui.", "translation": "The weather is nice today." },
+        { "sentence": "Je fais mes devoirs.", "translation": "I'm doing my homework." }
+      ]
+    },
+    {
+      "word": "aller",
+      "sentences": [
+        { "sentence": "Je vais au supermarché.", "translation": "I'm going to the supermarket." },
+        { "sentence": "Comment allez-vous?", "translation": "How are you?" },
+        { "sentence": "Nous allons à la plage demain.", "translation": "We're going to the beach tomorrow." }
+      ]
+    },
+    {
+      "word": "pouvoir",
+      "sentences": [
+        { "sentence": "Je peux vous aider?", "translation": "Can I help you?" },
+        { "sentence": "Elle ne peut pas venir.", "translation": "She can't come." },
+        { "sentence": "Pouvez-vous répéter?", "translation": "Can you repeat?" }
+      ]
+    },
+    {
+      "word": "vouloir",
+      "sentences": [
+        { "sentence": "Je veux un café.", "translation": "I want a coffee." },
+        { "sentence": "Qu'est-ce que tu veux faire?", "translation": "What do you want to do?" },
+        { "sentence": "Il veut partir.", "translation": "He wants to leave." }
+      ]
+    },
+    {
+      "word": "devoir",
+      "sentences": [
+        { "sentence": "Je dois partir.", "translation": "I must leave." },
+        { "sentence": "Tu dois étudier.", "translation": "You must study." },
+        { "sentence": "Nous devons travailler.", "translation": "We have to work." }
+      ]
+    },
+    {
+      "word": "venir",
+      "sentences": [
+        { "sentence": "Tu viens à la fête?", "translation": "Are you coming to the party?" },
+        { "sentence": "Je viens de France.", "translation": "I come from France." },
+        { "sentence": "Elle vient d'arriver.", "translation": "She just arrived." }
+      ]
+    },
+    {
+      "word": "voir",
+      "sentences": [
+        { "sentence": "Tu vois ce bâtiment?", "translation": "Do you see that building?" },
+        { "sentence": "J'ai vu un film hier.", "translation": "I saw a movie yesterday." },
+        { "sentence": "On se voit demain.", "translation": "See you tomorrow." }
+      ]
+    },
+    {
+      "word": "savoir",
+      "sentences": [
+        { "sentence": "Je ne sais pas.", "translation": "I don't know." },
+        { "sentence": "Tu sais parler français?", "translation": "Do you know how to speak French?" },
+        { "sentence": "Elle sait cuisiner.", "translation": "She knows how to cook." }
+      ]
+    },
+    {
+      "word": "dire",
+      "sentences": [
+        { "sentence": "Qu'est-ce que tu as dit?", "translation": "What did you say?" },
+        { "sentence": "Je te dis la vérité.", "translation": "I'm telling you the truth." },
+        { "sentence": "On dit qu'il va pleuvoir.", "translation": "They say it's going to rain." }
+      ]
+    },
+    {
+      "word": "prendre",
+      "sentences": [
+        { "sentence": "Je prends le bus.", "translation": "I take the bus." },
+        { "sentence": "Prenez votre temps.", "translation": "Take your time." },
+        { "sentence": "Tu prends un café?", "translation": "Are you having a coffee?" }
+      ]
+    },
+    {
+      "word": "parler",
+      "sentences": [
+        { "sentence": "Je parle français.", "translation": "I speak French." },
+        { "sentence": "Parlez plus lentement.", "translation": "Speak more slowly." },
+        { "sentence": "Nous devons parler.", "translation": "We need to talk." }
+      ]
+    },
+    {
+      "word": "donner",
+      "sentences": [
+        { "sentence": "Donne-moi le livre.", "translation": "Give me the book." },
+        { "sentence": "Il m'a donné un cadeau.", "translation": "He gave me a gift." },
+        { "sentence": "Ça donne faim.", "translation": "That makes you hungry." }
+      ]
+    },
+    {
+      "word": "aimer",
+      "sentences": [
+        { "sentence": "J'aime la musique.", "translation": "I like music." },
+        { "sentence": "Tu aimes le café?", "translation": "Do you like coffee?" },
+        { "sentence": "Je t'aime.", "translation": "I love you." }
+      ]
+    },
+    {
+      "word": "penser",
+      "sentences": [
+        { "sentence": "Qu'est-ce que tu penses?", "translation": "What do you think?" },
+        { "sentence": "Je pense que oui.", "translation": "I think so." },
+        { "sentence": "Je pensais à toi.", "translation": "I was thinking about you." }
+      ]
+    },
+    {
+      "word": "trouver",
+      "sentences": [
+        { "sentence": "Je ne trouve pas mes clés.", "translation": "I can't find my keys." },
+        { "sentence": "Tu trouves ça comment?", "translation": "What do you think of it?" },
+        { "sentence": "J'ai trouvé un bon restaurant.", "translation": "I found a good restaurant." }
+      ]
+    },
+    {
+      "word": "maison",
+      "sentences": [
+        { "sentence": "Ma maison est près d'ici.", "translation": "My house is near here." },
+        { "sentence": "Rentrons à la maison.", "translation": "Let's go home." },
+        { "sentence": "C'est une grande maison.", "translation": "It's a big house." }
+      ]
+    },
+    {
+      "word": "temps",
+      "sentences": [
+        { "sentence": "Je n'ai pas le temps.", "translation": "I don't have time." },
+        { "sentence": "Quel temps fait-il?", "translation": "What's the weather like?" },
+        { "sentence": "Ça fait longtemps!", "translation": "It's been a long time!" }
+      ]
+    },
+    {
+      "word": "vie",
+      "sentences": [
+        { "sentence": "La vie est belle.", "translation": "Life is beautiful." },
+        { "sentence": "Comment va ta vie?", "translation": "How is your life going?" },
+        { "sentence": "C'est l'amour de ma vie.", "translation": "He/She is the love of my life." }
+      ]
+    },
+    {
+      "word": "jour",
+      "sentences": [
+        { "sentence": "Bonjour!", "translation": "Good day! / Hello!" },
+        { "sentence": "Quel jour sommes-nous?", "translation": "What day is it?" },
+        { "sentence": "C'était une longue journée.", "translation": "It was a long day." }
+      ]
+    },
+    {
+      "word": "monde",
+      "sentences": [
+        { "sentence": "Le monde est grand.", "translation": "The world is big." },
+        { "sentence": "Il y a du monde ici.", "translation": "It's crowded here." },
+        { "sentence": "Tout le monde est là.", "translation": "Everyone is here." }
+      ]
+    },
+    {
+      "word": "homme",
+      "sentences": [
+        { "sentence": "L'homme marche dans la rue.", "translation": "The man walks in the street." },
+        { "sentence": "C'est un bon homme.", "translation": "He is a good man." },
+        { "sentence": "Les droits de l'homme.", "translation": "Human rights." }
+      ]
+    },
+    {
+      "word": "femme",
+      "sentences": [
+        { "sentence": "Cette femme est ma professeure.", "translation": "That woman is my teacher." },
+        { "sentence": "C'est ma femme.", "translation": "She is my wife." },
+        { "sentence": "La femme lit un livre.", "translation": "The woman reads a book." }
+      ]
+    },
+    {
+      "word": "bon",
+      "sentences": [
+        { "sentence": "C'est un bon livre.", "translation": "It's a good book." },
+        { "sentence": "Le repas est bon.", "translation": "The meal is good." },
+        { "sentence": "Bonne chance!", "translation": "Good luck!" }
+      ]
+    },
+    {
+      "word": "grand",
+      "sentences": [
+        { "sentence": "C'est une grande ville.", "translation": "It's a big city." },
+        { "sentence": "Mon frère est plus grand que moi.", "translation": "My brother is taller than me." },
+        { "sentence": "Il a un grand cœur.", "translation": "He has a big heart." }
+      ]
+    },
+    {
+      "word": "nouveau",
+      "sentences": [
+        { "sentence": "J'ai une nouvelle voiture.", "translation": "I have a new car." },
+        { "sentence": "Quoi de neuf?", "translation": "What's new?" },
+        { "sentence": "C'est un nouvel étudiant.", "translation": "He is a new student." }
+      ]
+    },
+    {
+      "word": "travailler",
+      "sentences": [
+        { "sentence": "Je travaille dans un bureau.", "translation": "I work in an office." },
+        { "sentence": "Elle travaille beaucoup.", "translation": "She works a lot." },
+        { "sentence": "Où travailles-tu?", "translation": "Where do you work?" }
+      ]
+    },
+    {
+      "word": "manger",
+      "sentences": [
+        { "sentence": "On va manger.", "translation": "Let's eat." },
+        { "sentence": "Qu'est-ce que tu veux manger?", "translation": "What do you want to eat?" },
+        { "sentence": "Je mange des fruits tous les jours.", "translation": "I eat fruit every day." }
+      ]
+    },
+    {
+      "word": "vivre",
+      "sentences": [
+        { "sentence": "Je vis à Paris.", "translation": "I live in Paris." },
+        { "sentence": "Où vis-tu?", "translation": "Where do you live?" },
+        { "sentence": "Nous vivons ensemble.", "translation": "We live together." }
+      ]
+    },
+    {
+      "word": "écrire",
+      "sentences": [
+        { "sentence": "J'écris une lettre.", "translation": "I'm writing a letter." },
+        { "sentence": "Peux-tu écrire ton nom?", "translation": "Can you write your name?" },
+        { "sentence": "Elle écrit très bien.", "translation": "She writes very well." }
+      ]
+    },
+    {
+      "word": "lire",
+      "sentences": [
+        { "sentence": "J'aime lire.", "translation": "I like to read." },
+        { "sentence": "Je lis le journal chaque matin.", "translation": "I read the newspaper every morning." },
+        { "sentence": "Qu'est-ce que tu lis?", "translation": "What are you reading?" }
+      ]
+    },
+    {
+      "word": "comprendre",
+      "sentences": [
+        { "sentence": "Je ne comprends pas.", "translation": "I don't understand." },
+        { "sentence": "Tu comprends le français?", "translation": "Do you understand French?" },
+        { "sentence": "Maintenant je comprends.", "translation": "Now I understand." }
+      ]
+    },
+    {
+      "word": "apprendre",
+      "sentences": [
+        { "sentence": "Je veux apprendre le français.", "translation": "I want to learn French." },
+        { "sentence": "J'apprends quelque chose de nouveau chaque jour.", "translation": "I learn something new every day." },
+        { "sentence": "C'est facile à apprendre.", "translation": "It's easy to learn." }
+      ]
+    },
+    {
+      "word": "attendre",
+      "sentences": [
+        { "sentence": "Attends-moi ici.", "translation": "Wait for me here." },
+        { "sentence": "J'attends le bus.", "translation": "I'm waiting for the bus." },
+        { "sentence": "Nous attendons depuis une heure.", "translation": "We've been waiting for an hour." }
+      ]
+    },
+    {
+      "word": "partir",
+      "sentences": [
+        { "sentence": "Je dois partir.", "translation": "I have to leave." },
+        { "sentence": "Quand est-ce que tu pars?", "translation": "When are you leaving?" },
+        { "sentence": "Elle est partie ce matin.", "translation": "She left this morning." }
+      ]
+    },
+    {
+      "word": "arriver",
+      "sentences": [
+        { "sentence": "Je suis arrivé en retard.", "translation": "I arrived late." },
+        { "sentence": "Le train arrive à huit heures.", "translation": "The train arrives at eight o'clock." },
+        { "sentence": "Qu'est-ce qui est arrivé?", "translation": "What happened?" }
+      ]
+    },
+    {
+      "word": "croire",
+      "sentences": [
+        { "sentence": "Je ne le crois pas.", "translation": "I don't believe it." },
+        { "sentence": "Je crois que oui.", "translation": "I believe so." },
+        { "sentence": "Tu crois aux fantômes?", "translation": "Do you believe in ghosts?" }
+      ]
+    },
+    {
+      "word": "mettre",
+      "sentences": [
+        { "sentence": "Mets la table.", "translation": "Set the table." },
+        { "sentence": "Où est-ce que je le mets?", "translation": "Where should I put it?" },
+        { "sentence": "J'ai mis mon manteau.", "translation": "I put on my coat." }
+      ]
+    },
+    {
+      "word": "dormir",
+      "sentences": [
+        { "sentence": "J'ai sommeil, je veux dormir.", "translation": "I'm sleepy, I want to sleep." },
+        { "sentence": "Tu as bien dormi?", "translation": "Did you sleep well?" },
+        { "sentence": "Le bébé dort.", "translation": "The baby is sleeping." }
+      ]
+    },
+    {
+      "word": "connaître",
+      "sentences": [
+        { "sentence": "Tu connais Marie?", "translation": "Do you know Marie?" },
+        { "sentence": "Je veux connaître la France.", "translation": "I want to get to know France." },
+        { "sentence": "Nous nous sommes connus à l'université.", "translation": "We met at university." }
+      ]
+    },
+    {
+      "word": "commencer",
+      "sentences": [
+        { "sentence": "Le cours commence à neuf heures.", "translation": "The class starts at nine." },
+        { "sentence": "On commence.", "translation": "Let's begin." },
+        { "sentence": "J'ai commencé à étudier hier.", "translation": "I started studying yesterday." }
+      ]
+    },
+    {
+      "word": "finir",
+      "sentences": [
+        { "sentence": "Tu as fini tes devoirs?", "translation": "Did you finish your homework?" },
+        { "sentence": "Le film finit à dix heures.", "translation": "The movie ends at ten." },
+        { "sentence": "J'ai fini de manger.", "translation": "I finished eating." }
+      ]
+    },
+    {
+      "word": "rappeler",
+      "sentences": [
+        { "sentence": "Je ne me rappelle pas son nom.", "translation": "I don't remember his/her name." },
+        { "sentence": "Rappelle-moi de fermer la porte.", "translation": "Remind me to close the door." },
+        { "sentence": "Je te rappelle demain.", "translation": "I'll call you back tomorrow." }
+      ]
+    },
+    {
+      "word": "oublier",
+      "sentences": [
+        { "sentence": "J'ai oublié les clés.", "translation": "I forgot the keys." },
+        { "sentence": "N'oublie pas de m'appeler.", "translation": "Don't forget to call me." },
+        { "sentence": "C'est facile à oublier.", "translation": "It's easy to forget." }
+      ]
+    },
+    {
+      "word": "courir",
+      "sentences": [
+        { "sentence": "J'aime courir le matin.", "translation": "I like to run in the morning." },
+        { "sentence": "L'enfant court vite.", "translation": "The child runs fast." },
+        { "sentence": "Cours!", "translation": "Run!" }
+      ]
+    },
+    {
+      "word": "sentir",
+      "sentences": [
+        { "sentence": "Je me sens bien.", "translation": "I feel good." },
+        { "sentence": "Comment te sens-tu?", "translation": "How do you feel?" },
+        { "sentence": "Ça sent bon.", "translation": "It smells good." }
+      ]
+    },
+    {
+      "word": "rester",
+      "sentences": [
+        { "sentence": "Je reste à la maison.", "translation": "I'm staying at home." },
+        { "sentence": "Reste ici.", "translation": "Stay here." },
+        { "sentence": "Il reste du gâteau.", "translation": "There's some cake left." }
+      ]
+    },
+    {
+      "word": "sembler",
+      "sentences": [
+        { "sentence": "Ça semble intéressant.", "translation": "It seems interesting." },
+        { "sentence": "Il semble fatigué.", "translation": "He seems tired." },
+        { "sentence": "Il me semble que oui.", "translation": "It seems so to me." }
+      ]
+    },
+    {
+      "word": "suivre",
+      "sentences": [
+        { "sentence": "Suivez-moi.", "translation": "Follow me." },
+        { "sentence": "Je suis un cours de français.", "translation": "I'm taking a French class." },
+        { "sentence": "Tu me suis?", "translation": "Are you following me?" }
+      ]
+    }
+  ]
+}
