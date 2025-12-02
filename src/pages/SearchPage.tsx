@@ -1,41 +1,55 @@
-import { useState, useEffect, useRef } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useState, useEffect, useRef, useMemo } from 'react';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import type { LanguageCode, Word, WordDetail } from '@/types';
 import { Header, Footer } from '@/components/layout';
 import {
   SearchInput,
-  DifficultyFilter,
   ResultsList,
   SearchTips,
   StatsBar,
   WordDetailModal,
+  FilterSidebar,
+  MobileFilterDrawer,
+  MobileFilterButton,
+  type LearningMode,
 } from '@/components/features';
 import { useVocabulary } from '@/hooks/useVocabulary';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useProgress } from '@/hooks/useProgress';
+import { useFilters } from '@/hooks/useFilters';
 import { useApp } from '@/contexts/AppContext';
 import { languages } from '@/lib/languages';
 import { getWordDetailsAsync } from '@/lib/wordDetails';
 
 export function SearchPage() {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const { t } = useTranslation();
-  const { siteLanguage } = useApp();
+  const {
+    siteLanguage,
+    nativeLanguage,
+    targetLanguage,
+    setNativeLanguage,
+    setTargetLanguage,
+  } = useApp();
 
-  // Get languages from URL params
-  const fromLang = (searchParams.get('from') || 'el') as LanguageCode;
-  const toLang = (searchParams.get('to') || 'de') as LanguageCode;
+  // Get languages from URL params or context
+  const fromLang = (searchParams.get('from') || nativeLanguage) as LanguageCode;
+  const toLang = (searchParams.get('to') || targetLanguage) as LanguageCode;
 
   // Track previous language to detect changes
   const prevLangRef = useRef(toLang);
 
-
   // State
   const [searchQuery, setSearchQuery] = useState('');
-  const [difficulty, setDifficulty] = useState(5); // Show all difficulty levels by default
-  const [contentLength, setContentLength] = useState(5);
   const [results, setResults] = useState<Word[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
+  const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
+  const [learningMode, setLearningMode] = useState<LearningMode>('browse');
+
+  // Settings state
+  const [showTranslations, setShowTranslations] = useState(true);
+  const [autoPlayAudio, setAutoPlayAudio] = useState(false);
 
   // Clear results when language changes
   useEffect(() => {
@@ -52,8 +66,15 @@ export function SearchPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Load vocabulary for target language
-  const { isLoading, error, searchWords, totalWords, languageName } =
-    useVocabulary(toLang);
+  const {
+    isLoading,
+    error,
+    advancedSearch,
+    totalWords,
+    languageName,
+    filterStats,
+    wordsWithExamples,
+  } = useVocabulary(toLang);
 
   // Progress tracking
   const {
@@ -62,15 +83,66 @@ export function SearchPage() {
     todayProgress,
     wordsLearned,
     bookmarkedCount,
+    learnedWordIds,
+    bookmarkedWordIds,
     addLearnedWord,
     removeLearnedWord,
     addBookmark,
     removeBookmark,
     isWordLearned,
     isWordBookmarked,
+    setDailyGoal,
   } = useProgress(toLang);
 
-  // Search handler
+  // Filters
+  const {
+    filters,
+    pendingFilters,
+    updatePendingFilters,
+    applyFilters,
+    resetFilters,
+    hasChanges,
+    activeFiltersCount,
+  } = useFilters();
+
+  // Convert arrays to Sets for efficient lookup
+  const learnedWordIdsSet = useMemo(() => new Set(learnedWordIds), [learnedWordIds]);
+  const bookmarkedWordIdsSet = useMemo(() => new Set(bookmarkedWordIds), [bookmarkedWordIds]);
+
+  // Build filter options from stats
+  const partOfSpeechOptions = useMemo(() => {
+    if (!filterStats?.partOfSpeechCounts) return [];
+
+    const posLabels: Record<string, string> = {
+      noun: 'Noun',
+      verb: 'Verb',
+      adjective: 'Adjective',
+      adverb: 'Adverb',
+      preposition: 'Preposition',
+      conjunction: 'Conjunction',
+      pronoun: 'Pronoun',
+      article: 'Article',
+      other: 'Other',
+    };
+
+    return Object.entries(filterStats.partOfSpeechCounts).map(([value, count]) => ({
+      value,
+      label: posLabels[value] || value,
+      count,
+    }));
+  }, [filterStats]);
+
+  const genderOptions = useMemo(() => {
+    if (!filterStats?.genderCounts) return [];
+
+    return [
+      { value: 'm' as const, label: 'Masculine', count: filterStats.genderCounts['m'] || 0 },
+      { value: 'f' as const, label: 'Feminine', count: filterStats.genderCounts['f'] || 0 },
+      { value: 'n' as const, label: 'Neuter', count: filterStats.genderCounts['n'] || 0 },
+    ].filter((opt) => opt.count > 0);
+  }, [filterStats]);
+
+  // Search handler with filters
   const handleSearch = () => {
     if (!searchQuery.trim()) {
       setResults([]);
@@ -78,24 +150,31 @@ export function SearchPage() {
       return;
     }
 
-    const searchResults = searchWords(searchQuery, difficulty);
+    const searchResults = advancedSearch(searchQuery, filters, {
+      learnedWordIds: learnedWordIdsSet,
+      bookmarkedWordIds: bookmarkedWordIdsSet,
+      wordsWithExamples,
+    });
     setResults(searchResults);
     setHasSearched(true);
   };
 
-  // Re-search when difficulty changes (if already searched)
+  // Re-search when filters are applied
   useEffect(() => {
     if (hasSearched && searchQuery.trim()) {
-      const searchResults = searchWords(searchQuery, difficulty);
+      const searchResults = advancedSearch(searchQuery, filters, {
+        learnedWordIds: learnedWordIdsSet,
+        bookmarkedWordIds: bookmarkedWordIdsSet,
+        wordsWithExamples,
+      });
       setResults(searchResults);
     }
-  }, [difficulty, hasSearched, searchQuery, searchWords]);
+  }, [filters, hasSearched, searchQuery, advancedSearch, learnedWordIdsSet, bookmarkedWordIdsSet, wordsWithExamples]);
 
   // Handle result click - open modal with word details
   const handleResultClick = async (id: number) => {
     const word = results.find((w) => w.id === id);
     if (word) {
-      // Open modal immediately with basic data, then load async data
       setIsModalOpen(true);
       const wordDetails = await getWordDetailsAsync(word, toLang);
       setSelectedWord(wordDetails);
@@ -128,167 +207,262 @@ export function SearchPage() {
     }
   };
 
+  // Language handlers
+  const handleNativeLanguageChange = (lang: LanguageCode) => {
+    setNativeLanguage(lang);
+    navigate(`/search?from=${lang}&to=${toLang}`);
+  };
+
+  const handleTargetLanguageChange = (lang: LanguageCode) => {
+    setTargetLanguage(lang);
+    navigate(`/search?from=${fromLang}&to=${lang}`);
+  };
+
+  const handleSwapLanguages = () => {
+    setNativeLanguage(toLang);
+    setTargetLanguage(fromLang);
+    navigate(`/search?from=${toLang}&to=${fromLang}`);
+  };
+
+  // Learning mode handler
+  const handleLearningModeChange = (mode: LearningMode) => {
+    setLearningMode(mode);
+    if (mode === 'flashcards') {
+      navigate(`/flashcards?from=${fromLang}&to=${toLang}`);
+    }
+  };
+
   // Convert Word[] to ResultsList format
   const resultsForDisplay = results.map((word) => ({
     id: word.id,
     sentence: `${word.word} (rank #${word.rank}, frequency: ${word.frequency.toLocaleString()})`,
-    highlightWord: word.word
+    highlightWord: word.word,
   }));
+
+  // Sidebar content (shared between desktop and mobile)
+  const sidebarContent = (
+    <FilterSidebar
+      filters={filters}
+      pendingFilters={pendingFilters}
+      onFilterChange={updatePendingFilters}
+      onApplyFilters={() => {
+        applyFilters();
+        setIsMobileDrawerOpen(false);
+      }}
+      onResetFilters={resetFilters}
+      hasChanges={hasChanges}
+      partOfSpeechOptions={partOfSpeechOptions}
+      genderOptions={genderOptions}
+      wordLengthRange={filterStats?.wordLengthRange || { min: 1, max: 30 }}
+      frequencyRange={filterStats?.frequencyRange || { min: 1, max: 10000 }}
+      bookmarkedCount={bookmarkedCount}
+      learnedCount={wordsLearned}
+      withExamplesCount={wordsWithExamples.size}
+      nativeLanguage={fromLang}
+      targetLanguage={toLang}
+      onNativeLanguageChange={handleNativeLanguageChange}
+      onTargetLanguageChange={handleTargetLanguageChange}
+      onSwapLanguages={handleSwapLanguages}
+      learningMode={learningMode}
+      onLearningModeChange={handleLearningModeChange}
+      streak={currentStreak}
+      wordsLearned={wordsLearned}
+      todayProgress={todayProgress}
+      dailyGoal={dailyGoal}
+      showTranslations={showTranslations}
+      onShowTranslationsChange={setShowTranslations}
+      autoPlayAudio={autoPlayAudio}
+      onAutoPlayAudioChange={setAutoPlayAudio}
+      onDailyGoalChange={setDailyGoal}
+      showGenderFilter={toLang === 'de'}
+    />
+  );
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Header - blue variant */}
       <Header variant="blue" showFlagSelector />
 
-      {/* Main content */}
-      <main className="flex-1 py-8 px-6">
-        <div className="max-w-6xl mx-auto">
-          {/* Language indicator */}
-          <div
-            className="mb-6 flex items-center gap-2"
-            style={{
-              fontFamily: "'Open Sans', Verdana, Arial, Helvetica, sans-serif",
-              fontSize: '14px'
-            }}
-          >
-            <span className="text-gray-600">{t('learning')}:</span>
-            <img
-              src={languages[toLang]?.flag}
-              alt={languageName}
-              className="w-6 h-auto rounded-sm"
-            />
-            <strong>{languageName || toLang.toUpperCase()}</strong>
-            <span className="text-gray-400 mx-2">|</span>
-            <span className="text-gray-600">{t('from')}:</span>
-            <img
-              src={languages[fromLang]?.flag}
-              alt={languages[fromLang]?.name}
-              className="w-6 h-auto rounded-sm"
-            />
-            <strong>{languages[fromLang]?.name}</strong>
-            {!isLoading && (
-              <>
-                <span className="text-gray-400 mx-2">|</span>
-                <span className="text-gray-500">
-                  {totalWords.toLocaleString()} {t('wordsAvailable')}
-                </span>
-              </>
-            )}
-          </div>
+      {/* Main layout with sidebar */}
+      <div className="flex-1 flex">
+        {/* Desktop Sidebar */}
+        <div className="hidden lg:block">{sidebarContent}</div>
 
-          {/* Stats Bar */}
-          <StatsBar
-            currentStreak={currentStreak}
-            wordsLearned={wordsLearned}
-            bookmarkedCount={bookmarkedCount}
-            todayProgress={todayProgress}
-            dailyGoal={dailyGoal}
-          />
+        {/* Mobile Filter Drawer */}
+        <MobileFilterDrawer
+          isOpen={isMobileDrawerOpen}
+          onClose={() => setIsMobileDrawerOpen(false)}
+        >
+          {sidebarContent}
+        </MobileFilterDrawer>
 
-          {/* Loading/Error states */}
-          {isLoading && (
-            <div className="mb-6 text-gray-500">
-              {t('loading')}
-            </div>
-          )}
-
-          {error && (
-            <div className="mb-6 text-red-500">
-              Error: {error}
-            </div>
-          )}
-
-          <div className="flex gap-8">
-            {/* Left side - Search and Results */}
-            <div className="flex-1" style={{ maxWidth: '70%' }}>
-              {/* Search input */}
-              <SearchInput
-                value={searchQuery}
-                onChange={setSearchQuery}
-                onSearch={handleSearch}
-                placeholder={`${t('searchPlaceholder')} ${languageName || ''}...`}
-                targetLanguage={toLang}
-                className="mb-6"
+        {/* Main content */}
+        <main className="flex-1 py-8 px-6 overflow-y-auto">
+          <div className="max-w-4xl mx-auto">
+            {/* Mobile filter button */}
+            <div className="lg:hidden mb-4">
+              <MobileFilterButton
+                onClick={() => setIsMobileDrawerOpen(true)}
+                activeFiltersCount={activeFiltersCount}
               />
+            </div>
 
-              {/* Filters */}
-              <div className="mb-8 space-y-3">
-                <DifficultyFilter
-                  label={t('maxDifficulty')}
-                  value={difficulty}
-                  onChange={setDifficulty}
-                />
-                <DifficultyFilter
-                  label={t('contentLength')}
-                  value={contentLength}
-                  onChange={setContentLength}
-                />
-              </div>
-
-              {/* Results */}
-              {hasSearched ? (
+            {/* Language indicator */}
+            <div
+              className="mb-6 flex items-center gap-2"
+              style={{
+                fontFamily: "'Open Sans', Verdana, Arial, Helvetica, sans-serif",
+                fontSize: '14px',
+              }}
+            >
+              <span className="text-gray-600">{t('learning')}:</span>
+              <img
+                src={languages[toLang]?.flag}
+                alt={languageName}
+                className="w-6 h-auto rounded-sm"
+              />
+              <strong>{languageName || toLang.toUpperCase()}</strong>
+              <span className="text-gray-400 mx-2">|</span>
+              <span className="text-gray-600">{t('from')}:</span>
+              <img
+                src={languages[fromLang]?.flag}
+                alt={languages[fromLang]?.name}
+                className="w-6 h-auto rounded-sm"
+              />
+              <strong>{languages[fromLang]?.name}</strong>
+              {!isLoading && (
                 <>
+                  <span className="text-gray-400 mx-2">|</span>
+                  <span className="text-gray-500">
+                    {totalWords.toLocaleString()} {t('wordsAvailable')}
+                  </span>
+                </>
+              )}
+            </div>
+
+            {/* Stats Bar - hide on desktop (shown in sidebar) */}
+            <div className="lg:hidden">
+              <StatsBar
+                currentStreak={currentStreak}
+                wordsLearned={wordsLearned}
+                bookmarkedCount={bookmarkedCount}
+                todayProgress={todayProgress}
+                dailyGoal={dailyGoal}
+              />
+            </div>
+
+            {/* Loading/Error states */}
+            {isLoading && (
+              <div className="mb-6 text-gray-500">{t('loading')}</div>
+            )}
+
+            {error && (
+              <div className="mb-6 text-red-500">Error: {error}</div>
+            )}
+
+            {/* Search input */}
+            <SearchInput
+              value={searchQuery}
+              onChange={setSearchQuery}
+              onSearch={handleSearch}
+              placeholder={`${t('searchPlaceholder')} ${languageName || ''}...`}
+              targetLanguage={toLang}
+              className="mb-6"
+            />
+
+            {/* Results */}
+            {hasSearched ? (
+              <>
+                <div
+                  className="mb-4 text-gray-600"
+                  style={{
+                    fontFamily: "'Open Sans', Verdana, Arial, Helvetica, sans-serif",
+                    fontSize: '14px',
+                  }}
+                >
+                  {results.length > 0
+                    ? t('foundWords', { count: results.length, query: searchQuery })
+                    : t('noResults', { query: searchQuery })}
+                  {activeFiltersCount > 0 && (
+                    <span className="ml-2 text-[#7b9dd2]">
+                      ({activeFiltersCount} filter{activeFiltersCount > 1 ? 's' : ''} active)
+                    </span>
+                  )}
+                </div>
+                <ResultsList
+                  results={resultsForDisplay}
+                  onResultClick={handleResultClick}
+                  title={results.length > 0 ? t('results') : undefined}
+                  targetLanguage={toLang}
+                />
+              </>
+            ) : (
+              <div className="flex gap-8">
+                <div className="flex-1">
                   <div
-                    className="mb-4 text-gray-600"
+                    className="text-gray-500 italic"
                     style={{
                       fontFamily: "'Open Sans', Verdana, Arial, Helvetica, sans-serif",
-                      fontSize: '14px'
+                      fontSize: '16px',
                     }}
                   >
-                    {results.length > 0
-                      ? t('foundWords', { count: results.length, query: searchQuery })
-                      : t('noResults', { query: searchQuery })}
+                    {t('enterPhrase')}
                   </div>
-                  <ResultsList
-                    results={resultsForDisplay}
-                    onResultClick={handleResultClick}
-                    title={results.length > 0 ? t('results') : undefined}
-                    targetLanguage={toLang}
-                  />
-                </>
-              ) : (
-                <div
-                  className="text-gray-500 italic"
-                  style={{
-                    fontFamily: "'Open Sans', Verdana, Arial, Helvetica, sans-serif",
-                    fontSize: '16px'
-                  }}
-                >
-                  {t('enterPhrase')}
                 </div>
-              )}
-            </div>
 
-            {/* Right sidebar - Search Tips */}
-            <div className="w-[30%] pl-6 border-l border-gray-200">
-              <SearchTips />
+                {/* Search Tips - only show when no search */}
+                <div className="hidden lg:block w-[280px] pl-6 border-l border-gray-200">
+                  <SearchTips />
 
-              {/* Quick stats */}
-              {!isLoading && (
-                <div
-                  className="mt-8 p-4 bg-gray-50 rounded-lg"
-                  style={{
-                    fontFamily: "'Open Sans', Verdana, Arial, Helvetica, sans-serif",
-                    fontSize: '13px'
-                  }}
-                >
-                  <h4 className="font-semibold mb-2 text-gray-700">
-                    {t('vocabularyStats')}
-                  </h4>
-                  <ul className="space-y-1 text-gray-600">
-                    <li>{t('totalWords')}: {totalWords.toLocaleString()}</li>
-                    <li>{t('difficulty')} 1: ~{Math.round(totalWords * 0.2).toLocaleString()}</li>
-                    <li>{t('difficulty')} 2: ~{Math.round(totalWords * 0.2).toLocaleString()}</li>
-                    <li>{t('difficulty')} 3: ~{Math.round(totalWords * 0.2).toLocaleString()}</li>
-                    <li>{t('difficulty')} 4: ~{Math.round(totalWords * 0.2).toLocaleString()}</li>
-                    <li>{t('difficulty')} 5: ~{Math.round(totalWords * 0.2).toLocaleString()}</li>
-                  </ul>
+                  {/* Quick stats */}
+                  {!isLoading && (
+                    <div
+                      className="mt-8 p-4 bg-gray-50 rounded-lg"
+                      style={{
+                        fontFamily: "'Open Sans', Verdana, Arial, Helvetica, sans-serif",
+                        fontSize: '13px',
+                      }}
+                    >
+                      <h4 className="font-semibold mb-2 text-gray-700">
+                        {t('vocabularyStats')}
+                      </h4>
+                      <ul className="space-y-1 text-gray-600">
+                        <li>
+                          {t('totalWords')}: {totalWords.toLocaleString()}
+                        </li>
+                        {filterStats?.difficultyDistribution && (
+                          <>
+                            <li>
+                              {t('difficulty')} 1:{' '}
+                              {filterStats.difficultyDistribution[1]?.toLocaleString() || 0}
+                            </li>
+                            <li>
+                              {t('difficulty')} 2:{' '}
+                              {filterStats.difficultyDistribution[2]?.toLocaleString() || 0}
+                            </li>
+                            <li>
+                              {t('difficulty')} 3:{' '}
+                              {filterStats.difficultyDistribution[3]?.toLocaleString() || 0}
+                            </li>
+                            <li>
+                              {t('difficulty')} 4:{' '}
+                              {filterStats.difficultyDistribution[4]?.toLocaleString() || 0}
+                            </li>
+                            <li>
+                              {t('difficulty')} 5:{' '}
+                              {filterStats.difficultyDistribution[5]?.toLocaleString() || 0}
+                            </li>
+                          </>
+                        )}
+                      </ul>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
 
       {/* Footer - full variant */}
       <Footer variant="full" />

@@ -10,3 +10,7 @@ export { EmptyState } from './EmptyState';
 export { FlashcardCard } from './FlashcardCard';
 export { FlashcardControls } from './FlashcardControls';
 export { FlashcardSessionSummary } from './FlashcardSessionSummary';
+
+// Sidebar components
+export * from './sidebar';
+export * from './filters';

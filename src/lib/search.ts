@@ -1,4 +1,4 @@
-import type { Word } from '@/types';
+import type { Word, SearchFilters, TranslationMap } from '@/types';
 
 /**
  * Search words that start with the query string
@@ -86,7 +86,7 @@ export function getExampleSentences(word: string, language: string): string[] {
 }
 
 /**
- * Perform a full search with all filters
+ * Perform a full search with all filters (legacy version)
  */
 export function performSearch(
   words: Word[],
@@ -112,4 +112,153 @@ export function performSearch(
 
   // Limit results
   return results.slice(0, maxResults);
+}
+
+/**
+ * Advanced search with comprehensive filters
+ */
+export function performAdvancedSearch(
+  words: Word[],
+  query: string,
+  filters: SearchFilters,
+  translations: TranslationMap,
+  options?: {
+    learnedWordIds?: Set<number>;
+    bookmarkedWordIds?: Set<number>;
+    wordsWithExamples?: Set<number>;
+    maxResults?: number;
+  }
+): Word[] {
+  const {
+    learnedWordIds = new Set(),
+    bookmarkedWordIds = new Set(),
+    wordsWithExamples = new Set(),
+    maxResults = 100,
+  } = options || {};
+
+  // Start with query search
+  let results = searchByWord(words, query);
+
+  // If no results with startsWith, try contains
+  if (results.length === 0 && query.length >= 2) {
+    results = searchByContains(words, query);
+  }
+
+  // Apply filters
+  results = results.filter((word) => {
+    // Difficulty filter
+    if (filters.difficulty.length > 0 && filters.difficulty.length < 5) {
+      if (!filters.difficulty.includes(word.difficulty)) {
+        return false;
+      }
+    }
+
+    // Word length filter
+    const wordLength = word.word.length;
+    if (wordLength < filters.wordLengthMin || wordLength > filters.wordLengthMax) {
+      return false;
+    }
+
+    // Frequency rank filter
+    if (word.rank < filters.frequencyMin || word.rank > filters.frequencyMax) {
+      return false;
+    }
+
+    // Part of speech filter (requires translation data)
+    if (filters.partOfSpeech.length > 0) {
+      const translation = translations[word.word.toLowerCase()];
+      if (!translation || !filters.partOfSpeech.includes(translation.partOfSpeech)) {
+        return false;
+      }
+    }
+
+    // Gender filter (requires translation data, only for nouns)
+    if (filters.gender.length > 0) {
+      const translation = translations[word.word.toLowerCase()];
+      if (!translation || !translation.gender || !filters.gender.includes(translation.gender)) {
+        return false;
+      }
+    }
+
+    // Has examples filter
+    if (filters.hasExamples === true && !wordsWithExamples.has(word.id)) {
+      return false;
+    }
+    if (filters.hasExamples === false && wordsWithExamples.has(word.id)) {
+      return false;
+    }
+
+    // Bookmarked only filter
+    if (filters.bookmarkedOnly && !bookmarkedWordIds.has(word.id)) {
+      return false;
+    }
+
+    // Not learned only filter
+    if (filters.notLearnedOnly && learnedWordIds.has(word.id)) {
+      return false;
+    }
+
+    return true;
+  });
+
+  // Sort by rank (most common first)
+  results = sortByRank(results);
+
+  // Limit results
+  return results.slice(0, maxResults);
+}
+
+/**
+ * Get filter statistics for the current vocabulary
+ */
+export function getFilterStats(
+  words: Word[],
+  translations: TranslationMap
+): {
+  partOfSpeechCounts: Record<string, number>;
+  genderCounts: Record<string, number>;
+  difficultyDistribution: Record<number, number>;
+  wordLengthRange: { min: number; max: number };
+  frequencyRange: { min: number; max: number };
+} {
+  const partOfSpeechCounts: Record<string, number> = {};
+  const genderCounts: Record<string, number> = {};
+  const difficultyDistribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  let minLength = Infinity;
+  let maxLength = 0;
+  let minRank = Infinity;
+  let maxRank = 0;
+
+  for (const word of words) {
+    // Difficulty distribution
+    difficultyDistribution[word.difficulty] = (difficultyDistribution[word.difficulty] || 0) + 1;
+
+    // Word length
+    const len = word.word.length;
+    if (len < minLength) minLength = len;
+    if (len > maxLength) maxLength = len;
+
+    // Frequency rank
+    if (word.rank < minRank) minRank = word.rank;
+    if (word.rank > maxRank) maxRank = word.rank;
+
+    // Part of speech and gender from translations
+    const translation = translations[word.word.toLowerCase()];
+    if (translation) {
+      const pos = translation.partOfSpeech;
+      partOfSpeechCounts[pos] = (partOfSpeechCounts[pos] || 0) + 1;
+
+      if (translation.gender) {
+        genderCounts[translation.gender] = (genderCounts[translation.gender] || 0) + 1;
+      }
+    }
+  }
+
+  return {
+    partOfSpeechCounts,
+    genderCounts,
+    difficultyDistribution,
+    wordLengthRange: { min: minLength === Infinity ? 1 : minLength, max: maxLength || 30 },
+    frequencyRange: { min: minRank === Infinity ? 1 : minRank, max: maxRank || 10000 },
+  };
 }

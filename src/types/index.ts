@@ -77,12 +77,56 @@ export interface VocabularyData {
   words: Word[];
 }
 
-// Search filters
+// Search filters - comprehensive filter state
 export interface SearchFilters {
-  difficulty: number[];
-  contentLength: number[];
-  query: string;
+  difficulty: number[]; // [1,2,3,4,5] - which levels to include
+  partOfSpeech: string[]; // ['noun', 'verb', 'adjective', ...]
+  gender: string[]; // ['m', 'f', 'n'] - for German nouns
+  wordLengthMin: number;
+  wordLengthMax: number;
+  frequencyMin: number; // rank-based (1 = most frequent)
+  frequencyMax: number;
+  hasExamples: boolean | null; // null = don't filter
+  bookmarkedOnly: boolean;
+  notLearnedOnly: boolean;
 }
+
+// Default filter values
+export const defaultSearchFilters: SearchFilters = {
+  difficulty: [1, 2, 3, 4, 5],
+  partOfSpeech: [],
+  gender: [],
+  wordLengthMin: 1,
+  wordLengthMax: 30,
+  frequencyMin: 1,
+  frequencyMax: 10000,
+  hasExamples: null,
+  bookmarkedOnly: false,
+  notLearnedOnly: false,
+};
+
+// Sidebar state
+export interface SidebarState {
+  isOpen: boolean;
+  activeSection: string | null;
+}
+
+// Part of speech options with display info
+export interface PartOfSpeechOption {
+  value: string;
+  label: string;
+  count?: number;
+}
+
+// Translation data from translations file
+export interface TranslationEntry {
+  translation: string;
+  partOfSpeech: string;
+  gender?: 'm' | 'f' | 'n';
+  baseForm?: string;
+}
+
+export type TranslationMap = Record<string, TranslationEntry>;
 
 // Search result for display
 export interface SearchResult {
