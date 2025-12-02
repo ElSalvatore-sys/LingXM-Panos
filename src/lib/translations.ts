@@ -166,6 +166,7 @@ export interface Translations {
   // Language Switcher
   'sidebar.iSpeak': string;
   'sidebar.imLearning': string;
+  'sidebar.swapLanguages': string;
 
   // Learning Mode
   'sidebar.browse': string;
@@ -176,14 +177,24 @@ export interface Translations {
   'sidebar.dayStreak': string;
   'sidebar.learned': string;
   'sidebar.saved': string;
+  'sidebar.dailyGoal': string;
 
   // Gender (for sidebar)
   'sidebar.masculineDer': string;
   'sidebar.feminineDie': string;
   'sidebar.neuterDas': string;
+  'sidebar.genderMasculine': string;
+  'sidebar.genderFeminine': string;
+  'sidebar.genderNeuter': string;
+
+  // Difficulty (for sidebar)
+  'sidebar.level': string;
 
   // Range
   'sidebar.chars': string;
+
+  // PartOfSpeech (for sidebar)
+  'sidebar.clear': string;
 
   // Quick Filters
   'sidebar.bookmarkedOnly': string;
@@ -202,11 +213,16 @@ export interface Translations {
   // Premium
   'sidebar.goPremium': string;
   'sidebar.unlockFeatures': string;
+  'sidebar.premiumDescription': string;
   'sidebar.unlimitedFlashcards': string;
   'sidebar.advancedAnalytics': string;
   'sidebar.offlineMode': string;
   'sidebar.noAds': string;
   'sidebar.upgradeNow': string;
+  'sidebar.premiumFeature1': string;
+  'sidebar.premiumFeature2': string;
+  'sidebar.premiumFeature3': string;
+  'sidebar.premiumFeature4': string;
 
   // Mobile
   'sidebar.filtersTitle': string;
@@ -378,6 +394,7 @@ const englishTranslations: Translations = {
   // Language Switcher
   'sidebar.iSpeak': 'I speak',
   'sidebar.imLearning': "I'm learning",
+  'sidebar.swapLanguages': 'Swap languages',
 
   // Learning Mode
   'sidebar.browse': 'Browse',
@@ -388,14 +405,24 @@ const englishTranslations: Translations = {
   'sidebar.dayStreak': 'Day Streak',
   'sidebar.learned': 'Learned',
   'sidebar.saved': 'Saved',
+  'sidebar.dailyGoal': 'Daily Goal',
 
   // Gender (for sidebar)
   'sidebar.masculineDer': 'Masculine (der)',
   'sidebar.feminineDie': 'Feminine (die)',
   'sidebar.neuterDas': 'Neuter (das)',
+  'sidebar.genderMasculine': 'Masculine (der)',
+  'sidebar.genderFeminine': 'Feminine (die)',
+  'sidebar.genderNeuter': 'Neuter (das)',
+
+  // Difficulty (for sidebar)
+  'sidebar.level': 'Level',
 
   // Range
   'sidebar.chars': 'chars',
+
+  // PartOfSpeech (for sidebar)
+  'sidebar.clear': 'Clear',
 
   // Quick Filters
   'sidebar.bookmarkedOnly': 'Bookmarked only',
@@ -414,11 +441,16 @@ const englishTranslations: Translations = {
   // Premium
   'sidebar.goPremium': 'Go Premium',
   'sidebar.unlockFeatures': 'Unlock all features and accelerate your learning',
+  'sidebar.premiumDescription': 'Unlock all features and accelerate your learning',
   'sidebar.unlimitedFlashcards': 'Unlimited flashcards',
   'sidebar.advancedAnalytics': 'Advanced analytics',
   'sidebar.offlineMode': 'Offline mode',
   'sidebar.noAds': 'No ads',
   'sidebar.upgradeNow': 'Upgrade Now',
+  'sidebar.premiumFeature1': 'Unlimited flashcards',
+  'sidebar.premiumFeature2': 'Advanced analytics',
+  'sidebar.premiumFeature3': 'Offline mode',
+  'sidebar.premiumFeature4': 'No ads',
 
   // Mobile
   'sidebar.filtersTitle': 'Filters',
@@ -590,6 +622,7 @@ const germanTranslations: Translations = {
   // Language Switcher
   'sidebar.iSpeak': 'Ich spreche',
   'sidebar.imLearning': 'Ich lerne',
+  'sidebar.swapLanguages': 'Sprachen tauschen',
 
   // Learning Mode
   'sidebar.browse': 'Durchsuchen',
@@ -600,14 +633,24 @@ const germanTranslations: Translations = {
   'sidebar.dayStreak': 'Tage Serie',
   'sidebar.learned': 'Gelernt',
   'sidebar.saved': 'Gespeichert',
+  'sidebar.dailyGoal': 'Tagesziel',
 
   // Gender (for sidebar)
   'sidebar.masculineDer': 'Maskulin (der)',
   'sidebar.feminineDie': 'Feminin (die)',
   'sidebar.neuterDas': 'Neutrum (das)',
+  'sidebar.genderMasculine': 'Maskulin (der)',
+  'sidebar.genderFeminine': 'Feminin (die)',
+  'sidebar.genderNeuter': 'Neutrum (das)',
+
+  // Difficulty (for sidebar)
+  'sidebar.level': 'Stufe',
 
   // Range
   'sidebar.chars': 'Zeichen',
+
+  // PartOfSpeech (for sidebar)
+  'sidebar.clear': 'Löschen',
 
   // Quick Filters
   'sidebar.bookmarkedOnly': 'Nur Gespeicherte',
@@ -626,11 +669,16 @@ const germanTranslations: Translations = {
   // Premium
   'sidebar.goPremium': 'Premium werden',
   'sidebar.unlockFeatures': 'Alle Funktionen freischalten und schneller lernen',
+  'sidebar.premiumDescription': 'Alle Funktionen freischalten und schneller lernen',
   'sidebar.unlimitedFlashcards': 'Unbegrenzte Karteikarten',
   'sidebar.advancedAnalytics': 'Erweiterte Statistiken',
   'sidebar.offlineMode': 'Offline-Modus',
   'sidebar.noAds': 'Keine Werbung',
   'sidebar.upgradeNow': 'Jetzt upgraden',
+  'sidebar.premiumFeature1': 'Unbegrenzte Karteikarten',
+  'sidebar.premiumFeature2': 'Erweiterte Statistiken',
+  'sidebar.premiumFeature3': 'Offline-Modus',
+  'sidebar.premiumFeature4': 'Keine Werbung',
 
   // Mobile
   'sidebar.filtersTitle': 'Filter',
@@ -802,6 +850,7 @@ const frenchTranslations: Translations = {
   // Language Switcher
   'sidebar.iSpeak': 'Je parle',
   'sidebar.imLearning': 'J\'apprends',
+  'sidebar.swapLanguages': 'Échanger les langues',
 
   // Learning Mode
   'sidebar.browse': 'Parcourir',
@@ -812,14 +861,24 @@ const frenchTranslations: Translations = {
   'sidebar.dayStreak': 'Jours consécutifs',
   'sidebar.learned': 'Appris',
   'sidebar.saved': 'Sauvegardés',
+  'sidebar.dailyGoal': 'Objectif quotidien',
 
   // Gender (for sidebar)
   'sidebar.masculineDer': 'Masculin (der)',
   'sidebar.feminineDie': 'Féminin (die)',
   'sidebar.neuterDas': 'Neutre (das)',
+  'sidebar.genderMasculine': 'Masculin (der)',
+  'sidebar.genderFeminine': 'Féminin (die)',
+  'sidebar.genderNeuter': 'Neutre (das)',
+
+  // Difficulty (for sidebar)
+  'sidebar.level': 'Niveau',
 
   // Range
   'sidebar.chars': 'caract.',
+
+  // PartOfSpeech (for sidebar)
+  'sidebar.clear': 'Effacer',
 
   // Quick Filters
   'sidebar.bookmarkedOnly': 'Favoris uniquement',
@@ -838,11 +897,16 @@ const frenchTranslations: Translations = {
   // Premium
   'sidebar.goPremium': 'Passer Premium',
   'sidebar.unlockFeatures': 'Débloquez toutes les fonctionnalités',
+  'sidebar.premiumDescription': 'Débloquez toutes les fonctionnalités',
   'sidebar.unlimitedFlashcards': 'Cartes illimitées',
   'sidebar.advancedAnalytics': 'Statistiques avancées',
   'sidebar.offlineMode': 'Mode hors ligne',
   'sidebar.noAds': 'Sans publicité',
   'sidebar.upgradeNow': 'Passer à Pro',
+  'sidebar.premiumFeature1': 'Cartes illimitées',
+  'sidebar.premiumFeature2': 'Statistiques avancées',
+  'sidebar.premiumFeature3': 'Mode hors ligne',
+  'sidebar.premiumFeature4': 'Sans publicité',
 
   // Mobile
   'sidebar.filtersTitle': 'Filtres',
@@ -1014,6 +1078,7 @@ const spanishTranslations: Translations = {
   // Language Switcher
   'sidebar.iSpeak': 'Hablo',
   'sidebar.imLearning': 'Estoy aprendiendo',
+  'sidebar.swapLanguages': 'Intercambiar idiomas',
 
   // Learning Mode
   'sidebar.browse': 'Explorar',
@@ -1024,14 +1089,24 @@ const spanishTranslations: Translations = {
   'sidebar.dayStreak': 'Días seguidos',
   'sidebar.learned': 'Aprendidas',
   'sidebar.saved': 'Guardadas',
+  'sidebar.dailyGoal': 'Meta diaria',
 
   // Gender (for sidebar)
   'sidebar.masculineDer': 'Masculino (der)',
   'sidebar.feminineDie': 'Femenino (die)',
   'sidebar.neuterDas': 'Neutro (das)',
+  'sidebar.genderMasculine': 'Masculino (der)',
+  'sidebar.genderFeminine': 'Femenino (die)',
+  'sidebar.genderNeuter': 'Neutro (das)',
+
+  // Difficulty (for sidebar)
+  'sidebar.level': 'Nivel',
 
   // Range
   'sidebar.chars': 'caract.',
+
+  // PartOfSpeech (for sidebar)
+  'sidebar.clear': 'Borrar',
 
   // Quick Filters
   'sidebar.bookmarkedOnly': 'Solo guardados',
@@ -1050,11 +1125,16 @@ const spanishTranslations: Translations = {
   // Premium
   'sidebar.goPremium': 'Hazte Premium',
   'sidebar.unlockFeatures': 'Desbloquea todas las funciones',
+  'sidebar.premiumDescription': 'Desbloquea todas las funciones',
   'sidebar.unlimitedFlashcards': 'Tarjetas ilimitadas',
   'sidebar.advancedAnalytics': 'Estadísticas avanzadas',
   'sidebar.offlineMode': 'Modo sin conexión',
   'sidebar.noAds': 'Sin anuncios',
   'sidebar.upgradeNow': 'Actualizar ahora',
+  'sidebar.premiumFeature1': 'Tarjetas ilimitadas',
+  'sidebar.premiumFeature2': 'Estadísticas avanzadas',
+  'sidebar.premiumFeature3': 'Modo sin conexión',
+  'sidebar.premiumFeature4': 'Sin anuncios',
 
   // Mobile
   'sidebar.filtersTitle': 'Filtros',
@@ -1226,6 +1306,7 @@ const russianTranslations: Translations = {
   // Language Switcher
   'sidebar.iSpeak': 'Я говорю',
   'sidebar.imLearning': 'Изучаю',
+  'sidebar.swapLanguages': 'Поменять языки',
 
   // Learning Mode
   'sidebar.browse': 'Обзор',
@@ -1236,14 +1317,24 @@ const russianTranslations: Translations = {
   'sidebar.dayStreak': 'Дней подряд',
   'sidebar.learned': 'Изучено',
   'sidebar.saved': 'Сохранено',
+  'sidebar.dailyGoal': 'Дневная цель',
 
   // Gender (for sidebar)
   'sidebar.masculineDer': 'Мужской (der)',
   'sidebar.feminineDie': 'Женский (die)',
   'sidebar.neuterDas': 'Средний (das)',
+  'sidebar.genderMasculine': 'Мужской (der)',
+  'sidebar.genderFeminine': 'Женский (die)',
+  'sidebar.genderNeuter': 'Средний (das)',
+
+  // Difficulty (for sidebar)
+  'sidebar.level': 'Уровень',
 
   // Range
   'sidebar.chars': 'симв.',
+
+  // PartOfSpeech (for sidebar)
+  'sidebar.clear': 'Очистить',
 
   // Quick Filters
   'sidebar.bookmarkedOnly': 'Только избранное',
@@ -1262,11 +1353,16 @@ const russianTranslations: Translations = {
   // Premium
   'sidebar.goPremium': 'Премиум',
   'sidebar.unlockFeatures': 'Разблокируйте все функции',
+  'sidebar.premiumDescription': 'Разблокируйте все функции',
   'sidebar.unlimitedFlashcards': 'Безлимитные карточки',
   'sidebar.advancedAnalytics': 'Расширенная статистика',
   'sidebar.offlineMode': 'Офлайн режим',
   'sidebar.noAds': 'Без рекламы',
   'sidebar.upgradeNow': 'Обновить сейчас',
+  'sidebar.premiumFeature1': 'Безлимитные карточки',
+  'sidebar.premiumFeature2': 'Расширенная статистика',
+  'sidebar.premiumFeature3': 'Офлайн режим',
+  'sidebar.premiumFeature4': 'Без рекламы',
 
   // Mobile
   'sidebar.filtersTitle': 'Фильтры',
@@ -1438,6 +1534,7 @@ const greekTranslations: Translations = {
   // Language Switcher
   'sidebar.iSpeak': 'Μιλάω',
   'sidebar.imLearning': 'Μαθαίνω',
+  'sidebar.swapLanguages': 'Εναλλαγή γλωσσών',
 
   // Learning Mode
   'sidebar.browse': 'Περιήγηση',
@@ -1448,14 +1545,24 @@ const greekTranslations: Translations = {
   'sidebar.dayStreak': 'Ημέρες σερί',
   'sidebar.learned': 'Μαθημένα',
   'sidebar.saved': 'Αποθηκευμένα',
+  'sidebar.dailyGoal': 'Ημερήσιος στόχος',
 
   // Gender (for sidebar)
   'sidebar.masculineDer': 'Αρσενικό (der)',
   'sidebar.feminineDie': 'Θηλυκό (die)',
   'sidebar.neuterDas': 'Ουδέτερο (das)',
+  'sidebar.genderMasculine': 'Αρσενικό (der)',
+  'sidebar.genderFeminine': 'Θηλυκό (die)',
+  'sidebar.genderNeuter': 'Ουδέτερο (das)',
+
+  // Difficulty (for sidebar)
+  'sidebar.level': 'Επίπεδο',
 
   // Range
   'sidebar.chars': 'χαρ.',
+
+  // PartOfSpeech (for sidebar)
+  'sidebar.clear': 'Καθαρισμός',
 
   // Quick Filters
   'sidebar.bookmarkedOnly': 'Μόνο αποθηκευμένα',
@@ -1474,11 +1581,16 @@ const greekTranslations: Translations = {
   // Premium
   'sidebar.goPremium': 'Premium',
   'sidebar.unlockFeatures': 'Ξεκλειδώστε όλες τις λειτουργίες',
+  'sidebar.premiumDescription': 'Ξεκλειδώστε όλες τις λειτουργίες',
   'sidebar.unlimitedFlashcards': 'Απεριόριστες κάρτες',
   'sidebar.advancedAnalytics': 'Προηγμένα στατιστικά',
   'sidebar.offlineMode': 'Λειτουργία εκτός σύνδεσης',
   'sidebar.noAds': 'Χωρίς διαφημίσεις',
   'sidebar.upgradeNow': 'Αναβάθμιση τώρα',
+  'sidebar.premiumFeature1': 'Απεριόριστες κάρτες',
+  'sidebar.premiumFeature2': 'Προηγμένα στατιστικά',
+  'sidebar.premiumFeature3': 'Λειτουργία εκτός σύνδεσης',
+  'sidebar.premiumFeature4': 'Χωρίς διαφημίσεις',
 
   // Mobile
   'sidebar.filtersTitle': 'Φίλτρα',

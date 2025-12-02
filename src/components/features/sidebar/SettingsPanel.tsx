@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface SettingsPanelProps {
   dailyGoal: number;
@@ -19,11 +20,13 @@ export function SettingsPanel({
   autoPlayAudio,
   onAutoPlayAudioChange,
 }: SettingsPanelProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="space-y-4">
       {/* Daily goal */}
       <div>
-        <label className="text-xs text-gray-500 block mb-2">Daily Goal</label>
+        <label className="text-xs text-gray-500 block mb-2">{t('sidebar.dailyGoal')}</label>
         <div className="flex flex-wrap gap-1.5">
           {goalOptions.map((goal) => (
             <button
@@ -45,14 +48,14 @@ export function SettingsPanel({
       {/* Toggle settings */}
       <div className="space-y-3">
         <ToggleSetting
-          label="Show translations"
-          description="Display translations in search results"
+          label={t('sidebar.showTranslations')}
+          description={t('sidebar.showTranslationsDesc')}
           checked={showTranslations}
           onChange={onShowTranslationsChange}
         />
         <ToggleSetting
-          label="Auto-play audio"
-          description="Play pronunciation when viewing words"
+          label={t('sidebar.autoPlayAudio')}
+          description={t('sidebar.autoPlayAudioDesc')}
           checked={autoPlayAudio}
           onChange={onAutoPlayAudioChange}
         />

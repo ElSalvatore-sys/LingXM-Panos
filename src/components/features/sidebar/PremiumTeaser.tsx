@@ -1,18 +1,21 @@
 import { SparklesIcon, CheckIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface PremiumTeaserProps {
   className?: string;
 }
 
-const premiumFeatures = [
-  'Unlimited flashcards',
-  'Advanced analytics',
-  'Offline mode',
-  'No ads',
-];
-
 export function PremiumTeaser({ className }: PremiumTeaserProps) {
+  const { t } = useTranslation();
+
+  const premiumFeatures = [
+    t('sidebar.premiumFeature1'),
+    t('sidebar.premiumFeature2'),
+    t('sidebar.premiumFeature3'),
+    t('sidebar.premiumFeature4'),
+  ];
+
   return (
     <div
       className={cn(
@@ -29,17 +32,17 @@ export function PremiumTeaser({ className }: PremiumTeaserProps) {
       <div className="relative">
         <div className="flex items-center gap-2 mb-2">
           <SparklesIcon className="w-5 h-5 text-yellow-300" />
-          <h4 className="font-bold text-white">Go Premium</h4>
+          <h4 className="font-bold text-white">{t('sidebar.goPremium')}</h4>
         </div>
 
         <p className="text-white/80 text-xs mb-3">
-          Unlock all features and accelerate your learning
+          {t('sidebar.premiumDescription')}
         </p>
 
         {/* Features */}
         <ul className="space-y-1 mb-4">
-          {premiumFeatures.map((feature) => (
-            <li key={feature} className="flex items-center gap-2 text-white/90 text-xs">
+          {premiumFeatures.map((feature, index) => (
+            <li key={index} className="flex items-center gap-2 text-white/90 text-xs">
               <CheckIcon className="w-3 h-3" />
               {feature}
             </li>
@@ -54,7 +57,7 @@ export function PremiumTeaser({ className }: PremiumTeaserProps) {
             'transition-colors shadow-sm'
           )}
         >
-          Upgrade Now
+          {t('sidebar.upgradeNow')}
         </button>
       </div>
     </div>

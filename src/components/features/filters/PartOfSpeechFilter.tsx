@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface PartOfSpeechOption {
   value: string;
@@ -17,6 +18,8 @@ export function PartOfSpeechFilter({
   selected,
   onChange,
 }: PartOfSpeechFilterProps) {
+  const { t } = useTranslation();
+
   const toggleOption = (value: string) => {
     if (selected.includes(value)) {
       onChange(selected.filter((v) => v !== value));
@@ -39,14 +42,14 @@ export function PartOfSpeechFilter({
           onClick={selectAll}
           className="text-[#7b9dd2] hover:underline"
         >
-          Select All
+          {t('sidebar.selectAll')}
         </button>
         <span className="text-gray-300">|</span>
         <button onClick={clearAll} className="text-gray-500 hover:underline">
-          Clear
+          {t('sidebar.clear')}
         </button>
         <span className="ml-auto text-gray-400">
-          {selected.length} of {options.length}
+          {selected.length} {t('sidebar.of')} {options.length}
         </span>
       </div>
 

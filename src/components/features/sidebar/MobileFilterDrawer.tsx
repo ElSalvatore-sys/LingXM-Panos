@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { XIcon, SlidersHorizontalIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface MobileFilterDrawerProps {
   isOpen: boolean;
@@ -13,6 +14,8 @@ export function MobileFilterDrawer({
   onClose,
   children,
 }: MobileFilterDrawerProps) {
+  const { t } = useTranslation();
+
   // Prevent body scroll when drawer is open
   useEffect(() => {
     if (isOpen) {
@@ -65,7 +68,7 @@ export function MobileFilterDrawer({
         <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200">
           <div className="flex items-center gap-2">
             <SlidersHorizontalIcon className="w-5 h-5 text-[#7b9dd2]" />
-            <h2 className="font-semibold text-gray-800">Filters</h2>
+            <h2 className="font-semibold text-gray-800">{t('sidebar.filters')}</h2>
           </div>
           <button
             onClick={onClose}
@@ -96,6 +99,8 @@ export function MobileFilterButton({
   activeFiltersCount = 0,
   className,
 }: MobileFilterButtonProps) {
+  const { t } = useTranslation();
+
   return (
     <button
       onClick={onClick}
@@ -107,7 +112,7 @@ export function MobileFilterButton({
       )}
     >
       <SlidersHorizontalIcon className="w-4 h-4 text-gray-600" />
-      <span className="text-sm text-gray-700">Filters</span>
+      <span className="text-sm text-gray-700">{t('sidebar.filters')}</span>
       {activeFiltersCount > 0 && (
         <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#7b9dd2] text-white text-xs">
           {activeFiltersCount}

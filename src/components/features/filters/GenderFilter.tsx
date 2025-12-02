@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface GenderOption {
   value: 'm' | 'f' | 'n';
@@ -12,12 +13,6 @@ interface GenderFilterProps {
   onChange: (values: string[]) => void;
 }
 
-const genderLabels: Record<string, string> = {
-  m: 'Masculine (der)',
-  f: 'Feminine (die)',
-  n: 'Neuter (das)',
-};
-
 const genderColors: Record<string, { bg: string; border: string; text: string }> = {
   m: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700' },
   f: { bg: 'bg-pink-50', border: 'border-pink-200', text: 'text-pink-700' },
@@ -29,6 +24,14 @@ export function GenderFilter({
   selected,
   onChange,
 }: GenderFilterProps) {
+  const { t } = useTranslation();
+
+  const genderLabels: Record<string, string> = {
+    m: t('sidebar.genderMasculine'),
+    f: t('sidebar.genderFeminine'),
+    n: t('sidebar.genderNeuter'),
+  };
+
   const toggleGender = (value: string) => {
     if (selected.includes(value)) {
       onChange(selected.filter((v) => v !== value));
@@ -48,11 +51,11 @@ export function GenderFilter({
           onClick={selectAll}
           className="text-[#7b9dd2] hover:underline"
         >
-          All
+          {t('sidebar.all')}
         </button>
         <span className="text-gray-300">|</span>
         <button onClick={clearAll} className="text-gray-500 hover:underline">
-          None
+          {t('sidebar.none')}
         </button>
       </div>
 

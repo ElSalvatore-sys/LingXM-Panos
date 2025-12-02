@@ -1,5 +1,6 @@
 import { FlameIcon, BookmarkIcon, CheckCircle2Icon, TargetIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface ProgressSummaryProps {
   streak: number;
@@ -18,6 +19,7 @@ export function ProgressSummary({
   dailyGoal,
   className,
 }: ProgressSummaryProps) {
+  const { t } = useTranslation();
   const progressPercent = Math.min((todayProgress / dailyGoal) * 100, 100);
   const goalReached = todayProgress >= dailyGoal;
 
@@ -26,7 +28,7 @@ export function ProgressSummary({
       {/* Daily goal progress */}
       <div>
         <div className="flex items-center justify-between mb-1.5">
-          <span className="text-xs text-gray-500">Today's Goal</span>
+          <span className="text-xs text-gray-500">{t('sidebar.todaysGoal')}</span>
           <span className={cn(
             'text-xs font-medium',
             goalReached ? 'text-green-600' : 'text-gray-600'
@@ -50,28 +52,28 @@ export function ProgressSummary({
         <StatCard
           icon={<FlameIcon className="w-4 h-4" />}
           value={streak}
-          label="Day Streak"
+          label={t('sidebar.dayStreak')}
           color="text-orange-500"
           bgColor="bg-orange-50"
         />
         <StatCard
           icon={<CheckCircle2Icon className="w-4 h-4" />}
           value={wordsLearned}
-          label="Learned"
+          label={t('sidebar.learned')}
           color="text-green-500"
           bgColor="bg-green-50"
         />
         <StatCard
           icon={<BookmarkIcon className="w-4 h-4" />}
           value={bookmarkedCount}
-          label="Saved"
+          label={t('sidebar.saved')}
           color="text-yellow-500"
           bgColor="bg-yellow-50"
         />
         <StatCard
           icon={<TargetIcon className="w-4 h-4" />}
           value={dailyGoal}
-          label="Daily Goal"
+          label={t('sidebar.dailyGoal')}
           color="text-[#7b9dd2]"
           bgColor="bg-blue-50"
         />

@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface DifficultyFilterSidebarProps {
   selected: number[];
@@ -9,6 +10,7 @@ export function DifficultyFilterSidebar({
   selected,
   onChange,
 }: DifficultyFilterSidebarProps) {
+  const { t } = useTranslation();
   const levels = [1, 2, 3, 4, 5];
 
   const toggleLevel = (level: number) => {
@@ -37,7 +39,7 @@ export function DifficultyFilterSidebar({
                 ? 'bg-[#7b9dd2] text-white shadow-sm'
                 : 'bg-gray-200 text-gray-500 hover:bg-gray-300'
             )}
-            title={`Level ${level}`}
+            title={`${t('sidebar.level')} ${level}`}
           >
             {level}
           </button>
@@ -48,14 +50,14 @@ export function DifficultyFilterSidebar({
           onClick={selectAll}
           className="text-[#7b9dd2] hover:underline"
         >
-          All
+          {t('sidebar.all')}
         </button>
         <span className="text-gray-300">|</span>
         <button onClick={clearAll} className="text-gray-500 hover:underline">
-          None
+          {t('sidebar.none')}
         </button>
         <span className="ml-auto text-gray-400">
-          {selected.length === 0 ? 'None' : selected.length === 5 ? 'All' : selected.join(', ')}
+          {selected.length === 0 ? t('sidebar.none') : selected.length === 5 ? t('sidebar.all') : selected.join(', ')}
         </span>
       </div>
     </div>

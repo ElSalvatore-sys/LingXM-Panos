@@ -1,5 +1,6 @@
 import { BookOpenIcon, LayersIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export type LearningMode = 'browse' | 'flashcards';
 
@@ -9,17 +10,19 @@ interface LearningModeToggleProps {
 }
 
 export function LearningModeToggle({ mode, onChange }: LearningModeToggleProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="flex gap-2">
       <ModeButton
         icon={<BookOpenIcon className="w-4 h-4" />}
-        label="Browse"
+        label={t('sidebar.browse')}
         active={mode === 'browse'}
         onClick={() => onChange('browse')}
       />
       <ModeButton
         icon={<LayersIcon className="w-4 h-4" />}
-        label="Flashcards"
+        label={t('sidebar.flashcards')}
         active={mode === 'flashcards'}
         onClick={() => onChange('flashcards')}
       />

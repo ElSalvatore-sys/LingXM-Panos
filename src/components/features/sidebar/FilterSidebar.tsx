@@ -27,6 +27,7 @@ import {
   type LearningMode,
 } from './index';
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface PartOfSpeechOption {
   value: string;
@@ -123,6 +124,8 @@ export function FilterSidebar({
   showGenderFilter = false,
   className,
 }: FilterSidebarProps) {
+  const { t } = useTranslation();
+
   return (
     <aside
       className={cn(
@@ -134,7 +137,7 @@ export function FilterSidebar({
       <div className="flex-1 overflow-y-auto">
         {/* Language Switcher */}
         <CollapsibleSection
-          title="Languages"
+          title={t('sidebar.languages')}
           icon={<GlobeIcon className="w-4 h-4" />}
           defaultOpen={true}
         >
@@ -149,7 +152,7 @@ export function FilterSidebar({
 
         {/* Learning Mode */}
         <CollapsibleSection
-          title="Learning Mode"
+          title={t('sidebar.learningMode')}
           icon={<BookOpenIcon className="w-4 h-4" />}
           defaultOpen={true}
         >
@@ -161,7 +164,7 @@ export function FilterSidebar({
 
         {/* Progress Summary */}
         <CollapsibleSection
-          title="Progress"
+          title={t('sidebar.progress')}
           icon={<TrendingUpIcon className="w-4 h-4" />}
           defaultOpen={true}
         >
@@ -179,7 +182,7 @@ export function FilterSidebar({
 
         {/* Difficulty Filter */}
         <CollapsibleSection
-          title="Difficulty"
+          title={t('difficulty')}
           icon={<SlidersHorizontalIcon className="w-4 h-4" />}
           defaultOpen={true}
           badge={pendingFilters.difficulty.length < 5 ? pendingFilters.difficulty.length : undefined}
@@ -192,7 +195,7 @@ export function FilterSidebar({
 
         {/* Part of Speech */}
         <CollapsibleSection
-          title="Part of Speech"
+          title={t('sidebar.partOfSpeech')}
           icon={<TypeIcon className="w-4 h-4" />}
           defaultOpen={false}
           badge={pendingFilters.partOfSpeech.length > 0 ? pendingFilters.partOfSpeech.length : undefined}
@@ -207,7 +210,7 @@ export function FilterSidebar({
         {/* Gender (only for German) */}
         {showGenderFilter && (
           <CollapsibleSection
-            title="Gender"
+            title={t('sidebar.gender')}
             icon={<TextCursorIcon className="w-4 h-4" />}
             defaultOpen={false}
             badge={pendingFilters.gender.length > 0 ? pendingFilters.gender.length : undefined}
@@ -222,7 +225,7 @@ export function FilterSidebar({
 
         {/* Word Length */}
         <CollapsibleSection
-          title="Word Length"
+          title={t('sidebar.wordLength')}
           icon={<TextCursorIcon className="w-4 h-4" />}
           defaultOpen={false}
         >
@@ -240,7 +243,7 @@ export function FilterSidebar({
 
         {/* Frequency */}
         <CollapsibleSection
-          title="Frequency Rank"
+          title={t('sidebar.frequencyRank')}
           icon={<HashIcon className="w-4 h-4" />}
           defaultOpen={false}
         >
@@ -259,7 +262,7 @@ export function FilterSidebar({
 
         {/* Quick Filters */}
         <CollapsibleSection
-          title="Quick Filters"
+          title={t('sidebar.quickFilters')}
           icon={<ZapIcon className="w-4 h-4" />}
           defaultOpen={false}
         >
@@ -281,7 +284,7 @@ export function FilterSidebar({
 
         {/* Settings */}
         <CollapsibleSection
-          title="Settings"
+          title={t('sidebar.settings')}
           icon={<SettingsIcon className="w-4 h-4" />}
           defaultOpen={false}
         >
@@ -309,7 +312,7 @@ export function FilterSidebar({
               onClick={onResetFilters}
               className="flex-1 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors"
             >
-              Reset
+              {t('sidebar.reset')}
             </button>
             <button
               onClick={onApplyFilters}
@@ -319,7 +322,7 @@ export function FilterSidebar({
                 'transition-colors shadow-sm'
               )}
             >
-              Apply Filters
+              {t('sidebar.applyFilters')}
             </button>
           </div>
         </div>

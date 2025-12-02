@@ -2,6 +2,7 @@ import { ArrowRightLeftIcon } from 'lucide-react';
 import type { LanguageCode } from '@/types';
 import { languages } from '@/lib/languages';
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface LanguageSwitcherProps {
   nativeLanguage: LanguageCode;
@@ -20,11 +21,13 @@ export function LanguageSwitcher({
   onTargetChange,
   onSwap,
 }: LanguageSwitcherProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="space-y-3">
       {/* Native language */}
       <div>
-        <label className="text-xs text-gray-500 block mb-1">I speak</label>
+        <label className="text-xs text-gray-500 block mb-1">{t('sidebar.iSpeak')}</label>
         <LanguageSelect
           value={nativeLanguage}
           onChange={onNativeChange}
@@ -37,7 +40,7 @@ export function LanguageSwitcher({
         <button
           onClick={onSwap}
           className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-          title="Swap languages"
+          title={t('sidebar.swapLanguages')}
         >
           <ArrowRightLeftIcon className="w-4 h-4 text-gray-400 rotate-90" />
         </button>
@@ -45,7 +48,7 @@ export function LanguageSwitcher({
 
       {/* Target language */}
       <div>
-        <label className="text-xs text-gray-500 block mb-1">I'm learning</label>
+        <label className="text-xs text-gray-500 block mb-1">{t('sidebar.imLearning')}</label>
         <LanguageSelect
           value={targetLanguage}
           onChange={onTargetChange}
