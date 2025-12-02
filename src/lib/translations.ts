@@ -139,6 +139,77 @@ export interface Translations {
   'flashcards.endSession': string;
   'flashcards.accuracy': string;
   'flashcards.minutes': string;
+
+  // Sidebar & Filters
+  'sidebar.filters': string;
+  'sidebar.applyFilters': string;
+  'sidebar.reset': string;
+  'sidebar.all': string;
+  'sidebar.none': string;
+  'sidebar.selectAll': string;
+  'sidebar.clearAll': string;
+  'sidebar.of': string;
+  'sidebar.active': string;
+
+  // Sidebar Sections
+  'sidebar.languages': string;
+  'sidebar.learningMode': string;
+  'sidebar.progress': string;
+  'sidebar.difficulty': string;
+  'sidebar.partOfSpeech': string;
+  'sidebar.gender': string;
+  'sidebar.wordLength': string;
+  'sidebar.frequencyRank': string;
+  'sidebar.quickFilters': string;
+  'sidebar.settings': string;
+
+  // Language Switcher
+  'sidebar.iSpeak': string;
+  'sidebar.imLearning': string;
+
+  // Learning Mode
+  'sidebar.browse': string;
+  'sidebar.flashcards': string;
+
+  // Progress
+  'sidebar.todaysGoal': string;
+  'sidebar.dayStreak': string;
+  'sidebar.learned': string;
+  'sidebar.saved': string;
+
+  // Gender (for sidebar)
+  'sidebar.masculineDer': string;
+  'sidebar.feminineDie': string;
+  'sidebar.neuterDas': string;
+
+  // Range
+  'sidebar.chars': string;
+
+  // Quick Filters
+  'sidebar.bookmarkedOnly': string;
+  'sidebar.notLearnedYet': string;
+  'sidebar.exampleSentences': string;
+  'sidebar.any': string;
+  'sidebar.with': string;
+  'sidebar.without': string;
+
+  // Settings
+  'sidebar.showTranslations': string;
+  'sidebar.showTranslationsDesc': string;
+  'sidebar.autoPlayAudio': string;
+  'sidebar.autoPlayAudioDesc': string;
+
+  // Premium
+  'sidebar.goPremium': string;
+  'sidebar.unlockFeatures': string;
+  'sidebar.unlimitedFlashcards': string;
+  'sidebar.advancedAnalytics': string;
+  'sidebar.offlineMode': string;
+  'sidebar.noAds': string;
+  'sidebar.upgradeNow': string;
+
+  // Mobile
+  'sidebar.filtersTitle': string;
 }
 
 const englishTranslations: Translations = {
@@ -280,6 +351,77 @@ const englishTranslations: Translations = {
   'flashcards.endSession': 'End Session',
   'flashcards.accuracy': 'Accuracy',
   'flashcards.minutes': 'minutes',
+
+  // Sidebar & Filters
+  'sidebar.filters': 'Filters',
+  'sidebar.applyFilters': 'Apply Filters',
+  'sidebar.reset': 'Reset',
+  'sidebar.all': 'All',
+  'sidebar.none': 'None',
+  'sidebar.selectAll': 'Select All',
+  'sidebar.clearAll': 'Clear',
+  'sidebar.of': 'of',
+  'sidebar.active': 'active',
+
+  // Sidebar Sections
+  'sidebar.languages': 'Languages',
+  'sidebar.learningMode': 'Learning Mode',
+  'sidebar.progress': 'Progress',
+  'sidebar.difficulty': 'Difficulty',
+  'sidebar.partOfSpeech': 'Part of Speech',
+  'sidebar.gender': 'Gender',
+  'sidebar.wordLength': 'Word Length',
+  'sidebar.frequencyRank': 'Frequency Rank',
+  'sidebar.quickFilters': 'Quick Filters',
+  'sidebar.settings': 'Settings',
+
+  // Language Switcher
+  'sidebar.iSpeak': 'I speak',
+  'sidebar.imLearning': "I'm learning",
+
+  // Learning Mode
+  'sidebar.browse': 'Browse',
+  'sidebar.flashcards': 'Flashcards',
+
+  // Progress
+  'sidebar.todaysGoal': "Today's Goal",
+  'sidebar.dayStreak': 'Day Streak',
+  'sidebar.learned': 'Learned',
+  'sidebar.saved': 'Saved',
+
+  // Gender (for sidebar)
+  'sidebar.masculineDer': 'Masculine (der)',
+  'sidebar.feminineDie': 'Feminine (die)',
+  'sidebar.neuterDas': 'Neuter (das)',
+
+  // Range
+  'sidebar.chars': 'chars',
+
+  // Quick Filters
+  'sidebar.bookmarkedOnly': 'Bookmarked only',
+  'sidebar.notLearnedYet': 'Not learned yet',
+  'sidebar.exampleSentences': 'Example sentences',
+  'sidebar.any': 'Any',
+  'sidebar.with': 'With',
+  'sidebar.without': 'Without',
+
+  // Settings
+  'sidebar.showTranslations': 'Show translations',
+  'sidebar.showTranslationsDesc': 'Display translations in search results',
+  'sidebar.autoPlayAudio': 'Auto-play audio',
+  'sidebar.autoPlayAudioDesc': 'Play pronunciation when viewing words',
+
+  // Premium
+  'sidebar.goPremium': 'Go Premium',
+  'sidebar.unlockFeatures': 'Unlock all features and accelerate your learning',
+  'sidebar.unlimitedFlashcards': 'Unlimited flashcards',
+  'sidebar.advancedAnalytics': 'Advanced analytics',
+  'sidebar.offlineMode': 'Offline mode',
+  'sidebar.noAds': 'No ads',
+  'sidebar.upgradeNow': 'Upgrade Now',
+
+  // Mobile
+  'sidebar.filtersTitle': 'Filters',
 };
 
 const germanTranslations: Translations = {
@@ -421,6 +563,77 @@ const germanTranslations: Translations = {
   'flashcards.endSession': 'Sitzung beenden',
   'flashcards.accuracy': 'Genauigkeit',
   'flashcards.minutes': 'Minuten',
+
+  // Sidebar & Filters
+  'sidebar.filters': 'Filter',
+  'sidebar.applyFilters': 'Filter anwenden',
+  'sidebar.reset': 'Zurücksetzen',
+  'sidebar.all': 'Alle',
+  'sidebar.none': 'Keine',
+  'sidebar.selectAll': 'Alle auswählen',
+  'sidebar.clearAll': 'Löschen',
+  'sidebar.of': 'von',
+  'sidebar.active': 'aktiv',
+
+  // Sidebar Sections
+  'sidebar.languages': 'Sprachen',
+  'sidebar.learningMode': 'Lernmodus',
+  'sidebar.progress': 'Fortschritt',
+  'sidebar.difficulty': 'Schwierigkeit',
+  'sidebar.partOfSpeech': 'Wortart',
+  'sidebar.gender': 'Geschlecht',
+  'sidebar.wordLength': 'Wortlänge',
+  'sidebar.frequencyRank': 'Häufigkeitsrang',
+  'sidebar.quickFilters': 'Schnellfilter',
+  'sidebar.settings': 'Einstellungen',
+
+  // Language Switcher
+  'sidebar.iSpeak': 'Ich spreche',
+  'sidebar.imLearning': 'Ich lerne',
+
+  // Learning Mode
+  'sidebar.browse': 'Durchsuchen',
+  'sidebar.flashcards': 'Karteikarten',
+
+  // Progress
+  'sidebar.todaysGoal': 'Tagesziel',
+  'sidebar.dayStreak': 'Tage Serie',
+  'sidebar.learned': 'Gelernt',
+  'sidebar.saved': 'Gespeichert',
+
+  // Gender (for sidebar)
+  'sidebar.masculineDer': 'Maskulin (der)',
+  'sidebar.feminineDie': 'Feminin (die)',
+  'sidebar.neuterDas': 'Neutrum (das)',
+
+  // Range
+  'sidebar.chars': 'Zeichen',
+
+  // Quick Filters
+  'sidebar.bookmarkedOnly': 'Nur Gespeicherte',
+  'sidebar.notLearnedYet': 'Noch nicht gelernt',
+  'sidebar.exampleSentences': 'Beispielsätze',
+  'sidebar.any': 'Alle',
+  'sidebar.with': 'Mit',
+  'sidebar.without': 'Ohne',
+
+  // Settings
+  'sidebar.showTranslations': 'Übersetzungen zeigen',
+  'sidebar.showTranslationsDesc': 'Übersetzungen in Suchergebnissen anzeigen',
+  'sidebar.autoPlayAudio': 'Audio automatisch',
+  'sidebar.autoPlayAudioDesc': 'Aussprache beim Anzeigen abspielen',
+
+  // Premium
+  'sidebar.goPremium': 'Premium werden',
+  'sidebar.unlockFeatures': 'Alle Funktionen freischalten und schneller lernen',
+  'sidebar.unlimitedFlashcards': 'Unbegrenzte Karteikarten',
+  'sidebar.advancedAnalytics': 'Erweiterte Statistiken',
+  'sidebar.offlineMode': 'Offline-Modus',
+  'sidebar.noAds': 'Keine Werbung',
+  'sidebar.upgradeNow': 'Jetzt upgraden',
+
+  // Mobile
+  'sidebar.filtersTitle': 'Filter',
 };
 
 const frenchTranslations: Translations = {
@@ -562,6 +775,77 @@ const frenchTranslations: Translations = {
   'flashcards.endSession': 'Terminer la session',
   'flashcards.accuracy': 'Précision',
   'flashcards.minutes': 'minutes',
+
+  // Sidebar & Filters
+  'sidebar.filters': 'Filtres',
+  'sidebar.applyFilters': 'Appliquer',
+  'sidebar.reset': 'Réinitialiser',
+  'sidebar.all': 'Tous',
+  'sidebar.none': 'Aucun',
+  'sidebar.selectAll': 'Tout sélectionner',
+  'sidebar.clearAll': 'Effacer',
+  'sidebar.of': 'sur',
+  'sidebar.active': 'actifs',
+
+  // Sidebar Sections
+  'sidebar.languages': 'Langues',
+  'sidebar.learningMode': 'Mode d\'apprentissage',
+  'sidebar.progress': 'Progrès',
+  'sidebar.difficulty': 'Difficulté',
+  'sidebar.partOfSpeech': 'Nature du mot',
+  'sidebar.gender': 'Genre',
+  'sidebar.wordLength': 'Longueur du mot',
+  'sidebar.frequencyRank': 'Rang de fréquence',
+  'sidebar.quickFilters': 'Filtres rapides',
+  'sidebar.settings': 'Paramètres',
+
+  // Language Switcher
+  'sidebar.iSpeak': 'Je parle',
+  'sidebar.imLearning': 'J\'apprends',
+
+  // Learning Mode
+  'sidebar.browse': 'Parcourir',
+  'sidebar.flashcards': 'Cartes mémoire',
+
+  // Progress
+  'sidebar.todaysGoal': 'Objectif du jour',
+  'sidebar.dayStreak': 'Jours consécutifs',
+  'sidebar.learned': 'Appris',
+  'sidebar.saved': 'Sauvegardés',
+
+  // Gender (for sidebar)
+  'sidebar.masculineDer': 'Masculin (der)',
+  'sidebar.feminineDie': 'Féminin (die)',
+  'sidebar.neuterDas': 'Neutre (das)',
+
+  // Range
+  'sidebar.chars': 'caract.',
+
+  // Quick Filters
+  'sidebar.bookmarkedOnly': 'Favoris uniquement',
+  'sidebar.notLearnedYet': 'Non appris',
+  'sidebar.exampleSentences': 'Exemples',
+  'sidebar.any': 'Tous',
+  'sidebar.with': 'Avec',
+  'sidebar.without': 'Sans',
+
+  // Settings
+  'sidebar.showTranslations': 'Afficher traductions',
+  'sidebar.showTranslationsDesc': 'Afficher les traductions dans les résultats',
+  'sidebar.autoPlayAudio': 'Lecture auto',
+  'sidebar.autoPlayAudioDesc': 'Jouer la prononciation automatiquement',
+
+  // Premium
+  'sidebar.goPremium': 'Passer Premium',
+  'sidebar.unlockFeatures': 'Débloquez toutes les fonctionnalités',
+  'sidebar.unlimitedFlashcards': 'Cartes illimitées',
+  'sidebar.advancedAnalytics': 'Statistiques avancées',
+  'sidebar.offlineMode': 'Mode hors ligne',
+  'sidebar.noAds': 'Sans publicité',
+  'sidebar.upgradeNow': 'Passer à Pro',
+
+  // Mobile
+  'sidebar.filtersTitle': 'Filtres',
 };
 
 const spanishTranslations: Translations = {
@@ -703,6 +987,77 @@ const spanishTranslations: Translations = {
   'flashcards.endSession': 'Terminar sesión',
   'flashcards.accuracy': 'Precisión',
   'flashcards.minutes': 'minutos',
+
+  // Sidebar & Filters
+  'sidebar.filters': 'Filtros',
+  'sidebar.applyFilters': 'Aplicar filtros',
+  'sidebar.reset': 'Restablecer',
+  'sidebar.all': 'Todos',
+  'sidebar.none': 'Ninguno',
+  'sidebar.selectAll': 'Seleccionar todo',
+  'sidebar.clearAll': 'Borrar',
+  'sidebar.of': 'de',
+  'sidebar.active': 'activos',
+
+  // Sidebar Sections
+  'sidebar.languages': 'Idiomas',
+  'sidebar.learningMode': 'Modo de aprendizaje',
+  'sidebar.progress': 'Progreso',
+  'sidebar.difficulty': 'Dificultad',
+  'sidebar.partOfSpeech': 'Categoría gramatical',
+  'sidebar.gender': 'Género',
+  'sidebar.wordLength': 'Longitud de palabra',
+  'sidebar.frequencyRank': 'Rango de frecuencia',
+  'sidebar.quickFilters': 'Filtros rápidos',
+  'sidebar.settings': 'Ajustes',
+
+  // Language Switcher
+  'sidebar.iSpeak': 'Hablo',
+  'sidebar.imLearning': 'Estoy aprendiendo',
+
+  // Learning Mode
+  'sidebar.browse': 'Explorar',
+  'sidebar.flashcards': 'Tarjetas',
+
+  // Progress
+  'sidebar.todaysGoal': 'Meta de hoy',
+  'sidebar.dayStreak': 'Días seguidos',
+  'sidebar.learned': 'Aprendidas',
+  'sidebar.saved': 'Guardadas',
+
+  // Gender (for sidebar)
+  'sidebar.masculineDer': 'Masculino (der)',
+  'sidebar.feminineDie': 'Femenino (die)',
+  'sidebar.neuterDas': 'Neutro (das)',
+
+  // Range
+  'sidebar.chars': 'caract.',
+
+  // Quick Filters
+  'sidebar.bookmarkedOnly': 'Solo guardados',
+  'sidebar.notLearnedYet': 'No aprendido',
+  'sidebar.exampleSentences': 'Ejemplos',
+  'sidebar.any': 'Cualquiera',
+  'sidebar.with': 'Con',
+  'sidebar.without': 'Sin',
+
+  // Settings
+  'sidebar.showTranslations': 'Mostrar traducciones',
+  'sidebar.showTranslationsDesc': 'Mostrar traducciones en los resultados',
+  'sidebar.autoPlayAudio': 'Reproducir auto',
+  'sidebar.autoPlayAudioDesc': 'Reproducir pronunciación automáticamente',
+
+  // Premium
+  'sidebar.goPremium': 'Hazte Premium',
+  'sidebar.unlockFeatures': 'Desbloquea todas las funciones',
+  'sidebar.unlimitedFlashcards': 'Tarjetas ilimitadas',
+  'sidebar.advancedAnalytics': 'Estadísticas avanzadas',
+  'sidebar.offlineMode': 'Modo sin conexión',
+  'sidebar.noAds': 'Sin anuncios',
+  'sidebar.upgradeNow': 'Actualizar ahora',
+
+  // Mobile
+  'sidebar.filtersTitle': 'Filtros',
 };
 
 const russianTranslations: Translations = {
@@ -844,6 +1199,77 @@ const russianTranslations: Translations = {
   'flashcards.endSession': 'Завершить сессию',
   'flashcards.accuracy': 'Точность',
   'flashcards.minutes': 'минут',
+
+  // Sidebar & Filters
+  'sidebar.filters': 'Фильтры',
+  'sidebar.applyFilters': 'Применить',
+  'sidebar.reset': 'Сбросить',
+  'sidebar.all': 'Все',
+  'sidebar.none': 'Нет',
+  'sidebar.selectAll': 'Выбрать все',
+  'sidebar.clearAll': 'Очистить',
+  'sidebar.of': 'из',
+  'sidebar.active': 'активно',
+
+  // Sidebar Sections
+  'sidebar.languages': 'Языки',
+  'sidebar.learningMode': 'Режим обучения',
+  'sidebar.progress': 'Прогресс',
+  'sidebar.difficulty': 'Сложность',
+  'sidebar.partOfSpeech': 'Часть речи',
+  'sidebar.gender': 'Род',
+  'sidebar.wordLength': 'Длина слова',
+  'sidebar.frequencyRank': 'Ранг частоты',
+  'sidebar.quickFilters': 'Быстрые фильтры',
+  'sidebar.settings': 'Настройки',
+
+  // Language Switcher
+  'sidebar.iSpeak': 'Я говорю',
+  'sidebar.imLearning': 'Изучаю',
+
+  // Learning Mode
+  'sidebar.browse': 'Обзор',
+  'sidebar.flashcards': 'Карточки',
+
+  // Progress
+  'sidebar.todaysGoal': 'Цель на сегодня',
+  'sidebar.dayStreak': 'Дней подряд',
+  'sidebar.learned': 'Изучено',
+  'sidebar.saved': 'Сохранено',
+
+  // Gender (for sidebar)
+  'sidebar.masculineDer': 'Мужской (der)',
+  'sidebar.feminineDie': 'Женский (die)',
+  'sidebar.neuterDas': 'Средний (das)',
+
+  // Range
+  'sidebar.chars': 'симв.',
+
+  // Quick Filters
+  'sidebar.bookmarkedOnly': 'Только избранное',
+  'sidebar.notLearnedYet': 'Не изучено',
+  'sidebar.exampleSentences': 'Примеры',
+  'sidebar.any': 'Любые',
+  'sidebar.with': 'С',
+  'sidebar.without': 'Без',
+
+  // Settings
+  'sidebar.showTranslations': 'Показать переводы',
+  'sidebar.showTranslationsDesc': 'Показывать переводы в результатах поиска',
+  'sidebar.autoPlayAudio': 'Автовоспроизведение',
+  'sidebar.autoPlayAudioDesc': 'Воспроизводить произношение автоматически',
+
+  // Premium
+  'sidebar.goPremium': 'Премиум',
+  'sidebar.unlockFeatures': 'Разблокируйте все функции',
+  'sidebar.unlimitedFlashcards': 'Безлимитные карточки',
+  'sidebar.advancedAnalytics': 'Расширенная статистика',
+  'sidebar.offlineMode': 'Офлайн режим',
+  'sidebar.noAds': 'Без рекламы',
+  'sidebar.upgradeNow': 'Обновить сейчас',
+
+  // Mobile
+  'sidebar.filtersTitle': 'Фильтры',
 };
 
 const greekTranslations: Translations = {
@@ -985,6 +1411,77 @@ const greekTranslations: Translations = {
   'flashcards.endSession': 'Τέλος συνεδρίας',
   'flashcards.accuracy': 'Ακρίβεια',
   'flashcards.minutes': 'λεπτά',
+
+  // Sidebar & Filters
+  'sidebar.filters': 'Φίλτρα',
+  'sidebar.applyFilters': 'Εφαρμογή',
+  'sidebar.reset': 'Επαναφορά',
+  'sidebar.all': 'Όλα',
+  'sidebar.none': 'Κανένα',
+  'sidebar.selectAll': 'Επιλογή όλων',
+  'sidebar.clearAll': 'Καθαρισμός',
+  'sidebar.of': 'από',
+  'sidebar.active': 'ενεργά',
+
+  // Sidebar Sections
+  'sidebar.languages': 'Γλώσσες',
+  'sidebar.learningMode': 'Λειτουργία',
+  'sidebar.progress': 'Πρόοδος',
+  'sidebar.difficulty': 'Δυσκολία',
+  'sidebar.partOfSpeech': 'Μέρος του λόγου',
+  'sidebar.gender': 'Γένος',
+  'sidebar.wordLength': 'Μήκος λέξης',
+  'sidebar.frequencyRank': 'Κατάταξη συχνότητας',
+  'sidebar.quickFilters': 'Γρήγορα φίλτρα',
+  'sidebar.settings': 'Ρυθμίσεις',
+
+  // Language Switcher
+  'sidebar.iSpeak': 'Μιλάω',
+  'sidebar.imLearning': 'Μαθαίνω',
+
+  // Learning Mode
+  'sidebar.browse': 'Περιήγηση',
+  'sidebar.flashcards': 'Κάρτες',
+
+  // Progress
+  'sidebar.todaysGoal': 'Στόχος σήμερα',
+  'sidebar.dayStreak': 'Ημέρες σερί',
+  'sidebar.learned': 'Μαθημένα',
+  'sidebar.saved': 'Αποθηκευμένα',
+
+  // Gender (for sidebar)
+  'sidebar.masculineDer': 'Αρσενικό (der)',
+  'sidebar.feminineDie': 'Θηλυκό (die)',
+  'sidebar.neuterDas': 'Ουδέτερο (das)',
+
+  // Range
+  'sidebar.chars': 'χαρ.',
+
+  // Quick Filters
+  'sidebar.bookmarkedOnly': 'Μόνο αποθηκευμένα',
+  'sidebar.notLearnedYet': 'Μη μαθημένα',
+  'sidebar.exampleSentences': 'Παραδείγματα',
+  'sidebar.any': 'Όλα',
+  'sidebar.with': 'Με',
+  'sidebar.without': 'Χωρίς',
+
+  // Settings
+  'sidebar.showTranslations': 'Εμφάνιση μεταφράσεων',
+  'sidebar.showTranslationsDesc': 'Εμφάνιση μεταφράσεων στα αποτελέσματα',
+  'sidebar.autoPlayAudio': 'Αυτόματη αναπαραγωγή',
+  'sidebar.autoPlayAudioDesc': 'Αναπαραγωγή προφοράς αυτόματα',
+
+  // Premium
+  'sidebar.goPremium': 'Premium',
+  'sidebar.unlockFeatures': 'Ξεκλειδώστε όλες τις λειτουργίες',
+  'sidebar.unlimitedFlashcards': 'Απεριόριστες κάρτες',
+  'sidebar.advancedAnalytics': 'Προηγμένα στατιστικά',
+  'sidebar.offlineMode': 'Λειτουργία εκτός σύνδεσης',
+  'sidebar.noAds': 'Χωρίς διαφημίσεις',
+  'sidebar.upgradeNow': 'Αναβάθμιση τώρα',
+
+  // Mobile
+  'sidebar.filtersTitle': 'Φίλτρα',
 };
 
 // All translations
