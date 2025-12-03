@@ -50,7 +50,7 @@ export function useVocabulary(languageCode: LanguageCode): UseVocabularyReturn {
         // Load vocabulary and translations in parallel
         const [vocabResponse, transResponse] = await Promise.all([
           fetch(`/data/${languageCode}.json`),
-          fetch(`/data/${languageCode}-en.json`).catch(() => null), // Translations might not exist
+          fetch(`/data/translations/${languageCode}-en.json`).catch(() => null), // Translations might not exist
         ]);
 
         if (!vocabResponse.ok) {
