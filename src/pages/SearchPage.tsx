@@ -11,7 +11,6 @@ import {
   FilterSidebar,
   MobileFilterDrawer,
   MobileFilterButton,
-  type LearningMode,
 } from '@/components/features';
 import { useVocabulary } from '@/hooks/useVocabulary';
 import { useTranslation } from '@/hooks/useTranslation';
@@ -45,7 +44,6 @@ export function SearchPage() {
   const [results, setResults] = useState<Word[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
-  const [learningMode, setLearningMode] = useState<LearningMode>('browse');
 
   // Settings state
   const [showTranslations, setShowTranslations] = useState(true);
@@ -108,39 +106,6 @@ export function SearchPage() {
   // Convert arrays to Sets for efficient lookup
   const learnedWordIdsSet = useMemo(() => new Set(learnedWordIds), [learnedWordIds]);
   const bookmarkedWordIdsSet = useMemo(() => new Set(bookmarkedWordIds), [bookmarkedWordIds]);
-
-  // Build filter options from stats
-  const partOfSpeechOptions = useMemo(() => {
-    if (!filterStats?.partOfSpeechCounts) return [];
-
-    const posLabels: Record<string, string> = {
-      noun: 'Noun',
-      verb: 'Verb',
-      adjective: 'Adjective',
-      adverb: 'Adverb',
-      preposition: 'Preposition',
-      conjunction: 'Conjunction',
-      pronoun: 'Pronoun',
-      article: 'Article',
-      other: 'Other',
-    };
-
-    return Object.entries(filterStats.partOfSpeechCounts).map(([value, count]) => ({
-      value,
-      label: posLabels[value] || value,
-      count,
-    }));
-  }, [filterStats]);
-
-  const genderOptions = useMemo(() => {
-    if (!filterStats?.genderCounts) return [];
-
-    return [
-      { value: 'm' as const, label: 'Masculine', count: filterStats.genderCounts['m'] || 0 },
-      { value: 'f' as const, label: 'Feminine', count: filterStats.genderCounts['f'] || 0 },
-      { value: 'n' as const, label: 'Neuter', count: filterStats.genderCounts['n'] || 0 },
-    ].filter((opt) => opt.count > 0);
-  }, [filterStats]);
 
   // Search handler with filters
   const handleSearch = () => {
@@ -224,14 +189,6 @@ export function SearchPage() {
     navigate(`/search?from=${toLang}&to=${fromLang}`);
   };
 
-  // Learning mode handler
-  const handleLearningModeChange = (mode: LearningMode) => {
-    setLearningMode(mode);
-    if (mode === 'flashcards') {
-      navigate(`/flashcards?from=${fromLang}&to=${toLang}`);
-    }
-  };
-
   // Convert Word[] to ResultsList format
   const resultsForDisplay = results.map((word) => ({
     id: word.id,
@@ -251,20 +208,15 @@ export function SearchPage() {
       }}
       onResetFilters={resetFilters}
       hasChanges={hasChanges}
-      partOfSpeechOptions={partOfSpeechOptions}
-      genderOptions={genderOptions}
-      wordLengthRange={filterStats?.wordLengthRange || { min: 1, max: 30 }}
-      frequencyRange={filterStats?.frequencyRange || { min: 1, max: 10000 }}
       bookmarkedCount={bookmarkedCount}
       learnedCount={wordsLearned}
       withExamplesCount={wordsWithExamples.size}
+      totalWords={totalWords}
       nativeLanguage={fromLang}
       targetLanguage={toLang}
       onNativeLanguageChange={handleNativeLanguageChange}
       onTargetLanguageChange={handleTargetLanguageChange}
       onSwapLanguages={handleSwapLanguages}
-      learningMode={learningMode}
-      onLearningModeChange={handleLearningModeChange}
       streak={currentStreak}
       wordsLearned={wordsLearned}
       todayProgress={todayProgress}
@@ -274,7 +226,6 @@ export function SearchPage() {
       autoPlayAudio={autoPlayAudio}
       onAutoPlayAudioChange={setAutoPlayAudio}
       onDailyGoalChange={setDailyGoal}
-      showGenderFilter={toLang === 'de'}
     />
   );
 

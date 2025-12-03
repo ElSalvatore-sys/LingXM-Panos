@@ -27,51 +27,23 @@ interface UseFiltersReturn {
 
 function filtersAreEqual(a: SearchFilters, b: SearchFilters): boolean {
   return (
-    JSON.stringify(a.difficulty.sort()) === JSON.stringify(b.difficulty.sort()) &&
-    JSON.stringify(a.partOfSpeech.sort()) === JSON.stringify(b.partOfSpeech.sort()) &&
-    JSON.stringify(a.gender.sort()) === JSON.stringify(b.gender.sort()) &&
-    a.wordLengthMin === b.wordLengthMin &&
-    a.wordLengthMax === b.wordLengthMax &&
-    a.frequencyMin === b.frequencyMin &&
-    a.frequencyMax === b.frequencyMax &&
-    a.hasExamples === b.hasExamples &&
+    a.wordLimit === b.wordLimit &&
     a.bookmarkedOnly === b.bookmarkedOnly &&
-    a.notLearnedOnly === b.notLearnedOnly
+    a.notLearnedOnly === b.notLearnedOnly &&
+    a.hasExamples === b.hasExamples
   );
 }
 
 function countActiveFilters(filters: SearchFilters, defaults: SearchFilters): number {
   let count = 0;
 
-  // Difficulty: count if not all 5 selected
-  if (filters.difficulty.length < 5) count++;
-
-  // Part of speech: count if any selected
-  if (filters.partOfSpeech.length > 0) count++;
-
-  // Gender: count if any selected
-  if (filters.gender.length > 0) count++;
-
-  // Word length: count if changed from defaults
-  if (
-    filters.wordLengthMin !== defaults.wordLengthMin ||
-    filters.wordLengthMax !== defaults.wordLengthMax
-  ) {
-    count++;
-  }
-
-  // Frequency: count if changed from defaults
-  if (
-    filters.frequencyMin !== defaults.frequencyMin ||
-    filters.frequencyMax !== defaults.frequencyMax
-  ) {
-    count++;
-  }
+  // Word limit: count if changed from default
+  if (filters.wordLimit !== defaults.wordLimit) count++;
 
   // Quick filters
-  if (filters.hasExamples !== null) count++;
   if (filters.bookmarkedOnly) count++;
   if (filters.notLearnedOnly) count++;
+  if (filters.hasExamples !== null) count++;
 
   return count;
 }

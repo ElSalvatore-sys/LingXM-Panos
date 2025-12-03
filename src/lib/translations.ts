@@ -226,6 +226,13 @@ export interface Translations {
 
   // Mobile
   'sidebar.filtersTitle': string;
+
+  // Word Range Filter
+  'sidebar.wordRange': string;
+  'sidebar.showing': string;
+  'sidebar.top': string;
+  'sidebar.allWords': string;
+  'sidebar.mostFrequent': string;
 }
 
 const englishTranslations: Translations = {
@@ -454,6 +461,13 @@ const englishTranslations: Translations = {
 
   // Mobile
   'sidebar.filtersTitle': 'Filters',
+
+  // Word Range Filter
+  'sidebar.wordRange': 'Word Range',
+  'sidebar.showing': 'Showing',
+  'sidebar.top': 'Top',
+  'sidebar.allWords': 'All Words',
+  'sidebar.mostFrequent': 'most frequent words',
 };
 
 const germanTranslations: Translations = {
@@ -682,6 +696,13 @@ const germanTranslations: Translations = {
 
   // Mobile
   'sidebar.filtersTitle': 'Filter',
+
+  // Word Range Filter
+  'sidebar.wordRange': 'Wortbereich',
+  'sidebar.showing': 'Zeige',
+  'sidebar.top': 'Top',
+  'sidebar.allWords': 'Alle Wörter',
+  'sidebar.mostFrequent': 'häufigste Wörter',
 };
 
 const frenchTranslations: Translations = {
@@ -910,6 +931,13 @@ const frenchTranslations: Translations = {
 
   // Mobile
   'sidebar.filtersTitle': 'Filtres',
+
+  // Word Range Filter
+  'sidebar.wordRange': 'Plage de mots',
+  'sidebar.showing': 'Affichage',
+  'sidebar.top': 'Top',
+  'sidebar.allWords': 'Tous les mots',
+  'sidebar.mostFrequent': 'mots les plus fréquents',
 };
 
 const spanishTranslations: Translations = {
@@ -1138,6 +1166,13 @@ const spanishTranslations: Translations = {
 
   // Mobile
   'sidebar.filtersTitle': 'Filtros',
+
+  // Word Range Filter
+  'sidebar.wordRange': 'Rango de palabras',
+  'sidebar.showing': 'Mostrando',
+  'sidebar.top': 'Top',
+  'sidebar.allWords': 'Todas las palabras',
+  'sidebar.mostFrequent': 'palabras más frecuentes',
 };
 
 const russianTranslations: Translations = {
@@ -1366,6 +1401,13 @@ const russianTranslations: Translations = {
 
   // Mobile
   'sidebar.filtersTitle': 'Фильтры',
+
+  // Word Range Filter
+  'sidebar.wordRange': 'Диапазон слов',
+  'sidebar.showing': 'Показано',
+  'sidebar.top': 'Топ',
+  'sidebar.allWords': 'Все слова',
+  'sidebar.mostFrequent': 'самых частых слов',
 };
 
 const greekTranslations: Translations = {
@@ -1594,6 +1636,13 @@ const greekTranslations: Translations = {
 
   // Mobile
   'sidebar.filtersTitle': 'Φίλτρα',
+
+  // Word Range Filter
+  'sidebar.wordRange': 'Εύρος λέξεων',
+  'sidebar.showing': 'Εμφάνιση',
+  'sidebar.top': 'Top',
+  'sidebar.allWords': 'Όλες οι λέξεις',
+  'sidebar.mostFrequent': 'πιο συχνές λέξεις',
 };
 
 // All translations

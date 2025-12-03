@@ -74,32 +74,20 @@ export interface VocabularyData {
   words: Word[];
 }
 
-// Search filters - comprehensive filter state
+// Search filters - simplified filter state
 export interface SearchFilters {
-  difficulty: number[]; // [1,2,3,4,5] - which levels to include
-  partOfSpeech: string[]; // ['noun', 'verb', 'adjective', ...]
-  gender: string[]; // ['m', 'f', 'n'] - for German nouns
-  wordLengthMin: number;
-  wordLengthMax: number;
-  frequencyMin: number; // rank-based (1 = most frequent)
-  frequencyMax: number;
-  hasExamples: boolean | null; // null = don't filter
+  wordLimit: number; // Show top N words by frequency rank (10, 50, 100, 500, 1000, 5000, Infinity)
   bookmarkedOnly: boolean;
   notLearnedOnly: boolean;
+  hasExamples: boolean | null; // null = don't filter
 }
 
 // Default filter values
 export const defaultSearchFilters: SearchFilters = {
-  difficulty: [1, 2, 3, 4, 5],
-  partOfSpeech: [],
-  gender: [],
-  wordLengthMin: 1,
-  wordLengthMax: 30,
-  frequencyMin: 1,
-  frequencyMax: 10000,
-  hasExamples: null,
+  wordLimit: 1000, // Default to top 1000 most frequent words
   bookmarkedOnly: false,
   notLearnedOnly: false,
+  hasExamples: null,
 };
 
 // Sidebar state

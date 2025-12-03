@@ -121,7 +121,7 @@ export function performAdvancedSearch(
   words: Word[],
   query: string,
   filters: SearchFilters,
-  translations: TranslationMap,
+  _translations: TranslationMap,
   options?: {
     learnedWordIds?: Set<number>;
     bookmarkedWordIds?: Set<number>;
@@ -146,38 +146,9 @@ export function performAdvancedSearch(
 
   // Apply filters
   results = results.filter((word) => {
-    // Difficulty filter
-    if (filters.difficulty.length > 0 && filters.difficulty.length < 5) {
-      if (!filters.difficulty.includes(word.difficulty)) {
-        return false;
-      }
-    }
-
-    // Word length filter
-    const wordLength = word.word.length;
-    if (wordLength < filters.wordLengthMin || wordLength > filters.wordLengthMax) {
+    // Word limit filter (by rank - top N most frequent words)
+    if (filters.wordLimit !== Infinity && word.rank > filters.wordLimit) {
       return false;
-    }
-
-    // Frequency rank filter
-    if (word.rank < filters.frequencyMin || word.rank > filters.frequencyMax) {
-      return false;
-    }
-
-    // Part of speech filter (requires translation data)
-    if (filters.partOfSpeech.length > 0) {
-      const translation = translations[word.word.toLowerCase()];
-      if (!translation || !filters.partOfSpeech.includes(translation.partOfSpeech)) {
-        return false;
-      }
-    }
-
-    // Gender filter (requires translation data, only for nouns)
-    if (filters.gender.length > 0) {
-      const translation = translations[word.word.toLowerCase()];
-      if (!translation || !translation.gender || !filters.gender.includes(translation.gender)) {
-        return false;
-      }
     }
 
     // Has examples filter

@@ -1,45 +1,21 @@
 import {
-  SlidersHorizontalIcon,
-  TypeIcon,
-  TextCursorIcon,
-  HashIcon,
+  ListIcon,
   ZapIcon,
   GlobeIcon,
-  BookOpenIcon,
   TrendingUpIcon,
   SettingsIcon,
 } from 'lucide-react';
 import type { LanguageCode, SearchFilters } from '@/types';
 import { CollapsibleSection } from '@/components/ui/CollapsibleSection';
-import {
-  DifficultyFilterSidebar,
-  PartOfSpeechFilter,
-  GenderFilter,
-  RangeSlider,
-  QuickFilters,
-} from '../filters';
+import { WordRangeFilter, QuickFilters } from '../filters';
 import {
   LanguageSwitcher,
-  LearningModeToggle,
   ProgressSummary,
   SettingsPanel,
   PremiumTeaser,
-  type LearningMode,
 } from './index';
 import { cn } from '@/lib/utils';
 import { useTranslation } from '@/hooks/useTranslation';
-
-interface PartOfSpeechOption {
-  value: string;
-  label: string;
-  count: number;
-}
-
-interface GenderOption {
-  value: 'm' | 'f' | 'n';
-  label: string;
-  count: number;
-}
 
 interface FilterSidebarProps {
   // Filter state
@@ -50,16 +26,11 @@ interface FilterSidebarProps {
   onResetFilters: () => void;
   hasChanges: boolean;
 
-  // Filter options
-  partOfSpeechOptions: PartOfSpeechOption[];
-  genderOptions: GenderOption[];
-  wordLengthRange: { min: number; max: number };
-  frequencyRange: { min: number; max: number };
-
   // Progress counts
   bookmarkedCount: number;
   learnedCount: number;
   withExamplesCount: number;
+  totalWords: number;
 
   // Language settings
   nativeLanguage: LanguageCode;
@@ -67,10 +38,6 @@ interface FilterSidebarProps {
   onNativeLanguageChange: (lang: LanguageCode) => void;
   onTargetLanguageChange: (lang: LanguageCode) => void;
   onSwapLanguages: () => void;
-
-  // Learning mode
-  learningMode: LearningMode;
-  onLearningModeChange: (mode: LearningMode) => void;
 
   // Progress stats
   streak: number;
@@ -85,33 +52,25 @@ interface FilterSidebarProps {
   onAutoPlayAudioChange: (autoPlay: boolean) => void;
   onDailyGoalChange: (goal: number) => void;
 
-  // Show gender filter (only for German)
-  showGenderFilter?: boolean;
-
   className?: string;
 }
 
 export function FilterSidebar({
-  filters: _filters, // Used for comparison logic, pendingFilters shown to user
+  filters: _filters,
   pendingFilters,
   onFilterChange,
   onApplyFilters,
   onResetFilters,
   hasChanges,
-  partOfSpeechOptions,
-  genderOptions,
-  wordLengthRange,
-  frequencyRange,
   bookmarkedCount,
   learnedCount,
   withExamplesCount,
+  totalWords,
   nativeLanguage,
   targetLanguage,
   onNativeLanguageChange,
   onTargetLanguageChange,
   onSwapLanguages,
-  learningMode,
-  onLearningModeChange,
   streak,
   wordsLearned,
   todayProgress,
@@ -121,7 +80,6 @@ export function FilterSidebar({
   autoPlayAudio,
   onAutoPlayAudioChange,
   onDailyGoalChange,
-  showGenderFilter = false,
   className,
 }: FilterSidebarProps) {
   const { t } = useTranslation();
@@ -150,18 +108,6 @@ export function FilterSidebar({
           />
         </CollapsibleSection>
 
-        {/* Learning Mode */}
-        <CollapsibleSection
-          title={t('sidebar.learningMode')}
-          icon={<BookOpenIcon className="w-4 h-4" />}
-          defaultOpen={true}
-        >
-          <LearningModeToggle
-            mode={learningMode}
-            onChange={onLearningModeChange}
-          />
-        </CollapsibleSection>
-
         {/* Progress Summary */}
         <CollapsibleSection
           title={t('sidebar.progress')}
@@ -180,83 +126,17 @@ export function FilterSidebar({
         {/* Divider */}
         <div className="h-2 bg-gray-50" />
 
-        {/* Difficulty Filter */}
+        {/* Word Range Filter */}
         <CollapsibleSection
-          title={t('difficulty')}
-          icon={<SlidersHorizontalIcon className="w-4 h-4" />}
+          title={t('sidebar.wordRange')}
+          icon={<ListIcon className="w-4 h-4" />}
           defaultOpen={true}
-          badge={pendingFilters.difficulty.length < 5 ? pendingFilters.difficulty.length : undefined}
+          badge={pendingFilters.wordLimit !== 1000 && pendingFilters.wordLimit !== Infinity ? 1 : undefined}
         >
-          <DifficultyFilterSidebar
-            selected={pendingFilters.difficulty}
-            onChange={(levels) => onFilterChange({ difficulty: levels })}
-          />
-        </CollapsibleSection>
-
-        {/* Part of Speech */}
-        <CollapsibleSection
-          title={t('sidebar.partOfSpeech')}
-          icon={<TypeIcon className="w-4 h-4" />}
-          defaultOpen={false}
-          badge={pendingFilters.partOfSpeech.length > 0 ? pendingFilters.partOfSpeech.length : undefined}
-        >
-          <PartOfSpeechFilter
-            options={partOfSpeechOptions}
-            selected={pendingFilters.partOfSpeech}
-            onChange={(values) => onFilterChange({ partOfSpeech: values })}
-          />
-        </CollapsibleSection>
-
-        {/* Gender (only for German) */}
-        {showGenderFilter && (
-          <CollapsibleSection
-            title={t('sidebar.gender')}
-            icon={<TextCursorIcon className="w-4 h-4" />}
-            defaultOpen={false}
-            badge={pendingFilters.gender.length > 0 ? pendingFilters.gender.length : undefined}
-          >
-            <GenderFilter
-              options={genderOptions}
-              selected={pendingFilters.gender}
-              onChange={(values) => onFilterChange({ gender: values })}
-            />
-          </CollapsibleSection>
-        )}
-
-        {/* Word Length */}
-        <CollapsibleSection
-          title={t('sidebar.wordLength')}
-          icon={<TextCursorIcon className="w-4 h-4" />}
-          defaultOpen={false}
-        >
-          <RangeSlider
-            min={wordLengthRange.min}
-            max={wordLengthRange.max}
-            minValue={pendingFilters.wordLengthMin}
-            maxValue={pendingFilters.wordLengthMax}
-            onChange={(min, max) =>
-              onFilterChange({ wordLengthMin: min, wordLengthMax: max })
-            }
-            formatLabel={(v) => `${v} chars`}
-          />
-        </CollapsibleSection>
-
-        {/* Frequency */}
-        <CollapsibleSection
-          title={t('sidebar.frequencyRank')}
-          icon={<HashIcon className="w-4 h-4" />}
-          defaultOpen={false}
-        >
-          <RangeSlider
-            min={frequencyRange.min}
-            max={frequencyRange.max}
-            minValue={pendingFilters.frequencyMin}
-            maxValue={pendingFilters.frequencyMax}
-            onChange={(min, max) =>
-              onFilterChange({ frequencyMin: min, frequencyMax: max })
-            }
-            step={100}
-            formatLabel={(v) => `#${v.toLocaleString()}`}
+          <WordRangeFilter
+            value={pendingFilters.wordLimit}
+            onChange={(limit) => onFilterChange({ wordLimit: limit })}
+            totalWords={totalWords}
           />
         </CollapsibleSection>
 
@@ -264,7 +144,7 @@ export function FilterSidebar({
         <CollapsibleSection
           title={t('sidebar.quickFilters')}
           icon={<ZapIcon className="w-4 h-4" />}
-          defaultOpen={false}
+          defaultOpen={true}
         >
           <QuickFilters
             hasExamples={pendingFilters.hasExamples}
@@ -282,7 +162,7 @@ export function FilterSidebar({
         {/* Divider */}
         <div className="h-2 bg-gray-50" />
 
-        {/* Settings */}
+        {/* Settings - at bottom */}
         <CollapsibleSection
           title={t('sidebar.settings')}
           icon={<SettingsIcon className="w-4 h-4" />}
@@ -298,7 +178,7 @@ export function FilterSidebar({
           />
         </CollapsibleSection>
 
-        {/* Premium Teaser */}
+        {/* Premium Teaser - at very bottom */}
         <div className="p-4">
           <PremiumTeaser />
         </div>
