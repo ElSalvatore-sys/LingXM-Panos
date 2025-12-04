@@ -165,3 +165,60 @@ export interface FlashcardStats {
   masteredCards: number;
   averageEase: number;
 }
+
+// Universal vocabulary (multi-language per word)
+export interface UniversalWord {
+  id: string;
+  word: string;
+  category: string;
+  frequency_rank: number;
+  level: string;
+  cefrLevel: string;
+  translations: Record<string, string>;
+  explanation: Record<string, string>;
+  examples: Record<string, string[]>;
+  conjugations: unknown | null;
+}
+
+export interface UniversalVocabulary {
+  meta: {
+    totalWords: number;
+    languages: string[];
+    lastUpdated: string;
+    source: string;
+  };
+  words: Record<string, UniversalWord>;
+}
+
+// Language pair filtered data (what components receive)
+export interface LanguagePairWord {
+  id: string;
+  word: string;
+  translation: string;
+  explanation: string;
+  examples: Array<{ sentence: string; translation: string }>;
+  category: string;
+  level: string;
+  frequencyRank: number;
+}
+
+// Premium packages
+export interface PremiumPackage {
+  id: string;
+  name: string;
+  nameTranslations: Record<string, string>;
+  description: string;
+  icon: string;
+  language: LanguageCode;
+  level: string;
+  domain: string;
+  wordCount: number;
+  sentenceCount: number;
+  price: number;
+  isLocked: boolean;
+  dataFile: string;
+}
+
+export interface PremiumPackagesData {
+  packages: PremiumPackage[];
+}

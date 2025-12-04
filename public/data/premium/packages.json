@@ -1,0 +1,114 @@
+{
+  "packages": [
+    {
+      "id": "de-gastro-b1b2",
+      "name": "German Gastronomy (B1-B2)",
+      "nameTranslations": {
+        "en": "German Gastronomy",
+        "de": "Deutsche Gastronomie",
+        "fr": "Gastronomie allemande",
+        "es": "Gastronomía alemana",
+        "ru": "Немецкая гастрономия",
+        "el": "Γερμανική γαστρονομία"
+      },
+      "description": "Restaurant, kitchen, and food service vocabulary",
+      "icon": "🍽️",
+      "language": "de",
+      "level": "B1-B2",
+      "domain": "gastronomy",
+      "wordCount": 172,
+      "sentenceCount": 540,
+      "price": 4.99,
+      "isLocked": false,
+      "dataFile": "de-gastro-b1b2.json"
+    },
+    {
+      "id": "de-gastro-c1",
+      "name": "German Gastronomy (C1)",
+      "nameTranslations": {
+        "en": "German Gastronomy Advanced",
+        "de": "Deutsche Gastronomie Fortgeschritten",
+        "fr": "Gastronomie allemande avancé",
+        "es": "Gastronomía alemana avanzado",
+        "ru": "Немецкая гастрономия продвинутый",
+        "el": "Γερμανική γαστρονομία προχωρημένο"
+      },
+      "description": "Advanced culinary and hospitality terminology",
+      "icon": "🍽️",
+      "language": "de",
+      "level": "C1",
+      "domain": "gastronomy",
+      "wordCount": 172,
+      "sentenceCount": 513,
+      "price": 6.99,
+      "isLocked": false,
+      "dataFile": "de-gastro-c1.json"
+    },
+    {
+      "id": "de-it-b2",
+      "name": "German IT/Tech (B2)",
+      "nameTranslations": {
+        "en": "German IT & Technology",
+        "de": "Deutsche IT & Technologie",
+        "fr": "IT & Technologie allemand",
+        "es": "IT y Tecnología alemán",
+        "ru": "Немецкий IT и технологии",
+        "el": "Γερμανικά IT & Τεχνολογία"
+      },
+      "description": "Software development, programming, and tech vocabulary",
+      "icon": "💻",
+      "language": "de",
+      "level": "B2",
+      "domain": "technology",
+      "wordCount": 180,
+      "sentenceCount": 540,
+      "price": 4.99,
+      "isLocked": false,
+      "dataFile": "de-it-b2.json"
+    },
+    {
+      "id": "de-stadtplanung-c1",
+      "name": "German Urban Planning (C1)",
+      "nameTranslations": {
+        "en": "German Urban Planning",
+        "de": "Deutsche Stadtplanung",
+        "fr": "Urbanisme allemand",
+        "es": "Urbanismo alemán",
+        "ru": "Немецкое градостроительство",
+        "el": "Γερμανική πολεοδομία"
+      },
+      "description": "City planning, zoning, and infrastructure terminology",
+      "icon": "🏙️",
+      "language": "de",
+      "level": "C1",
+      "domain": "urban-planning",
+      "wordCount": 161,
+      "sentenceCount": 483,
+      "price": 6.99,
+      "isLocked": false,
+      "dataFile": "de-stadtplanung-c1.json"
+    },
+    {
+      "id": "de-stadtverwaltung-c1",
+      "name": "German City Administration (C1)",
+      "nameTranslations": {
+        "en": "German City Administration",
+        "de": "Deutsche Stadtverwaltung",
+        "fr": "Administration municipale allemande",
+        "es": "Administración municipal alemana",
+        "ru": "Немецкое городское управление",
+        "el": "Γερμανική δημοτική διοίκηση"
+      },
+      "description": "Municipal government, public administration vocabulary",
+      "icon": "🏛️",
+      "language": "de",
+      "level": "C1",
+      "domain": "administration",
+      "wordCount": 180,
+      "sentenceCount": 540,
+      "price": 6.99,
+      "isLocked": false,
+      "dataFile": "de-stadtverwaltung-c1.json"
+    }
+  ]
+}
