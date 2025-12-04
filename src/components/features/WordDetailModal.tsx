@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import {
   Dialog,
   DialogContent,
@@ -11,6 +11,8 @@ import { BookmarkIcon, CheckCircleIcon, Volume2Icon, ChevronDownIcon, ChevronUpI
 import type { WordDetail, LanguageCode, SiteLanguage } from '@/types'
 import { getTranslation } from '@/lib/translations'
 import { speak, isTTSAvailable } from '@/lib/audioService'
+import { useUniversalVocab } from '@/hooks/useUniversalVocab'
+import { useApp } from '@/contexts/AppContext'
 
 interface WordDetailModalProps {
   word: WordDetail | null
@@ -39,6 +41,40 @@ export function WordDetailModal({
   const [showFullConjugation, setShowFullConjugation] = useState(false)
   const [showFullDeclension, setShowFullDeclension] = useState(false)
   const t = (key: string) => getTranslation(nativeLanguage, key)
+
+  // === UNIVERSAL DATA ENHANCEMENT (NEW) ===
+  const { nativeLanguage: contextNativeLang, targetLanguage: contextTargetLang } = useApp()
+  const { getWord: getUniversalWord } = useUniversalVocab(contextNativeLang, contextTargetLang)
+
+  // Try to get universal data for this word
+  const universalWord = useMemo(() => {
+    if (!word?.word) return null
+    return getUniversalWord(word.word)
+  }, [word?.word, getUniversalWord])
+
+  // === QUALITY-FIRST MERGE: Universal > Existing > None ===
+  const displayData = useMemo(() => {
+    // Start with existing data as base
+    const base = {
+      translation: word?.translation || '',
+      explanation: '',
+      examples: word?.examplesWithTranslations || [],
+      hasUniversalData: false
+    }
+
+    // If universal data exists AND is better (has translation + examples), use it
+    if (universalWord && universalWord.translation && universalWord.examples.length > 0) {
+      return {
+        translation: universalWord.translation, // Universal has language-pair translation
+        explanation: universalWord.explanation || '',
+        examples: universalWord.examples, // Already filtered by language pair
+        hasUniversalData: true
+      }
+    }
+
+    // Otherwise, use existing data
+    return base
+  }, [universalWord, word?.translation, word?.examplesWithTranslations])
 
   if (!word) return null
 
@@ -125,6 +161,11 @@ export function WordDetailModal({
                   Real Data
                 </span>
               )}
+              {displayData.hasUniversalData && (
+                <span className="flex items-center gap-1 px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs">
+                  ✨ Enhanced
+                </span>
+              )}
             </div>
             <div className="flex gap-2">
               <Button
@@ -155,8 +196,10 @@ export function WordDetailModal({
         <div className="space-y-4 mt-4">
           {/* Translation and basic info */}
           <div className="flex flex-wrap items-center gap-2">
-            {word.translation && (
-              <span className="text-lg text-muted-foreground">{word.translation}</span>
+            {(displayData.translation || word.translation) && (
+              <span className="text-lg text-muted-foreground">
+                {displayData.translation || word.translation}
+              </span>
             )}
             {word.partOfSpeech && (
               <span className="px-2 py-1 bg-secondary text-secondary-foreground rounded-full text-xs">
@@ -169,6 +212,13 @@ export function WordDetailModal({
               </span>
             )}
           </div>
+
+          {/* Explanation from universal data */}
+          {displayData.explanation && (
+            <p className="text-sm text-gray-600 italic border-l-2 border-lingxm-blue pl-3">
+              {displayData.explanation}
+            </p>
+          )}
 
           {/* Difficulty and frequency info */}
           <div className="flex flex-wrap gap-2 text-sm">
@@ -305,7 +355,28 @@ export function WordDetailModal({
           )}
 
           {/* Example sentences with translations */}
-          {word.examplesWithTranslations && word.examplesWithTranslations.length > 0 ? (
+          {displayData.examples && displayData.examples.length > 0 ? (
+            <div className="border rounded-lg p-3">
+              <h3 className="font-semibold mb-2">
+                {t('modal.examples')}
+                {displayData.hasUniversalData && (
+                  <span className="ml-2 text-xs font-normal text-green-600">
+                    (multilingual)
+                  </span>
+                )}
+              </h3>
+              <ul className="space-y-3">
+                {displayData.examples.map((example, index) => (
+                  <li key={index} className="text-sm">
+                    <div className="font-medium">{example.sentence}</div>
+                    {example.translation && (
+                      <div className="text-muted-foreground text-xs mt-0.5">{example.translation}</div>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : word.examplesWithTranslations && word.examplesWithTranslations.length > 0 ? (
             <div className="border rounded-lg p-3">
               <h3 className="font-semibold mb-2">{t('modal.examples')}</h3>
               <ul className="space-y-3">
