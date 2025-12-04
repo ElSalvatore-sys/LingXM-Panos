@@ -6,6 +6,7 @@ export { SearchTips } from './SearchTips';
 export { VirtualKeyboard } from './VirtualKeyboard';
 export { StatsBar } from './StatsBar';
 export { WordDetailModal } from './WordDetailModal';
+export { WordTooltip } from './WordTooltip';
 export { EmptyState } from './EmptyState';
 export { FlashcardCard } from './FlashcardCard';
 export { FlashcardControls } from './FlashcardControls';

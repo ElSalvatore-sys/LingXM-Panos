@@ -233,6 +233,17 @@ export interface Translations {
   'sidebar.top': string;
   'sidebar.allWords': string;
   'sidebar.mostFrequent': string;
+
+  // Premium Packages
+  'sidebar.specializedVocabulary': string;
+  'sidebar.premiumPackagesDescription': string;
+  'sidebar.words': string;
+  'sidebar.sentences': string;
+  'sidebar.unlockAll': string;
+  'sidebar.loading': string;
+
+  // Tooltip
+  'tooltip.clickForExamples': string;
 }
 
 const englishTranslations: Translations = {
@@ -468,6 +479,17 @@ const englishTranslations: Translations = {
   'sidebar.top': 'Top',
   'sidebar.allWords': 'All Words',
   'sidebar.mostFrequent': 'most frequent words',
+
+  // Premium Packages
+  'sidebar.specializedVocabulary': 'Specialized Vocabulary',
+  'sidebar.premiumPackagesDescription': 'Specialized vocabulary packs',
+  'sidebar.words': 'words',
+  'sidebar.sentences': 'sentences',
+  'sidebar.unlockAll': 'Unlock All Packages',
+  'sidebar.loading': 'Loading...',
+
+  // Tooltip
+  'tooltip.clickForExamples': 'Click for examples',
 };
 
 const germanTranslations: Translations = {
@@ -703,6 +725,17 @@ const germanTranslations: Translations = {
   'sidebar.top': 'Top',
   'sidebar.allWords': 'Alle Wörter',
   'sidebar.mostFrequent': 'häufigste Wörter',
+
+  // Premium Packages
+  'sidebar.specializedVocabulary': 'Fachvokabular',
+  'sidebar.premiumPackagesDescription': 'Spezialisierte Vokabelpakete',
+  'sidebar.words': 'Wörter',
+  'sidebar.sentences': 'Sätze',
+  'sidebar.unlockAll': 'Alle Pakete freischalten',
+  'sidebar.loading': 'Wird geladen...',
+
+  // Tooltip
+  'tooltip.clickForExamples': 'Klicken für Beispiele',
 };
 
 const frenchTranslations: Translations = {
@@ -938,6 +971,17 @@ const frenchTranslations: Translations = {
   'sidebar.top': 'Top',
   'sidebar.allWords': 'Tous les mots',
   'sidebar.mostFrequent': 'mots les plus fréquents',
+
+  // Premium Packages
+  'sidebar.specializedVocabulary': 'Vocabulaire spécialisé',
+  'sidebar.premiumPackagesDescription': 'Packs de vocabulaire spécialisé',
+  'sidebar.words': 'mots',
+  'sidebar.sentences': 'phrases',
+  'sidebar.unlockAll': 'Débloquer tous les packs',
+  'sidebar.loading': 'Chargement...',
+
+  // Tooltip
+  'tooltip.clickForExamples': 'Cliquez pour des exemples',
 };
 
 const spanishTranslations: Translations = {
@@ -1173,6 +1217,17 @@ const spanishTranslations: Translations = {
   'sidebar.top': 'Top',
   'sidebar.allWords': 'Todas las palabras',
   'sidebar.mostFrequent': 'palabras más frecuentes',
+
+  // Premium Packages
+  'sidebar.specializedVocabulary': 'Vocabulario especializado',
+  'sidebar.premiumPackagesDescription': 'Paquetes de vocabulario especializado',
+  'sidebar.words': 'palabras',
+  'sidebar.sentences': 'oraciones',
+  'sidebar.unlockAll': 'Desbloquear todos los paquetes',
+  'sidebar.loading': 'Cargando...',
+
+  // Tooltip
+  'tooltip.clickForExamples': 'Clic para ver ejemplos',
 };
 
 const russianTranslations: Translations = {
@@ -1408,6 +1463,17 @@ const russianTranslations: Translations = {
   'sidebar.top': 'Топ',
   'sidebar.allWords': 'Все слова',
   'sidebar.mostFrequent': 'самых частых слов',
+
+  // Premium Packages
+  'sidebar.specializedVocabulary': 'Специализированный словарь',
+  'sidebar.premiumPackagesDescription': 'Тематические наборы слов',
+  'sidebar.words': 'слов',
+  'sidebar.sentences': 'предложений',
+  'sidebar.unlockAll': 'Разблокировать все пакеты',
+  'sidebar.loading': 'Загрузка...',
+
+  // Tooltip
+  'tooltip.clickForExamples': 'Нажмите для примеров',
 };
 
 const greekTranslations: Translations = {
@@ -1643,6 +1709,17 @@ const greekTranslations: Translations = {
   'sidebar.top': 'Top',
   'sidebar.allWords': 'Όλες οι λέξεις',
   'sidebar.mostFrequent': 'πιο συχνές λέξεις',
+
+  // Premium Packages
+  'sidebar.specializedVocabulary': 'Εξειδικευμένο λεξιλόγιο',
+  'sidebar.premiumPackagesDescription': 'Εξειδικευμένα πακέτα λεξιλογίου',
+  'sidebar.words': 'λέξεις',
+  'sidebar.sentences': 'προτάσεις',
+  'sidebar.unlockAll': 'Ξεκλείδωμα όλων των πακέτων',
+  'sidebar.loading': 'Φόρτωση...',
+
+  // Tooltip
+  'tooltip.clickForExamples': 'Κλικ για παραδείγματα',
 };
 
 // All translations

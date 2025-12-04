@@ -4,6 +4,7 @@ import {
   GlobeIcon,
   TrendingUpIcon,
   SettingsIcon,
+  BookOpenIcon,
 } from 'lucide-react';
 import type { LanguageCode, SearchFilters } from '@/types';
 import { CollapsibleSection } from '@/components/ui/CollapsibleSection';
@@ -13,6 +14,7 @@ import {
   ProgressSummary,
   SettingsPanel,
   PremiumTeaser,
+  PremiumPackages,
 } from './index';
 import { cn } from '@/lib/utils';
 import { useTranslation } from '@/hooks/useTranslation';
@@ -157,6 +159,15 @@ export function FilterSidebar({
             learnedCount={learnedCount}
             withExamplesCount={withExamplesCount}
           />
+        </CollapsibleSection>
+
+        {/* Specialized Vocabulary / Premium Packages */}
+        <CollapsibleSection
+          title={t('sidebar.specializedVocabulary')}
+          icon={<BookOpenIcon className="w-4 h-4" />}
+          defaultOpen={false}
+        >
+          <PremiumPackages />
         </CollapsibleSection>
 
         {/* Divider */}
