@@ -5,6 +5,47 @@ All notable changes to LingXM-Panos will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2025-12-04
+
+### Added - Universal Vocabulary Integration
+
+#### Universal Data System
+- `data/universal/vocabulary.json` - 18,000+ words with multilingual examples
+- Language pair filtering (native → target) for contextual translations
+- Quality-first data merge: Universal data takes priority over existing data
+
+#### Enhanced Word Tooltips
+- Hover tooltips on ResultsList with 300ms delay to prevent flicker
+- Display translation, category, and level from universal vocabulary
+- Click for more examples prompt
+
+#### Word Detail Modal Enhancements
+- "Enhanced" badge for words with universal data
+- Explanation section from universal vocabulary
+- Richer examples with quality-first merge strategy
+- Falls back gracefully to existing data when universal unavailable
+
+#### Premium Packages Foundation
+- `PremiumPackages` component for specialized vocabulary collections
+- Business, Medical, Legal, Technical vocabulary categories
+- Integration with FilterSidebar
+
+#### New UI Components
+- `WordTooltip` - floating tooltip with translation and category
+- `useUniversalVocab` hook - language pair filtered vocabulary access
+
+#### New Translations
+- 7+ new translation keys for sidebar sections
+- Specialized vocabulary section labels
+- Premium package descriptions
+
+### Technical
+- PWA cache limit increased to 3MB for vocabulary.json
+- 34 tests passing
+- Build: 474KB JS (157KB gzipped)
+
+---
+
 ## [1.1.0] - 2025-11-30
 
 ### Added - Phase 2: Progress Tracking & Audio
